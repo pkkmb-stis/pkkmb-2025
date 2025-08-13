@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateKelompokTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('kelompok', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('nama',40);
+            $table->smallInteger('lapk_user_id',false,true)->nullable();
+            $table->foreign('lapk_user_id')->references('id')->on('users');
+            $table->text('link_group_wa')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('kelompok');
+    }
+}
