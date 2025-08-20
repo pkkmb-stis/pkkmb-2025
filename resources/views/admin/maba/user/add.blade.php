@@ -11,25 +11,25 @@
           <form wire:submit.prevent="submit" class="text-sm text-gray-700">
             <div class="mb-3">
               <x-label-input for="nim">NIM</x-label-input>
-              <x-jet-input type="text" class="w-full" wire:model.defer="nim" id="nim" />
+              <x-input type="text" class="w-full" wire:model.defer="nim" id="nim" />
               <x-error-input name="nim" />
             </div>
 
             <div class="mb-3">
               <x-label-input for="nama">Nama</x-label-input>
-              <x-jet-input type="text" class="w-full" wire:model.defer="nama" id="nama" />
+              <x-input type="text" class="w-full" wire:model.defer="nama" id="nama" />
               <x-error-input name="nama" />
             </div>
 
             <div class="mb-3">
               <x-label-input for="email">Email</x-label-input>
-              <x-jet-input type="email" class="w-full" wire:model.defer="email" id="email" />
+              <x-input type="email" class="w-full" wire:model.defer="email" id="email" />
               <x-error-input name="email" />
             </div>
 
             <div class="mb-3">
               <x-label-input for="password">Password</x-label-input>
-              <x-jet-input type="password" class="w-full" wire:model.defer="password" id="password" />
+              <x-input type="password" class="w-full" wire:model.defer="password" id="password" />
               <x-error-input name="password" />
             </div>
 

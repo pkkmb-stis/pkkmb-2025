@@ -10,7 +10,7 @@
                     <form wire:submit.prevent="addRole">
                         <div class="mb-3">
                             <x-label-input for="name">Nama Role</x-label-input>
-                            <x-jet-input type="text" class="w-full" wire:model.defer="name" id="name" />
+                            <x-input type="text" class="w-full" wire:model.defer="name" id="name" />
                             <x-error-input name="name" />
                         </div>
 

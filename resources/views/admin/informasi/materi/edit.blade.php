@@ -5,7 +5,7 @@
       <form wire:submit.prevent="update">
         <div class="mb-3">
           <x-label-input for="title">Judul Materi</x-label-input>
-          <x-jet-input wire:model.defer='title' value="{{ $title ?? '' }}" type="text" class="w-full" />
+          <x-input wire:model.defer='title' value="{{ $title ?? '' }}" type="text" class="w-full" />
           <x-error-input name="title" />
         </div>
 

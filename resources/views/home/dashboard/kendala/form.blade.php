@@ -44,7 +44,7 @@
                         <x-error-input name="content" />
                     </div>
                     <label class="flex mb-3">
-                        <x-jet-input type="checkbox" name="konfirmasi" wire:model.defer="konfirmasi"
+                        <x-input type="checkbox" name="konfirmasi" wire:model.defer="konfirmasi"
                             class="mt-1 border-2 border-gray-800 rounded-full" />
                         <p class="ml-3 text-justify">Laporan ini saya buat sesuai dengan kejadian yang sebenarnya tanpa
                             dikurangi atau dilebihkan. Apabila suatu saat ditemukan bahwa laporan saya tidak sesuai

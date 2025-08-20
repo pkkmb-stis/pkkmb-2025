@@ -12,7 +12,7 @@
                         <div class="grid sm:grid-cols-2 sm:gap-6">
                             <div class="mb-3">
                                 <x-label-input for="title">Judul</x-label-input>
-                                <x-jet-input type="text" class="w-full" wire:model.defer="title" id="title" />
+                                <x-input type="text" class="w-full" wire:model.defer="title" id="title" />
                                 <x-error-input name="title" />
                             </div>
 
@@ -88,7 +88,7 @@
                                     @else
                                         <div class="mb-3">
                                             <x-label-input for="urutan">Urutan di Gallery</x-label-input>
-                                            <x-jet-input type="number" class="w-full" wire:model.defer="urutan"
+                                            <x-input type="number" class="w-full" wire:model.defer="urutan"
                                                 id="urutan" min="0" />
                                             <x-error-input name="urutan" />
                                         </div>

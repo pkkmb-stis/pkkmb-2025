@@ -1,7 +1,7 @@
 <div>
     <x-card>
         <h5 class="mb-3 text-xl font-normal text-gray-700 font-bohemianSoul">List Permission</h5>
-        <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari permission .."
+        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari permission .."
             class="block w-full mb-3 placeholder-gray-400" />
         <x-table :theads="['permission', 'penjelasan']" :overflow="false">
             @forelse ($permissions as $permission)

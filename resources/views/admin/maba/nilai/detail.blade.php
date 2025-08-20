@@ -47,7 +47,7 @@
                             <td class="hidden px-6 py-3 xl:table-cell">{{ $nilai->nama }}</td>
                             <td class="hidden px-6 py-3 text-center lg:table-cell">{{ $nilai->sks }}</td>
                             <td class="px-6 py-3 text-center">
-                                <x-jet-input id="nilai-{{ $index }}" min=0 max=100 type="number"
+                                <x-input id="nilai-{{ $index }}" min=0 max=100 type="number"
                                     class="block w-full mt-1" wire:model.defer="indikator.{{ $index }}.nilai"
                                     step=0.01 />
                             </td>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="flex items-center mt-1 text-sm font-semibold text-base-blue-400">
                             <span class="mr-2 font-bold">Nilai: </span>
-                            <x-jet-input id="nilai-{{ $index }}" min=0 max=100 type="number"
+                            <x-input id="nilai-{{ $index }}" min=0 max=100 type="number"
                                 class="block w-full mt-1" wire:model.defer="indikator.{{ $index }}.nilai"
                                 step=0.01 />
                         </div>

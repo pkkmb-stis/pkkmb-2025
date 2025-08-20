@@ -47,7 +47,7 @@
                 </x-select-form>
             </div>
 
-            <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari nama atau nimb"
+            <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari nama atau nimb"
                 class="block w-full mb-3 placeholder-gray-400" />
             <div class="hidden sm:block">
                 <x-table :theads="['Aksi', 'Nama', 'Status', 'Tipe', 'Diupdate Pada']" class="mb-3" :breakpointVisibility="[

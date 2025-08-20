@@ -14,26 +14,26 @@
 
                     <div class="mb-3">
                         <label for="nama" class="block mb-1 font-bold">Nama Kelompok</label>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="nama"
+                        <x-input type="text" class="w-full" wire:model.defer="nama"
                             disabled="{{ !$canUpdateKelompok }}" />
                         <x-error-input name="nama" />
                     </div>
 
                     <div class="mb-3">
                         <label for="linkWa" class="block mb-1 font-bold">Link Group WA</label>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="linkWa"
+                        <x-input type="text" class="w-full" wire:model.defer="linkWa"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
                     <div class="mb-3">
                         <label for="linkZoom" class="block mb-1 font-bold">Link Zoom</label>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="linkZoom"
+                        <x-input type="text" class="w-full" wire:model.defer="linkZoom"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
                     <div class="mb-3">
                         <label for="linkZoom" class="block mb-1 font-bold">Link Classroom</label>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="linkClassroom"
+                        <x-input type="text" class="w-full" wire:model.defer="linkClassroom"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
@@ -45,7 +45,7 @@
 
                     <div class="mb-3">
                         <label for="warnaCoCard" class="block mb-1 font-bold">Warna Co Card</label>
-                        <x-jet-input type="color" class="w-full" wire:model.defer="warnaCoCard"
+                        <x-input type="color" class="w-full" wire:model.defer="warnaCoCard"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
@@ -64,7 +64,7 @@
                             <div class="mb-3">
                                 <label for="anggota" class="block mb-1 font-bold">Tambah Anggota Kelompok</label>
                                 <div class="relative">
-                                    <x-jet-input type="text" wire:model="search" placeholder="Search user..."
+                                    <x-input type="text" wire:model="search" placeholder="Search user..."
                                         x-on:input="search = true" class="block w-full" wire:focus="removeSearch" />
 
                                     <ul x-cloak x-show="search" x-on:click.away="search = false"

@@ -6,7 +6,7 @@
                 <form wire:submit.prevent="update" class="text-sm text-gray-700">
                     <div class="mb-3">
                         <x-label-input for="title2">Judul</x-label-input>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="title" id="title2"
+                        <x-input type="text" class="w-full" wire:model.defer="title" id="title2"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="title" />
                     </div>
@@ -37,14 +37,14 @@
 
                     <div class="mb-3">
                         <x-label-input for="location2">Lokasi</x-label-input>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="location" id="location2"
+                        <x-input type="text" class="w-full" wire:model.defer="location" id="location2"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="location" />
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="link2">Link Galeri</x-label-input>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="link_gallery" id="link2"
+                        <x-input type="text" class="w-full" wire:model.defer="link_gallery" id="link2"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="link_gallery" />
                     </div>

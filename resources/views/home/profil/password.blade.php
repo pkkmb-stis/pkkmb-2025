@@ -8,7 +8,7 @@
                 Lama</x-label-input>
         </div>
         <div class="md:w-2/3">
-            <x-jet-input wire:model.defer="password_lama" type="password" class="w-full rounded-lg shadow-lg" />
+            <x-input wire:model.defer="password_lama" type="password" class="w-full rounded-lg shadow-lg" />
             <x-error-input name="password_lama" />
         </div>
 
@@ -20,7 +20,7 @@
                 Baru</x-label-input>
         </div>
         <div class="md:w-2/3">
-            <x-jet-input wire:model.defer="password_baru" type="password" class="w-full rounded-lg shadow-lg" />
+            <x-input wire:model.defer="password_baru" type="password" class="w-full rounded-lg shadow-lg" />
             <x-error-input name="password_baru" />
         </div>
     </div>
@@ -31,7 +31,7 @@
                 Baru</x-label-input>
         </div>
         <div class="md:w-2/3">
-            <x-jet-input wire:model.defer="password_baru_confirmation" type="password"
+            <x-input wire:model.defer="password_baru_confirmation" type="password"
                 class="w-full rounded-lg shadow-lg" />
             <x-error-input name="password_baru_confirmation" />
         </div>

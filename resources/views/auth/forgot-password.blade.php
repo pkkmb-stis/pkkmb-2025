@@ -10,8 +10,8 @@
         @csrf
 
         <div class="block">
-            <x-jet-label for="username" value="No Ujian / Username" class="mb-2" />
-            <x-jet-input id="username" class="block w-full mt-1" type="text" name="username" :value="old('username')"
+            <x-label for="username" value="No Ujian / Username" class="mb-2" />
+            <x-input id="username" class="block w-full mt-1" type="text" name="username" :value="old('username')"
                 required autofocus />
         </div>
 

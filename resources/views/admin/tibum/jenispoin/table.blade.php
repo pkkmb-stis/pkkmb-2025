@@ -34,7 +34,7 @@
                 </x-select-form>
             </div>
 
-            <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari Jenis Poin ..."
+            <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari Jenis Poin ..."
                 class="block w-full mb-3 placeholder-gray-400" />
 
             <div class="hidden md:block">

@@ -5,7 +5,7 @@
       <form wire:submit.prevent="update">
         <div class="mb-3">
           <x-label-input for="title">Judul Pengumuman</x-label-input>
-          <x-jet-input wire:model.defer='title' value="{{ $title ?? '' }}" type="text" class="w-full" />
+          <x-input wire:model.defer='title' value="{{ $title ?? '' }}" type="text" class="w-full" />
           <x-error-input name="title" />
         </div>
 
@@ -38,7 +38,7 @@
           @endif
 
           <x-label-input for="image">Ubah Gambar</x-label-input>
-          <x-jet-input type="file" name="image" wire:model="image" style="border: 1px solid #ccc; padding: 5px; border-radius:5px" />
+          <x-input type="file" name="image" wire:model="image" style="border: 1px solid #ccc; padding: 5px; border-radius:5px" />
           <x-error-input name="image" />
           <div wire:loading wire:target="image" class="mt-1 text-lg text-green-600 bold">Uploading...
           </div>

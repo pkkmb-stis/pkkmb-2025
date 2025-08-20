@@ -10,7 +10,7 @@
                     <form wire:submit.prevent="submit" class="text-sm text-gray-700">
                         <div class="mb-3">
                             <x-label-input for="nama">Nama Poin</x-label-input>
-                            <x-jet-input type="text" class="w-full" wire:model.defer="nama" />
+                            <x-input type="text" class="w-full" wire:model.defer="nama" />
                             <x-error-input name="nama" />
                         </div>
                         <div class="mb-3">
@@ -36,14 +36,14 @@
                             <x-error-input name="type" />
                         </div>
                         <div class="w-full mb-3" x-show="$wire.category == {{CATEGORY_JENISPOIN_PELANGGARAN}}">
-                            <x-jet-input id="is_bintang" class="cursor-pointer" type="checkbox" class="" wire:model.defer="is_bintang" />
+                            <x-input id="is_bintang" class="cursor-pointer" type="checkbox" class="" wire:model.defer="is_bintang" />
                             <span>
                                 <label for="is_bintang" class="cursor-pointer">Pelanggaran per elemen</label>
                             </span>
                         </div>
                         <div class="mb-3">
                             <x-label-input for="poin">Poin</x-label-input>
-                            <x-jet-input type="number" class="w-full" min="0" wire:model="poin" />
+                            <x-input type="number" class="w-full" min="0" wire:model="poin" />
                         </div>
                         <div class="mb-3">
                             <x-label-input for="detail">Detail Jenis Poin</x-label-input>

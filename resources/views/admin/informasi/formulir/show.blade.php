@@ -6,7 +6,7 @@
                 @livewire('admin.informasi.formulir.add')
             @endcan
         </div>
-        <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari formulir ..."
+        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari formulir ..."
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['Nama Formulir', 'Spreadsheet ID', 'Nama Sheet', 'Aksi']" :breakpointVisibility="[

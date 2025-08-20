@@ -15,35 +15,35 @@
                         <p>Pastikan bahwa seluruh poin pelanggaran telah dimasukkan.</p>
                         <p>Silakan pilih poin penghargaan yang akan digenerate.</p>
                         <div class="pl-5">
-                            <x-jet-checkbox id="genPoint1" class="cursor-pointer" type="checkbox"
+                            <x-checkbox id="genPoint1" class="cursor-pointer" type="checkbox"
                                 wire:model.defer="isPatuhAtribut"/>
                             <span><label for="genPoint1" class="cursor-pointer">
                                 Atribut lengkap dan rapi
                             </label></span>
                         </div>
                         <div class="pl-5">
-                            <x-jet-checkbox id="genPoint2" class="cursor-pointer" type="checkbox"
+                            <x-checkbox id="genPoint2" class="cursor-pointer" type="checkbox"
                                 wire:model.defer="isPatuhKuliahUmum"/>
                             <span><label for="genPoint2" class="cursor-pointer">
                                 Tertib mengikuti kegiatan pembekalan
                             </label></span>
                         </div>
                         <div class="pl-5">
-                            <x-jet-checkbox id="genPoint3" class="cursor-pointer" type="checkbox"
+                            <x-checkbox id="genPoint3" class="cursor-pointer" type="checkbox"
                                 wire:model.defer="isPatuhHariIni"/>
                             <span><label for="genPoint3" class="cursor-pointer">
                                 Tidak melanggar peraturan dalam sehari
                             </label></span>
                         </div>
                         <div class="pl-5">
-                            <x-jet-checkbox id="genPoint4" class="cursor-pointer" type="checkbox"
+                            <x-checkbox id="genPoint4" class="cursor-pointer" type="checkbox"
                                 wire:model.defer="isPatuhTugas"/>
                             <span><label for="genPoint4" class="cursor-pointer">
                                 Tugas harian lengkap dan tepat waktu
                             </label></span>
                         </div>
                         <div class="pl-5">
-                            <x-jet-checkbox id="genPoint5" class="cursor-pointer" type="checkbox"
+                            <x-checkbox id="genPoint5" class="cursor-pointer" type="checkbox"
                                 wire:model.defer="isPatuhAtributPKBN"/>
                             <span><label for="genPoint5" class="cursor-pointer">
                                 Perlengkapan PKBN lengkap
@@ -70,7 +70,7 @@
 
                         <div class="mt-3">
                             <x-label-input for="password">Password Kamu</x-label-input>
-                            <x-jet-input type="password" class="w-full" wire:model.defer="password" />
+                            <x-input type="password" class="w-full" wire:model.defer="password" />
                             <x-error-input name="password" />
                         </div>
                     </div>

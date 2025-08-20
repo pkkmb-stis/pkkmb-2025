@@ -42,7 +42,7 @@
             $theads[] = 'Aksi';
         @endphp
 
-        <x-jet-input wire:model.debounce.200ms="title" type="text" placeholder="{{ $placeholder }}"
+        <x-input wire:model.debounce.200ms="title" type="text" placeholder="{{ $placeholder }}"
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="$theads" :breakpointVisibility="$breakpointVisibility">

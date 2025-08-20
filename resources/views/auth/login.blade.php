@@ -15,14 +15,14 @@
 {{--        </div>--}}
 
         <div>
-            <x-jet-label for="username" value="No Ujian / Username" class="mb-2" />
+            <x-label for="username" value="No Ujian / Username" class="mb-2" />
             <input type="text" :value="old('username')"
                 class="block w-full mt-1 rounded-lg border-opacity-80 border-coklat-1 focus:outline-none focus:ring-1 focus:ring-coklat-2 focus:border-coklat-2"
                 name="username" required autofocus>
         </div>
 
         <div class="mt-4" x-data="{ showPassword: false }">
-            <x-jet-label for="password" value="{{ __('Password') }}" class="mb-2" />
+            <x-label for="password" value="{{ __('Password') }}" class="mb-2" />
             <div class="relative flex flex-row items-center">
                 <input :type="showPassword ? 'text' : 'password'" id="password"
                     class="block w-full pr-3 mt-1 rounded-lg border-opacity-80 border-coklat-1 focus:outline-none focus:ring-1 focus:ring-coklat-2 focus:border-coklat-2"
@@ -36,7 +36,7 @@
 
         <div class="block mt-4">
             <label for="remember_me" class="flex items-center">
-                <x-jet-checkbox id="remember_me" name="remember" />
+                <x-checkbox id="remember_me" name="remember" />
                 <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
             </label>
         </div>

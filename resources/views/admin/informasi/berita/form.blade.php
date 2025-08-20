@@ -4,13 +4,13 @@
             <div class="grid sm:grid-cols-2 sm:gap-6">
                 <div class="mb-3">
                     <label for="judul" class="block mb-1 font-bold">Judul</label>
-                    <x-jet-input type="text" class="w-full" wire:model.defer="judul" id="judul" />
+                    <x-input type="text" class="w-full" wire:model.defer="judul" id="judul" />
                     <x-error-input name="judul" />
                 </div>
 
                 <div class="mb-3">
                     <label for="penulis" class="block mb-1 font-bold">Penulis</label>
-                    <x-jet-input type="text" class="w-full" wire:model.defer="penulis" id="penulis" />
+                    <x-input type="text" class="w-full" wire:model.defer="penulis" id="penulis" />
                     <x-error-input name="penulis" />
                 </div>
             </div>
@@ -18,7 +18,7 @@
             <div class="grid sm:grid-cols-2 sm:gap-6">
                 <div class="mb-3">
                     <label for="hastags" class="block mb-1 font-bold">Hastags</label>
-                    <x-jet-input type="text" class="w-full" wire:model.defer="hastags" id="hastags" />
+                    <x-input type="text" class="w-full" wire:model.defer="hastags" id="hastags" />
                 </div>
 
                 <div class="mb-3">

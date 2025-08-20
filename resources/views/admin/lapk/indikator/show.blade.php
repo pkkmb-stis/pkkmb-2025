@@ -116,7 +116,7 @@
                     <form wire:submit.prevent="ubahIndikator" class="text-sm text-gray-700">
                         <div class="mb-3">
                             <label for="nama" class="block mb-1 font-bold">Indikator</label>
-                            <x-jet-input type="text" class="w-full" wire:model.defer="nama"
+                            <x-input type="text" class="w-full" wire:model.defer="nama"
                                 disabled="{{ !$canEdit }}" />
                             <x-error-input name="nama" />
                         </div>
@@ -133,7 +133,7 @@
 
                         <div class="mb-3">
                             <label for="sks" class="block mb-1 font-bold">SKS</label>
-                            <x-jet-input type="number" min="1" max="4" class="w-full"
+                            <x-input type="number" min="1" max="4" class="w-full"
                                 wire:model.defer="sks" disabled="{{ !$canEdit }}" />
                             <x-error-input name="sks" />
                         </div>

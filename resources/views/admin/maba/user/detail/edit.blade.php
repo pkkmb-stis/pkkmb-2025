@@ -3,7 +3,7 @@
         {{-- Email --}}
         <div class="mb-3">
             <x-label-input for="email">Email</x-label-input>
-            <x-jet-input id="email" type="email" class="block w-full mt-1" wire:model.defer="state.email"
+            <x-input id="email" type="email" class="block w-full mt-1" wire:model.defer="state.email"
                 disabled="{{ !$canUpdateBasic }}" />
             <x-error-input name="state.email" />
         </div>
@@ -11,7 +11,7 @@
         {{-- Username --}}
         <div class="mb-3">
             <x-label-input for="username">No Ujian</x-label-input>
-            <x-jet-input id="username" type="text" class="block w-full mt-1" wire:model.defer="state.username"
+            <x-input id="username" type="text" class="block w-full mt-1" wire:model.defer="state.username"
                 disabled="{{ !$canUpdateBasic }}" />
             <x-error-input name="state.username" />
         </div>
@@ -19,7 +19,7 @@
         {{-- Nama --}}
         <div class="mb-3">
             <x-label-input for="name">Nama</x-label-input>
-            <x-jet-input type="text" class="w-full" wire:model.defer="state.name" id="name"
+            <x-input type="text" class="w-full" wire:model.defer="state.name" id="name"
                 disabled="{{ !$canUpdateTambahan }}" />
             <x-error-input name="state.name" />
         </div>
@@ -40,14 +40,14 @@
             <div class="grid mb-3 lg:grid-cols-2 lg:gap-6 gap-y-3">
                 <div>
                     <x-label-input for="nimb">NIMB</x-label-input>
-                    <x-jet-input type="text" class="w-full" id="nimb" disabled="{{ !$canUpdateTambahan }}"
+                    <x-input type="text" class="w-full" id="nimb" disabled="{{ !$canUpdateTambahan }}"
                         wire:model.defer="state.nimb" />
                     <x-error-input name="state.nimb" />
                 </div>
 
                 <div>
                     <x-label-input for="nama-statistik">Nama Khas</x-label-input>
-                    <x-jet-input type="text" class="w-full" wire:model.defer="state.nama_statistik"
+                    <x-input type="text" class="w-full" wire:model.defer="state.nama_statistik"
                         id="nama-statistik" disabled="{{ !$canUpdateTambahan }}" />
                     <x-error-input name="state.nama_statistik" />
                 </div>

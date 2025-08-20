@@ -10,7 +10,7 @@
                 <form wire:submit.prevent="submit" class="text-sm text-gray-700">
                     <div class="mb-3">
                         <x-label-input for="title">Judul</x-label-input>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="title" id="title" />
+                        <x-input type="text" class="w-full" wire:model.defer="title" id="title" />
                         <x-error-input name="title" />
                     </div>
 
@@ -38,13 +38,13 @@
 
                     <div class="mb-3">
                         <x-label-input for="location">Lokasi</x-label-input>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="location" id="location" />
+                        <x-input type="text" class="w-full" wire:model.defer="location" id="location" />
                         <x-error-input name="location" />
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="link">Link Galeri</x-label-input>
-                        <x-jet-input type="text" class="w-full" wire:model.defer="link" id="link" />
+                        <x-input type="text" class="w-full" wire:model.defer="link" id="link" />
                         <x-error-input name="link" />
                     </div>
 

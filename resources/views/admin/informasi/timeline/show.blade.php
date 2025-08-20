@@ -6,7 +6,7 @@
                 @livewire('admin.informasi.timeline.add')
             @endcan
         </div>
-        <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari timeline ..."
+        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari timeline ..."
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['Judul', 'Waktu Mulai', 'Waktu Akhir', 'Lokasi', 'Aksi']" :breakpointVisibility="[

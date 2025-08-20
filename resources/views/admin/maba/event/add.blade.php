@@ -13,7 +13,7 @@
               <div>
                 <div class="mb-3">
                   <x-label-input for="title">Judul Acara</x-label-input>
-                  <x-jet-input type="text" class="w-full" wire:model.defer="title" id="title" />
+                  <x-input type="text" class="w-full" wire:model.defer="title" id="title" />
                   <x-error-input name="title" />
                 </div>
 

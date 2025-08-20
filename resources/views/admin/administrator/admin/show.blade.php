@@ -7,7 +7,7 @@
                 @livewire('admin.administrator.admin.add')
             @endcan
         </div>
-        <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari nama admin, role..."
+        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari nama admin, role..."
             class="block w-full mb-3 placeholder-gray-400" />
 
         <div x-data="{ showModalRevoke: false, revokeName: '', revokeId: '' }">

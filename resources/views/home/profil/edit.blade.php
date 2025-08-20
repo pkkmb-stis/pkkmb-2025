@@ -20,7 +20,7 @@
                 WA</x-label-input>
         </div>
         <div class="md:w-2/3">
-            <x-jet-input wire:model.defer="user.nowa" type="text" class="w-full rounded-lg shadow-lg 2xl:-ml-5"
+            <x-input wire:model.defer="user.nowa" type="text" class="w-full rounded-lg shadow-lg 2xl:-ml-5"
                 placeholder="Isi dengan format 62... tanpa +" />
             <x-error-input name="user.nowa" />
         </div>

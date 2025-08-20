@@ -52,7 +52,7 @@
             <div class="grid lg:grid-cols-2 lg:gap-6">
               <div class="mb-3">
                 <x-label-input for="poin">Poin</x-label-input>
-                <x-jet-input type="number" class="w-full" wire:model.defer="poin" />
+                <x-input type="number" class="w-full" wire:model.defer="poin" />
                 <x-error-input name="poin" />
               </div>
               <div class="mb-3">

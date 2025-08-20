@@ -30,7 +30,7 @@
             </x-select-form>
         </div>
 
-        <x-jet-input wire:model.debounce.200ms="namaSearch" type="text"
+        <x-input wire:model.debounce.200ms="namaSearch" type="text"
             placeholder="Cari berdasarkan nama, nim panitia, atau nimb maba"
             class="block w-full mb-3 placeholder-gray-400" />
 

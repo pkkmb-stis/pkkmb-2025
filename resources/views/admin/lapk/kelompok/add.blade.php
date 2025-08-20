@@ -12,13 +12,13 @@
 
             <div class="mb-3">
               <label for="nama" class="block mb-1 font-bold">Nama Kelompok</label>
-              <x-jet-input type="text" class="w-full" wire:model.defer="nama" id="nama" />
+              <x-input type="text" class="w-full" wire:model.defer="nama" id="nama" />
               <x-error-input name="nama" />
             </div>
 
             <div class="mb-3">
               <label for="pendamping" class="block mb-1 font-bold">Pendamping Kelompok</label>
-              <x-jet-input type="text" wire:model="search" placeholder="Search user..." x-on:input="search = true"
+              <x-input type="text" wire:model="search" placeholder="Search user..." x-on:input="search = true"
                 class="block w-full" />
 
               <ul x-show="search" x-on:click.away="search = false"

@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <x-jet-input wire:model.debounce.200ms="search" type="text"
+                    <x-input wire:model.debounce.200ms="search" type="text"
                         placeholder="Cari nama, no ujian, nim atau nimb"
                         class="block w-full mb-3 placeholder-gray-400" />
                 </div>

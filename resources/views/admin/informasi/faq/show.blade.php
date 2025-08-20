@@ -6,7 +6,7 @@
                 @livewire('admin.informasi.faq.add')
             @endcan
         </div>
-        <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari pertanyaan, jawaban ..."
+        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari pertanyaan, jawaban ..."
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['Pertanyaan', 'Jawaban', 'Aksi']" :breakpointVisibility="[

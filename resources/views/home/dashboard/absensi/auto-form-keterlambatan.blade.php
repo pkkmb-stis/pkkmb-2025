@@ -11,7 +11,7 @@
                         <form wire:submit.prevent="submit" class="text-sm text-gray-700">
                             <div class="mb-3">
                                 <x-label-input for="nama">Nama</x-label-input>
-                                <x-jet-input id="nama" name="nama" type="text" value="{{ $user->name }}" class="w-full" readonly />
+                                <x-input id="nama" name="nama" type="text" value="{{ $user->name }}" class="w-full" readonly />
                             </div>
 
                             <div class="mb-3">

@@ -8,7 +8,7 @@
                 <div class="p-5 pb-1 bg-white">
                     <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah Admin</p>
                     <div class="text-sm text-gray-700">
-                        <x-jet-input type="text" wire:model="search" placeholder="Search user..."
+                        <x-input type="text" wire:model="search" placeholder="Search user..."
                             x-on:input="search = true" class="block w-full" />
 
                         <ul x-show="search" x-on:click.away="search = false"

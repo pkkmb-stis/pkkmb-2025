@@ -28,7 +28,7 @@
             </div>
             <div class="grid lg:grid-cols-1 lg:gap-6">
                 <div class="mb-3">
-                    <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari kelompok"
+                    <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari kelompok"
                         class="block w-full mb-3 placeholder-gray-400" />
                 </div>
             </div>

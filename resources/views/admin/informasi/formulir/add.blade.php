@@ -35,7 +35,7 @@
                     <div class="mb-3">
                         <x-label-input for="is_visible">Tampilkan</x-label-input>
                         <label class="flex">
-                            <x-jet-input type="checkbox" wire:model.defer="is_visible" id="is_visible" />
+                            <x-input type="checkbox" wire:model.defer="is_visible" id="is_visible" />
                             <p class="ml-3 text-justify">Ya</p>
                         </label>
                         <x-error-input name="is_visible" />

@@ -34,7 +34,7 @@
                         name="tanggal_poin_user" x-ref="addDate" />
                 </div>
                 <div class="mb-3">
-                    <x-jet-input wire:model.debounce.200ms="search" type="text" placeholder="Cari Nama"
+                    <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari Nama"
                         class="block w-full mb-3 placeholder-gray-400" />
                 </div>
             </div>

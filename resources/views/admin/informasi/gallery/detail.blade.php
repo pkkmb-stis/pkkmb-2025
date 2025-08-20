@@ -10,7 +10,7 @@
                         <div class="grid sm:grid-cols-2 sm:gap-6">
                             <div class="mb-3">
                                 <x-label-input for="title">Judul</x-label-input>
-                                <x-jet-input type="text" class="w-full" wire:model.defer="title"
+                                <x-input type="text" class="w-full" wire:model.defer="title"
                                     disabled="{{ !$canUpdate }}" />
                                 <x-error-input name="title" />
                             </div>
@@ -28,7 +28,7 @@
                             @else
                                 <div class="mb-3">
                                     <x-label-input for="urutan">Urutan di Home</x-label-input>
-                                    <x-jet-input type="number" class="w-full" wire:model.defer="urutan" min="0"
+                                    <x-input type="number" class="w-full" wire:model.defer="urutan" min="0"
                                         disabled="{{ !$canUpdate }}" />
                                     <x-error-input name="urutan" />
                                 </div>

@@ -34,7 +34,7 @@
                         <div class="grid lg:grid-cols-2 lg:gap-6">
                             <div class="mb-3">
                                 <x-label-input for="poin">Poin</x-label-input>
-                                <x-jet-input type="number" class="w-full" wire:model.defer="poin" />
+                                <x-input type="number" class="w-full" wire:model.defer="poin" />
                                 <x-error-input name="poin" />
                             </div>
 
@@ -73,7 +73,7 @@
                                 @endif
                             @endif
                             <x-label-input for="image">Ubah Bukti</x-label-input>
-                            <x-jet-input type="file" name="image" wire:model="image"
+                            <x-input type="file" name="image" wire:model="image"
                                 style="border: 1px solid #ccc; padding: 5px; border-radius:5px" />
                             <x-error-input name="image" />
                             <div wire:loading wire:target="image" class="mt-1 text-lg text-green-600 bold">Uploading...
