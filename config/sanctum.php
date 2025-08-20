@@ -42,6 +42,7 @@ return [
     | request. You may change the middleware listed below as required.
     |
     */
+    'guard' => ['web'],
 
     'middleware' => [
         'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class,
