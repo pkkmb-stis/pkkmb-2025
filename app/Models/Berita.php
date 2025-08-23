@@ -11,7 +11,8 @@ class Berita extends Model
     protected $table = 'berita';
     protected $fillable = ['judul', 'content', 'category', 'published_by', 'slug', 'published_datetime', 'hastag', 'thumbnails'];
 
-    protected $dates = [
-        'published_datetime'
+
+     protected $casts = [
+        'published_datetime' => 'datetime',
     ];
 }

@@ -11,9 +11,9 @@ class Event extends Model
     protected $table = 'events';
     protected $guarded = [];
 
-    protected $dates = [
-        'waktu_mulai',
-        'waktu_akhir',
+     protected $casts = [
+        'waktu_mulai' => 'datetime',
+        'waktu_akhir' => 'datetime',
     ];
 
     /**

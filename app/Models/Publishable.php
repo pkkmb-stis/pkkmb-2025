@@ -11,9 +11,9 @@ class Publishable extends Model
     use HasFactory;
     protected $table = 'publishable';
     protected $guarded = [];
-
-    protected $dates = [
-        'publish_datetime'
+    
+     protected $casts = [
+        'publish_datetime' => 'datetime',
     ];
     /**
      * untuk query hanya pengumuman

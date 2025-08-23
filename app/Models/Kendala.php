@@ -12,8 +12,8 @@ class Kendala extends Model
     protected $table = 'kendala';
     protected $guarded = [];
 
-    protected $dates = [
-        'waktu_kendala',
+     protected $casts = [
+        'waktu_kendala' => 'datetime',
     ];
 
     /**
