@@ -1,6 +1,6 @@
-const notification = require("notyf");
+import { Notyf } from "notyf";
 
-const notyf = new notification.Notyf({
+const notyf = new Notyf({
     duration: 2000
 });
 

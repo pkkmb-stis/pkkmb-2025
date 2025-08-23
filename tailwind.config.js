@@ -1,13 +1,13 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
-    mode: "jit",
-    purge: [
+    content: [
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./vendor/laravel/jetstream/**/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
+        "./resources/js/**/*.js",
     ],
 
     theme: {
@@ -165,7 +165,7 @@ module.exports = {
                 teal: colors.teal,
                 sky: colors.sky,
                 fuchsia: colors.fuchsia,
-                blueGray: colors.blueGray,
+                slate: colors.slate,
             },
             maxHeight: {
                 custom: "90vh",
@@ -180,15 +180,8 @@ module.exports = {
         },
     },
 
-    variants: {
-        extend: {
-            opacity: ["disabled"],
-            borderWidth: ["hover"],
-        },
-    },
-
     plugins: [
-        require("@tailwindcss/forms"),
-        require("@tailwindcss/typography"),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
     ],
 };
