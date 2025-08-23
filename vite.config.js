@@ -14,4 +14,17 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    css: {
+        postcss: {
+            plugins: [
+                require('tailwindcss'),
+                require('autoprefixer'),
+            ],
+        },
+    },
+    resolve: {
+        alias: {
+            '~': '/node_modules/',
+        },
+    },
 });
