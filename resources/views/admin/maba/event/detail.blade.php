@@ -49,7 +49,7 @@
 
 
     @push('script-top')
-        <script src="{{ mix('js/laravel-echo.js') }}" defer></script>
+        @vite('resources/js/laravel-echo.js')
     @endpush
 
     @push('script-bottom')
