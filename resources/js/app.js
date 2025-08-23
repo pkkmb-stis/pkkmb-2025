@@ -1,4 +1,4 @@
-require("./bootstrap");
+import "./bootstrap";
 //require("flatpickr");
 //require("../../node_modules/sweetalert2/src/SweetAlert");
 
