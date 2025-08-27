@@ -1,7 +1,7 @@
 <div x-data="{ showModalKendala: @entangle('showModalKendala') }">
     <div class="fixed z-10 p-4 transition-all transform scale-75 border-2 rounded-full shadow-lg cursor-pointer bottom-6 md:right-16 right-6 bg-base-brown-400 md:hover:scale-105 hover:scale-90 md:scale-95 border-base-brown-600"
         x-on:click="showModalKendala = true">
-        <i class="fas fa-envelope-open-text fa-2x text-base-brown-950"></i>
+        <i class="fa-solid fa-envelope-open-text fa-2x text-base-brown-950"></i>
     </div>
 
     <div x-cloak x-show="showModalKendala">

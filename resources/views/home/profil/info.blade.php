@@ -31,7 +31,7 @@
                 <div class="flex items-center py-3">
                     <div class=" flex rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden">
                         <div class="px-4 text-center text-gray-50 text-sm font-bohemianSoul font-semibold bg-merah-1 py-2">
-                            <i class="fas fa-address-card text-white fa-fw"></i>
+                            <i class="fa-solid fa-address-card text-white fa-fw"></i>
                             NIMB</div>
                         <div class=" text-center text-sm font-nunito text-gray-600 ml-2 py-2">{{ $user->nimb ?? '-' }}</div>
                     </div>
@@ -149,7 +149,7 @@
         @if ($user->is_maba)
 
         <div class="flex items-center py-3">
-            <i class="fas fa-address-card text-base-blue-400 fa-fw mr-2"></i>
+            <i class="fa-solid fa-address-card text-base-blue-400 fa-fw mr-2"></i>
             <div>
                 <div class="text-xs font-poppins font-semibold">NIMB</div>
                 <div class="text-sm text-gray-600">{{ $user->nimb ?? '-' }}</div>

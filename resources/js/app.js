@@ -9,6 +9,7 @@ import Chart from "chart.js/auto";
 import jspdf from "jspdf";
 import "chartjs-adapter-luxon";
 import { Notyf } from "notyf";
+import '@fortawesome/fontawesome-free/css/all.css';
 
 window.Chart = Chart;
 window.SlimSelect = SlimSelect;

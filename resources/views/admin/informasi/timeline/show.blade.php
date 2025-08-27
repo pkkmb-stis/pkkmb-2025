@@ -28,10 +28,10 @@
                                     (Click For Detail)
                                 </dd>
                                 <dd class="mt-1.5 2xl:hidden">
-                                    <i class="mr-1 fas fa-location-dot"></i>{{ $t->location ?? '-' }}
+                                    <i class="mr-1 fa-solid fa-location-dot"></i>{{ $t->location ?? '-' }}
                                 </dd>
                                 <dd class="mt-1.5 lg:hidden">
-                                    <i class="mr-1 fas fa-clock"></i>
+                                    <i class="mr-1 fa-solid fa-clock"></i>
                                     {{ formatDateIso($t->waktu_mulai, 'D MMMM YYYY') }}
                                     @if ($t->waktu_akhir)
                                         - {{ formatDateIso($t->waktu_akhir, 'D MMMM YYYY') }}

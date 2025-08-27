@@ -3,7 +3,7 @@
         x-on:click="showModalPenugasan = true">
 
         <div class="flex items-center justify-center w-full h-full">
-            <i class="text-lg text-white fas fa-pencil-ruler"></i>
+            <i class="text-lg text-white fa-solid fa-pencil-ruler"></i>
         </div>
     </div>
 
@@ -36,7 +36,7 @@
                                     <x-button href="{{ $p['link'] }}"
                                         class="px-5 mr-2 font-bold uppercase rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 text-white-800 text-md"
                                         :tagA=true download="{{ $p['downloadName'] }}">
-                                        <i class="mr-1 fas fa-book text-white-800"></i>
+                                        <i class="mr-1 fa-solid fa-book text-white-800"></i>
                                         <span> Unduh</span>
                                     </x-button>
                                 </div>

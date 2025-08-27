@@ -6,7 +6,7 @@
         <div class="px-4 py-2 flex justify-between items-center">
             <h2 class="text-xl font-semibold">{{ $title }}</h2>
             <button @click="showModal = false" class="text-gray-500 hover:text-gray-700">
-                <i class="fas fa-times"></i>
+                <i class="fa-solid fa-times"></i>
             </button>
         </div>
         <div class="px-4 py-2">

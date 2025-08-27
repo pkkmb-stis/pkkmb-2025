@@ -5,11 +5,11 @@
 {{--   [ini comment] Pemberitahuan di login page apabila web sudah di share tapi akun belum dibagikan--}}
 {{--        <div class="px-4 py-3 mb-2 font-semibold text-white rounded-md bg-merah-500 opacity-90">--}}
 {{--            <div class="flex items-start mb-1">--}}
-{{--                <i class="mr-2 mt-0.5 fas fa-exclamation"></i>--}}
+{{--                <i class="mr-2 mt-0.5 fa-solid fa-exclamation"></i>--}}
 {{--                <small class="text-sm">Peserta dapat login setelah pembagian akun sekitar tanggal 11-12 September.</small>--}}
 {{--            </div>--}}
 {{--            <div class="flex items-start">--}}
-{{--                <i class="mr-2 mt-0.5 fas fa-exclamation"></i>--}}
+{{--                <i class="mr-2 mt-0.5 fa-solid fa-exclamation"></i>--}}
 {{--                <small class="text-sm">Saat ini, silakan cek Pengumuman secara berkala.</small>--}}
 {{--            </div>--}}
 {{--        </div>--}}

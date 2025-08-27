@@ -13,7 +13,7 @@
                     @if ($user->kelompok->link_group_wa)
                         <x-button class="mx-0.5 rounded-3xl bg-green-500 p-1 hover:bg-green-600" :tagA="true"
                             href="{{ $user->kelompok->link_group_wa }}" target="_blank">
-                            <i class="mr-1 fab fa-whatsapp"></i>
+                            <i class="mr-1 fa-brands fa-whatsapp"></i>
                             <span>Group WA</span>
                         </x-button>
                     @endif
@@ -21,7 +21,7 @@
                     @if ($user->kelompok->link_zoom)
                         <x-button class="mx-0.5 rounded-3xl bg-blue-500 p-1 hover:bg-blue-600" :tagA="true"
                             href="{{ $user->kelompok->link_zoom }}" target="_blank">
-                            <i class="mr-1 fas fa-video"></i>
+                            <i class="mr-1 fa-solid fa-video"></i>
                             Zoom Kelas
                         </x-button>
                     @endif
@@ -29,7 +29,7 @@
                     @if ($user->kelompok->link_classroom)
                         <x-button class="mx-0.5 rounded-3xl bg-lime-500 p-1 hover:bg-lime-600" :tagA="true"
                             href="{{ $user->kelompok->link_classroom }}" target="_blank">
-                            <i class="mr-1 fas fa-chalkboard-teacher"></i>
+                            <i class="mr-1 fa-solid fa-chalkboard-teacher"></i>
                             Classroom
                         </x-button>
                     @endif

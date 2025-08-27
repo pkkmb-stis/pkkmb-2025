@@ -9,23 +9,23 @@
 
 @font-face {
     font-family: "BACHELOR";
-    src: url("/fonts/Bachelor Bold.ttf");
+    src: url("../fonts/Bachelor Bold.ttf");
 }
 @font-face {
     font-family: "CARUBAN";
-    src: url("/fonts/Caruban-EBK8.ttf");
+    src: url("../fonts/Caruban-EBK8.ttf");
 }
 @font-face {
     font-family: "BACHELOR REGULAR";
-    src: url("/fonts/Bachelor Regular.ttf");
+    src: url("../fonts/Bachelor Regular.ttf");
 }
 @font-face {
     font-family: "ARINGGO";
-    src: url("/fonts/Aringgo.ttf");
+    src: url("../fonts/Aringgo.ttf");
 }
 @font-face {
     font-family: "BOHEMIAN SOUL";
-    src: url("/fonts/BohemianSoul.otf");
+    src: url("../fonts/BohemianSoul.otf");
 }
 
 .ss-list .ss-option:hover {

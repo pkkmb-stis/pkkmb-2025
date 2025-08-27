@@ -6,7 +6,7 @@
 
         <div class="flex justify-center items-center h-full w-full">
             <div x-cloak x-show="show">
-                <i class="fas fa-book text-lg text-white"></i>
+                <i class="fa-solid fa-book text-lg text-white"></i>
             </div>
             <div x-cloak x-show="hover" class="text-white text-center font-poppins font-bold text-2xl mr-3 ml-3">
                 <h1>
@@ -37,13 +37,13 @@
                                 {{-- <x-button href="{{ storage($content->link) }}"
                             class="bg-blue-500 hover:bg-blue-600 uppercase text-md mr-2" :tagA=true
                             download="{{ renameToDownload($content->title, $content->link) }}">
-                            <i class="fas fa-book text-white"></i>
+                            <i class="fa-solid fa-book text-white"></i>
                             <span> Unduh</span>
                             </x-button> --}}
                                 <x-button href="{{ $content->link }}"
                                     class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 text-white-800 font-bold uppercase text-md mr-2"
                                     :tagA=true target="blank">
-                                    <i class="fas fa-book text-white-800"></i>
+                                    <i class="fa-solid fa-book text-white-800"></i>
                                     <span> Lihat Materi</span>
                                 </x-button>
                             </div>

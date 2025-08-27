@@ -23,15 +23,15 @@
             </h1>
             <ul class="font-normal lg:text-base text-sm">
                 <li class="sm:my-5 my-2 leading-6 flex items-center">
-                    <i class="fas fa-map-marker-alt fa-2x mr-3"></i>
+                    <i class="fa-solid fa-map-marker-alt fa-2x mr-3"></i>
                     Jalan Otto Iskandardinata No. 64C Jakarta Timur 13330
                 </li>
                 <li class="sm:my-5 my-2 leading-6 flex items-center">
-                    <i class="fas fa-phone-alt fa-2x mr-3"></i>
+                    <i class="fa-solid fa-phone-alt fa-2x mr-3"></i>
                     (021) 8508812, 8191437
                 </li>
                 <li class="sm:my-5 my-2 leading-6 flex items-center">
-                    <i class="fas fa-print fa-2x mr-3"></i>
+                    <i class="fa-solid fa-print fa-2x mr-3"></i>
                     8197577
                 </li>
             </ul>
@@ -42,19 +42,19 @@
             </h1>
             {{-- <div class="flex w-full h-fit items-center gap-2 my-4 hover:text-kuning-600">
                 <a target="_blank" href="https://web.facebook.com/MP2KSTIS?_rdc=1&_rdr" class="transition font-bold h-10 w-10 hover:text-kuning-600 flex items-center justify-center">
-                    <i class="fab fa-facebook h-full w-full"></i>
+                    <i class="fa-brands fa-facebook h-full w-full"></i>
                 </a>
                 <a target="_blank" href="https://web.facebook.com/MP2KSTIS?_rdc=1&_rdr">@MP2KSTIS</a>
             </div> --}}
             <div class="flex w-full h-fit items-center gap-2 my-4 hover:text-kuning-600">
                 <a target="_blank" href="https://www.youtube.com/channel/UCdcOPB6OFbzwso8AUJUbYLQ" class="transition font-bold h-10 w-10 hover:text-kuning-600 flex items-center justify-center">
-                    <i class="fab fa-youtube h-full w-full"></i>
+                    <i class="fa-brands fa-youtube h-full w-full"></i>
                 </a>
                 <a target="_blank" href="https://www.youtube.com/channel/UCdcOPB6OFbzwso8AUJUbYLQ">PKKMB-PKBN STIS</a>
             </div>
             <div class="flex w-full h-fit items-center gap-2 my-4 hover:text-kuning-600">
                 <a target="_blank" href="https://www.instagram.com/pkkmb_stis/" class="transition font-bold h-10 w-10 hover:text-kuning-600 flex items-center justify-center">
-                    <i class="fab fa-instagram h-full w-full"></i>
+                    <i class="fa-brands fa-instagram h-full w-full"></i>
                 </a>
                 <a target="_blank" href="https://www.instagram.com/pkkmb_stis/">@pkkmb_stis</a>
             </div>

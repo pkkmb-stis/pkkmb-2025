@@ -4,8 +4,8 @@
         <button
             class="text-xl leading-none bg-transparent border border-transparent border-solid rounded opacity-50 cursor-pointer text-putih-100"
             type="button" x-on:click="openSidebar = !openSidebar">
-            <i x-show="!openSidebar" class="fas fa-bars"></i>
-            <i x-show="openSidebar" class="fas fa-times"></i>
+            <i x-show="!openSidebar" class="fa-solid fa-bars"></i>
+            <i x-show="openSidebar" class="fa-solid fa-times"></i>
 
         </button>
         @can(PERMISSION_SHOW_KENDALA)

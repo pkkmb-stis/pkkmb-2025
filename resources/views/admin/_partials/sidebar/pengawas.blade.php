@@ -6,7 +6,7 @@
     <x-sidebar.body>
         
         @can(PERMISSION_SHOW_LAPORAN_KEGIATAN)
-        <x-sidebar.menu active="{{ $menu == 'Laporan Kegiatan' }}" icon="fas fa-exclamation-triangle"
+        <x-sidebar.menu active="{{ $menu == 'Laporan Kegiatan' }}" icon="fa-solid fa-exclamation-triangle"
             href="{{ route('laporankegiatan') }}">
             Laporan Kegiatan
         </x-sidebar.menu>

@@ -14,7 +14,7 @@
 
                 <div class="flex flex-col pt-5 font-aringgo text-base-white">
                     <span class="absolute right-0 pr-4 cursor-pointer" @click="showMenuHp = false">
-                        <i class="text-lg fas fa-close"></i>
+                        <i class="text-lg fa-solid fa-close"></i>
                     </span>
                     <a class="px-10 mb-4 text-center" href="{{ route('home.index') }}">
                         <img src="{{ LOGO }}" alt="LOGO" class="w-20 mx-auto" />

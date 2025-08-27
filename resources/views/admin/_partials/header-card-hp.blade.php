@@ -12,7 +12,7 @@
         <button type="button"
             class="text-xl leading-none text-gray-100 bg-transparent border border-transparent border-solid rounded opacity-50 cursor-pointer md:hidden"
             x-on:click="openSidebar = false">
-            <i class="fas fa-times"></i>
+            <i class="fa-solid fa-times"></i>
         </button>
 
     </div>

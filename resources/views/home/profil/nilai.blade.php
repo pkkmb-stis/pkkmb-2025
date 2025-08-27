@@ -3,7 +3,7 @@
         @if (canAksesNilai() && auth()->user()->status_kelulusan)
             @if (auth()->user()->status_kelulusan == STATUS_LULUS_PKKMB_PKBN)
                 <div class="flex items-center px-4 py-3 mb-2 font-semibold text-white rounded-md bg-hijau-1">
-                    <i class="mr-2 fas fa-check-double"></i>
+                    <i class="mr-2 fa-solid fa-check-double"></i>
                     <small class="text-sm">Selamat! Kamu dinyatakan <b>LULUS</b> PKKMB-PKBN 2024.</small>
                 </div>
             @endif
@@ -11,7 +11,7 @@
             @if (auth()->user()->status_kelulusan == STATUS_LULUS_PKKMB)
                 <div
                     class="flex items-center px-4 py-3 mb-2 font-semibold text-gray-600 rounded-md bg-base-yellow-200 opacity-90">
-                    <i class="mr-2 fas fa-check"></i>
+                    <i class="mr-2 fa-solid fa-check"></i>
                     <small class="text-sm">Kamu hanya dinyatakan <b>LULUS</b> PKKMB 2024. Silakan mengikuti PKBN pada
                         tahun berikutnya.</small>
                 </div>
@@ -19,14 +19,14 @@
 
             @if (auth()->user()->status_kelulusan == STATUS_LULUS_PKBN)
                 <div class="flex items-center px-4 py-3 mb-2 font-semibold text-white rounded-md bg-hijau-1 opacity-90">
-                    <i class="mr-2 fas fa-check"></i>
+                    <i class="mr-2 fa-solid fa-check"></i>
                     <small class="text-sm">Selamat! Kamu dinyatakan <b>LULUS</b> PKBN 2024.</small>
                 </div>
             @endif
 
             @if (auth()->user()->status_kelulusan == STATUS_LULUS_BERSYARAT)
                 <div class="flex items-center px-4 py-3 mb-2 font-semibold text-white rounded-md bg-merah-500">
-                    <i class="mr-2 fas fa-times-circle"></i>
+                    <i class="mr-2 fa-solid fa-times-circle"></i>
                     <small class="text-sm">Kamu dinyatakan <b>LULUS BERSYARAT</b>. Silakan hubungi PK untuk info lebih
                         lanjut.</small>
                 </div>
@@ -35,7 +35,7 @@
             @if (auth()->user()->status_kelulusan == STATUS_TIDAK_LULUS)
                 <div
                     class="flex items-center px-4 py-3 mb-2 font-semibold text-white rounded-md bg-merah-500 opacity-90">
-                    <i class="mr-2 fas fa-times-circle"></i>
+                    <i class="mr-2 fa-solid fa-times-circle"></i>
                     <small class="text-sm">Maaf, kamu dinyatakan <b>TIDAK LULUS</b> PKKMB-PKBN 2024. Silakan mengulang
                         pada tahun berikutnya.</small>
                 </div>
@@ -99,7 +99,7 @@
             </x-card>
         @else
             <div class="flex items-center px-4 py-3 mb-2 font-semibold text-gray-600 rounded-md bg-base-yellow-200">
-                <i class="mr-2 fas fa-exclamation-triangle"></i>
+                <i class="mr-2 fa-solid fa-exclamation-triangle"></i>
                 <small class="text-sm">Maaf, nilaimu belum dapat diakses</small>
             </div>
         @endif
