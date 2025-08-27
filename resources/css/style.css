@@ -31,34 +31,34 @@
 }
 
 .bg-motif1 {
-    background-image: url("../images/pattern/2024/motif1.png");
+    background-image: url("/images/pattern/2024/motif1.png");
     background-size: auto 15rem;
 }
 
 .bg-kotak-06 {
-    background-image: url("../img/asset/kotak-05.png");
+    background-image: url("/img/asset/kotak-05.png");
     background-size: 6.25rem;
 }
 .bg-kotak-07 {
-    background-image: url("../img/asset/kotak-07.png");
+    background-image: url("/img/asset/kotak-07.png");
     background-size: 6.15094rem 6.25rem;
 }
 .bg-kotak-08 {
-    background-image: url("../img/asset/kotak-08.png");
+    background-image: url("/img/asset/kotak-08.png");
     background-size: 11rem;
 }
 .bg-kotak-11 {
-    background-image: url("../img/asset/kotak-11.png");
+    background-image: url("/img/asset/kotak-11.png");
     background-size: 6.24131rem 4.375rem;
 }
 
 .bg-kotak-10 {
-    background-image: url("../img/asset/kotak-10.png");
+    background-image: url("/img/asset/kotak-10.png");
     background-size: 6.24131rem 4.375rem;
 }
 
 .bg-kotak-12 {
-    background-image: url("../img/asset/kotak-12.png");
+    background-image: url("/img/asset/kotak-12.png");
     background-size: 16rem;
 }
 

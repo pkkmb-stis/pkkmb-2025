@@ -100,7 +100,7 @@
                         @endcan
                     </div>
                     <div x-cloak x-show="dropDownOpen" x-on:click.away="dropDownOpen = false"
-                        class="absolute right-0 pb-2 rounded-md shadow-lg top-12 whitespace-nowrap bg-blueGray-50 text-coklat-1">
+                        class="absolute right-0 pb-2 rounded-md shadow-lg top-12 whitespace-nowrap bg-gray-50 text-coklat-1">
 
                         <div class="divide-y">
                             <div class="px-3 py-2 pt-3 text-center cursor-not-allowed">
