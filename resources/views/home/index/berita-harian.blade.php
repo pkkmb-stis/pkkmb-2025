@@ -72,7 +72,7 @@
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script type="text/javascript">
         function toggleModal(id) {
-            Livewire.emit('openModalBeritaHarian', `${id}`)
+            Livewire.dispatch('openModalBeritaHarian', { beritaId: `${id}` })
         }
         $(document).ready(function() {
             $(".berita-carousel").owlCarousel({

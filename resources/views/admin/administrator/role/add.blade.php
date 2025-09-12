@@ -1,4 +1,4 @@
-<div x-data="{isModalOpen : @entangle('isModalOpen')}">
+<div x-data="{isModalOpen : @entangle('isModalOpen').live}">
     <x-button class="ml-2 uppercase rounded-3xl bg-coklat-1 hover:bg-base-brown-600" type="button" x-on:click="isModalOpen = true">
         Tambah Role
     </x-button>
@@ -7,16 +7,16 @@
             <div class="px-4 py-6 bg-white">
                 <h5 class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah Role</h5>
                 <div class="text-sm text-gray-700">
-                    <form wire:submit.prevent="addRole">
+                    <form wire:submit="addRole">
                         <div class="mb-3">
                             <x-label-input for="name">Nama Role</x-label-input>
-                            <x-input type="text" class="w-full" wire:model.defer="name" id="name" />
+                            <x-input type="text" class="w-full" wire:model="name" id="name" />
                             <x-error-input name="name" />
                         </div>
 
                         <div class="mb-3">
                             <x-label-input for="description">Deskripsi</x-label-input>
-                            <textarea rows="3" wire:model.defer="description"
+                            <textarea rows="3" wire:model="description"
                                 class="w-full border-gray-300 rounded-md shadow-sm focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50"></textarea>
                             <x-error-input name="description" />
                         </div>

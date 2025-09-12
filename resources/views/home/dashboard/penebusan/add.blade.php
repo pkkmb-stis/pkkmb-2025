@@ -13,10 +13,10 @@
                     <div class="px-5 py-6 bg-white">
                         <p class="text-lg font-semibold text-gray-700 capitalize leading-3 mb-4">Tambah Penebusan</p>
 
-                        <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                        <form wire:submit="submit" class="text-sm text-gray-700">
                             @if ($jenispoins->count() != 0)
                                 <div class="mb-3">
-                                    <x-select-form wire:model="jenispoin">
+                                    <x-select-form wire:model.live="jenispoin">
                                         <option class="hidden" selected="selected">Pilih Jenis Poin Penebusan</option>
                                         @foreach ($jenispoins as $j)
                                             <option value="{{ $j->id }}">

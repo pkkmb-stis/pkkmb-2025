@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ openedit: @entangle('openedit'), showModalDelete: false, jenispoinTitle: '', jenispoinId: '', showModalDetail: @entangle('showModalDetail') }" x-init="document.addEventListener('click', function(event) {
+    <div x-data="{ openedit: @entangle('openedit').live, showModalDelete: false, jenispoinTitle: '', jenispoinId: '', showModalDetail: @entangle('showModalDetail').live }" x-init="document.addEventListener('click', function(event) {
         if (window.innerWidth <= 640) {
             let targetCard = event.target.closest('.clickable-card');
             if (targetCard) {
@@ -26,7 +26,7 @@
                 @endcan
             </div>
             <div class="mb-3">
-                <x-select-form wire:model.lazy="categorySelected" id="categorySelected">
+                <x-select-form wire:model.blur="categorySelected" id="categorySelected">
                     <option value="-1">Semua Kategori</option>
                     @foreach ([1, 2, 3] as $category)
                         <option value="{{ $category }}">{{ getCategoryPoin($category) }}</option>
@@ -34,7 +34,7 @@
                 </x-select-form>
             </div>
 
-            <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari Jenis Poin ..."
+            <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari Jenis Poin ..."
                 class="block w-full mb-3 placeholder-gray-400" />
 
             <div class="hidden md:block">

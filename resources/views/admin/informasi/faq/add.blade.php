@@ -1,4 +1,4 @@
-<div x-data="{ showModalAdd: @entangle('showModalAdd') }">
+<div x-data="{ showModalAdd: @entangle('showModalAdd').live }">
     <x-button class="uppercase rounded-full opacity-100 bg-coklat-1 hover:bg-base-brown-600 whitespace-nowrap"
         type="button" x-on:click="showModalAdd = true">
         Tambah FAQ
@@ -7,16 +7,16 @@
         <x-modal>
             <div class="px-5 py-6 bg-white">
                 <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah FAQ</p>
-                <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                <form wire:submit="submit" class="text-sm text-gray-700">
                     <div class="mb-3">
                         <x-label-input for="pertanyaan">Pertanyaan</x-label-input>
-                        <x-textarea cols="30" rows="6" wire:model.defer="pertanyaan" id="pertanyaan" />
+                        <x-textarea cols="30" rows="6" wire:model="pertanyaan" id="pertanyaan" />
                         <x-error-input name="pertanyaan" />
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="jawaban">Jawaban</x-label-input>
-                        <x-textarea name="jawaban" wire:model.defer="jawaban" id="jawaban" cols="30"
+                        <x-textarea name="jawaban" wire:model="jawaban" id="jawaban" cols="30"
                             rows="10">
                         </x-textarea>
                         <x-error-input name="jawaban" />

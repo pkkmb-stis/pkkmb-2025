@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ showModalDelete: false, jenispoinTitle: '', user_name: '', update_pada: '', penebusanId: '', showModalDetail: @entangle('showModalDetail') }">
+    <div x-data="{ showModalDelete: false, jenispoinTitle: '', user_name: '', update_pada: '', penebusanId: '', showModalDetail: @entangle('showModalDetail').live }">
 
         <x-card class="px-2 sm:px-5">
             <div class="mb-4 flex flex-row justify-between">
@@ -29,7 +29,7 @@
                                     @if ($p->status == PENEBUSAN_MENUNGGU_UPLOAD || $p->status == PENEBUSAN_BUTUH_REVISI)
                                         <x-button
                                             class="mx-0.5 my-0.5 rounded-3xl bg-base-orange-500 hover:bg-base-orange-600"
-                                            wire:click="$emit('mabaUploadPenebusan', {{ $p->id }})">
+                                            wire:click="$dispatch('mabaUploadPenebusan', {{ $p->id }})">
                                             Upload Tugas
                                         </x-button>
 

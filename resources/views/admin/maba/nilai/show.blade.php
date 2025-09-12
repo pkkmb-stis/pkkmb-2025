@@ -4,7 +4,7 @@
             <h5 class="text-xl font-normal text-gray-700 font-bohemianSoul">Daftar Maba</h5>
         </div>
         <div class="mb-3">
-            <x-select-form name="kelompok" id="kelompok" wire:model.lazy="kelompok">
+            <x-select-form name="kelompok" id="kelompok" wire:model.blur="kelompok">
                 <option value="-1">Semua Kelompok</option>
                 @foreach ($daftar_kelompok as $k)
                     <option value='{{ $k->id }}'>{{ $k->nama }}</option>
@@ -12,7 +12,7 @@
             </x-select-form>
         </div>
 
-        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari berdasarkan nama atau nimb"
+        <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari berdasarkan nama atau nimb"
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['nama', 'nimb', 'kelompok', 'ipk', 'aksi']" :breakpointVisibility="[

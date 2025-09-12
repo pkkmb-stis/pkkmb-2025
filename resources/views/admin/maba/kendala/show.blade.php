@@ -5,14 +5,14 @@
             @livewire('admin.maba.kendala.export-kendala')
         </div>
         <div class="grid mb-3 lg:grid-cols-2 lg:gap-6 gap-y-3">
-            <x-select-form wire:model.lazy="category">
+            <x-select-form wire:model.blur="category">
                 <option value="-1">Semua Pengaduan</option>
                 @foreach ([1, 2, 3] as $jenis)
                     <option value="{{ $jenis }}">{{ getJenisKendala($jenis) }}</option>
                 @endforeach
             </x-select-form>
 
-            <x-select-form wire:model.lazy="status">
+            <x-select-form wire:model.blur="status">
                 <option value="-1">Semua Status</option>
                 @foreach ([0, 1, 2] as $status)
                     <option value="{{ $status }}">{{ getStatusKendala($status) }}</option>
@@ -20,7 +20,7 @@
             </x-select-form>
         </div>
 
-        <x-input wire:model.debounce.200ms="search" type="text"
+        <x-input wire:model.live.debounce.200ms="search" type="text"
             placeholder="Cari berdasarkan nama, nim, atau nimb" class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['Nama', 'Jenis Pengaduan', 'Status', 'Waktu Pengajuan', 'Aksi']" class="mb-3" :breakpointVisibility="[
@@ -32,8 +32,7 @@
             @forelse ($kendala as $row)
                 <tr class="border-b border-gray-200 hover:bg-blueGray-100 {{ $loop->even ? 'bg-gray-50' : '' }}
                     x-data="{}"
-                    x-on:click="if (window.innerWidth <=640) { $wire.emit('openDetailKendalaAdmin', {{ $row->id }})
-                    }">
+                    x-on:click="if (window.innerWidth <= 640) { $wire.dispatch('openDetailKendalaAdmin', { kendalaId: {{ $row->id }} }) }">
                     <td class="flex items-start justify-between px-6 py-3 sm:block">
                         <div>
                             <a href="{{ route('user.detail', ['id' => $row->user->id]) }}"
@@ -73,7 +72,7 @@
 
                     <td class="hidden px-6 py-3 text-center sm:table-cell">
                         <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5"
-                            wire:click="$emit('openDetailKendalaAdmin', {{ $row->id }})">
+                            wire:click="$dispatch('openDetailKendalaAdmin', {{ $row->id }})">
                             Detail
                         </x-button>
 

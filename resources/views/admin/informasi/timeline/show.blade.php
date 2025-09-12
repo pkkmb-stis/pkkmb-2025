@@ -6,7 +6,7 @@
                 @livewire('admin.informasi.timeline.add')
             @endcan
         </div>
-        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari timeline ..."
+        <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari timeline ..."
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['Judul', 'Waktu Mulai', 'Waktu Akhir', 'Lokasi', 'Aksi']" :breakpointVisibility="[
@@ -18,7 +18,7 @@
             @forelse ($timeline as $t)
                 <tr class="{{ $loop->even ? 'bg-gray-50' : '' }} border-b border-gray-200 hover:bg-blueGray-100"
                     x-data="{}"
-                    x-on:click="if (window.innerWidth <=640) { $wire.emit('openDetailTimeline', {{ $t->id }})
+                    x-on:click="if (window.innerWidth <=640) { $wire.dispatch('openDetailTimeline', {timelineId:{{ $t->id }} })
                     }">
                     <td class="flex items-start justify-between px-6 py-3 sm:block">
                         <div class="w-52 sm:w-auto">
@@ -62,7 +62,7 @@
                         {{ $t->location ?? '-' }}
                     </td>
                     <td class="hidden px-6 py-3 text-center sm:table-cell">
-                        <x-button wire:click="$emit('openDetailTimeline', {{ $t->id }})"
+                        <x-button wire:click="$dispatch('openDetailTimeline', {{ $t->id }})"
                             class="mx-0.5 rounded-3xl bg-coklat-2 hover:bg-coklat-hover">
                             Detail
                         </x-button>

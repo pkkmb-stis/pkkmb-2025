@@ -1,4 +1,4 @@
-<div x-data="{openQrCodeReader : @entangle('openQrCodeReader')}" id="QrModal">
+<div x-data="{openQrCodeReader : @entangle('openQrCodeReader').live}" id="QrModal">
     <div x-cloak x-show="openQrCodeReader">
         <x-modal>
             <div class="p-5 pt-3 bg-white">
@@ -20,7 +20,7 @@
         const onScanSuccess = (decodedText, decodedResult) => {
             html5QrcodeScanner.clear();
             document.getElementById('loading').classList.remove('hidden');
-            Livewire.emit('absensiWithQrCode', decodedText);
+            Livewire.dispatch('absensiWithQrCode', { qrCode: decodedText });
         }
 
         let html5QrcodeScanner;

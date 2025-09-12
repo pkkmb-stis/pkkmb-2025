@@ -29,6 +29,6 @@
         <div wire:loading wire:target="fotoPerlengkapan" class="text-xs text-gray-500">Uploading...
         </div>
 
-        <input type="file" wire:model="fotoPerlengkapan" id="fotoPerlengkapan" class="hidden">
+        <input type="file" wire:model.live="fotoPerlengkapan" id="fotoPerlengkapan" class="hidden">
     </div>
 </div>

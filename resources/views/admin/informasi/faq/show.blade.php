@@ -6,7 +6,7 @@
                 @livewire('admin.informasi.faq.add')
             @endcan
         </div>
-        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari pertanyaan, jawaban ..."
+        <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari pertanyaan, jawaban ..."
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['Pertanyaan', 'Jawaban', 'Aksi']" :breakpointVisibility="[
@@ -16,8 +16,7 @@
             @forelse ($faqs as $faq)
                 <tr class="{{ $loop->even ? 'bg-gray-50' : '' }} border-b border-gray-200 hover:bg-blueGray-100"
                     x-data="{}"
-                    x-on:click="if (window.innerWidth <=640) { $wire.emit('openDetailFaq', {{ $faq->id }})
-                    }">
+                    x-on:click="if (window.innerWidth <= 640) { $dispatch('openDetailFaq', { faqId: {{ $faq->id }} }) }">
                     <td class="flex items-start justify-between w-[85vw] px-6 py-3 sm:block md:w-96">
                         <div>
                             <span class="font-bold xl:font-semibold">{{ $faq->pertanyaan }}</span>
@@ -43,7 +42,7 @@
                         {{ $faq->jawaban }}
                     </td>
                     <td class="hidden w-48 px-6 py-3 text-center sm:table-cell">
-                        <x-button wire:click="$emit('openDetailFaq', {{ $faq->id }})"
+                        <x-button wire:click="$dispatch('openDetailFaq', { faqId: {{ $faq->id }} })"
                             class="mx-0.5 rounded-3xl bg-coklat-2 hover:bg-coklat-hover">
                             Detail
                         </x-button>
@@ -61,7 +60,6 @@
                     <td colspan="3" class="px-6 py-3 italic text-center text-md">Belum ada FAQ</td>
                 </tr>
             @endforelse
-
         </x-table>
 
         {{ $faqs->onEachSide(ON_EACH_SIDE)->links(DEFAULT_PAGINATION) }}

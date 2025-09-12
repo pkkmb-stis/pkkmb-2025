@@ -1,19 +1,19 @@
 <div>
     <x-card>
         <div class="grid mb-3 lg:grid-cols-2 lg:gap-6 gap-y-3">
-            <x-select-form wire:model.lazy="isMaba">
+            <x-select-form wire:model.blur="isMaba">
                 <option value="1">Maba</option>
                 <option value="0">Panitia</option>
             </x-select-form>
 
-            <x-select-form wire:model.lazy="belumAbsen">
+            <x-select-form wire:model.blur="belumAbsen">
                 <option value="1">Belum Absen</option>
                 <option value="0">Sudah Absen</option>
             </x-select-form>
         </div>
 
         <div class="{{ $isMaba ? '' : 'hidden' }}">
-            <x-select-form wire:model.lazy="kelompokSearch" class="mb-3">
+            <x-select-form wire:model.blur="kelompokSearch" class="mb-3">
                 <option value="%%">Semua Kelompok</option>
                 @foreach ($kelompok as $k)
                     <option value="{{ $k }}">{{ $k }}</option>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="{{ $belumAbsen ? 'hidden' : '' }}">
-            <x-select-form wire:model.lazy="statusAbsensi" class="mb-3">
+            <x-select-form wire:model.blur="statusAbsensi" class="mb-3">
                 <option value="-1">Semua Status</option>
                 @foreach ([0, 1, 2, 3, 4] as $status)
                     <option value="{{ $status }}">{{ getStatusAbsensi($status) }}</option>
@@ -30,7 +30,7 @@
             </x-select-form>
         </div>
 
-        <x-input wire:model.debounce.200ms="namaSearch" type="text"
+        <x-input wire:model.live.debounce.200ms="namaSearch" type="text"
             placeholder="Cari berdasarkan nama, nim panitia, atau nimb maba"
             class="block w-full mb-3 placeholder-gray-400" />
 
@@ -83,11 +83,14 @@
                                     </td>
                                     <td class="px-6 py-3 text-center">
                                         @if ($canAddNewAbsen)
-                                            <x-button
-                                                class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5"
-                                                wire:click="$emit('openModalAddAbsensi', {{ $user->id }}, {{ $event->id }})">
+                                            <x-button class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5"
+                                                wire:click="$dispatch('openModalAddAbsensi', { 
+                                                    userId: {{ $user->id }}, 
+                                                    eventId: {{ $event->id }} 
+                                                })">
                                                 Ubah Status
                                             </x-button>
+
                                         @endif
                                     </td>
                                 </tr>
@@ -110,7 +113,10 @@
                                 </span>
                                 @if ($canAddNewAbsen)
                                     <x-button class="bg-base-orange-500 hover:bg-base-orange-600 rounded-3xl"
-                                        wire:click="$emit('openModalAddAbsensi', {{ $user->id }}, {{ $event->id }})">
+                                        wire:click="$dispatch('openModalAddAbsensi', { 
+                                            userId: {{ $user->id }}, 
+                                            eventId: {{ $event->id }} 
+                                        })">
                                         Ubah Status
                                     </x-button>
                                 @endif
@@ -190,7 +196,10 @@
 
                                     <td class="px-6 py-3 text-center">
                                         <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5"
-                                            wire:click="$emit('openModalDetailAbsensi', {{ $user->user_id }}, {{ $user->event_id }})">
+                                            wire:click="$dispatch('openModalDetailAbsensi', { 
+                                                userId: {{ $user->user_id }}, 
+                                                eventId: {{ $user->event_id }} 
+                                            })">
                                             Detail
                                         </x-button>
 
@@ -217,7 +226,10 @@
                     @forelse ($users as $user)
                         <x-card class="flex flex-col items-start justify-between p-4 space-y-2 font-sans"
                             x-data="{}"
-                            @click="$wire.emit('openModalDetailAbsensi', {{ $user->user_id }}, {{ $user->event_id }})">
+                            wire:click="$dispatch('openModalAddAbsensi', { 
+                                userId: {{ $user->id }}, 
+                                eventId: {{ $event->id }} 
+                            })">
                             <div class="flex items-center justify-between w-full">
                                 <span class="font-bold text-base-blue-400">
                                     {{ $user->name }}

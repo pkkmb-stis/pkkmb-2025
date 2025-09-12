@@ -1,4 +1,4 @@
-<div x-data="{ showModalBerita: @entangle('showModalBerita') }">
+<div x-data="{ showModalBerita: @entangle('showModalBerita').live }">
 
     @if ($berita)
         <div x-cloak x-show="showModalBerita">

@@ -6,7 +6,7 @@
                 @livewire('admin.informasi.formulir.add')
             @endcan
         </div>
-        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari formulir ..."
+        <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari formulir ..."
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['Nama Formulir', 'Spreadsheet ID', 'Nama Sheet', 'Aksi']" :breakpointVisibility="[
@@ -40,7 +40,7 @@
                                 Detail
                             </x-button>
                             @can(PERMISSION_UPDATE_FORMULIR)
-                                <x-button wire:click.stop="$emit('openDetailFormulir', {{ $formulir->id }})"
+                                <x-button wire:click.stop="$dispatch('openDetailFormulir', {{ $formulir->id }})"
                                     class="mx-0.5 px-5 rounded-3xl bg-base-orange-500 hover:bg-base-orange-600">
                                     Edit
                                 </x-button>
@@ -65,7 +65,7 @@
                             Detail
                         </x-button>
                         @can(PERMISSION_UPDATE_FORMULIR)
-                            <x-button wire:click.stop="$emit('openDetailFormulir', {{ $formulir->id }})"
+                            <x-button wire:click.stop="$dispatch('openDetailFormulir', {{ $formulir->id }})"
                                 class="mx-0.5 rounded-3xl px-5 bg-base-orange-500 hover:bg-base-orange-600">
                                 Edit
                             </x-button>

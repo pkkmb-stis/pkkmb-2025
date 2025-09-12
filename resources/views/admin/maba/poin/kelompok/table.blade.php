@@ -15,11 +15,11 @@
             </div>
             <div class="grid lg:grid-cols-2 lg:gap-6">
                 <div class="mb-3">
-                    <x-date-wo-time-input wire:model.lazy="tanggal_poin_kelompok" id="tanggal_poin_kelompok"
+                    <x-date-wo-time-input wire:model.blur="tanggal_poin_kelompok" id="tanggal_poin_kelompok"
                         name="tanggal_poin_kelompok" x-ref="addDate" />
                 </div>
                 <div class="mb-3">
-                    <x-select-form name="tipePoin" id="tipePoin" wire:model.lazy="tipePoin">
+                    <x-select-form name="tipePoin" id="tipePoin" wire:model.blur="tipePoin">
                         <option value="-1">Semua Tipe Poin</option>
                         <option value="{{ CATEGORY_JENISPOIN_PENGHARGAAN }}">Penghargaan</option>
                         <option value="{{ CATEGORY_JENISPOIN_PELANGGARAN }}">Pelanggaran</option>
@@ -28,7 +28,7 @@
             </div>
             <div class="grid lg:grid-cols-1 lg:gap-6">
                 <div class="mb-3">
-                    <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari kelompok"
+                    <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari kelompok"
                         class="block w-full mb-3 placeholder-gray-400" />
                 </div>
             </div>

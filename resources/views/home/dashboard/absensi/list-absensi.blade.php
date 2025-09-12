@@ -1,4 +1,4 @@
-<div x-data="{ showDetailAbsensi: @entangle('showDetailAbsensi') }">
+<div x-data="{ showDetailAbsensi: @entangle('showDetailAbsensi').live }">
     <x-card class="px-2 sm:px-5">
         <h5 class="mb-4 font-bohemianSoul text-lg font-medium">List Presensi</h5>
         <div class="divide-y">

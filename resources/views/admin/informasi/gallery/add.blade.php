@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ isModalOpen: @entangle('isModalOpen') }">
+    <div x-data="{ isModalOpen: @entangle('isModalOpen').live }">
         <x-button class="uppercase rounded-full opacity-100 bg-coklat-1 hover:bg-base-brown-600 whitespace-nowrap"
             type="button" x-on:click="isModalOpen = true">
             Tambah Gallery
@@ -8,17 +8,17 @@
             <x-modal maxWidth="max-w-4xl">
                 <div class="px-5 py-6 bg-white">
                     <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah Gallery</p>
-                    <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                    <form wire:submit="submit" class="text-sm text-gray-700">
                         <div class="grid sm:grid-cols-2 sm:gap-6">
                             <div class="mb-3">
                                 <x-label-input for="title">Judul</x-label-input>
-                                <x-input type="text" class="w-full" wire:model.defer="title" id="title" />
+                                <x-input type="text" class="w-full" wire:model="title" id="title" />
                                 <x-error-input name="title" />
                             </div>
 
                             <div class="mb-3">
                                 <x-label-input for="category">Kategori</x-label-input>
-                                <x-select-form wire:model.lazy="category" id="category">
+                                <x-select-form wire:model.blur="category" id="category">
                                     <option value="0">Pilih Kategori</option>
                                     <option value="1">Foto</option>
                                     <option value="2">Video</option>
@@ -50,7 +50,7 @@
                                                         alt="Foto">
                                                 @endif
                                             </x-label-input>
-                                            <input type="file" class="hidden" id="file" wire:model="file">
+                                            <input type="file" class="hidden" id="file" wire:model.live="file">
                                             <x-error-input name="file" />
                                             <div wire:loading wire:target="file" class="text-xs text-gray-500">
                                                 Uploading...
@@ -59,7 +59,7 @@
                                     @else
                                         <div class="mb-3">
                                             <x-label-input for="link">Link Embbed Youtube</x-label-input>
-                                            <x-textarea name="link" wire:model.defer="link" id="link"
+                                            <x-textarea name="link" wire:model="link" id="link"
                                                 cols="30" rows="8">
                                             </x-textarea>
                                             <x-error-input name="link" />
@@ -71,7 +71,7 @@
                                     @if ($category == CATEGORY_GALLERY_FOTO)
                                         <div class="mb-3">
                                             <x-label-input for="event_id">Pilih Timeline</x-label-input>
-                                            <x-select-form wire:model.defer="event_id" id="event_id">
+                                            <x-select-form wire:model="event_id" id="event_id">
                                                 <option value="">Pilih Timeline</option>
                                                 @foreach ($events as $event)
                                                     <option value="{{ $event->id }}">{{ $event->title }}</option>
@@ -88,14 +88,14 @@
                                     @else
                                         <div class="mb-3">
                                             <x-label-input for="urutan">Urutan di Gallery</x-label-input>
-                                            <x-input type="number" class="w-full" wire:model.defer="urutan"
+                                            <x-input type="number" class="w-full" wire:model="urutan"
                                                 id="urutan" min="0" />
                                             <x-error-input name="urutan" />
                                         </div>
 
                                         {{-- <div class="mb-3">
                                         <x-label-input for="caption">Caption</x-label-input>
-                                        <x-textarea name="caption" wire:model.defer="caption" id="caption"
+                                        <x-textarea name="caption" wire:model="caption" id="caption"
                                             cols="30" rows="6">
                                         </x-textarea>
                                         <x-error-input name="caption" />

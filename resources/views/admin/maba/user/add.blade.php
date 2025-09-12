@@ -1,5 +1,5 @@
 <div>
-  <div x-data="{ isModalOpen: @entangle('isModalOpen') }">
+  <div x-data="{ isModalOpen: @entangle('isModalOpen').live }">
     <x-button class="ml-2 uppercase rounded-full opacity-100 bg-coklat-1 hover:bg-base-brown-600" type="button"
       x-on:click="isModalOpen = true">
       Tambah User
@@ -8,28 +8,28 @@
       <x-modal>
         <div class="px-5 py-6 bg-white">
           <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah User</p>
-          <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+          <form wire:submit="submit" class="text-sm text-gray-700">
             <div class="mb-3">
               <x-label-input for="nim">NIM</x-label-input>
-              <x-input type="text" class="w-full" wire:model.defer="nim" id="nim" />
+              <x-input type="text" class="w-full" wire:model="nim" id="nim" />
               <x-error-input name="nim" />
             </div>
 
             <div class="mb-3">
               <x-label-input for="nama">Nama</x-label-input>
-              <x-input type="text" class="w-full" wire:model.defer="nama" id="nama" />
+              <x-input type="text" class="w-full" wire:model="nama" id="nama" />
               <x-error-input name="nama" />
             </div>
 
             <div class="mb-3">
               <x-label-input for="email">Email</x-label-input>
-              <x-input type="email" class="w-full" wire:model.defer="email" id="email" />
+              <x-input type="email" class="w-full" wire:model="email" id="email" />
               <x-error-input name="email" />
             </div>
 
             <div class="mb-3">
               <x-label-input for="password">Password</x-label-input>
-              <x-input type="password" class="w-full" wire:model.defer="password" id="password" />
+              <x-input type="password" class="w-full" wire:model="password" id="password" />
               <x-error-input name="password" />
             </div>
 

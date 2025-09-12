@@ -55,12 +55,15 @@
         }
     });
 
-    document.addEventListener('livewire:load', function() {
+    document.addEventListener('livewire:init', function() {
         window.Echo.private('pengaduan')
             .listen('PengaduanUpdated', (event) => {
                 if (event.actionType === 'add') {
-                    Livewire.emit('toastShow', 'success',
-                        `Terdapat ${event.pengaduanCount} pengaduan baru.`, true);
+                    Livewire.dispatch('toastShow', {
+                        type: 'success',
+                        message: `Terdapat ${event.pengaduanCount} pengaduan baru.`,
+                        autoHide: true
+                    });
                 }
             });
     });

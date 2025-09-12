@@ -1,5 +1,8 @@
 <div>
-    <div x-data="{ openedit: @entangle('openedit'), showModalDelete: false, user_name: '', update_pada: '', poinTitle: '', poinId: '', showModalDetail: @entangle('showModalDetail') }" x-init="document.addEventListener('click', function(event) {
+    <div x-data="{ openedit: @entangle('openedit').live, showModalDelete: false, user_name: '', update_pada: '', poinTitle: '', poinId: '', showModalDetail: @entangle('showModalDetail').live }" x-init="document.addEventListener('click', function(event) {
+        if (event.target.closest('button') || event.target.closest('a')) {
+            return;
+        }
         if (window.innerWidth <= 640) {
             let targetCard = event.target.closest('.clickable-card');
             if (targetCard) {
@@ -11,7 +14,10 @@
     Livewire.hook('message.processed', (message, component) => {
         document.querySelectorAll('.clickable-card').forEach(card => {
             if (!card.hasAttribute('data-listener-added')) {
-                card.addEventListener('click', function() {
+                card.addEventListener('click', function(e) {
+                    if (e.target.closest('button') || e.target.closest('a')) {
+                        return;
+                    }
                     if (window.innerWidth <= 640) {
                         $wire.show(card.dataset.id);
                     }
@@ -19,7 +25,7 @@
                 card.setAttribute('data-listener-added', 'true');
             }
         });
-    });;">
+    });">
         <div class="w-full text-center">
             <img wire:loading wire:target="show,edit" src="{{ asset('/img/icon/loading-ring.svg') }}" class="h-10 my-0"
                 alt="">
@@ -39,7 +45,7 @@
             </div>
             <div class="grid lg:grid-cols-2 lg:gap-6">
                 <div class="mb-3">
-                    <x-select-form name="jenisUser" id="jenisUser" wire:model.lazy="jenisUser">
+                    <x-select-form name="jenisUser" id="jenisUser" wire:model.blur="jenisUser">
                         <option value="semua">Maba dan Panitia</option>
                         <option value="maba">Maba</option>
                         <option value="panitia">Panitia</option>
@@ -47,7 +53,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <x-select-form name="tipePoin" id="tipePoin" wire:model.lazy="tipePoin">
+                    <x-select-form name="tipePoin" id="tipePoin" wire:model.blur="tipePoin">
                         <option value="-1">Semua Tipe Poin</option>
                         <option value="{{ CATEGORY_JENISPOIN_PENGHARGAAN }}">Penghargaan</option>
                         <option value="{{ CATEGORY_JENISPOIN_PELANGGARAN }}">Pelanggaran</option>
@@ -57,36 +63,35 @@
             </div>
             <div class="grid lg:grid-cols-2 lg:gap-6">
                 <div class="mb-3">
-                    <x-date-wo-time-input wire:model.lazy="tanggal_poin" id="tanggal_poin" name="tanggal_poin"
+                    <x-date-wo-time-input wire:model.blur="tanggal_poin" id="tanggal_poin" name="tanggal_poin"
                         x-ref="addDate" />
                 </div>
 
                 <div class="mb-3">
-                    <x-input wire:model.debounce.200ms="search" type="text"
+                    <x-input wire:model.live.debounce.200ms="search" type="text"
                         placeholder="Cari nama, no ujian, nim atau nimb"
                         class="block w-full mb-3 placeholder-gray-400" />
                 </div>
             </div>
             <div class="hidden sm:block">
                 <x-table :theads="['Aksi', 'Nama', 'Jenis Poin', 'Kategori', 'Poin', 'Urutan Input']" class="mb-3" :breakpointVisibility="[
-                    3 => ['xl' => 'hidden'], // Hide kategori on xl
-                    4 => ['xl' => 'hidden'], // Hide Poin on xl
-                    5 => ['xl' => 'hidden'], // Hide urutan input on xl
+                    3 => ['xl' => 'hidden'],
+                    4 => ['xl' => 'hidden'],
+                    5 => ['xl' => 'hidden'],
                 ]">
                     <slot>
                         @forelse ($poins as $p)
-                            <tr class="border-b border-gray-200 hover:bg-blueGray-100 {{ $loop->even ? 'bg-gray-50' : '' }}"
-                                x-on:click="window.innerWidth < 1024 ? $wire.show({{ $p->id }}) : null">
+                            <tr class="border-b border-gray-200 hover:bg-blueGray-100 {{ $loop->even ? 'bg-gray-50' : '' }}">
                                 <td class="px-6 py-3 text-center">
-                                    <x-button wire:click="show({{ $p->id }})"
+                                    <x-button 
+                                        x-on:click.stop="$wire.show({{ $p->id }})"
                                         class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5 hidden lg:inline">
                                         Detail
                                     </x-button>
                                     @can(PERMISSION_UPDATE_POIN)
                                         <x-button
                                             class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5 px-5 sm:block lg:inline mb-2"
-                                            wire:click.stop='edit({{ $p->id }})'
-                                            x-on:click="initializeEditJenisPoin()">
+                                            x-on:click.stop="$wire.edit({{ $p->id }}); initializeEditJenisPoin()">
                                             Edit
                                         </x-button>
                                     @endcan
@@ -98,14 +103,19 @@
                                         </x-button>
                                     @endcan
                                 </td>
-                                <td class="px-6 py-3 text-left" title="{{ $p->user->name }}">
+                                <td class="px-6 py-3 text-left cursor-pointer lg:cursor-default" 
+                                    x-on:click.stop="window.innerWidth < 1024 ? $wire.show({{ $p->id }}) : null"
+                                    title="{{ $p->user->name }}">
                                     <a href="{{ route('user.detail', ['id' => $p->user->id]) }}"
-                                        class="underline hover:text-base-brown-500">
+                                        class="underline hover:text-base-brown-500"
+                                        x-on:click.stop>
                                         {{ substr_replace($p->user->name, '..', 20) }}
                                     </a>
                                 </td>
 
-                                <td class="px-6 py-3" title="{{ $p->jenispoin->nama }}">
+                                <td class="px-6 py-3 cursor-pointer lg:cursor-default" 
+                                    x-on:click.stop="window.innerWidth < 1024 ? $wire.show({{ $p->id }}) : null"
+                                    title="{{ $p->jenispoin->nama }}">
                                     {{ substr_replace($p->jenispoin->nama, '..', 20) }}
                                     <dl class="xl:hidden -ml-0.5">
                                         <dd class="mt-1">
@@ -144,7 +154,6 @@
                     </slot>
                 </x-table>
             </div>
-            <!-- Versi Mobile untuk Tabel Poin -->
             <div class="grid grid-cols-1 gap-4 sm:hidden">
                 @forelse ($poins as $p)
                     <x-card class="flex flex-col items-start justify-between p-4 space-y-3 font-sans clickable-card"
@@ -152,7 +161,8 @@
                         <div class="flex items-start justify-between w-full">
                             <div class="font-bold text-base-blue-400 ml-0.5">
                                 <a href="{{ route('user.detail', ['id' => $p->user->id]) }}"
-                                    class="underline hover:text-base-brown-500">
+                                    class="underline hover:text-base-brown-500"
+                                    x-on:click.stop>
                                     {{ $p->user->name }}
                             </div>
                             </a>
@@ -178,7 +188,8 @@
                                 Diberikan pada {{ $p->urutan_input }}
                             </dl>
                             @can(PERMISSION_UPDATE_POIN)
-                                <x-button wire:click.stop="edit({{ $p->id }})"
+                                <x-button 
+                                    x-on:click.stop="$wire.edit({{ $p->id }}); initializeEditJenisPoin()"
                                     class="w-full mt-3 bg-base-orange-500 hover:bg-base-orange-600 rounded-3xl">Edit</x-button>
                             @endcan
                         </div>
@@ -235,8 +246,6 @@
                                         alt="Bukti menyusul" class="w-64 h-auto my-2">
                                 @endif
                             @endif
-
-
                         @endif
                     </div>
                 </x-modal>

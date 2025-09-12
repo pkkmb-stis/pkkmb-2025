@@ -59,7 +59,7 @@
                         <h5 class="mb-3 font-bold">Tambah Role</h5>
 
                         <div class="mb-5">
-                            <x-select-form wire:model.defer="roleToAdd">
+                            <x-select-form wire:model="roleToAdd">
                                 <slot>
                                     <option>Pilih Role</option>
                                     @foreach ($roles as $r)

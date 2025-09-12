@@ -6,7 +6,7 @@
                 <img class="w-3/4 mx-auto h-40 object-cover md:mb-5 md:rounded-lg cursor-pointer border"
                     src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}">
 
-                <input type="file" id="photo" class="hidden" wire:model="photo">
+                <input type="file" id="photo" class="hidden" wire:model.live="photo">
             </x-label-input>
             <p class="text-xs text-gray-600 italic" wire:loading wire:target="photo">Uploading ...
         </div>

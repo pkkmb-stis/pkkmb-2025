@@ -1,11 +1,11 @@
-<form wire:submit.prevent="update" class="w-full max-w-2xl text-gray-900">
+<form wire:submit="update" class="w-full max-w-2xl text-gray-900">
     <div class="mb-6 md:flex md:items-center">
         <div class="md:w-1/3">
             <x-label-input for="jurusan"
                 class="block py-2 pr-4 mb-1 md:text-left md:mb-0 font-bohemianSoul">Jurusan</x-label-input>
         </div>
         <div class="md:w-2/3">
-            <x-select-form id="jurusan" wire:model.defer="user.prodi" class="w-full rounded-lg shadow-lg 2xl:-ml-5">
+            <x-select-form id="jurusan" wire:model="user.prodi" class="w-full rounded-lg shadow-lg 2xl:-ml-5">
                 <option>Pilih Jurusan</option>
                 @foreach (getJurusan() as $jurusan)
                     <option value="{{ $jurusan }}">{{ $jurusan }}</option>
@@ -20,7 +20,7 @@
                 WA</x-label-input>
         </div>
         <div class="md:w-2/3">
-            <x-input wire:model.defer="user.nowa" type="text" class="w-full rounded-lg shadow-lg 2xl:-ml-5"
+            <x-input wire:model="user.nowa" type="text" class="w-full rounded-lg shadow-lg 2xl:-ml-5"
                 placeholder="Isi dengan format 62... tanpa +" />
             <x-error-input name="user.nowa" />
         </div>
@@ -32,7 +32,7 @@
                 Kelamin</label>
         </div>
         <div class="md:w-2/3">
-            <x-select-form id="jenis_kelamin" wire:model.defer="user.jenis_kelamin"
+            <x-select-form id="jenis_kelamin" wire:model="user.jenis_kelamin"
                 class="w-full rounded-lg shadow-lg 2xl:-ml-5">
                 <option>Pilih Jenis Kelamin</option>
                 <option value="Perempuan">Perempuan</option>
@@ -47,7 +47,7 @@
                     class="block py-2 pr-4 mb-1 md:text-left md:mb-0 font-bohemianSoul">Negara</label>
             </div>
             <div class="md:w-2/3">
-                <x-select-form wire:model.defer="user.kabkot_id" id="kabkot_id" disabled="{{ !$kabupatenActive }}"
+                <x-select-form wire:model="user.kabkot_id" id="kabkot_id" disabled="{{ !$kabupatenActive }}"
                     class="w-full rounded-lg shadow-lg 2xl:-ml-5">
                     <option>Pilih Negara</option>
                     @foreach ($kabupaten as $k)
@@ -63,7 +63,7 @@
                 <label for="himada" class="block py-2 pr-4 mb-1 md:text-left md:mb-0 font-bohemianSoul">Himada</label>
             </div>
             <div class="md:w-2/3">
-                <x-select-form wire:model.defer="user.himada" id="himada"
+                <x-select-form wire:model="user.himada" id="himada"
                     class="w-full rounded-lg shadow-lg 2xl:-ml-5">
                     <option>Pilih Himada</option>
                     @foreach (getHimada() as $himada)
@@ -78,7 +78,7 @@
                     class="block py-2 pr-4 mb-1 md:text-left md:mb-0 font-bohemianSoul">Provinsi</label>
             </div>
             <div class="md:w-2/3">
-                <x-select-form id="provinsi" wire:model.lazy="provinsiUser" wire:ignore
+                <x-select-form id="provinsi" wire:model.blur="provinsiUser" wire:ignore
                     class="w-full rounded-lg shadow-lg 2xl:-ml-5">
                     <option>Pilih Provinsi</option>
 
@@ -96,7 +96,7 @@
                 <label for="kabkot_id" class="block pr-4 mb-1 md:text-left md:mb-0 font-bohemianSoul">Kab/Kota</label>
             </div>
             <div class="md:w-2/3">
-                <x-select-form wire:model.defer="user.kabkot_id" id="kabkot_id" disabled="{{ !$kabupatenActive }}"
+                <x-select-form wire:model="user.kabkot_id" id="kabkot_id" disabled="{{ !$kabupatenActive }}"
                     class="w-full rounded-lg shadow-lg 2xl:-ml-5">
                     <option>Pilih Kabupaten/Kota</option>
                     @foreach ($kabupaten as $k)
@@ -113,7 +113,7 @@
                 Lengkap</x-label-input>
         </div>
         <div class="md:w-2/3">
-            <x-textarea wire:model.defer="user.alamat" cols="30" rows="8"
+            <x-textarea wire:model="user.alamat" cols="30" rows="8"
                 class="w-full rounded-lg shadow-lg 2xl:-ml-5">{{ $alamat ?? '' }}
             </x-textarea>
         </div>

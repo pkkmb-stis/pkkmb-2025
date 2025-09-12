@@ -8,7 +8,7 @@
       <x-modal maxWidth="max-w-4xl">
         <div class="px-5 py-6 bg-white">
           <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Rekap Presensi</p>
-          <form wire:submit.prevent="export" class="text-sm text-gray-700">
+          <form wire:submit="export" class="text-sm text-gray-700">
             <div class="mb-3">
               <x-label-input for="selectacara">Pilih Acara</x-label-input>
               <div wire:ignore>

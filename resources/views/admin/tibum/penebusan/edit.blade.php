@@ -12,7 +12,7 @@
                     </p>
                 </div>
 
-                <form wire:submit.prevent="update">
+                <form wire:submit="update">
                     <div class="mb-3">
                         <x-label-input for="jenispoin">Jenis Poin</x-label-input>
                         <h3>{{ $jenispoin }}</h3>
@@ -26,7 +26,7 @@
                             </h3>
                         @else
                             <p class="mb-1 text-xs text-gray-500">Anda dapat mengubah deadline jika diperlukan</p>
-                            <x-date-input wire:model.defer="deadline" name="deadline"
+                            <x-date-input wire:model="deadline" name="deadline"
                                 disabled="{{ !$canEditDeadline }}" />
                             <x-error-input name="deadline" />
                         @endif
@@ -36,7 +36,7 @@
 
                         <div class="mb-3">
                             <x-label-input for="status">Status</x-label-input>
-                            <x-select-form wire:model.lazy="status"
+                            <x-select-form wire:model.blur="status"
                                 x-on:change="showCatatan = ($el.value == 'Butuh Revisi')">
                                 <option value="" class="hidden" selected="selected">Pilih status...</option>
                                 <option value="{{ PENEBUSAN_BUTUH_REVISI }}">{{ PENEBUSAN_BUTUH_REVISI }}</option>
@@ -47,7 +47,7 @@
 
                         <div x-show='showCatatan' class="mb-3">
                             <x-label-input for="catatan">Catatan Revisi</x-label-input>
-                            <x-textarea name="catatan" wire:model.defer="catatan" cols="30" rows="6">
+                            <x-textarea name="catatan" wire:model="catatan" cols="30" rows="6">
                             </x-textarea>
                         </div>
 
@@ -71,7 +71,7 @@
                                     <label for="fileUpload2"
                                         class="px-3 py-1 text-xs text-white cursor-pointer rounded-3xl bg-base-green-300 hover:bg-base-green-400">Pilih
                                         File</label>
-                                    <input type="file" wire:model="file" id="fileUpload2" class="hidden">
+                                    <input type="file" wire:model.live="file" id="fileUpload2" class="hidden">
                                 @endif
 
                                 @if ($selected && $selected->link)

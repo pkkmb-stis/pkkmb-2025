@@ -1,4 +1,4 @@
-<div x-data="{ showDetailKendala: @entangle('showDetailKendala') }" x-cloak x-show="showDetailKendala">
+<div x-data="{ showDetailKendala: @entangle('showDetailKendala').live }" x-cloak x-show="showDetailKendala">
     @if ($kendala)
         <x-modal maxWidth="max-w-2xl">
             <div class="p-5 pb-3 bg-white">
@@ -39,9 +39,9 @@
                     </div>
                 </div>
 
-                <form wire:submit.prevent="ubah">
+                <form wire:submit="ubah">
                     <div class="mb-3">
-                        <x-select-form wire:model.defer="status" disabled="{{ !$canEdit }}">
+                        <x-select-form wire:model="status" disabled="{{ !$canEdit }}">
                             @foreach ([0, 1, 2] as $jenisStatus)
                                 <option value="{{ $jenisStatus }}">{{ getStatusKendala($jenisStatus) }}</option>
                             @endforeach
@@ -50,7 +50,7 @@
 
                     <div class="mb-3">
                         <x-label-input for="tanggapan">Tanggapan</x-label-input>
-                        <x-textarea name="tanggapan" wire:model.defer="tanggapan" id="tanggapan" cols="30"
+                        <x-textarea name="tanggapan" wire:model="tanggapan" id="tanggapan" cols="30"
                             rows="4" disabled="{{ !$canEdit }}">
                         </x-textarea>
                     </div>

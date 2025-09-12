@@ -1,4 +1,4 @@
-<div x-data="{ showDetailKendala: @entangle('showDetailKendala') }">
+<div x-data="{ showDetailKendala: @entangle('showDetailKendala').live }">
     <x-card>
         <h5 class="mb-4 text-lg font-normal text-gray-700 font-bohemianSoul">List Kendala</h5>
         <x-table :theads="['Jenis Kendala', 'Status', 'Waktu Pengajuan', 'Aksi']" class="mb-3" :breakpointVisibility="[

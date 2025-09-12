@@ -26,7 +26,7 @@
     </x-card>
 
     <x-card>
-        <form wire:submit.prevent="simpanNilai">
+        <form wire:submit="simpanNilai">
             <div class="hidden sm:block">
                 <x-table :theads="['Dimensi', 'Indikator', 'SKS', 'nilai', 'grade']" :breakpointVisibility="[
                     1 => ['xl' => 'hidden'], // Hide kelompok on xl
@@ -48,7 +48,7 @@
                             <td class="hidden px-6 py-3 text-center lg:table-cell">{{ $nilai->sks }}</td>
                             <td class="px-6 py-3 text-center">
                                 <x-input id="nilai-{{ $index }}" min=0 max=100 type="number"
-                                    class="block w-full mt-1" wire:model.defer="indikator.{{ $index }}.nilai"
+                                    class="block w-full mt-1" wire:model="indikator.{{ $index }}.nilai"
                                     step=0.01 />
                             </td>
                             <td class="px-6 py-3 text-center">
@@ -84,7 +84,7 @@
                         <div class="flex items-center mt-1 text-sm font-semibold text-base-blue-400">
                             <span class="mr-2 font-bold">Nilai: </span>
                             <x-input id="nilai-{{ $index }}" min=0 max=100 type="number"
-                                class="block w-full mt-1" wire:model.defer="indikator.{{ $index }}.nilai"
+                                class="block w-full mt-1" wire:model="indikator.{{ $index }}.nilai"
                                 step=0.01 />
                         </div>
                         <div class="mt-1 text-sm font-semibold text-base-blue-400">

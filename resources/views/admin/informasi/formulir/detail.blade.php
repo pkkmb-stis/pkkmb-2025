@@ -1,19 +1,19 @@
-<div x-data="{ showModalDetail: @entangle('showModalDetail') }">
+<div x-data="{ showModalDetail: @entangle('showModalDetail').live }">
     <div x-cloak x-show="showModalDetail">
         <x-modal>
             <div class="px-5 py-6 bg-white">
                 <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Detail Formulir</p>
-                <form wire:submit.prevent="update" class="text-sm text-gray-700">
+                <form wire:submit="update" class="text-sm text-gray-700">
                     <div class="mb-3">
                         <x-label-input for="nama_formulir">Nama Formulir</x-label-input>
-                        <x-textarea cols="30" rows="2" wire:model.defer="nama_formulir" id="nama_formulir"
+                        <x-textarea cols="30" rows="2" wire:model="nama_formulir" id="nama_formulir"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="nama_formulir" />
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="spreadsheet_id">Spreadsheet ID</x-label-input>
-                        <x-textarea name="spreadsheet_id" wire:model.defer="spreadsheet_id" id="spreadsheet_id"
+                        <x-textarea name="spreadsheet_id" wire:model="spreadsheet_id" id="spreadsheet_id"
                             cols="30" rows="2" disabled="{{ !$canUpdate }}">
                         </x-textarea>
                         <p class="text-xs">Share akses spreadsheet kepada
@@ -24,7 +24,7 @@
 
                     <div class="mb-3">
                         <x-label-input for="nama_sheet">Nama Sheet</x-label-input>
-                        <x-textarea cols="30" rows="2" wire:model.defer="nama_sheet" id="nama_sheet"
+                        <x-textarea cols="30" rows="2" wire:model="nama_sheet" id="nama_sheet"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="nama_sheet" />
                     </div>
@@ -32,7 +32,7 @@
                     <div class="mb-3">
                         <x-label-input for="is_visible">Tampilkan</x-label-input>
                         <label class="flex">
-                            <x-input type="checkbox" wire:model.defer="is_visible" id="is_visible"
+                            <x-input type="checkbox" wire:model="is_visible" id="is_visible"
                                 disabled="{{ !$canUpdate }}" />
                             <p class="ml-3 text-justify">Ya</p>
                         </label>
@@ -41,14 +41,14 @@
 
                     <div class="mb-3">
                         <x-label-input for="search_range">Posisi Kolom NIMB</x-label-input>
-                        <x-textarea cols="30" rows="2" wire:model.defer="search_range" id="search_range"
+                        <x-textarea cols="30" rows="2" wire:model="search_range" id="search_range"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="search_range" />
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="link_form">Link Form</x-label-input>
-                        <x-textarea cols="30" rows="2" wire:model.defer="link_form" id="link_form"
+                        <x-textarea cols="30" rows="2" wire:model="link_form" id="link_form"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="link_form" />
                         <a href="https://s.stis.ac.id/IsiFormulir" target="_blank"

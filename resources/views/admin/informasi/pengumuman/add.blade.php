@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ isModalOpen: @entangle('isModalOpen') }">
+    <div x-data="{ isModalOpen: @entangle('isModalOpen').live }">
         <x-button class="uppercase rounded-full opacity-100 bg-coklat-1 hover:bg-base-brown-600 whitespace-nowrap"
             type="button" x-on:click="isModalOpen = true">
             Tambah Pengumuman
@@ -8,17 +8,17 @@
             <x-modal>
                 <div class="px-5 py-6 bg-white">
                     <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah Pengumuman</p>
-                    <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                    <form wire:submit="submit" class="text-sm text-gray-700">
                         <div class="mb-3">
                             <x-label-input for="title">Judul Pengumuman</x-label-input>
-                            <x-input type="text" class="w-full" wire:model.defer="title" id="title" />
+                            <x-input type="text" class="w-full" wire:model="title" id="title" />
                             <x-error-input name="title" />
                         </div>
 
                         <div class="mb-3">
                             <x-label-input for="content">Isi Pengumuman</x-label-input>
                             <div x-data="quillEditor()">
-                                <input type="hidden" x-ref="input" wire:model.defer="content">
+                                <input type="hidden" x-ref="input" wire:model="content">
                                 <div wire:ignore>
                                     <div x-ref="editor">{!! $content !!}</div>
                                 </div>
@@ -28,7 +28,7 @@
 
                         <div class="mb-3">
                             <x-label-input for="publish_datetime">Tanggal Publish</x-label-input>
-                            <x-date-input wire:model.defer="publish_datetime" id="publish_datetime"
+                            <x-date-input wire:model="publish_datetime" id="publish_datetime"
                                 name="publish_datetime" x-ref="addDate" />
                             <x-error-input name="publish_datetime" />
                         </div>
@@ -38,7 +38,7 @@
                             @if ($image)
                                 <img src="{{ $image->temporaryUrl() }}" class="w-64 h-auto my-2">
                             @endif
-                            <input type="file" name="image" id="{{ $rand }}" accept="image/*" wire:model.defer="image"
+                            <input type="file" name="image" id="{{ $rand }}" accept="image/*" wire:model="image"
                                 style="border: 1px solid #ccc; padding: 5px; border-radius:5px">
                             <x-error-input name="image" />
                             <div wire:loading wire:target="image" class="mt-1 text-lg text-green-600 bold">Uploading...

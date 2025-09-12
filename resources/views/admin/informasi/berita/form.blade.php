@@ -1,16 +1,16 @@
 <x-card>
-    <form wire:submit.prevent="submit">
+    <form wire:submit="submit">
         <div class="text-sm text-gray-700">
             <div class="grid sm:grid-cols-2 sm:gap-6">
                 <div class="mb-3">
                     <label for="judul" class="block mb-1 font-bold">Judul</label>
-                    <x-input type="text" class="w-full" wire:model.defer="judul" id="judul" />
+                    <x-input type="text" class="w-full" wire:model="judul" id="judul" />
                     <x-error-input name="judul" />
                 </div>
 
                 <div class="mb-3">
                     <label for="penulis" class="block mb-1 font-bold">Penulis</label>
-                    <x-input type="text" class="w-full" wire:model.defer="penulis" id="penulis" />
+                    <x-input type="text" class="w-full" wire:model="penulis" id="penulis" />
                     <x-error-input name="penulis" />
                 </div>
             </div>
@@ -18,12 +18,12 @@
             <div class="grid sm:grid-cols-2 sm:gap-6">
                 <div class="mb-3">
                     <label for="hastags" class="block mb-1 font-bold">Hastags</label>
-                    <x-input type="text" class="w-full" wire:model.defer="hastags" id="hastags" />
+                    <x-input type="text" class="w-full" wire:model="hastags" id="hastags" />
                 </div>
 
                 <div class="mb-3">
                     <x-label-input for="waktuPublish">Waktu Publish</x-label-input>
-                    <x-date-input wire:model.defer="waktuPublish" id="waktuPublish" name="waktuPublish" />
+                    <x-date-input wire:model="waktuPublish" id="waktuPublish" name="waktuPublish" />
                     <x-error-input name="waktuPublish" />
                 </div>
             </div>
@@ -31,7 +31,7 @@
             <div class="grid sm:grid-cols-2 sm:gap-6">
                 <div class="mb-3">
                     <label for="kategori" class="block mb-1 font-bold">Kategori</label>
-                    <x-select-form wire:model.defer="kategori" id="kategori">
+                    <x-select-form wire:model="kategori" id="kategori">
                         <option>Pilih Kategori</option>
                         <option value="{{ CATEGORY_BERITA_PRA_PKKMB }}">Pra PKKMB</option>
                         <option value="{{ CATEGORY_BERITA_MASA_PKKMB }}">Masa PKKMB</option>
@@ -68,7 +68,7 @@
                     <x-button x-on:click="$refs.inputFile.click()" class="bg-green-500 rounded-3xl hover:bg-green-600"
                         type="button">Pilih File</x-button>
 
-                    <input type="file" x-ref="inputFile" wire:model="thumbnails" class="hidden" id="thumbnails">
+                    <input type="file" x-ref="inputFile" wire:model.live="thumbnails" class="hidden" id="thumbnails">
                     <x-error-input name="thumbnails" />
 
                     <div wire:loading wire:target="thumbnails" class="text-xs text-gray-500">Uploading...
@@ -78,7 +78,7 @@
 
             <div class="z-0">
                 <div x-data="quillEditor()">
-                    <input type="hidden" x-ref="input" wire:model.defer="konten">
+                    <input type="hidden" x-ref="input" wire:model="konten">
                     <div wire:ignore>
                         <div x-ref="editor">{!! $konten !!}</div>
                     </div>

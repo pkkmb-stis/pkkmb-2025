@@ -1,12 +1,12 @@
-<div x-data="{ showModalDetail: @entangle('showModalDetail') }">
+<div x-data="{ showModalDetail: @entangle('showModalDetail').live }">
     <div x-cloak x-show="showModalDetail">
         <x-modal>
             <div class="px-5 py-6 bg-white">
                 <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Detail Timeline</p>
-                <form wire:submit.prevent="update" class="text-sm text-gray-700">
+                <form wire:submit="update" class="text-sm text-gray-700">
                     <div class="mb-3">
                         <x-label-input for="title2">Judul</x-label-input>
-                        <x-input type="text" class="w-full" wire:model.defer="title" id="title2"
+                        <x-input type="text" class="w-full" wire:model="title" id="title2"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="title" />
                     </div>
@@ -14,14 +14,14 @@
                     <div class="grid sm:grid-cols-2 sm:gap-6">
                         <div class="mb-3">
                             <x-label-input for="waktuMulai2">Waktu Mulai</x-label-input>
-                            <x-date-input wire:model.defer="waktuMulai" id="waktuMulai2" name="waktuMulai"
+                            <x-date-input wire:model="waktuMulai" id="waktuMulai2" name="waktuMulai"
                                 disabled="{{ !$canUpdate }}" />
                             <x-error-input name="waktuMulai" />
                         </div>
 
                         <div class="mb-3">
                             <x-label-input for="waktuAkhir2">Waktu Akhir</x-label-input>
-                            <x-date-input wire:model.defer="waktuAkhir" id="waktuAkhir2" name="waktuAkhir"
+                            <x-date-input wire:model="waktuAkhir" id="waktuAkhir2" name="waktuAkhir"
                                 disabled="{{ !$canUpdate }}" />
                             <x-error-input name="waktuAkhir" />
                         </div>
@@ -29,7 +29,7 @@
 
                     <div class="mb-3">
                         <x-label-input for="caption2">Deskripsi</x-label-input>
-                        <x-textarea name="caption" wire:model.defer="caption" id="caption2" cols="30"
+                        <x-textarea name="caption" wire:model="caption" id="caption2" cols="30"
                             rows="8" disabled="{{ !$canUpdate }}">
                         </x-textarea>
                         <x-error-input name="caption" />
@@ -37,14 +37,14 @@
 
                     <div class="mb-3">
                         <x-label-input for="location2">Lokasi</x-label-input>
-                        <x-input type="text" class="w-full" wire:model.defer="location" id="location2"
+                        <x-input type="text" class="w-full" wire:model="location" id="location2"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="location" />
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="link2">Link Galeri</x-label-input>
-                        <x-input type="text" class="w-full" wire:model.defer="link_gallery" id="link2"
+                        <x-input type="text" class="w-full" wire:model="link_gallery" id="link2"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="link_gallery" />
                     </div>

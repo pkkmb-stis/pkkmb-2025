@@ -2,22 +2,22 @@
   <x-modal>
     <div class="px-5 py-6 bg-white">
       <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Edit Materi</p>
-      <form wire:submit.prevent="update">
+      <form wire:submit="update">
         <div class="mb-3">
           <x-label-input for="title">Judul Materi</x-label-input>
-          <x-input wire:model.defer='title' value="{{ $title ?? '' }}" type="text" class="w-full" />
+          <x-input wire:model='title' value="{{ $title ?? '' }}" type="text" class="w-full" />
           <x-error-input name="title" />
         </div>
 
         <div class="mb-3">
           <x-label-input for="publish_datetime2">Tanggal Publish</x-label-input>
-          <x-date-input wire:model.defer='publish_datetime' id='publish_datetime2' />
+          <x-date-input wire:model='publish_datetime' id='publish_datetime2' />
           <x-error-input name="publish_datetime" />
         </div>
 
         <div class="mb-3">
           <x-label-input for="link">Link Materi</x-label-input>
-          <x-textarea name="link" wire:model.defer="link" id="link" cols="30" rows="8">
+          <x-textarea name="link" wire:model="link" id="link" cols="30" rows="8">
           </x-textarea>
           <x-error-input name="link" />
         </div>

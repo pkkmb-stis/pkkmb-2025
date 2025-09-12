@@ -6,7 +6,7 @@
                 @include('admin.administrator.role.add')
             @endcan
         </div>
-        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari role .."
+        <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari role .."
             class="block w-full mb-3 placeholder-gray-400" />
 
         <x-table :theads="['role', 'penjelasan', 'aksi']" :overflow="false">

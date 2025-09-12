@@ -1,4 +1,4 @@
-<div x-data="{ showModalDetail: @entangle('showModalDetail') }" x-on:close-modal.window="showModalDetail = false">
+<div x-data="{ showModalDetail: @entangle('showModalDetail').live }" x-on:close-modal.window="showModalDetail = false">
     <x-card class="px-2 sm:px-5">
         <h5 class="mb-4 text-lg font-medium font-bohemianSoul">Poin Terbaru</h5>
         <div class="divide-y">

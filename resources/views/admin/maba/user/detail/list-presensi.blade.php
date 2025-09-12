@@ -1,4 +1,4 @@
-<div x-data="{ showDetailAbsensi: @entangle('showDetailAbsensi') }">
+<div x-data="{ showDetailAbsensi: @entangle('showDetailAbsensi').live }">
     <x-card>
         <h5 class="mb-4 text-lg font-normal text-gray-700 font-bohemianSoul">List Presensi</h5>
         <x-table :theads="['Event', 'Waktu Mulai Presensi', 'Waktu Absen', 'Status', 'Aksi']" class="mb-3" :breakpointVisibility="[

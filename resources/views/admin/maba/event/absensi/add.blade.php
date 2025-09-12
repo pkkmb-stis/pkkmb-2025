@@ -1,4 +1,4 @@
-<div class="inline" x-data="{showModalAddAbsensi : @entangle('showModalAddAbsensi')}">
+<div class="inline" x-data="{showModalAddAbsensi : @entangle('showModalAddAbsensi').live}">
     <div x-cloak x-show="showModalAddAbsensi" class="inline">
         <x-modal>
             <div class="p-5 bg-white">
@@ -16,10 +16,10 @@
                 </div>
 
                 <div class="mt-2">
-                    <form wire:submit.prevent="addAbsensi" class="mt-3 text-sm text-gray-700">
+                    <form wire:submit="addAbsensi" class="mt-3 text-sm text-gray-700">
                         <div class="mb-3">
                             <x-label-input for="keterangan">Status Absensi</x-label-input>
-                            <x-select-form wire:model.defer="statusAbsensi">
+                            <x-select-form wire:model="statusAbsensi">
                                 <option>Pilih Status</option>
                                 @foreach ([0, 1, 2, 3, 4] as $status)
                                 <option value="{{ $status }}">{{ getStatusAbsensi($status) }}</option>
@@ -30,7 +30,7 @@
 
                         <div class="mb-3">
                             <x-label-input for="keterangan">Keterangan</x-label-input>
-                            <x-textarea name="keterangan" wire:model.defer="keterangan" id="keterangan" cols="30"
+                            <x-textarea name="keterangan" wire:model="keterangan" id="keterangan" cols="30"
                                 rows="4">
                             </x-textarea>
                         </div>

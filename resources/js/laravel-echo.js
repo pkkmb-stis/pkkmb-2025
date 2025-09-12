@@ -24,13 +24,14 @@ window.Echo.private('pengaduan')
         if (pengaduanNotif) {
             if (event.pengaduanCount > 0) {
                 pengaduanNotif.innerText = event.pengaduanCount;
-                Livewire.emit('pengaduanUpdated', event.pengaduanCount);
+                Livewire.dispatch('pengaduanUpdated', { count: event.pengaduanCount });
+
             } else {
                 pengaduanNotif.style.display = 'none';
-                Livewire.emit('pengaduanUpdated');
+                Livewire.dispatch('pengaduanUpdated');
             }
         } else {
-            Livewire.emit('pengaduanUpdated');
+            Livewire.dispatch('pengaduanUpdated');
         }
     });
 

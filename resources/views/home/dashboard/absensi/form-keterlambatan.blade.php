@@ -1,4 +1,4 @@
-<div x-data="{ openFormKeterlambatan: @entangle('openFormKeterlambatan') }">
+<div x-data="{ openFormKeterlambatan: @entangle('openFormKeterlambatan').live }">
     <div x-cloak x-show="openFormKeterlambatan">
         @if ($event)
             <x-modal>
@@ -10,12 +10,12 @@
                         <h5 class="font-poppins mb-4 font-semibold">Formulir Presensi {{ $event->title ?? '' }}</h5>
                     @endif
                     <div>
-                        <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                        <form wire:submit="submit" class="text-sm text-gray-700">
 
                             @can(PERMISSION_ADD_ABSENSI)
                                 <div class="mb-3">
                                     <x-label-input for="nama">Nama</x-label-input>
-                                    <x-select-multi name="nama" wire:model.defer="nama" id="nama">
+                                    <x-select-multi name="nama" wire:model="nama" id="nama">
                                         <option value="">Pilih Anggota</option>
                                         @forelse ($kelompok as $k)
                                             @forelse ($k->anggota as $anggota)

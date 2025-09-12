@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ openedit: @entangle('openedit'), showModalDelete: false, jenispoinTitle: '', user_name: '', update_pada: '', penebusanId: '', showModalDetail: @entangle('showModalDetail'), isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
+    <div x-data="{ openedit: @entangle('openedit').live, showModalDelete: false, jenispoinTitle: '', user_name: '', update_pada: '', penebusanId: '', showModalDetail: @entangle('showModalDetail').live, isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
         x-on:livewire-upload-finish="isUploading = false" x-on:livewire-upload-error="isUploading = false"
         x-on:livewire-upload-progress="progress = $event.detail.progress" x-init="document.addEventListener('click', function(event) {
             if (window.innerWidth <= 640) {
@@ -32,14 +32,14 @@
                 </div>
             </div>
             <div class="grid mb-3 lg:grid-cols-2 lg:gap-6 gap-y-3">
-                <x-select-form wire:model.lazy="selectedStatus">
+                <x-select-form wire:model.blur="selectedStatus">
                     <option value="-1">Semua Status</option>
                     @foreach (MAP_CATEGORY['penebusan_user'] as $status)
                         <option value="{{ $status }}">{{ $status }}</option>
                     @endforeach
                 </x-select-form>
 
-                <x-select-form wire:model.lazy="selectedTipe">
+                <x-select-form wire:model.blur="selectedTipe">
                     <option value="-1">Semua Tipe</option>
                     @foreach (MAP_CATEGORY['tipe_poin'] as $key => $tipe)
                         <option value="{{ $key }}">{{ $tipe }}</option>
@@ -47,7 +47,7 @@
                 </x-select-form>
             </div>
 
-            <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari nama atau nimb"
+            <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari nama atau nimb"
                 class="block w-full mb-3 placeholder-gray-400" />
             <div class="hidden sm:block">
                 <x-table :theads="['Aksi', 'Nama', 'Status', 'Tipe', 'Diupdate Pada']" class="mb-3" :breakpointVisibility="[

@@ -2,10 +2,10 @@
   <x-modal>
     <div class="px-5 py-6 bg-white">
       <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Edit Pengumuman</p>
-      <form wire:submit.prevent="update">
+      <form wire:submit="update">
         <div class="mb-3">
           <x-label-input for="title">Judul Pengumuman</x-label-input>
-          <x-input wire:model.defer='title' value="{{ $title ?? '' }}" type="text" class="w-full" />
+          <x-input wire:model='title' value="{{ $title ?? '' }}" type="text" class="w-full" />
           <x-error-input name="title" />
         </div>
 
@@ -13,7 +13,7 @@
           <x-label-input for="content">Isi Pengumuman</x-label-input>
           <div x-data="quillEditor2()"
             x-effect="const editor = $refs.editor2.querySelector('.ql-editor'); editor ? editor.innerHTML = '{{ $content }}' : ''">
-            <input type="hidden" x-ref="input2" wire:model.defer="content">
+            <input type="hidden" x-ref="input2" wire:model="content">
             <div wire:ignore>
               <div x-ref="editor2">{!! $content !!}</div>
             </div>
@@ -23,7 +23,7 @@
 
         <div class="mb-3">
           <x-label-input for="publish_datetime2">Tanggal Publish</x-label-input>
-          <x-date-input wire:model.defer='publish_datetime' id='publish_datetime2' />
+          <x-date-input wire:model='publish_datetime' id='publish_datetime2' />
           <x-error-input name="publish_datetime" />
         </div>
 
@@ -38,7 +38,7 @@
           @endif
 
           <x-label-input for="image">Ubah Gambar</x-label-input>
-          <x-input type="file" name="image" wire:model="image" style="border: 1px solid #ccc; padding: 5px; border-radius:5px" />
+          <x-input type="file" name="image" wire:model.live="image" style="border: 1px solid #ccc; padding: 5px; border-radius:5px" />
           <x-error-input name="image" />
           <div wire:loading wire:target="image" class="mt-1 text-lg text-green-600 bold">Uploading...
           </div>

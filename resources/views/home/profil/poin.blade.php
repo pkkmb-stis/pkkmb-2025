@@ -1,4 +1,4 @@
-<div x-data="{ showModalDetail: @entangle('showModalDetail') }">
+<div x-data="{ showModalDetail: @entangle('showModalDetail').live }">
     @if ($check)
         <div class="grid grid-cols-1 gap-3">
             <div class="col-span-1 ">

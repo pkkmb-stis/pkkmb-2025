@@ -11,14 +11,14 @@
                 @endcan
             </div>
             <div class="mb-3">
-                <x-select-form wire:model.lazy="isPublished" id="isPublished">
+                <x-select-form wire:model.blur="isPublished" id="isPublished">
                     <option value="-1">Semua Materi</option>
                     <option value="0">Belum Publish</option>
                     <option value="1">Publish</option>
                 </x-select-form>
             </div>
 
-            <x-input wire:model.debounce.200ms="search" type="text"
+            <x-input wire:model.live.debounce.200ms="search" type="text"
                 placeholder="Cari Berdasarkan Judul atau Penulis" class="block w-full mb-3 placeholder-gray-400" />
 
             <div class="hidden sm:block">

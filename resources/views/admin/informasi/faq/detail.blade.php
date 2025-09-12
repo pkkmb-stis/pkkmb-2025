@@ -1,19 +1,19 @@
-<div x-data="{ showModalDetail: @entangle('showModalDetail') }">
+<div x-data="{ showModalDetail: @entangle('showModalDetail').live }">
     <div x-cloak x-show="showModalDetail">
         <x-modal>
             <div class="px-5 py-6 bg-white">
                 <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Detail FAQ</p>
-                <form wire:submit.prevent="update" class="text-sm text-gray-700">
+                <form wire:submit="update" class="text-sm text-gray-700">
                     <div class="mb-3">
                         <x-label-input for="pertanyaan2">Pertanyaan</x-label-input>
-                        <x-textarea cols="30" rows="6" wire:model.defer="pertanyaan" id="pertanyaan2"
+                        <x-textarea cols="30" rows="6" wire:model="pertanyaan" id="pertanyaan2"
                             disabled="{{ !$canUpdate }}" />
                         <x-error-input name="pertanyaan" />
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="jawaban2">Jawaban</x-label-input>
-                        <x-textarea name="jawaban" wire:model.defer="jawaban" id="jawaban2" cols="30"
+                        <x-textarea name="jawaban" wire:model="jawaban" id="jawaban2" cols="30"
                             rows="10" disabled="{{ !$canUpdate }}">
                         </x-textarea>
                         <x-error-input name="jawaban" />

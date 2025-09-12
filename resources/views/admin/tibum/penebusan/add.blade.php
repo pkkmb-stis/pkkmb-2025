@@ -12,7 +12,7 @@
             <x-modal>
                 <div class="px-5 py-6 bg-white">
                     <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah Penebusan</p>
-                    <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                    <form wire:submit="submit" class="text-sm text-gray-700">
                         <div class="mb-3">
                             <x-label-input for="selectusers">Pilih Maba/Panitia</x-label-input>
                             <div wire:ignore>
@@ -44,7 +44,7 @@
 
                         <div class="mb-3">
                             <x-label-input for="status">Status</x-label-input>
-                            <x-select-form id='sele' wire:model.defer="status">
+                            <x-select-form id='sele' wire:model="status">
                                 <option value="" class="hidden" selected="selected">Pilih status...</option>
                                 @foreach (MAP_CATEGORY['penebusan_user'] as $j)
                                     <option value="{{ $j }}">{{ $j }}</option>
@@ -55,7 +55,7 @@
 
                         <div class="mb-3">
                             <x-label-input for="deadline1">Deadline</x-label-input>
-                            <x-date-input wire:model.defer="deadline" id="deadline1" name="deadline" />
+                            <x-date-input wire:model="deadline" id="deadline1" name="deadline" />
                             <x-error-input name="deadline" />
                         </div>
 
@@ -91,7 +91,7 @@
                             </p>
 
 
-                            <input type="file" wire:model="file" id="fileUpload" class="hidden">
+                            <input type="file" wire:model.live="file" id="fileUpload" class="hidden">
                             <x-error-input name="file" />
 
                             <div x-show="isUploading">

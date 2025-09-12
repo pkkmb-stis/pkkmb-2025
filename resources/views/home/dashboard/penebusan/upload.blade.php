@@ -1,4 +1,4 @@
-<div x-data="{ openedit: @entangle('openedit'), isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
+<div x-data="{ openedit: @entangle('openedit').live, isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
   x-on:livewire-upload-finish="isUploading = false" x-on:livewire-upload-error="isUploading = false"
   x-on:livewire-upload-progress="progress = $event.detail.progress">
 
@@ -15,7 +15,7 @@
             </p>
           </div>
 
-          <form wire:submit.prevent="update">
+          <form wire:submit="update">
             <div class="mb-3">
               @if ($file)
                 <?php
@@ -41,7 +41,7 @@
               </div>
 
 
-              <input type="file" wire:model="file" id="fileUpload" class="hidden">
+              <input type="file" wire:model.live="file" id="fileUpload" class="hidden">
               <x-error-input name="file" />
 
               <div x-show="isUploading">

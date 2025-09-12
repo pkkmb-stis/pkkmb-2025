@@ -113,16 +113,16 @@
             <x-modal>
                 <div class="px-5 py-6 bg-white">
                     <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Ubah Indikator</p>
-                    <form wire:submit.prevent="ubahIndikator" class="text-sm text-gray-700">
+                    <form wire:submit="ubahIndikator" class="text-sm text-gray-700">
                         <div class="mb-3">
                             <label for="nama" class="block mb-1 font-bold">Indikator</label>
-                            <x-input type="text" class="w-full" wire:model.defer="nama"
+                            <x-input type="text" class="w-full" wire:model="nama"
                                 disabled="{{ !$canEdit }}" />
                             <x-error-input name="nama" />
                         </div>
                         <div class="mb-3">
                             <label for="dimensi" class="block mb-1 font-bold">Dimensi</label>
-                            <x-select-form id="dimensi" wire:model.defer="dimensi" disabled="{{ !$canEdit }}">
+                            <x-select-form id="dimensi" wire:model="dimensi" disabled="{{ !$canEdit }}">
                                 <option value="{{ DIMENSI_NASIONALISME }}">{{ DIMENSI_NASIONALISME }}</option>
                                 <option value="{{ DIMENSI_BUDI_PEKERTI }}">{{ DIMENSI_BUDI_PEKERTI }}</option>
                                 <option value="{{ DIMENSI_BERINTELEKTUAL }}">{{ DIMENSI_BERINTELEKTUAL }}</option>
@@ -134,13 +134,13 @@
                         <div class="mb-3">
                             <label for="sks" class="block mb-1 font-bold">SKS</label>
                             <x-input type="number" min="1" max="4" class="w-full"
-                                wire:model.defer="sks" disabled="{{ !$canEdit }}" />
+                                wire:model="sks" disabled="{{ !$canEdit }}" />
                             <x-error-input name="sks" />
                         </div>
 
                         <div class="mb-3">
                             <x-label-input for="detail">Detail</x-label-input>
-                            <x-textarea name="detail" wire:model.defer="detail" id="detail" cols="30"
+                            <x-textarea name="detail" wire:model="detail" id="detail" cols="30"
                                 rows="6" disabled="{{ !$canEdit }}">
                             </x-textarea>
                             <x-error-input name="detail" />

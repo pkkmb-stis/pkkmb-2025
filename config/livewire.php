@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'class_namespace' => 'App\\Http\\Livewire',
+    'class_namespace' => 'App\\Livewire',
 
     /*
     |--------------------------------------------------------------------------
@@ -41,33 +41,7 @@ return [
 
     'layout' => 'layouts.app',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Livewire Assets URL
-    |--------------------------------------------------------------------------
-    |
-    | This value sets the path to Livewire JavaScript assets, for cases where
-    | your app's domain root is not the correct path. By default, Livewire
-    | will load its JavaScript assets from the app's "relative root".
-    |
-    | Examples: "/assets", "myurl.com/app".
-    |
-    */
-
-    'asset_url' => env('ASSET_URL', null),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Livewire Endpoint Middleware Group
-    |--------------------------------------------------------------------------
-    |
-    | This value sets the middleware group that will be applied to the main
-    | Livewire "message" endpoint (the endpoint that gets hit everytime
-    | a Livewire component updates). It is set to "web" by default.
-    |
-    */
-
-    'middleware_group' => 'web',
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -94,20 +68,16 @@ return [
         'max_upload_time' => 5, // Max duration (in minutes) before an upload gets invalidated.
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Manifest File Path
-    |--------------------------------------------------------------------------
-    |
-    | This value sets the path to the Livewire manifest file.
-    | The default should work for most cases (which is
-    | "<app_root>/bootstrap/cache/livewire-components.php)", but for specific
-    | cases like when hosting on Laravel Vapor, it could be set to a different value.
-    |
-    | Example: for Laravel Vapor, it would be "/tmp/storage/bootstrap/cache/livewire-components.php".
-    |
-    */
+ 
 
-    'manifest_path' => null,
+    'legacy_model_binding' => true,
+ 
+    'inject_assets' => true,
+    
+    'inject_morph_markers' => true,
+    
+    'navigate' => false,
+    
+    'pagination_theme' => 'tailwind',
 
 ];

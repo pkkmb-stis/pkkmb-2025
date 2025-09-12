@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ rekapHarian: @entangle('rekapHarian') }">
+    <div x-data="{ rekapHarian: @entangle('rekapHarian').live }">
         <x-button class="uppercase rounded-3xl text-coklat-1 bg-kuning-1 hover:bg-kuning-hover whitespace-nowrap"
             type="button" x-on:click="rekapHarian = true">
             Rekap Harian
@@ -15,7 +15,7 @@
                         <div>
                             <x-label-input for="password">Tanggal</x-label-input>
                             <div class="mb-3">
-                                <x-date-wo-time-input wire:model.lazy="tanggal_rekap" id="tanggal_rekap"
+                                <x-date-wo-time-input wire:model.blur="tanggal_rekap" id="tanggal_rekap"
                                     name="tanggal_rekap" x-ref="addDate" />
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-<div x-data="{ showDetailGallery: @entangle('showDetailGallery') }">
+<div x-data="{ showDetailGallery: @entangle('showDetailGallery').live }">
     @if ($gallery)
         <div x-cloak x-show="showDetailGallery">
             <x-modal maxWidth="max-w-4xl">
@@ -6,18 +6,18 @@
                     <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Edit
                         {{ getCategoryGallery($gallery->category) }}</p>
 
-                    <form wire:submit.prevent="update" class="text-sm text-gray-700">
+                    <form wire:submit="update" class="text-sm text-gray-700">
                         <div class="grid sm:grid-cols-2 sm:gap-6">
                             <div class="mb-3">
                                 <x-label-input for="title">Judul</x-label-input>
-                                <x-input type="text" class="w-full" wire:model.defer="title"
+                                <x-input type="text" class="w-full" wire:model="title"
                                     disabled="{{ !$canUpdate }}" />
                                 <x-error-input name="title" />
                             </div>
                             @if ($gallery->category == CATEGORY_GALLERY_FOTO)
                                 <div class="mb-3">
                                     <x-label-input for="event_id">Pilih Timeline</x-label-input>
-                                    <x-select-form wire:model.defer="event_id" id="event_id">
+                                    <x-select-form wire:model="event_id" id="event_id">
                                         <option value="">Pilih Timeline</option>
                                         @foreach ($events as $event)
                                             <option value="{{ $event->id }}">{{ $event->title }}</option>
@@ -28,7 +28,7 @@
                             @else
                                 <div class="mb-3">
                                     <x-label-input for="urutan">Urutan di Home</x-label-input>
-                                    <x-input type="number" class="w-full" wire:model.defer="urutan" min="0"
+                                    <x-input type="number" class="w-full" wire:model="urutan" min="0"
                                         disabled="{{ !$canUpdate }}" />
                                     <x-error-input name="urutan" />
                                 </div>
@@ -47,7 +47,7 @@
                                 @else
                                     <div class="mb-3">
                                         <x-label-input for="filename">Link Embbed Youtube</x-label-input>
-                                        <x-textarea name="filename" wire:model.defer="filename" cols="30"
+                                        <x-textarea name="filename" wire:model="filename" cols="30"
                                             rows="8" disabled="{{ !$canUpdate }}">
                                         </x-textarea>
                                         <x-error-input name="filename" />
@@ -60,7 +60,7 @@
 
                         {{-- <div class="mb-3">
               <x-label-input for="caption">Caption</x-label-input>
-              <x-textarea name="caption" wire:model.defer="caption" id="caption" cols="30" rows="6"
+              <x-textarea name="caption" wire:model="caption" id="caption" cols="30" rows="6"
                 disabled="{{ !$canUpdate }}">
               </x-textarea>
               <x-error-input name="caption" />

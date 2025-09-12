@@ -6,7 +6,7 @@
                 @livewire('admin.lapk.kelompok.add')
             @endcan
         </div>
-        <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari nama kelompok/pendamping..."
+        <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari nama kelompok/pendamping..."
             class="block w-full mb-3 placeholder-gray-400" />
         <x-table :theads="['nama kelompok', 'pendamping', 'jumlah anggota', 'aksi']" :breakpointVisibility="[
             1 => ['lg' => 'hidden'], // Hide pendamping on lg

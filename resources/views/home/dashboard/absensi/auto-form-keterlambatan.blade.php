@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ open: @entangle('openAutoFormKeterlambatan') }">
+    <div x-data="{ open: @entangle('openAutoFormKeterlambatan').live }">
         <div x-show="open">
             @if ($event && $user)
             <x-modal>
@@ -8,7 +8,7 @@
                     <small class="mb-4">Diperuntukkan untuk presensi keterlambatan</small>
 
                     <div>
-                        <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                        <form wire:submit="submit" class="text-sm text-gray-700">
                             <div class="mb-3">
                                 <x-label-input for="nama">Nama</x-label-input>
                                 <x-input id="nama" name="nama" type="text" value="{{ $user->name }}" class="w-full" readonly />
@@ -52,7 +52,7 @@
                             @if ($kehadiran !== 'tepat_waktu')
                                 <div class="mb-3">
                                     <x-label-input for="alasan">Alasan</x-label-input>
-                                    <x-textarea name="alasan" wire:model.defer="alasan" id="alasan" cols="30" rows="6"></x-textarea>
+                                    <x-textarea name="alasan" wire:model="alasan" id="alasan" cols="30" rows="6"></x-textarea>
                                     <x-error-input name="alasan" />
                                 </div>
                             @endif
@@ -85,7 +85,7 @@
 
                                 <div wire:loading wire:target="fotoBukti" class="text-xs text-gray-500">Uploading...
                                 </div>
-                                <input type="file" wire:model="fotoBukti" id="fotoBukti" class="hidden">
+                                <input type="file" wire:model.live="fotoBukti" id="fotoBukti" class="hidden">
                                 <x-error-input name="fotoBukti" />
                             </div>
 

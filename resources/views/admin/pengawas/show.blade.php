@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ openedit: @entangle('openedit'), showModalDelete: false, laporanKegiatanTitle: '', laporanKegiatanId: '', showModalDetail: @entangle('showModalDetail') }">
+    <div x-data="{ openedit: @entangle('openedit').live, showModalDelete: false, laporanKegiatanTitle: '', laporanKegiatanId: '', showModalDetail: @entangle('showModalDetail').live }">
         <x-card class="mb-8">
             <div class="flex items-center justify-between mb-3">
                 <h5 class="text-xl font-normal text-gray-700 font-bohemianSoul">Daftar Laporan Kegiatan PKKMB</h5>
@@ -8,13 +8,13 @@
                 @endcan
             </div>
             <div class="mb-3">
-                <x-select-form wire:model.lazy="isPublished" id="isPublished">
+                <x-select-form wire:model.blur="isPublished" id="isPublished">
                     <option value="-1">Semua Laporan Kegiatan</option>
                     <option value="0">Belum Publish</option>
                     <option value="1">Publish</option>
                 </x-select-form>
             </div>
-            <x-input wire:model.debounce.200ms="search" type="text"
+            <x-input wire:model.live.debounce.200ms="search" type="text"
                 placeholder="Cari berdasarkan judul laporan ..." class="block w-full mb-3 placeholder-gray-400" />
 
             <div class="hidden sm:block">

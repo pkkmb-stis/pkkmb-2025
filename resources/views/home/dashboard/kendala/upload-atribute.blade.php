@@ -30,6 +30,6 @@
         <div wire:loading wire:target="fotoAtribute" class="text-xs text-gray-500">Uploading...
         </div>
 
-        <input type="file" wire:model="fotoAtribute" id="fotoAtribute" class="hidden">
+        <input type="file" wire:model.live="fotoAtribute" id="fotoAtribute" class="hidden">
     </div>
 </div>

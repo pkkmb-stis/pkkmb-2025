@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{showModalDetail : @entangle('showModalDetail')}">
+    <div x-data="{showModalDetail : @entangle('showModalDetail').live}">
 
         <x-card class="bg-opacity-70">
             <div class="divide-y">

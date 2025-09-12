@@ -1,4 +1,4 @@
-<div x-data="{ showDetailKendala: @entangle('showDetailKendala') }">
+<div x-data="{ showDetailKendala: @entangle('showDetailKendala').live }">
     <x-card class="px-2 sm:px-5">
         <h5 class="mb-4 font-bohemianSoul text-lg font-medium">List Pengaduan</h5>
         <div class="divide-y">

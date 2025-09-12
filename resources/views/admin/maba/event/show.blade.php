@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ openedit: @entangle('openedit'), showModalDelete: false, eventTitle: '', eventId: '' }">
+    <div x-data="{ openedit: @entangle('openedit').live, showModalDelete: false, eventTitle: '', eventId: '' }">
         <x-card class="mb-8">
             <div class="flex items-center justify-between mb-3">
                 <h5 class="text-xl font-normal text-gray-700 font-bohemianSoul">Daftar Acara</h5>
@@ -10,7 +10,7 @@
                     @endcan
                 </div>
             </div>
-            <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari Berdasarkan Nama Acara"
+            <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari Berdasarkan Nama Acara"
                 class="block w-full mb-3 placeholder-gray-400" />
             <div class="hidden sm:block">
                 <x-table :theads="['Acara', 'Waktu Mulai Absen', 'Waktu Akhir Absen', 'Aksi']" class="mb-3" :breakpointVisibility="[

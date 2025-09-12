@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ showModalDetail: @entangle('showModalDetail') }">
+    <div x-data="{ showModalDetail: @entangle('showModalDetail').live }">
 
         @if ($user->is_maba)
             <div class="mb-3 grid grid-cols-1 gap-6 lg:grid-cols-12" wire:ignore>

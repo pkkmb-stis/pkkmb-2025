@@ -29,7 +29,7 @@
         <div class="mt-5">
             @can(PERMISSION_UPDATE_PERMISSION_ROLE)
             <h5 class="mb-2 font-bold text-gray-700">Tambah Permission</h5>
-            <x-select-form wire:model.defer="permissionToAdd">
+            <x-select-form wire:model="permissionToAdd">
                 <slot>
                     <option>Pilih Permission</option>
                     @foreach ($permissions as $p)

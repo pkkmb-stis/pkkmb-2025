@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="mb-3">
-            <x-select-form name="kelompok" id="kelompok" wire:model.lazy="kelompok">
+            <x-select-form name="kelompok" id="kelompok" wire:model.blur="kelompok">
                 <option value="-1">Semua Kelompok</option>
                 <option value="0">Panitia</option>
                 @foreach ($daftar_kelompok as $k)
@@ -19,7 +19,7 @@
             </x-select-form>
         </div>
 
-        <x-input wire:model.debounce.200ms="search" type="text"
+        <x-input wire:model.live.debounce.200ms="search" type="text"
             placeholder="Cari berdasarkan nama, no ujian, atau nimb" class="block w-full mb-3 placeholder-gray-400" />
         <div class="hidden sm:block">
             <x-table :theads="['nama', 'no ujian', 'nimb', 'email', 'aksi']" :breakpointVisibility="[

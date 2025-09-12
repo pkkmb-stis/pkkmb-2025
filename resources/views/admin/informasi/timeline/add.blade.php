@@ -1,4 +1,4 @@
-<div x-data="{ showModalAdd: @entangle('showModalAdd') }">
+<div x-data="{ showModalAdd: @entangle('showModalAdd').live }">
     <x-button class="uppercase rounded-full opacity-100 bg-coklat-1 hover:bg-base-brown-600 whitespace-nowrap"
         type="button" x-on:click="showModalAdd = true">
         Tambah Timeline
@@ -7,30 +7,30 @@
         <x-modal>
             <div class="px-5 py-6 bg-white">
                 <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah Timeline</p>
-                <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                <form wire:submit="submit" class="text-sm text-gray-700">
                     <div class="mb-3">
                         <x-label-input for="title">Judul</x-label-input>
-                        <x-input type="text" class="w-full" wire:model.defer="title" id="title" />
+                        <x-input type="text" class="w-full" wire:model="title" id="title" />
                         <x-error-input name="title" />
                     </div>
 
                     <div class="grid sm:grid-cols-2 sm:gap-6">
                         <div class="mb-3">
                             <x-label-input for="waktuMulai">Waktu Mulai</x-label-input>
-                            <x-date-input wire:model.defer="waktuMulai" id="waktuMulai" name="waktuMulai" />
+                            <x-date-input wire:model="waktuMulai" id="waktuMulai" name="waktuMulai" />
                             <x-error-input name="waktuMulai" />
                         </div>
 
                         <div class="mb-3">
                             <x-label-input for="waktuAkhir">Waktu Akhir</x-label-input>
-                            <x-date-input wire:model.defer="waktuAkhir" id="waktuAkhir" name="waktuAkhir" />
+                            <x-date-input wire:model="waktuAkhir" id="waktuAkhir" name="waktuAkhir" />
                             <x-error-input name="waktuAkhir" />
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="caption">Deskripsi</x-label-input>
-                        <x-textarea name="caption" wire:model.defer="caption" id="caption" cols="30"
+                        <x-textarea name="caption" wire:model="caption" id="caption" cols="30"
                             rows="8">
                         </x-textarea>
                         <x-error-input name="caption" />
@@ -38,13 +38,13 @@
 
                     <div class="mb-3">
                         <x-label-input for="location">Lokasi</x-label-input>
-                        <x-input type="text" class="w-full" wire:model.defer="location" id="location" />
+                        <x-input type="text" class="w-full" wire:model="location" id="location" />
                         <x-error-input name="location" />
                     </div>
 
                     <div class="mb-3">
                         <x-label-input for="link">Link Galeri</x-label-input>
-                        <x-input type="text" class="w-full" wire:model.defer="link" id="link" />
+                        <x-input type="text" class="w-full" wire:model="link" id="link" />
                         <x-error-input name="link" />
                     </div>
 

@@ -9,7 +9,7 @@
                 <div class="px-5 py-6 bg-white">
                     <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah Jenis Poin Kelompok
                     </p>
-                    <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                    <form wire:submit="submit" class="text-sm text-gray-700">
                         <span class="mt-1 text-xs italic text-gray-400">
                             Penentuan jenis poin kelompok terbaik hanya dapat dilakukan sekali dalam satu hari. Jika
                             ingin membatalkan
@@ -19,7 +19,7 @@
                         <div class="grid lg:grid-cols-2 lg:gap-6">
                             <div class="mb-3">
                                 <x-label-input for="kelompok">Pilih Kelompok</x-label-input>
-                                <x-select-form wire:model.lazy="kelompok">
+                                <x-select-form wire:model.blur="kelompok">
                                     <option class="hidden" selected>Pilih kelompok...</option>
                                     @foreach ($kelompoks as $k)
                                         <option value="{{ $k->id }}">{{ $k->nama }}</option>
@@ -30,7 +30,7 @@
 
                             <div class="mb-3">
                                 <x-label-input for="jenis_poin">Jenis Poin</x-label-input>
-                                <x-select-form wire:model.lazy="jenis_poin">
+                                <x-select-form wire:model.blur="jenis_poin">
                                     <option class="hidden" selected>Pilih jenis poin kelompok...</option>
                                     @foreach ($jenis_poin_kelompok as $jpk)
                                         <option value="{{ $jpk->id }}">{{ $jpk->nama }}</option>

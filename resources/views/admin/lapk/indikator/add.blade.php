@@ -1,5 +1,5 @@
 <div>
-    <div x-data="{ isModalOpen: @entangle('isModalOpen') }">
+    <div x-data="{ isModalOpen: @entangle('isModalOpen').live }">
         <x-button class="uppercase rounded-3xl bg-coklat-1 hover:bg-base-brown-600 whitespace-nowrap" type="button"
             x-on:click="isModalOpen = true">
             Tambah Indikator
@@ -8,16 +8,16 @@
             <x-modal>
                 <div class="px-5 py-6 bg-white">
                     <p class="mb-4 text-lg font-semibold leading-3 text-gray-700 capitalize">Tambah Indikator</p>
-                    <form wire:submit.prevent="submit" class="text-sm text-gray-700">
+                    <form wire:submit="submit" class="text-sm text-gray-700">
                         <div class="mb-3">
                             <label for="nama2" class="block mb-1 font-bold">Indikator</label>
-                            <x-input type="text" class="w-full" wire:model.defer="nama" />
+                            <x-input type="text" class="w-full" wire:model="nama" />
                             <x-error-input name="nama" />
                         </div>
 
                         <div class="mb-3">
                             <label for="dimensi2" class="block mb-1 font-bold">Dimensi</label>
-                            <x-select-form id="dimensi2" wire:model.defer="dimensi">
+                            <x-select-form id="dimensi2" wire:model="dimensi">
                                 <option>Pilih Dimensi</option>
                                 <option value="{{ DIMENSI_NASIONALISME }}">{{ DIMENSI_NASIONALISME }}</option>
                                 <option value="{{ DIMENSI_BUDI_PEKERTI }}">{{ DIMENSI_BUDI_PEKERTI }}</option>
@@ -30,13 +30,13 @@
                         <div class="mb-3">
                             <label for="sks2" class="block mb-1 font-bold">SKS</label>
                             <x-input id="sks2" type="number" min="1" max="4" class="w-full"
-                                wire:model.defer="sks" />
+                                wire:model="sks" />
                             <x-error-input name="sks" />
                         </div>
 
                         <div class="mb-3">
                             <x-label-input for="detail2">Detail</x-label-input>
-                            <x-textarea name="detail" wire:model.defer="detail" id="detail2" cols="30"
+                            <x-textarea name="detail" wire:model="detail" id="detail2" cols="30"
                                 rows="6">
                             </x-textarea>
                             <x-error-input name="detail" />

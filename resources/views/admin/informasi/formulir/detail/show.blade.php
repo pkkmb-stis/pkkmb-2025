@@ -2,10 +2,10 @@
     <x-card>
         <!-- Filter Pencarian -->
         <div class="grid mb-3 lg:grid-cols-2 lg:gap-6 gap-y-3">
-            <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari berdasarkan nama atau NIMB"
+            <x-input wire:model.live.debounce.200ms="search" type="text" placeholder="Cari berdasarkan nama atau NIMB"
                 class="block w-full mb-3 placeholder-gray-400" />
 
-            <x-select-form wire:model.lazy="status" class="mb-3">
+            <x-select-form wire:model.blur="status" class="mb-3">
                 <option value="0">Belum Mengisi</option>
                 <option value="1">Sudah Mengisi</option>
             </x-select-form>
@@ -13,7 +13,7 @@
 
         {{-- Filter Kelompok --}}
         <div>
-            <x-select-form wire:model.lazy="kelompokSearch" class="mb-3">
+            <x-select-form wire:model.blur="kelompokSearch" class="mb-3">
                 <option value="%%">Semua Kelompok</option>
                 @foreach ($kelompok as $k)
                     <option value="{{ $k }}">{{ $k }}</option>

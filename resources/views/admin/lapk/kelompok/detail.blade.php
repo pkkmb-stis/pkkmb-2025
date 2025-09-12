@@ -1,7 +1,7 @@
 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
     <div>
         <x-card>
-            <form wire:submit.prevent="updateKelompok">
+            <form wire:submit="updateKelompok">
 
                 <div class="text-gray-700">
                     <div class="mb-3">
@@ -14,44 +14,44 @@
 
                     <div class="mb-3">
                         <label for="nama" class="block mb-1 font-bold">Nama Kelompok</label>
-                        <x-input type="text" class="w-full" wire:model.defer="nama"
+                        <x-input type="text" class="w-full" wire:model="nama"
                             disabled="{{ !$canUpdateKelompok }}" />
                         <x-error-input name="nama" />
                     </div>
 
                     <div class="mb-3">
                         <label for="linkWa" class="block mb-1 font-bold">Link Group WA</label>
-                        <x-input type="text" class="w-full" wire:model.defer="linkWa"
+                        <x-input type="text" class="w-full" wire:model="linkWa"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
                     <div class="mb-3">
                         <label for="linkZoom" class="block mb-1 font-bold">Link Zoom</label>
-                        <x-input type="text" class="w-full" wire:model.defer="linkZoom"
+                        <x-input type="text" class="w-full" wire:model="linkZoom"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
                     <div class="mb-3">
                         <label for="linkZoom" class="block mb-1 font-bold">Link Classroom</label>
-                        <x-input type="text" class="w-full" wire:model.defer="linkClassroom"
+                        <x-input type="text" class="w-full" wire:model="linkClassroom"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
                     <div class="mb-3">
                         <label for="linkWa" class="block mb-1 font-bold">Deskripsi</label>
-                        <x-textarea class="w-full" wire:model.defer="deskripsi" rows="6"
+                        <x-textarea class="w-full" wire:model="deskripsi" rows="6"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
                     <div class="mb-3">
                         <label for="warnaCoCard" class="block mb-1 font-bold">Warna Co Card</label>
-                        <x-input type="color" class="w-full" wire:model.defer="warnaCoCard"
+                        <x-input type="color" class="w-full" wire:model="warnaCoCard"
                             disabled="{{ !$canUpdateKelompok }}" />
                     </div>
 
                     <div class="mb-3">
                         <label for="jenisKelompok" class="block mb-1 font-bold">Jenis Kelompok</label>
-                        <x-select-multi name="jenisKelompok" wire:model.defer="jenisKelompok" id="jenisKelompok">
+                        <x-select-multi name="jenisKelompok" wire:model="jenisKelompok" id="jenisKelompok">
                             <option value="">Pilih jenis kelompok</option>
                             <option {{ $jenisKelompok == 1 ? 'selected' : '' }} value="1">Online</option>
                             <option {{ $jenisKelompok == 0 ? 'selected' : '' }} value="0">Offline</option>
@@ -64,7 +64,7 @@
                             <div class="mb-3">
                                 <label for="anggota" class="block mb-1 font-bold">Tambah Anggota Kelompok</label>
                                 <div class="relative">
-                                    <x-input type="text" wire:model="search" placeholder="Search user..."
+                                    <x-input type="text" wire:model.live="search" placeholder="Search user..."
                                         x-on:input="search = true" class="block w-full" wire:focus="removeSearch" />
 
                                     <ul x-cloak x-show="search" x-on:click.away="search = false"

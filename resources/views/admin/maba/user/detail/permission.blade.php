@@ -58,7 +58,7 @@
                         <h5 class="mb-3 font-bold">Tambah Permission</h5>
 
                         <div class="mb-5">
-                            <x-select-form wire:model.defer="permissionToAdd">
+                            <x-select-form wire:model="permissionToAdd">
                                 <slot>
                                     <option>Pilih Permission</option>
                                     @foreach ($permissions as $p)

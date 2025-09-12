@@ -2,7 +2,7 @@ import "./bootstrap";
 import "../css/app.css";
 import "../scss/app.scss";
 
-import Alpine from "alpinejs";
+import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
 import flatpickr from "flatpickr";
 import SlimSelect from "slim-select";
 import Chart from "chart.js/auto";
@@ -18,4 +18,4 @@ window.jspdf = jspdf;
 window.flatpickr = flatpickr;
 window.Notyf = Notyf;
 
-Alpine.start();
+Livewire.start();
