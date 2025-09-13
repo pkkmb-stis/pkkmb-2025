@@ -12,6 +12,18 @@
     src: url("../fonts/Bachelor Bold.ttf");
 }
 @font-face {
+    font-family: "CHATIME";
+    src: url("../fonts/chatime.otf");
+}
+@font-face {
+    font-family: "POPPINS";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "BRASIKA DISPLAY";
+    src: url("../fonts/BrasikaDisplay.ttf")
+}
+@font-face {
     font-family: "CARUBAN";
     src: url("../fonts/Caruban-EBK8.ttf");
 }

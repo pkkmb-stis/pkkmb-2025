@@ -13,6 +13,7 @@ export default {
     theme: {
         extend: {
             backgroundImage: (theme) => ({
+                "background1-pattern": "url('@/images/pattern/2025/background desktop 1.png')",
                 "merah-pattern": "url('@/images/pattern/2024/merah.png')",
                 "merah1-pattern": "url('@/images/pattern/2024/merah1.png')",
                 "merah2-pattern": "url('@/images/pattern/2024/merah2.png')",
@@ -40,6 +41,10 @@ export default {
                 bachelorReg: ["BACHELOR REGULAR", "cursive"],
                 aringgo: ["ARINGGO", "cursive"],
                 bohemianSoul: ["BOHEMIAN SOUL", "cursive"],
+                brasikaDisplay: ["BRASIKA DISPLAY"],
+                chaTime: ["CHATIME"],
+                poppins: ["POPPINS"]
+
             },
             colors: {
                 "footer-solid": {
