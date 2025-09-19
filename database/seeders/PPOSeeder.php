@@ -72,7 +72,7 @@ class PPOSeeder extends Seeder
         ];
 
         // koor Tibum
-        $koor = User::where('name', 'Imam Fathoni Arufi')->first();
+        $koor = User::where('name', 'Ica Bali Tri Susmita')->first();
         $koor->givePermissionTo([
             PERMISSION_DELETE_JENISPOIN,
             PERMISSION_DELETE_PENEBUSAN,
@@ -85,7 +85,7 @@ class PPOSeeder extends Seeder
         $koor->givePermissionTo($permissionPengumuman);
 
         // koor LAPK
-        $koor = User::where('name', 'Fadiah Yahya')->first();
+        $koor = User::where('name', 'Marsya Audia Cholisah')->first();
         $koor->givePermissionTo([
             PERMISSION_UPDATE_INFO_TAMBAHAN_USER,
             PERMISSION_ADD_KELOMPOK,
@@ -104,7 +104,7 @@ class PPOSeeder extends Seeder
         $koor->givePermissionTo($permissionPengumuman);
 
         // koor acara
-        $koor = User::where('name', 'Zahra Mufidah Ariani')->first();
+        $koor = User::where('name', 'Muhammad Barkah Amaliansyah')->first();
         $koor->givePermissionTo([
             PERMISSION_DELETE_EVENT,
             PERMISSION_DELETE_TIMELINE
@@ -112,7 +112,7 @@ class PPOSeeder extends Seeder
         $koor->givePermissionTo($permissionPengumuman);
 
         // koor HPD
-        $koor = User::where('name', 'Dustin Raka Widiananta Aslam')->first();
+        $koor = User::where('name', 'Andra Adiputra Rudianto')->first();
         $koor->givePermissionTo([
             PERMISSION_DELETE_BERITA,
             PERMISSION_DELETE_PENGUMUMAN,
