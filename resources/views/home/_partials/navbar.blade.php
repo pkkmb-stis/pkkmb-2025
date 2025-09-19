@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <nav
-    class="fixed top-0 left-0 right-0 z-20 px-4 py-2 mx-3 my-2 transition-all duration-500 shadow-xl rounded-2xl bg-navbar-solid bg-opacity-80 backdrop-blur-lg backdrop-filter sm:mx-4 sm:my-2 sm:px-8 md:mx-4 md:my-2 md:px-12 lg:mx-4 lg:my-2 lg:px-16 xl:mx-4 xl:my-2 xl:px-24">
+    class="fixed top-0 left-0 right-0 z-20 px-4 py-2 mx-3 my-2 transition-all duration-500 shadow-xl rounded-2xl bg-[#F9C46B] bg-opacity-80 backdrop-blur-lg backdrop-filter sm:mx-4 sm:my-2 sm:px-8 md:mx-4 md:my-2 md:px-12 lg:mx-4 lg:my-2 lg:px-16 xl:mx-4 xl:my-2 xl:px-24">
     <div class="flex items-center justify-between gap-4 font-semibold text-merah-1">
 
         {{-- Menu HP --}}
@@ -18,7 +18,7 @@
                     </span>
                     <a class="px-10 mb-4 text-center" href="{{ route('home.index') }}">
                         <img src="{{ LOGO }}" alt="LOGO" class="w-20 mx-auto" />
-                        <span class="font-bold font-bohemianSoul">PKKMB-PKBN 2024</span>
+                        <span class="font-bold font-brasikaDisplay">PKKMB-PKBN 2025</span>
                     </a>
 
                     @auth
@@ -55,14 +55,13 @@
         <a href="{{ route('home.index') }}" class="flex items-center">
             <img src="{{ LOGO }}" alt="LOGO" class="hidden w-10 mr-2 lg:inline-block" />
             <span
-                class="gap-2 text-sm font-bold leading-none font-bohemianSoul hover:text-merah-2 lg:flex lg:flex-col lg:items-start lg:justify-start">
-                <span>PKKMB</span>
-                <span class="lg:hidden"> - </span>
-                <span>PKBN 2024</span>
+                class="gap-2 text-sm font-bold leading-none font-brasikaDisplay hover:text-[#8B2F4B] lg:flex lg:flex-col lg:items-start lg:justify-start">
+                <span>PKKMB-PKBN</span>
+                <span>2025</span>
             </span>
         </a>
 
-        <ul class="items-center hidden font-semibold font-aringgo lg:flex">
+        <ul class="items-center hidden font-semibold font-brasikaDisplay lg:flex">
             @auth
                 <li class="mx-8">
                     <a href="{{ route('home.dashboard') }}"
@@ -139,7 +138,7 @@
                     </div>
                 </div>
             @else
-                <a class="px-5 py-1 font-bold transition border-2 rounded-full border-base-yellow-600 bg-base-orange-500 font-nunito text-base-white hover:bg-merah-1"
+                <a class="px-5 py-1 font-bold font-poppins transition border-2 rounded-full border-[#8B2F4B] bg-[#8B2F4B] font-poppins text-base-white"
                     href="{{ route('login') }}">
                     Masuk
                 </a>

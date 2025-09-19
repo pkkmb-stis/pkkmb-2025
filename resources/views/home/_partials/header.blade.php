@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{{ $title ? $title  : 'PKKMB-PKBN 2024' }}</title>
+<title>{{ $title ? $title  : 'PKKMB-PKBN 2025' }}</title>
 <link rel="shortcut icon" href="{{ LOGO }}" type="image/x-icon">
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
