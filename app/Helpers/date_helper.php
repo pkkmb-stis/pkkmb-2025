@@ -61,13 +61,12 @@ if (!function_exists('getGreeting')) {
     /**
      * getGreeting
      *
-     * @param  mixed $time
+     * @param  ?Carbon $time
      * @return string
      */
-    function getGreeting(Carbon $time = null)
+    function getGreeting(?Carbon $time = null)
     {
-        if ($time) $hour = $time->format('H');
-        else $hour = Carbon::now()->format('H');
+        $hour = $time ? $time->format('H') : Carbon::now()->format('H');
 
         if ($hour < 4) return "Selamat Malam";
         else if ($hour < 11) return "Selamat Pagi";
@@ -96,10 +95,10 @@ if (!function_exists('rawSQLDateTime')) {
     /**
      * rawSQLDateTime to select
      *
-     * @param  mixed $time
+     * @param  ?Carbon $time
      * @return string
      */
-    function rawSQLDateTime(Carbon $time = null)
+    function rawSQLDateTime(?Carbon $time = null)
     {
         if (!$time) $time = Carbon::now();
         $time = $time->toDateTimeString();
