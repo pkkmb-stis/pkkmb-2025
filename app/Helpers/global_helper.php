@@ -233,32 +233,32 @@ if (!function_exists('getPanitia')) {
     {
         $bph = [
             [
-                'nama' => 'M. Ridlo Ubaidillah',
-                'foto' => 'img/ppo/bph/M. Ridlo Ubaidillah.png',
+                'nama' => 'Decapryo Rivian Belo',
+                'foto' => 'img/ppo/bph/Decapryo Rivian Belo.png',
                 'jabatan' => 'KPO'
             ],
             [
-                'nama' => 'Kilat Tri Prasetyo',
-                'foto' => 'img/ppo/bph/Kilat Tri Prasetyo.png',
+                'nama' => 'Muhammad Choiri Krisna Arsyad',
+                'foto' => 'img/ppo/bph/Muhammad Choiri Krisna Arsyad.png',
                 'jabatan' => 'WKPO'
             ],
             [
-                'nama' => 'Fathiyah Nur Shohwah',
-                'foto' => 'img/ppo/bph/Fathiyah Nur Shohwah.png',
+                'nama' => 'Lintang Pertiwi',
+                'foto' => 'img/ppo/bph/Lintang Pertiwi.png',
                 'jabatan' => 'Sekretaris I'
             ],
             [
-                'nama' => 'Yohana Herdianly Br Nainggolan',
-                'foto' => 'img/ppo/bph/Yohana Herdianly Br Nainggolan.png',
+                'nama' => 'Fildzah Nur Izzati',
+                'foto' => 'img/ppo/bph/Fildzah Nur Izzati.png',
                 'jabatan' => 'Sekretaris II'
             ],
             [
-                'nama' => 'Hervira Nur Shafira',
-                'foto' => 'img/ppo/bph/Hervira Nur Shafira.png',
+                'nama' => 'Kessya Desyka Ayliyanda',
+                'foto' => 'img/ppo/bph/Kessya Desyka Ayliyanda.png',
                 'jabatan' => 'Bendahara I'
             ],
             [
-                'nama' => 'Athiyah Tsurayya',
+                'nama' => 'Zaskia Bening Mulia',
                 'foto' => 'img/ppo/bph/Athiyah Tsurayya.png',
                 'jabatan' => 'Bendahara II'
             ],
@@ -266,18 +266,33 @@ if (!function_exists('getPanitia')) {
 
         $acara = [
             [
-                'nama' => 'Zahra Mufidah Ariani',
-                'foto' => 'img/ppo/acara/Zahra Mufidah Ariani.png',
+                'nama' => 'Muhammad Barkah Amaliansyah',
+                'foto' => 'img/ppo/acara/Muhammad Barkah Amaliansyah.png',
                 'jabatan' => 'Koordinator'
             ],
             [
-                'nama' => 'Aurelia Dini Syafnadiva',
-                'foto' => 'img/ppo/acara/Aurelia Dini Syafnadiva.png',
+                'nama' => 'Ahmad Ridho Parabi',
+                'foto' => 'img/ppo/acara/Ahmad Ridho Parabi.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Decapryo Rivian Belo',
-                'foto' => 'img/ppo/acara/Decapryo Rivian Belo.png',
+                'nama' => 'Auliya Ahmada Ghinannafsa',
+                'foto' => 'img/ppo/acara/Auliya Ahmada Ghinannafsa.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Bungaran Sammy Briandoli Nainggolan',
+                'foto' => 'img/ppo/acara/Bungaran Sammy Briandoli Nainggolan.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Hafizh Dzaky Ats Tsaqif',
+                'foto' => 'img/ppo/acara/Hafizh Dzaky Ats Tsaqif.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Joys Gresia Ulina Sianturi',
+                'foto' => 'img/ppo/acara/Joys Gresia Ulina Sianturi.png',
                 'jabatan' => 'Anggota'
             ],
             [
@@ -286,28 +301,18 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Muhammad Barkah Amaliansyah',
-                'foto' => 'img/ppo/acara/Muhammad Barkah Amaliansyah.png',
+                'nama' => 'Muhammad Hasbie Hasibuan',
+                'foto' => 'img/ppo/acara/Muhammad Hasbie Hasibuan.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Muhammad Choiri Krisna Arsyad',
-                'foto' => 'img/ppo/acara/Muhammad Choiri Krisna Arsyad.png',
+                'nama' => 'Naila Sandra Utami',
+                'foto' => 'img/ppo/acara/Naila Sandra Utami.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Nela Nur \'Azizah',
-                'foto' => 'img/ppo/acara/Nela Nur \'Azizah.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Putu Ayudhia Pratami Putri',
-                'foto' => 'img/ppo/acara/Putu Ayudhia Pratami Putri.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Yuliana Kartika Permadani',
-                'foto' => 'img/ppo/acara/Yuliana Kartika Permadani.png',
+                'nama' => 'Renata Cecilia Br Sirait',
+                'foto' => 'img/ppo/acara/Renata Cecilia Br Sirait.png',
                 'jabatan' => 'Anggota'
             ],
         ];
@@ -315,42 +320,52 @@ if (!function_exists('getPanitia')) {
 
         $lapk = [
             [
-                'nama' => 'Fadiah Yahya',
-                'foto' => 'img/ppo/lapk/Fadiah Yahya.png',
+                'nama' => 'Marsya Audia Cholisah',
+                'foto' => 'img/ppo/lapk/Marsya Audia Cholisah.png',
                 'jabatan' => 'Koordinator'
             ],
             [
-                'nama' => 'Adrian Januartha',
-                'foto' => 'img/ppo/lapk/Adrian Januartha.png',
+                'nama' => 'Ananda Natasya',
+                'foto' => 'img/ppo/lapk/Ananda Natasya.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Ahmad Excell Ramadhan',
-                'foto' => 'img/ppo/lapk/Ahmad Excell Ramadhan.png',
+                'nama' => 'Anindya Zahra Damayanti',
+                'foto' => 'img/ppo/lapk/Anindya Zahra Damayanti.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Anggi Dwi Puspita',
-                'foto' => 'img/ppo/lapk/Anggi Dwi Puspita.png',
+                'nama' => 'Ariella Syifa Maheswari',
+                'foto' => 'img/ppo/lapk/Ariella Syifa Maheswari.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Berniko Surya Wibawa',
-                'foto' => 'img/ppo/lapk/Berniko Surya Wibawa.png',
+                'nama' => 'Ashy Sulfidah',
+                'foto' => 'img/ppo/lapk/Ashy Sulfidah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Bunga Musva Cotva',
-                'foto' => 'img/ppo/lapk/Bunga Musva Cotva.png',
+                'nama' => 'Cikal Dwijayanti',
+                'foto' => 'img/ppo/lapk/Cikal Dwijayanti.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Fatikha Nuraziza',
-                'foto' => 'img/ppo/lapk/Fatikha Nuraziza.png',
+                'nama' => 'Difya Ayu Meisya Nurjanah',
+                'foto' => 'img/ppo/lapk/Difya Ayu Meisya Nurjanah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => "Haris Farestu",
+                'nama' => "Ego Stiven Rafliza",
+                'foto' => 'img/ppo/lapk/Ego Stiven Rafliza.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Grace Sovia Ginting',
+                'foto' => 'img/ppo/lapk/Grace Sovia Ginting.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Haris Farestu',
                 'foto' => 'img/ppo/lapk/Haris Farestu.png',
                 'jabatan' => 'Anggota'
             ],
@@ -360,48 +375,53 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Janitra Hayu Pramestya',
-                'foto' => 'img/ppo/lapk/Janitra Hayu Pramestya.png',
+                'nama' => 'Imam Mansyur',
+                'foto' => 'img/ppo/lapk/Imam Mansyur.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Kadek Sri Nagitha Suaryanti',
-                'foto' => 'img/ppo/lapk/Kadek Sri Nagitha Suaryanti.png',
+                'nama' => 'Indah Dwi Yuniati',
+                'foto' => 'img/ppo/lapk/Indah Dwi Yuniati.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Lydia Aushaf Ozora Siregar',
-                'foto' => 'img/ppo/lapk/Lydia Aushaf Ozora Siregar.png',
+                'nama' => 'Isnani Hayatur Rohmah',
+                'foto' => 'img/ppo/lapk/Isnani Hayatur Rohmah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Marsya Audia Cholisah',
-                'foto' => 'img/ppo/lapk/Marsya Audia Cholisah.png',
+                'nama' => 'Kukuh Bagus Purnomo Sidik',
+                'foto' => 'img/ppo/lapk/Kukuh Bagus Purnomo Sidik.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Mohammad Zidane Akbar Satriaji',
-                'foto' => 'img/ppo/lapk/Mohammad Zidane Akbar Satriaji.png',
+                'nama' => 'Melika Dzicra Kalila Wardhani',
+                'foto' => 'img/ppo/lapk/Melika Dzicra Kalila Wardhani.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Najwa Alya Fauziah',
-                'foto' => 'img/ppo/lapk/Najwa Alya Fauziah.png',
+                'nama' => 'Mohammad Zidane A. Satriaji',
+                'foto' => 'img/ppo/lapk/Mohammad Zidane A. Satriaji.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Rafi Ariq Hakim',
-                'foto' => 'img/ppo/lapk/Rafi Ariq Hakim.png',
+                'nama' => 'Naya Alya Fauziah',
+                'foto' => 'img/ppo/lapk/Naya Alya Fauziah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Rayhan Ardi Fardian',
-                'foto' => 'img/ppo/lapk/Rayhan Ardi Fardian.png',
+                'nama' => 'Nikolas Agape',
+                'foto' => 'img/ppo/lapk/Nikolas Agape.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Uswatun Nisa Ritonga',
-                'foto' => 'img/ppo/lapk/Uswatun Nisa Ritonga.png',
+                'nama' => 'Nisa Nur Fadillah',
+                'foto' => 'img/ppo/lapk/Nisa Nur Fadillah.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Saren Risanti Hutsaoti',
+                'foto' => 'img/ppo/lapk/Saren Risanti Hutsaoti.png',
                 'jabatan' => 'Anggota'
             ],
             [
@@ -413,124 +433,149 @@ if (!function_exists('getPanitia')) {
 
         $gramti = [
             [
-                'nama' => 'Farhan Adi Suripto',
-                'foto' => 'img/ppo/gramti/Farhan Adi Suripto.png',
+                'nama' => 'Ilyas Ramadhan',
+                'foto' => 'img/ppo/gramti/Ilyas Ramadhan.png',
                 'jabatan' => 'Koordinator'
             ],
             [
-                'nama' => 'Esra Yosefa Simarmata',
-                'foto' => 'img/ppo/gramti/Esra Yosefa Simarmata.png',
+                'nama' => 'Arif Budiman',
+                'foto' => 'img/ppo/gramti/Arif Budiman.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Ilyas Ramadhan',
-                'foto' => 'img/ppo/gramti/Ilyas Ramadhan.png',
+                'nama' => 'Ihsan Nurrahman',
+                'foto' => 'img/ppo/gramti/Ihsan Nurrahman.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Made Nisa Rahayu Ananda Suwendra',
-                'foto' => 'img/ppo/gramti/Made Nisa Rahayu Ananda Suwendra.png',
+                'nama' => 'Ibrahim Bazra Ritonga',
+                'foto' => 'img/ppo/gramti/Ibrahim Bazra Ritonga.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Muhammad Rayhan Faridh',
-                'foto' => 'img/ppo/gramti/Muhammad Rayhan Faridh.png',
+                'nama' => 'Isnan Akbar Saputra',
+                'foto' => 'img/ppo/gramti/Isnan Akbar Saputra.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Rizkyana Azka Akhiria Ramadhanti',
-                'foto' => 'img/ppo/gramti/Rizkyana Azka Akhiria Ramadhanti.png',
+                'nama' => 'Kaylla Zahrani',
+                'foto' => 'img/ppo/gramti/Kaylla Zahrani.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Thoriq Mustafa Akmal',
-                'foto' => 'img/ppo/gramti/Thoriq Mustafa Akmal.png',
+                'nama' => 'Nabhan Athallah',
+                'foto' => 'img/ppo/gramti/Nabhan Athallah.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Rehandhika Arya Pratama',
+                'foto' => 'img/ppo/gramti/Rehandhika Arya Pratama.png',
                 'jabatan' => 'Anggota'
             ],
         ];
 
         $hpd = [
             [
-                'nama' => 'Dustin Raka Widiananta Aslam',
-                'foto' => 'img/ppo/hpd/Dustin Raka Widiananta Aslam.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Alisha Islami Zukhruf',
-                'foto' => 'img/ppo/hpd/Alisha Islami Zukhruf.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
                 'nama' => 'Andra Adiputra Rudianto',
                 'foto' => 'img/ppo/hpd/Andra Adiputra Rudianto.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Destiana Salsabila',
-                'foto' => 'img/ppo/hpd/Destiana Salsabila.png',
+                'nama' => 'Amelia Deranaya Shafira',
+                'foto' => 'img/ppo/hpd/Amelia Deranaya Shafira.png',
+                'jabatan' => 'Koordinator'
+            ],
+            [
+                'nama' => 'Anugrah Putri Indahsari Tria Meiliana',
+                'foto' => 'img/ppo/hpd/Anugrah Putri Indahsari Tria Meiliana.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Firda Dessya Dwitanti',
-                'foto' => 'img/ppo/hpd/Firda Dessya Dwitanti.png',
+                'nama' => 'Araminta Abidah',
+                'foto' => 'img/ppo/hpd/Araminta Abidah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Iqbal Maulana',
-                'foto' => 'img/ppo/hpd/Iqbal Maulana.png',
+                'nama' => 'Dzaky Aska Pradipta',
+                'foto' => 'img/ppo/hpd/Dzaky Aska Pradipta.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Lintang Pertiwi',
-                'foto' => 'img/ppo/hpd/Lintang Pertiwi.png',
+                'nama' => 'Gusti Ayu Made Putra Pebriani Dharmawan',
+                'foto' => 'img/ppo/hpd/Gusti Ayu Made Putra Pebriani Dharmawan.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Maharani Nur Halizah',
-                'foto' => 'img/ppo/hpd/Maharani Nur Halizah.png',
+                'nama' => 'Hielda Setya Khanifah',
+                'foto' => 'img/ppo/hpd/Hielda Setya Khanifah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Nasywa Saniyyah',
-                'foto' => 'img/ppo/hpd/Nasywa Saniyyah.png',
+                'nama' => 'Mufidah Azzahrah',
+                'foto' => 'img/ppo/hpd/Mufidah Azzahrah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Putu Sinta Pramastini',
-                'foto' => 'img/ppo/hpd/Putu Sinta Pramastini.png',
+                'nama' => 'Nailis Sahila',
+                'foto' => 'img/ppo/hpd/Nailis Sahila.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Syifa Hana Salsabila Nadra Gustari',
-                'foto' => 'img/ppo/hpd/Syifa Hana Salsabila Nadra Gustari.png',
+                'nama' => 'Nathania Nandika Calluella',
+                'foto' => 'img/ppo/hpd/Nathania Nandika Calluella.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Satria Imka Dwi Putra',
+                'foto' => 'img/ppo/hpd/Satria Imka Dwi Putra.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Sheila Berliana Sunan',
+                'foto' => 'img/ppo/hpd/Sheila Berliana Sunan.png',
                 'jabatan' => 'Anggota'
             ],
         ];
 
         $ppm = [
             [
-                'nama' => 'Elsya Nabila',
-                'foto' => 'img/ppo/ppm/Elsya Nabila.png',
+                'nama' => 'Khilwa Layyina',
+                'foto' => 'img/ppo/ppm/Khilwa Layyina.png',
                 'jabatan' => 'Koordinator'
             ],
             [
-                'nama' => 'Azizah Hemilton',
-                'foto' => 'img/ppo/ppm/Azizah Hemilton.png',
+                'nama' => 'Ahmad Rafi\'izra Nugraha',
+                'foto' => 'img/ppo/ppm/Ahmad Rafiizra Nugraha.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Kessya Desyka Ayliyanda',
-                'foto' => 'img/ppo/ppm/Kessya Desyka Ayliyanda.png',
+                'nama' => 'Deka Sholiha Kartika Habsari',
+                'foto' => 'img/ppo/ppm/Deka Sholiha Kartika Habsari.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Khilwa Layyina',
-                'foto' => 'img/ppo/ppm/Khilwa Layyina.png',
+                'nama' => 'Depati Zaid Haikal',
+                'foto' => 'img/ppo/ppm/Depati Zaid Haikal.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Miranti Nabila Ramadhani',
-                'foto' => 'img/ppo/ppm/Miranti Nabila Ramadhani.png',
+                'nama' => 'Fathania Nur Rahmadhani',
+                'foto' => 'img/ppo/ppm/Fathania Nur Rahmadhani.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Lydia Aushaf Ozora Siregar',
+                'foto' => 'img/ppo/ppm/Lydia Aushaf Ozora Siregar.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Reva Auliya Qurrota A\'yun',
+                'foto' => 'img/ppo/ppm/Reva Auliya Qurrota A\'yun.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Rizki Ali Wafa',
+                'foto' => 'img/ppo/ppm/Rizki Ali Wafa.png',
                 'jabatan' => 'Anggota'
             ],
             [
@@ -538,22 +583,12 @@ if (!function_exists('getPanitia')) {
                 'foto' => 'img/ppo/ppm/Rizqi Arby Maulana.png',
                 'jabatan' => 'Anggota'
             ],
-            [
-                'nama' => 'Roland Yohanes Renteng',
-                'foto' => 'img/ppo/ppm/Roland Yohanes Renteng.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Ully Prisea Mawadah',
-                'foto' => 'img/ppo/ppm/Ully Prisea Mawadah.png',
-                'jabatan' => 'Anggota'
-            ],
         ];
 
         $tibum = [
             [
-                'nama' => 'Imam Fathoni Arufi',
-                'foto' => 'img/ppo/tibum/Imam Fathoni Arufi.png',
+                'nama' => 'Ica Bali Tri Susmita',
+                'foto' => 'img/ppo/tibum/Ica Bali Tri Susmita.png',
                 'jabatan' => 'Koordinator'
             ],
             [
@@ -562,8 +597,8 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Alif Hidayah Nur Rahmadani',
-                'foto' => 'img/ppo/tibum/Alif Hidayah Nur Rahmadani.png',
+                'nama' => 'Alya Nailah Zaid',
+                'foto' => 'img/ppo/tibum/Alya Nailah Zaid.png',
                 'jabatan' => 'Anggota'
             ],
             [
@@ -572,61 +607,66 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Berlian Bagus Antonia',
-                'foto' => 'img/ppo/tibum/Berlian Bagus Antonia.png',
+                'nama' => 'Joyce Cynthia Br Sitorus',
+                'foto' => 'img/ppo/tibum/Joyce Cynthia Br Sitorus.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Davika Fathma Gusnindar',
-                'foto' => 'img/ppo/tibum/Davika Fathma Gusnindar.png',
+                'nama' => 'Luis Montoya Stefanus Siregar',
+                'foto' => 'img/ppo/tibum/Luis Montoya Stefanus Siregar.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Ica Bali Tri Susmita',
-                'foto' => 'img/ppo/tibum/Ica Bali Tri Susmita.png',
+                'nama' => 'Mohamad Zidan Al Farizi',
+                'foto' => 'img/ppo/tibum/Mohamad Zidan Al Farizi.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Muhamad Choza Inul Muna',
-                'foto' => 'img/ppo/tibum/Muhamad Choza Inul Muna.png',
+                'nama' => 'Nofal Febrian Nugraha',
+                'foto' => 'img/ppo/tibum/Nofal Febrian Nugraha.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Nur Faqih Ihsan',
-                'foto' => 'img/ppo/tibum/Nur Faqih Ihsan.png',
+                'nama' => 'Nuraini Fauziah',
+                'foto' => 'img/ppo/tibum/Nuraini Fauziah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Putra Dafa Pratama',
-                'foto' => 'img/ppo/tibum/Putra Dafa Pratama.png',
+                'nama' => 'Putri Yuli Yanti',
+                'foto' => 'img/ppo/tibum/Putri Yuli Yanti.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Wisnu Aimariyadi',
-                'foto' => 'img/ppo/tibum/Wisnu Aimariyadi.png',
+                'nama' => 'Romizard Rasendriya',
+                'foto' => 'img/ppo/tibum/Romizard Rasendriya.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Samuel Kevin',
+                'foto' => 'img/ppo/tibum/Samuel Kevin.png',
                 'jabatan' => 'Anggota'
             ],
         ];
 
         $umum = [
             [
-                'nama' => 'Dimas Haafizh Rahman',
-                'foto' => 'img/ppo/umum/Dimas Haafizh Rahman.png',
+                'nama' => 'Ramadhani Zaki Suruuri',
+                'foto' => 'img/ppo/umum/Ramadhani Zaki Suruuri.png',
                 'jabatan' => 'Koordinator'
             ],
             [
-                'nama' => 'Afifah Dayan Syaharani',
-                'foto' => 'img/ppo/umum/Afifah Dayan Syaharani.png',
+                'nama' => 'Ayra Jasmine Hasibuan',
+                'foto' => 'img/ppo/umum/Ayra Jasmine Hasibuan.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Annisa Rizqillah',
-                'foto' => 'img/ppo/umum/Annisa Rizqillah.png',
+                'nama' => 'Aziz Hidayatulloh',
+                'foto' => 'img/ppo/umum/Aziz Hidayatulloh.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Arizki Dwi Cahyo',
-                'foto' => 'img/ppo/umum/Arizki Dwi Cahyo.png',
+                'nama' => 'Bambang Fathdry Hermawan',
+                'foto' => 'img/ppo/umum/Bambang Fathdry Hermawan.png',
                 'jabatan' => 'Anggota'
             ],
             [
@@ -635,28 +675,33 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Hafidh Dzaky A',
-                'foto' => 'img/ppo/umum/Hafidh Dzaky A.png',
+                'nama' => 'Muhamad Fadhlan Hendri',
+                'foto' => 'img/ppo/umum/Muhamad Fadhlan Hendri.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'I Gede Rizky Putra Arnawa',
-                'foto' => 'img/ppo/umum/I Gede Rizky Putra Arnawa.png',
+                'nama' => 'Raziq Alzam Fadlullah',
+                'foto' => 'img/ppo/umum/Raziq Alzam Fadlullah.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Ramadhani Zaki Suruuri',
-                'foto' => 'img/ppo/umum/Ramadhani Zaki Suruuri.png',
+                'nama' => 'Regita Maulidya Hidayat',
+                'foto' => 'img/ppo/umum/Regita Maulidya Hidayat.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Rihhadatul Aisy\'',
-                'foto' => 'img/ppo/umum/Rihhadatul Aisy\'.png',
+                'nama' => 'Sawangi Kasturi',
+                'foto' => 'img/ppo/umum/Sawangi Kasturi.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Yoceylin Feby Sitorus',
-                'foto' => 'img/ppo/umum/Yoceylin Feby Sitorus.png',
+                'nama' => 'Yudhistira Putra Herlambang',
+                'foto' => 'img/ppo/umum/Yudhistira Putra Herlambang.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Zenas Samosir',
+                'foto' => 'img/ppo/umum/Zenas Samosir.png',
                 'jabatan' => 'Anggota'
             ],
         ];
