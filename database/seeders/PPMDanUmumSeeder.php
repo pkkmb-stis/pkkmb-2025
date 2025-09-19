@@ -55,11 +55,11 @@ class PPMDanUmumSeeder extends Seeder
         ];
 
         // Koor PPM
-        $koor = User::where('name', 'Elsya Nabila')->first();
+        $koor = User::where('name', 'Khilwa Layyina')->first();
         $koor->givePermissionTo($permissionPengumuman);
 
         // Koor Umum
-        $koor = User::where('name', 'Dimas Haafizh Rahman')->first();
+        $koor = User::where('name', 'Ramadhani Zaki Suruuri')->first();
         $koor->givePermissionTo($permissionPengumuman);
 
     }
