@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Maba\Poin;
 
 use App\Models\Poin\JenisPoin;
 use App\Models\Poin\Poin;
+use App\Models\Day;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
@@ -15,12 +16,13 @@ class Table extends Component
     use WithPagination, WithFileUploads;
     public $jenispoin, $poin, $alasan, $urutan_input, $tanggal_poin, $image, $filename;
     public $jenisPoinSelected;
-
+    public $selected_day_poin; 
+    public $selected_day_edit; 
     public $selected;
     public $openedit = false;
     public $search;
     public $poinToShow;
-    public $jenisUser = "semua"; // maba dan panitia
+    public $jenisUser = "semua"; 
     public $tipePoin = -1; // semua tipe poin
     public $showModalDetail = false;
     public $jenispoins;
@@ -52,6 +54,7 @@ class Table extends Component
         $this->alasan = $poin->alasan;
         $this->poin = $poin->poin;
         $this->filename = $poin->filename;
+        $this->selected_day_edit = null;
 
         // cek kalau jenis poinnya penebusan maka tidak bisa diubah tipenya
         if ($this->jenisPoinSelected != null && $this->jenisPoinSelected->category == CATEGORY_JENISPOIN_PENEBUSAN)
@@ -61,6 +64,7 @@ class Table extends Component
 
         $this->openedit = true;
     }
+
     public function update()
     {
         if (!userHasPermission(PERMISSION_UPDATE_POIN))
@@ -82,7 +86,9 @@ class Table extends Component
                     $this->filename = sha1(uniqid(mt_rand(), true)) . '.' . $this->image->getClientOriginalExtension();
                     $this->image->storeAs('images/bukti-poin', $this->filename, 'public');
                 }
-            } else {
+            } 
+            
+            else {
                 $this->validate([
                     'poin' => 'required|numeric',
                     'alasan' => 'nullable|max:500',
@@ -93,10 +99,22 @@ class Table extends Component
                 }
                 $this->filename = null;
             }
+            
             try {
+                // NEW: Convert selected_day_edit to actual datetime if selected
+                $urutanInput = $this->urutan_input;
+                if ($this->selected_day_edit) {
+                    $dayDate = Day::getDateByName($this->selected_day_edit);
+                    if ($dayDate) {
+                        // Preserve original time, change only the date
+                        $originalTime = \Carbon\Carbon::parse($this->urutan_input)->format('H:i:s');
+                        $urutanInput = $dayDate->format('Y-m-d') . ' ' . $originalTime;
+                    }
+                }
+
                 $data = [
                     'poin' => $this->poin,
-                    'urutan_input' => $this->urutan_input,
+                    'urutan_input' => $urutanInput,
                     'alasan' => $this->alasan,
                     'jenis_poin_id' => $this->jenispoin % 1000,
                     'filename' => $this->filename
@@ -118,7 +136,7 @@ class Table extends Component
 
     public function resetAll()
     {
-        $this->reset('search', 'selected', 'jenispoin', 'alasan', 'poin', 'urutan_input', 'image');
+        $this->reset('search', 'selected', 'jenispoin', 'alasan', 'poin', 'urutan_input', 'image', 'selected_day_edit', 'openedit');
     }
 
     public function show(Poin $poin)
@@ -144,22 +162,7 @@ class Table extends Component
         }
     }
 
-    public function updatingSearch()
-    {
-        $this->resetPage();
-    }
-
-    public function updatingJenisUser()
-    {
-        $this->resetPage();
-    }
-
-    public function updatingTipePoin()
-    {
-        $this->resetPage();
-    }
-
-    public function updatingTanggalPoin()
+    public function updating($name, $value)
     {
         $this->resetPage();
     }
@@ -185,12 +188,15 @@ class Table extends Component
             });
         });
 
-        // filter jenis poin
-        $poins->whereHas('jenispoin', function (Builder $query) use ($date, $search) {
-            if ($this->tipePoin != -1)
-                $query->where('category', '=', $this->tipePoin);
+        if ($date) {
+            $poins->where('urutan_input', 'like', $date);
+        }
 
-            $query->where('urutan_input', 'like', $date);
+        // filter jenis poin
+        $poins->whereHas('jenispoin', function (Builder $query) {
+            if ($this->tipePoin != -1){
+                $query->where('category', '=', $this->tipePoin);
+            }
         });
 
         $poins->orderBy('urutan_input', 'desc');
@@ -199,11 +205,32 @@ class Table extends Component
 
     public function render()
     {
-        $tanggal = $this->tanggal_poin == '' ? date('Y-m-d', time()) : $this->tanggal_poin;
-        $this->tanggal_poin = $tanggal;
+        $tanggal_filter = null;
 
-        $date = $tanggal . "%";
+        if ($this->selected_day_poin) {
+            $dayDate = Day::getDateByName($this->selected_day_poin);
+            if ($dayDate) {
+                $tanggal_filter = $dayDate->format('Y-m-d');;
+            }
+        }
+        
+        elseif ($this->tanggal_poin) {
+            $tanggal_filter = $this->tanggal_poin;
+        }
+
+        $date = $tanggal_filter ? $tanggal_filter . '%' : null;
         $search = '%' . $this->search . '%';
+
         return view('admin.maba.poin.table', ['poins' => $this->getPoins($search, $date)]);
     }
+
+    /**
+     * Reset filter method
+     */
+    public function resetFilter()
+    {
+        $this->selected_day_poin = null;
+        $this->tanggal_poin = null;
+    }
 }
+

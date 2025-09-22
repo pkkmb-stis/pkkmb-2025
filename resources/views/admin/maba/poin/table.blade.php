@@ -57,8 +57,13 @@
             </div>
             <div class="grid lg:grid-cols-2 lg:gap-6">
                 <div class="mb-3">
-                    <x-date-wo-time-input wire:model.lazy="tanggal_poin" id="tanggal_poin" name="tanggal_poin"
-                        x-ref="addDate" />
+                    <select wire:model.lazy="selected_day_poin" id="selected_day_poin" name="selected_day_poin" 
+                        class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
+                        <option value="">Semua Hari</option>
+                        @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
+                            <option value="{{ $name }}">{{ $description }}</option>
+                        @endforeach
+                    </select>  
                 </div>
 
                 <div class="mb-3">
@@ -68,7 +73,7 @@
                 </div>
             </div>
             <div class="hidden sm:block">
-                <x-table :theads="['Aksi', 'Nama', 'Jenis Poin', 'Kategori', 'Poin', 'Urutan Input']" class="mb-3" :breakpointVisibility="[
+                <x-table :theads="['Aksi', 'Nama', 'Jenis Poin', 'Kategori', 'Poin', 'Waktu']" class="mb-3" :breakpointVisibility="[
                     3 => ['xl' => 'hidden'], // Hide kategori on xl
                     4 => ['xl' => 'hidden'], // Hide Poin on xl
                     5 => ['xl' => 'hidden'], // Hide urutan input on xl

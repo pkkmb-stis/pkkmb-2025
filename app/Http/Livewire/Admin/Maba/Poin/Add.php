@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin\Maba\Poin;
 use App\Models\Poin\JenisPoin;
 use App\Models\Poin\Poin;
 use App\Models\User;
+use App\Models\Day;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -16,6 +17,7 @@ class Add extends Component
     public $allMaba, $allPanitia;
     public $jenispoins;
     public $users, $alasan, $jenispoin, $poin, $urutan_input, $is_bintang, $image;
+    public $selected_day_add;
     public $addmodal = false;
     public $jenisPoinSelected;
 
@@ -28,7 +30,7 @@ class Add extends Component
 
     public function resetAll($closeModal = true)
     {
-        $this->reset('alasan', 'jenispoin', 'poin', 'urutan_input', 'users','image');
+        $this->reset('alasan', 'jenispoin', 'poin', 'urutan_input', 'users','image', 'selected_day_add');
         $this->resetValidation();
         if ($closeModal)
             $this->reset('addmodal');
@@ -98,9 +100,18 @@ class Add extends Component
 
             //* Simpan
             try {
+                // NEW: Convert selected_day_add to actual datetime
+                $urutanInput = $this->urutan_input;
+                if ($this->selected_day_add) {
+                    $dayDate = Day::getDateByName($this->selected_day_add);
+                    if ($dayDate) {
+                        // Set to beginning of selected day with current time
+                        $urutanInput = $dayDate->format('Y-m-d') . ' ' . now()->format('H:i:s');
+                    }
+                }
 
                 $data = [
-                    'urutan_input' => $this->urutan_input ?? now(),
+                    'urutan_input' => $urutanInput ?? now(),
                     'poin' => $this->poin,
                     'alasan' => $this->alasan,
                     'filename' => $filename,

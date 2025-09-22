@@ -1,5 +1,6 @@
 <div>
-    <div x-data="{ rekapHarian: @entangle('rekapHarian') }">
+    {{--<div x-data="{ rekapHarian: @entangle('rekapHarian') }">--}}
+    <div x-data="{ rekapHarian: false }">
         <x-button class="uppercase rounded-3xl text-coklat-1 bg-kuning-1 hover:bg-kuning-hover whitespace-nowrap"
             type="button" x-on:click="rekapHarian = true">
             Rekap Harian
@@ -13,10 +14,19 @@
                     </x-slot>
                     <div class="mt-5">
                         <div>
-                            <x-label-input for="password">Tanggal</x-label-input>
+                            <x-label-input for="selected_day">Pilih Hari</x-label-input>
                             <div class="mb-3">
-                                <x-date-wo-time-input wire:model.lazy="tanggal_rekap" id="tanggal_rekap"
-                                    name="tanggal_rekap" x-ref="addDate" />
+                                <select wire:model.live="selected_day" id="selected_day" name="selected_day" 
+                                    class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
+                                    <option value="">Semua Hari</option>
+                                    @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
+                                        <option value="{{ $name }}">{{ $description }}</option>
+                                    @endforeach
+                                </select>
+                                
+                                {{-- BACKUP: Original date input (commented out) --}}
+                                {{-- <x-date-wo-time-input wire:model.lazy="tanggal_rekap" id="tanggal_rekap"
+                                    name="tanggal_rekap" x-ref="addDate" /> --}}
                             </div>
                         </div>
                         <div class="grid lg:grid-cols-2 lg:gap-6">
@@ -48,12 +58,7 @@
                         <div wire:loading.remove wire:target="submit">
                             <x-button class="mr-1 bg-gray-500 rounded-3xl hover:bg-gray-600" :tagA="false"
                                 x-on:click="rekapHarian = false">Tutup</x-button>
-                            {{-- <x-button class="bg-red-500 rounded-3xl hover:bg-red-600" :tagA="false" wire:click="submit">Ya, yakin
-                            </x-button> --}}
                         </div>
-                        {{-- <div wire:loading wire:target="submit" class="text-xs italic text-gary-600">
-                            Sedang memproses. Harap menunggu ..
-                        </div> --}}
                     </x-slot>
                 </x-modal.warning>
             </x-modal>

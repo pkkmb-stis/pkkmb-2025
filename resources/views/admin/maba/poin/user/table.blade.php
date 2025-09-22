@@ -30,8 +30,13 @@
             </div>
             <div class="grid lg:grid-cols-2 lg:gap-6">
                 <div class="mb-3">
-                    <x-date-wo-time-input wire:model.lazy="tanggal_poin_user" id="tanggal_poin_user"
-                        name="tanggal_poin_user" x-ref="addDate" />
+                    <select wire:model.lazy="selected_day_user" id="selected_day_user" name="selected_day_user" 
+                        class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
+                        <option value="">Semua Hari</option>
+                        @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
+                            <option value="{{ $name }}">{{ $description }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="mb-3">
                     <x-input wire:model.debounce.200ms="search" type="text" placeholder="Cari Nama"

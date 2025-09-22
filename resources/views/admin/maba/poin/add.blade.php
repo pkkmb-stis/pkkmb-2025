@@ -56,13 +56,20 @@
                 <x-error-input name="poin" />
               </div>
               <div class="mb-3">
-                <x-label-input for="urutan_input">Waktu Terkena Poin</x-label-input>
-                <x-date-input wire:model.defer="urutan_input" id="urutan_input" name="urutan_input" x-ref="addDate" />
-                <x-error-input name="urutan_input" />
+                <x-label-input for="selected_day_add">Hari Terkena Poin</x-label-input>
+
+                <select wire:model.defer="selected_day_add" id="selected_day_add" name="selected_day_add" 
+                    class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
+                    <option value="">Pilih Hari (Opsional)</option>
+                    @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
+                        <option value="{{ $name }}">{{ $description }}</option>
+                    @endforeach
+                </select>
+                
+                <x-error-input name="selected_day_add" />
                 <span class="mt-1 text-xs italic text-gray-400">
-                  Akan digunakan tanggal dan waktu ini untuk perhitungan poin. Jika dikosongkan maka
-                  akan
-                  otomatis bernilai waktu ketika form disubmit
+                  Pilih hari PKKMB untuk perhitungan poin. Jika dikosongkan maka
+                  akan otomatis menggunakan waktu ketika form disubmit
                 </span>
               </div>
             </div>

@@ -3,32 +3,57 @@
 namespace App\Http\Livewire\Admin\Maba\Poin\User;
 
 use App\Models\User;
+use App\Models\Day;
 use Livewire\Component;
 
 class RekapHarian extends Component
 {
     public $tanggal_rekap;
-    protected $listeners = ['reloadCardRekap' => '$refresh'];
+    public $selected_day;
+    //protected $listeners = ['reloadCardRekap' => '$refresh'];
+
+    public function mount()
+    {
+        $this->selected_day = '';
+    }
+
 
     public function render()
     {
-        $tanggal = $this->tanggal_rekap == '' ? date('Y-m-d', time()) : $this->tanggal_rekap;
-        $this->tanggal_rekap = $tanggal;
+        $tanggal_filter = null;
 
-        $date = $tanggal . "%";
+        if ($this->selected_day) {
+            $dayDate = Day::getDateByName($this->selected_day);
+            if ($dayDate) {
+                $tanggal_filter = $dayDate->format('Y-m-d');
+            }
+        }
+        
         return view('admin.maba.poin.user.rekap-harian', [
-            'rekap' => $this->getRekap($date)
+            'rekap' => $this->getRekap($tanggal_filter)
         ]);
 
-        $this->emit("reloadCardRekap");
+        //$this->emit("reloadCardRekap");
     }
 
-    public function getRekap($date)
+    /**
+     * NEW: Reset filter method
+     */
+    public function resetFilter()
+    {
+        $this->selected_day = null;
+        $this->tanggal_rekap = null;
+    }
+
+    public function getRekap($tanggal)
     {
         $hasil = User::rekapHarian();
 
-        $hasil->where(function ($query) use ($date) {
-            $query->where('jenis_poin_user.urutan_input', 'like', $date);
+        $hasil->where(function ($query) use ($tanggal) {
+
+            if ($tanggal) {
+                $query->where('jenis_poin_user.urutan_input', 'like', $tanggal . "%");
+            }
             $query->has('kelompok');
         });
 

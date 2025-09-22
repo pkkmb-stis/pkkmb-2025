@@ -11,13 +11,13 @@
                             <div wire:ignore>
                                 <select id="editJenisPoinSelect" class="w-full" wire:model.lazy="jenispoin"
                                     {{ !$canChangeJenisPoin ? 'disabled' : '' }} x-init="initializeEditJenisPoin()">
-                                    <!-- Displaying selected option -->
+
                                     <option
                                         value="{{ $selected->jenispoin->category * 1000 + $selected->jenispoin->id }}"
                                         selected>
                                         {{ MAP_CATEGORY['jenis_poin'][$selected->jenispoin->category] . ' ' . $selected->jenispoin->nama }}
                                     </option>
-                                    <!-- Displaying other options -->
+
                                     @foreach ($jenispoins as $j)
                                         @if ($j->id != $selected->jenispoin->id)
                                             <option value="{{ $j->category * 1000 + $j->id }}">
@@ -30,7 +30,6 @@
                             <x-error-input name="editJenisPoinSelect" />
                         </div>
 
-                        <!-- Points and Timing in two columns -->
                         <div class="grid lg:grid-cols-2 lg:gap-6">
                             <div class="mb-3">
                                 <x-label-input for="poin">Poin</x-label-input>
@@ -39,11 +38,19 @@
                             </div>
 
                             <div class="mb-3">
-                                <x-label-input for="urutan_input">Waktu Terkena Poin</x-label-input>
-                                <x-date-input wire:model.defer="urutan_input" name="urutan_input" x-ref="editDate" />
-                                <x-error-input name="urutan_input" />
+                                <x-label-input for="selected_day_edit">Hari Terkena Poin</x-label-input>
+
+                                <select wire:model.defer="selected_day_edit" id="selected_day_edit" name="selected_day_edit" 
+                                    class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
+                                    <option value="">Gunakan Waktu Asli</option>
+                                    @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
+                                        <option value="{{ $name }}">{{ $description }}</option>
+                                    @endforeach
+                                </select>
+                               
+                                <x-error-input name="selected_day_edit" />
                                 <span class="mt-1 text-xs italic text-gray-400">
-                                    Mengubah waktu terkena poin bisa berdampak kepada hasil akhir poin
+                                    Pilih hari untuk mengubah tanggal poin. Kosongkan untuk mempertahankan waktu asli
                                 </span>
                             </div>
                         </div>
@@ -115,6 +122,12 @@
                     searchingText: 'Sedang mencari...',
                     searchPlaceholder: 'Cari jenis poin...',
                     placeholder: 'Pilih jenis poin...',
+
+                    events: {
+                    afterChange: (newVal) => {
+                        @this.set('jenispoin', newVal[0].value);
+                }
+            }
                 });
             }
         </script>
