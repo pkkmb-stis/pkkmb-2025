@@ -41,13 +41,13 @@
                         $today = Carbon\Carbon::today();
 
                         // Default background color
-                        $bgColor = '#C0C0C0'; // Default for wait (C0C0C0)
+                        $bgColor = '#C0C0C0';
 
                         // Mengatur warna solid berdasarkan status (wait atau done)
                         if ($endDate->lt($today)) {
-                            $bgColor = '#F9C46B'; // Done (F9C46B) from 2025.5 color
+                            $bgColor = '#F9C46B';
                         } elseif ($startDate->eq($today)) {
-                            $bgColor = '#F9C46B'; // Done for today (F9C46B) from 2025.5 color
+                            $bgColor = '#F9C46B';
                         }
 
                         // Menentukan warna untuk status circle
@@ -68,8 +68,8 @@
 
                             <!-- Judul acara -->
                             <h1 class="mb-2 font-chaTime text-lg font-bold text-coklat-1">{{ $t->title }}</h1>
-                            <div class="rounded-lg px-4 py-2 pr-40 font-poppins text-white bg-cover bg-center bg-no-repeat"
-                                style="background-color: {{ $bgColor }};"> <!-- Gunakan warna solid -->
+                            <div class="rounded-lg px-4 py-2 pr-52 font-poppins text-white bg-cover bg-center bg-no-repeat border-2 border-solid border-2025-3"
+                                style="background-color: {{ $bgColor }};">
                                 <div class="font-poppins font-bold tracking-wide text-kuning-1">
                                     {{ formatDateIso($t->waktu_mulai, 'D MMMM YYYY') }}
                                     @if ($t->waktu_akhir)
@@ -91,13 +91,18 @@
                                 </div>
 
                                 <div class="absolute top-0 right-0 flex flex-col gap-2 mt-2 mr-4">
-                                    <img src="{{ asset('img/asset/2025/timeline/'.$rightElement) }}" alt="Icon" class="w-16 h-16 z-10" />
-                                </div>`
+                                    <img src="{{ asset('img/asset/2025/timeline/'.$rightElement) }}" alt="pattern" class="w-40 z-10 mt-7 mr-2" style="height:125px;"/>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Lingkaran status acara -->
-                        <div class="{{ $color }} absolute top-0 ml-[-8px] mt-[4px] h-5 w-5 rounded-full border-2 border-solid border-black">
+                        <div class="absolute top-0 ml-[-12px] -mt-[2px]">
+                            <!-- Gambar untuk status "done" -->
+                            <img 
+                                src="{{ asset('img/asset/2025/timeline/' . ($color == 'bg-yellow-500' ? 'cempakadone.png' : 'cempakawait.png')) }}" 
+                                alt="status" 
+                                class="w-8 h-8" />
                         </div>
                     </div>
                     @php
