@@ -17,7 +17,7 @@
         <div>
             <x-label for="username" value="No Ujian / Username" class="mb-2" />
             <input type="text" :value="old('username')"
-                class="block w-full mt-1 rounded-lg border-opacity-80 border-coklat-1 focus:outline-none focus:ring-1 focus:ring-coklat-2 focus:border-coklat-2"
+                class="block w-full px-4 py-2 mt-1 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.05)] border border-transparent focus:outline-none focus:ring-2 focus:ring-brown-600 focus:border-transparent"
                 name="username" required autofocus>
         </div>
 
@@ -25,7 +25,7 @@
             <x-label for="password" value="{{ __('Password') }}" class="mb-2" />
             <div class="relative flex flex-row items-center">
                 <input :type="showPassword ? 'text' : 'password'" id="password"
-                    class="block w-full pr-3 mt-1 rounded-lg border-opacity-80 border-coklat-1 focus:outline-none focus:ring-1 focus:ring-coklat-2 focus:border-coklat-2"
+                    class="block w-full px-4 py-2 mt-1 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.05)] border border-transparent focus:outline-none focus:ring-2 focus:ring-brown-600 focus:border-transparent"
                     name="password" required autocomplete="current-password">
                 <i class="absolute right-0 flex items-center pr-3 mr-2 cursor-pointer fa fa-eye"
                     x-on:click="showPassword = !showPassword" style="z-index: 1;"></i>
@@ -41,17 +41,17 @@
             </label>
         </div>
 
-        <div class="mt-3">
-            <x-button class="w-full text-lg transition rounded-lg bg-merah-700 hover:bg-merah-hover font-poppins">
-                Masuk
-            </x-button>
+       <div class="flex flex-col items-center mt-3">
+        <x-button class="inline-flex items-center justify-center px-8 py-3 text-lg font-bold text-white transition-all rounded-full shadow-lg bg-gradient-to-b from-pink-500 to-indigo-900 hover:brightness-110 hover:scale-105">
+        Masuk
+    </x-button>
 
-            @if (Route::has('password.request'))
-                <a class="block mt-3 text-sm text-center text-gray-500 cursor-pointer hover:text-base-blue-600"
-                    href="{{ route('password.request') }}">
-                    Lupa Password?
-                </a>
-            @endif
+    @if (Route::has('password.request'))
+    <a class="mt-3 text-sm text-center text-gray-500 cursor-pointer hover:text-base-blue-600"
+    href="{{ route('password.request') }}">
+    Lupa Password?
+        </a>
+        @endif
         </div>
     </form>
 </x-guest-layout>

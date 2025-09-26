@@ -30,13 +30,12 @@
                     <img src="{{ LOGO }}" alt="Logo" class="relative w-56 mb-4">
                     <div class="text-center md:px-8 2xl:px-20">
                         <p class="text-base font-bold text-base-white font-nunito">
-                            Membangun Mahasiswa yang Tangguh Serta Siap Menempuh Pendidikan Untuk Menjadi Calon ASN Ahli
-                            di Bidang Statistik dan Komputasi Statistik yang BerAKHLAK
+                            Menyiapkan Calon Statistisi BerAKHLAK, Unggul dalam Kolaborasi dan Inovasi, serta Mampu Beradaptasi dengan Teknologi Digital sebagai Pilar Statistik Resmi Berkualitas untuk Indonesia Emas 2045.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center w-full col-span-8 md:w-2/3 md:col-span-4 md:bg-putih-100/70">
+            <div class="flex justify-center w-full col-span-8 md:w-2/3 md:col-span-4 md:bg-putih-100/70 ">
                 <div class="flex items-center justify-center w-full h-screen ">
                     <div class="md:w-3/4 w-[90%] md:h-3/4 rounded-3xl" style="box-shadow: 0 0 20px rgb(60, 60, 60);">
                         <div
