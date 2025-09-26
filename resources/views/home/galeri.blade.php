@@ -35,11 +35,11 @@
 
         <div class="mx-4 mb-16 mt-8 grid grid-cols-2 gap-x-0 font-bohemianSoul sm:mb-20 lg:grid-cols-12">
             <a href="{{ route('home.galeri') }}"
-                class="col-span-1 flex items-center justify-center rounded-l-full border-4 border-merah-1 bg-merah-1 py-1 text-base-white lg:col-start-4 lg:col-end-7">
+                class="col-span-1 flex items-center justify-center rounded-l-full border-4 border-2025-1 bg-2025-1 py-1 text-base-white lg:col-start-4 lg:col-end-7">
                 <h1 class="text-lg md:text-xl lg:text-2xl">Foto</h1>
             </a>
             <a href="{{ route('home.video') }}"
-                class="col-span-1 flex items-center justify-center rounded-r-full border-4 border-merah-1 py-1 text-merah-1 hover:bg-merah-1 hover:text-base-white lg:col-start-7 lg:col-end-10">
+                class="col-span-1 flex items-center justify-center rounded-r-full border-4 border-2025-1 py-1 text-2025-1 hover:bg-2025-1 hover:text-base-white lg:col-start-7 lg:col-end-10">
                 <h1 class="text-lg md:text-xl lg:text-2xl">Video</h1>
             </a>
         </div>
@@ -57,71 +57,66 @@
                     ->get();
             @endphp
             <div
-                class="mb-20 flex w-full flex-col items-center justify-around gap-4 rounded-[38px] bg-merah3-pattern p-6 sm:gap-8 sm:p-8">
-                <div class="{{ $isEven ? 'bg-event-odd' : 'bg-event-even' }} -mt-12 flex w-full items-center justify-center bg-white bg-repeat-x px-10 py-2 text-center font-bohemianSoul text-3xl font-normal leading-normal text-merah-2 sm:-mt-16 sm:px-16 md:px-28 md:py-4 md:text-4xl lg:px-40 lg:text-5xl"
-                    style="border-radius: 30px;">
-                    <span>
-                        <img src="{{ asset('img/asset/2024/Elemen 5.png') }}" alt=""
-                            style="filter: drop-shadow(0 0 2px #fff);">
-                    </span>
-                    <span class="mx-4 text-base text-coklat-2 sm:text-2xl"
-                        style="filter: drop-shadow(2px 2px orange);">{{ $t->title }}</span>
-                    <span>
-                        <img class="scale-x-[-1]" src="{{ asset('img/asset/2024/Elemen 5.png') }}" alt=""
-                            style="filter: drop-shadow(0 0 4px #fff);">
-                    </span>
-                </div>
-                <div x-data="{ showModalImage: false }" class="grid grid-cols-2 gap-4 lg:grid-cols-3">
-                    @foreach ($photos as $p)
-                        <div x-data="{ hovered: false, width: window.innerWidth }" x-init="window.addEventListener('resize', () => {
-                            width = window.innerWidth;
-                        });" @mouseenter="hovered = true"
-                            @mouseleave="hovered = false" @click="showModalImage = true"
-                            class="relative flex flex-col items-center justify-center bg-base-grey-700">
-                            <img x-cloak class="w-full object-cover shadow-xl hover:scale-[1.05] custom-shadow-hover"
-                                src="{{ $p->filename }}" alt="Photo {{ $loop->index + 1 }}"
-                                :style="(width >= 640) ? 'aspect-ratio: 16/9' : 'aspect-ratio: 1/1'">
+                class="relative mb-20 flex w-full flex-col items-center justify-around gap-4 rounded-[38px] bg-2025-1 p-6 sm:gap-8 sm:p-8">
 
-                            <!-- Overlay yang muncul saat hover -->
-                            {{-- <div x-cloak :class="{ 'inset-0': hovered, 'bottom-0 inset-x-0': !hovered }"
-                                class="absolute flex flex-col items-center justify-center bg-black bg-opacity-70">
-                                <span
-                                    class="w-[90%] break-all text-center font-bohemianSoul text-sm font-bold uppercase tracking-wide text-white sm:text-lg"
-                                    style="filter: drop-shadow(4px 4px #000);">
-                                    {{ $p->title }}
-                                </span>
-                                <p :class="{ '': hovered, 'hidden': !hovered }"
-                                    class="w-[90%] break-all font-nunito text-white">{{ $p->caption }}</p>
-                            </div> --}}
+                <div class="absolute inset-0 rounded-[38px] bg-motif3-pattern bg-repeat bg-[size:400px] opacity-25"></div>
+
+                <div class="relative w-full">
+
+                    <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
+                        <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
+                            class="h-7 w-8">
+
+                        <div class="relative">
+                            <img src="{{ asset('img/asset/2025/background_subjudul.png') }}" alt="BG" class="h-12 rounded-lg">
+                            <span class="absolute inset-0 flex items-center justify-center text-[#8B2F4B] -translate-y-1">
+                                {{ $t->title }}
+                            </span>
                         </div>
-                    @endforeach
 
-                    <!-- Modal Image -->
-                    <div x-cloak x-show="showModalImage" x-init="$watch('showModalImage', value => document.body.classList.toggle('no-scroll', value))">
-                        <x-modal.galeri judul="{{ $t->title }}">
-                            <x-slot name="closeButton">
-                                <div x-on:click="showModalImage = false">
-                                    <x-close-button />
-                                </div>
-                            </x-slot>
+                        <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
+                            class="h-7 w-8">
+                    </h5>
 
-                            @include('home.image-carousel', ['photos' => $photos])
-                        </x-modal.galeri>
+                    <div x-data="{ showModalImage: false }" class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+                        @foreach ($photos as $p)
+                            <div x-data="{ hovered: false, width: window.innerWidth }" x-init="window.addEventListener('resize', () => {
+                                width = window.innerWidth;
+                            });" @mouseenter="hovered = true"
+                                @mouseleave="hovered = false" @click="showModalImage = true"
+                                class="relative flex flex-col items-center justify-center bg-base-grey-700">
+                                <img x-cloak class="w-full object-cover shadow-xl hover:scale-[1.05] custom-shadow-hover"
+                                    src="{{ $p->filename }}" alt="Photo {{ $loop->index + 1 }}"
+                                    :style="(width >= 640) ? 'aspect-ratio: 16/9' : 'aspect-ratio: 1/1'">
+                            </div>
+                        @endforeach
+
+                        <div x-cloak x-show="showModalImage" x-init="$watch('showModalImage', value => document.body.classList.toggle('no-scroll', value))">
+                            <x-modal.galeri judul="{{ $t->title }}">
+                                <x-slot name="closeButton">
+                                    <div x-on:click="showModalImage = false">
+                                        <x-close-button />
+                                    </div>
+                                </x-slot>
+
+                                @include('home.image-carousel', ['photos' => $photos])
+                            </x-modal.galeri>
+                        </div>
                     </div>
-                </div>
 
-                {{-- Tampilkan bila sudah login --}}
-                @auth
-                    @if (!empty($t->link_gallery))
-                        <div class="flex w-full items-center justify-end">
-                            <x-button :tagA='true' href="{{ $t->link_gallery }}" target="_blank"
-                                class="rounded-3xl bg-base-orange-500 text-sm hover:bg-base-orange-600 sm:text-base">
-                                Selengkapnya
-                            </x-button>
-                        </div>
-                    @endif
-                @endauth
-            </div>
+                    {{-- Tampilkan bila sudah login --}}
+                    @auth
+                        @if (!empty($t->link_gallery))
+                            <div class="flex w-full items-center justify-end">
+                                <x-button :tagA='true' href="{{ $t->link_gallery }}" target="_blank"
+                                    class="rounded-3xl bg-base-orange-500 text-sm hover:bg-base-orange-600 sm:text-base">
+                                    Selengkapnya
+                                </x-button>
+                            </div>
+                        @endif
+                    @endauth
+
+                </div> </div>
             @php
                 $i++;
             @endphp
