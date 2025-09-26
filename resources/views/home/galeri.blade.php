@@ -13,17 +13,23 @@
 
         <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-12 md:pt-28 lg:pt-32 xl:px-16">
             <div class="flex h-full w-full flex-row items-end justify-center gap-4">
-                <img src="{{ asset('img/maskot/kambe galeri.png') }}" alt="wave" class="z-10 w-24 sm:w-32">
-                <div class="flex h-full flex-col items-center justify-center">
-                    <img src="{{ asset('img/asset/2024/Elemen 4.png') }}" alt="Elemen 4">
-                    <h1
-                        class="rounded-full bg-putih-100 px-6 py-3 text-center align-middle font-aringgo text-sm font-thin leading-normal text-merah-1 drop-shadow-md sm:px-12 lg:py-4 lg:text-3xl xl:text-4xl">
-                        GALERI
-                    </h1>
-                    <img src="{{ asset('img/asset/2024/Elemen 4.png') }}" alt="Elemen 4" class="rotate-180">
-                </div>
-                <img src="{{ asset('img/maskot/kambe galeri.png') }}" alt="wave"
-                    class="z-10 w-24 scale-x-[-1] sm:w-32">
+                <img src="{{ asset('img/maskot/2025/maskot 1.png') }}" alt="wave" class="z-10 w-24 sm:w-28 -translate-x-6 translate-y-5">
+                    <div class="flex h-full flex-col items-center justify-center">
+                        <div class="flex flex-row items-center justify-center gap-4 mt-14">
+                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                                alt="Elemen 4" class="w-24 sm:w-28 -mr-28 z-10 -mt-8">
+                            <h1
+                                class="flex items-center justify-center rounded-full px-10 py-3 sm:px-16 lg:py-4 lg:pb-6
+                                    font-brasikaDisplay text-center text-sm font-thin leading-normal 
+                                    drop-shadow-md sm:text-2xl lg:text-3xl xl:text-4xl z-0 relative border-4"
+                                style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
+                                GALERI
+                            </h1>
+                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                                alt="Elemen 4" class="w-24 sm:w-28 -ml-28 z-10 -mt-8 scale-x-[-1]">
+                        </div>
+                    </div>
+                <img src="{{ asset('img/maskot/2025/maskot 4.png') }}" alt="wave" class="z-10 w-24 sm:w-28 translate-x-6 translate-y-5">
             </div>
         </div>
 

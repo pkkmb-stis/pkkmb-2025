@@ -4,17 +4,23 @@
 
         <div class="grid sm:px-16 md:px-20 xl:px-16 lg:pt-32 md:pt-28 pt-24 md:pb-12 pb-4 px-8 w-full">
             <div class="flex flex-row justify-center items-end gap-4 w-full h-full">
-                <img src="{{ asset('img/maskot/pika tentang.png') }}" alt="wave" class="z-10 sm:w-32 w-24">
-                <div class="flex flex-col h-full justify-center items-center">
-                    <img src="{{ asset('img/asset/2024/Elemen 4.png') }}" alt="Elemen 4">
-                    <h1
-                        class="font-thin xl:text-4xl lg:text-3xl text-sm leading-normal text-merah-1 font-aringgo text-center py-3 lg:py-4 px-6 sm:px-12 bg-putih-100 rounded-full align-middle drop-shadow-md"
-                        >
-                        TENTANG
-                    </h1>
-                    <img src="{{ asset('img/asset/2024/Elemen 4.png') }}" alt="Elemen 4" class="rotate-180">
-                </div>
-                <img src="{{ asset('img/maskot/pika tentang.png') }}" alt="wave" class="z-10 sm:w-32 w-24 scale-x-[-1]">
+                <img src="{{ asset('img/maskot/2025/maskot 3.png') }}" alt="wave" class="z-10 w-24 sm:w-28 -translate-x-6 translate-y-5">
+                    <div class="flex h-full flex-col items-center justify-center">
+                        <div class="flex flex-row items-center justify-center gap-4 mt-14">
+                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                                alt="Elemen 4" class="w-24 sm:w-28 -mr-28 z-10 -mt-8 ">
+                            <h1
+                                class="flex items-center justify-center rounded-full px-10 py-3 sm:px-16 lg:py-4 lg:pb-6
+                                    font-brasikaDisplay text-center text-sm font-thin leading-normal 
+                                    drop-shadow-md sm:text-2xl lg:text-3xl xl:text-4xl z-0 relative border-4"
+                                style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
+                                TENTANG
+                            </h1>
+                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                                alt="Elemen 4" class="w-24 sm:w-28 -ml-28 z-10 -mt-8 scale-x-[-1]">
+                        </div>
+                    </div>
+                <img src="{{ asset('img/maskot/2025/maskot 4.png') }}" alt="wave" class="z-10 w-24 sm:w-28 translate-x-6 translate-y-5">
             </div>
         </div>
 
