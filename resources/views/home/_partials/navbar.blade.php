@@ -138,7 +138,7 @@
                     </div>
                 </div>
             @else
-                <a class="px-5 py-1 font-bold font-poppins transition border-2 rounded-full border-[#8B2F4B] bg-[#8B2F4B] font-poppins text-base-white"
+                <a class="px-5 py-1 font-bold font-poppins transition border-2 rounded-full border-[#8B2F4B] bg-[#8B2F4B] font-poppins text-base-white hover:bg-2025-2" 
                     href="{{ route('login') }}">
                     Masuk
                 </a>
