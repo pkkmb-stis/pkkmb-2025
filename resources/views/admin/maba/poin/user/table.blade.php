@@ -25,6 +25,7 @@
                         <option value="-1">Semua Tipe Poin</option>
                         <option value="{{ CATEGORY_JENISPOIN_PENGHARGAAN }}">Penghargaan</option>
                         <option value="{{ CATEGORY_JENISPOIN_PELANGGARAN }}">Pelanggaran</option>
+                        <option value="{{ CATEGORY_JENISPOIN_PENEBUSAN }}">Penebusan</option>
                     </x-select-form>
                 </div>
             </div>
@@ -44,7 +45,7 @@
                 </div>
             </div>
 
-            <x-table :theads="['Nama', 'Kategori', 'Jumlah', 'Terakhir Update']" class="mb-3" :breakpointVisibility="[
+            <x-table :theads="['Nama', 'Kategori', 'Jumlah Pelanggaran', 'Jumlah Poin', 'Terakhir Update']" class="mb-3" :breakpointVisibility="[
                 3 => ['lg' => 'hidden'], // Hide terakhir update on lg
                 1 => ['md' => 'hidden'], // Hide kategori on md
             ]">
@@ -67,6 +68,7 @@
                                 <x-badge-poin :category="$pk->kategori" />
                             </td>
                             <td class="px-6 py-3 text-center">{{ $pk->kategori_count }}</td>
+                            <td class="px-6 py-3 text-center">{{ $pk->poin_sum }}</td>
                             <td class="hidden px-6 py-3 text-center lg:table-cell">{{ $pk->terakhir_update }}</td>
                         </tr>
                     @empty

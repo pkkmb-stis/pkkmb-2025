@@ -279,11 +279,11 @@ class User extends Authenticatable
 
     public static function poinUser()
     {
-        $hasil = User::select('name', 'jenis_poin.category as kategori', JenisPoin::raw('count(jenis_poin.category) as kategori_count'), 'jenis_poin_user.urutan_input as terakhir_update')
+        $hasil = User::select('name', 'jenis_poin.category as kategori', JenisPoin::raw('count(jenis_poin.category) as kategori_count'), Poin::raw('sum(jenis_poin_user.poin) as poin_sum'), 'jenis_poin_user.urutan_input as terakhir_update')
             ->join('jenis_poin_user', 'users.id', '=', 'jenis_poin_user.user_id')
             ->join('jenis_poin', 'jenis_poin_user.jenis_poin_id', '=', 'jenis_poin.id')
             ->groupBy('kategori', 'name')
-            ->orderBy('kategori', 'asc')
+            ->orderBy('poin_sum', 'asc')
             ->orderBy('kategori_count', 'asc');
 
         return $hasil;

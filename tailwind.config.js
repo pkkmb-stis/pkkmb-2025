@@ -14,6 +14,8 @@ export default {
         extend: {
             backgroundImage: (theme) => ({
                 "background1-pattern": "url('@/images/pattern/2025/backgrounddesktop1.png')",
+                "motif-pattern": "url('@/images/pattern/2025/pattern.png')",
+                "motif3-pattern": "url('@/images/pattern/2025/motif 3.png')",
                 "merah-pattern": "url('@/images/pattern/2024/merah.png')",
                 "merah1-pattern": "url('@/images/pattern/2024/merah1.png')",
                 "merah2-pattern": "url('@/images/pattern/2024/merah2.png')",

@@ -76,6 +76,9 @@ class DatabaseSeeder extends Seeder
         // Warna seeder
         $this->call(WarnaCoCardKelompokSeeder::class);
 
+        // Day seeder
+        $this->call(DaySeeder::class);
+
         //  Jika environment local maka generate data dummy
         if (env('APP_ENV') == 'local') {
             // Generate poin
