@@ -21,7 +21,7 @@ export default {
                 "merah2-pattern": "url('@/images/pattern/2024/merah2.png')",
                 "merah3-pattern": "url('@/images/pattern/2024/merah3.png')",
                 "merah4-pattern": "url('@/images/pattern/2024/merah4.png')",
-                "putih-pattern": "url('@/images/pattern/2024/putih2.png')",
+                "putih-pattern": "url('@/images/pattern/2025/putih-pattern.png')",
                 "putih2-pattern": "url('@/images/pattern/2024/putih.png')",
                 "coklat-pattern": "url('@/images/pattern/2024/coklat.png')",
                 "coklat3-pattern": "url('@/images/pattern/2024/coklat3.png')",

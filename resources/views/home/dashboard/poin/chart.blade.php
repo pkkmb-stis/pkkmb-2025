@@ -1,8 +1,14 @@
 <div class="grid grid-cols-1 items-center justify-center gap-x-2 gap-y-6 sm:grid-cols-2 lg:grid-cols-1">
     {{-- <div class="mb-5"> --}}
-        <x-card>
+    <x-card class="bg-white rounded-xl shadow-md p-4" style="border: 4px solid #1E1E1E;">
+        <div class="w-full h-full">
+            <x-line-poin id="5" list-poin="{!! $listPoin !!}" />
+        </div>
+    </x-card>
+    
+        {{-- <x-card>
             <x-line-poin id='5' list-poin="{!! $listPoin !!}" />
-        </x-card>
+        </x-card> --}}
     {{-- </div> --}}
 
     @if (auth()->user()->is_maba)

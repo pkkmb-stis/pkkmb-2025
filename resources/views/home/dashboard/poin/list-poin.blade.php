@@ -1,6 +1,21 @@
 <div x-data="{ showModalDetail: @entangle('showModalDetail') }" x-on:close-modal.window="showModalDetail = false">
-    <x-card class="px-2 sm:px-5">
-        <h5 class="mb-4 text-lg font-medium font-bohemianSoul">Poin Terbaru</h5>
+    <x-card class="px-2 sm:px-5" style="border: 4px solid #1E1E1E;">
+        <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
+            <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" 
+                alt="Cempaka Merah" 
+                class="w-8 h-7">
+            
+            <div class="relative">
+                <img src="{{ asset('img/asset/2025/background_subjudul.png') }}" alt="BG" class="h-12 rounded-lg">
+                <span class="absolute inset-0 flex items-center justify-center text-[#8B2F4B] -translate-y-1">
+                    Poin
+                </span>
+            </div>
+            
+            <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" 
+                alt="Cempaka Merah" 
+                class="w-8 h-7">
+        </h5>
         <div class="divide-y">
             @forelse ($poin as $p)
                 <div class="px-2 py-4 hover:bg-blueGray-50 sm:px-5 cursor-pointer" wire:click="show({{ $p['id'] }})">

@@ -1,10 +1,21 @@
 <x-home-layout menu="Dashboard" title="Dashboard">
-    <div class="px-4 pt-24 pb-16 mt-6 sm:px-6 md:px-8 md:pt-28 lg:px-10">
+    <div class="px-4 pt-24 pb-16 mt-6 sm:px-6 md:px-8 md:pt-28 lg:px-10 mx-10">
 
-        <x-card class="px-2 sm:px-5">
-            <h5 class="text-xl font-medium font-bohemianSoul md:text-2xl">
-                {{ getGreeting() }}, {{ $user->name }}!
+        <x-card class="px-2 sm:px-5" style="border: 4px solid #1E1E1E;">
+            <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
+                <img src="{{ asset('img\asset\2025\Elemen 1.png') }}" 
+                    alt="elemen 1" 
+                    class="w-10 h-10">
+                
+                <div class="text-xl font-medium md:text-2xl">
+                    {{ getGreeting() }}, {{ $user->name }}!
+                </div>    
+
+                <img src="{{ asset('img\asset\2025\Elemen 1.png') }}" 
+                    alt="elemen 1" 
+                    class="w-10 h-10">
             </h5>
+            
             <p class="w-full mt-1 italic leading-tight text-justify text-gray-700 text-md lg:w-3/4">{{ getQuotes() }}
             </p>
 
@@ -61,7 +72,7 @@
 
             <div>
                 @if (auth()->user()->is_maba)
-                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
+                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-12"> 
                         <div class="col-span-1 lg:col-span-7">
                             <div class="grid grid-cols-1 gap-6">
                                 @livewire('home.dashboard.penebusan.list-penebusan')
@@ -70,29 +81,46 @@
                                 @livewire('home.dashboard.kendala.list-kendala')
                             </div>
                         </div>
+                        
+                        <div class="flex flex-col gap-6">
+                            @include('components.presensi')   {{-- Full 1 baris --}}
+                            @include('components.pengaduan') {{-- Enter ke bawah --}}
+                        </div>
+
 
                         <div class="col-span-1 lg:col-span-5">
                             @livewire('home.dashboard.poin.chart')
                         </div>
                     </div>
                 @elseif (auth()->user()->hasRole(ROLE_PANITIA))
-                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
+                    {{-- <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
                         <div class="col-span-1 lg:col-span-7">
                             @livewire('home.dashboard.absensi.list-absensi')
                         </div>
                         <div class="col-span-1 lg:col-span-5">
                             @livewire('home.dashboard.kendala.list-kendala')
                         </div>
+                    </div> --}}
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            @livewire('home.dashboard.absensi.list-absensi')
+                        </div>
+                        <div>
+                            @livewire('home.dashboard.kendala.list-kendala')
+                        </div>
                     </div>
 
-                    <div class="grid grid-cols-1 gap-6 mt-5 lg:grid-cols-12">
-                        <div class="col-span-1 lg:col-span-7">
+
+                    <div class="flex flex-col gap-6 mt-5">
+                        <div class="w-full">
                             @livewire('home.dashboard.poin.list-poin')
                         </div>
-                        <div class="col-span-1 lg:col-span-5">
+                        <div class="w-full">
                             @livewire('home.dashboard.poin.chart')
                         </div>
                     </div>
+
                 @endif
             </div>
 
