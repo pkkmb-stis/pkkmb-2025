@@ -26,7 +26,7 @@ export default {
                 "coklat-pattern": "url('@/images/pattern/2024/coklat.png')",
                 "coklat3-pattern": "url('@/images/pattern/2024/coklat3.png')",
                 "header-wave": "url('@/images/pattern/2024/header-wave.png')",
-                "footer-wave": "url('@/images/pattern/2024/footer-wave.png')",
+                "footer-wave": "url('@/images/pattern/2025/footer-all.png')",
                 "kuning-pattern": "url('@/images/pattern/2024/kuning.png')",
                 "kuning2-pattern": "url('@/images/pattern/2024/kuning2.png')",
                 "card-profile": "url('@/images/pattern/2024/card.png')",
