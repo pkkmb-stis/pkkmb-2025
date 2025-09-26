@@ -1,44 +1,53 @@
-<div>
+<div class="bg-[#FFEAC8] mix-blend-multiply">
   <div class="pb-40" id="teaser">
-    <!-- Header -->
-    <div
-      class="grid lg:grid-cols-1 grid-cols-1 md:gap-6 h-auto align-items-start lg:align-items-stretch lg:items-center lg:py-0">
-      <div class="lg:pl-16 lg:pr-16 md:px-8 sm:px-2 col-span-1 relative lg:pt-20 md:pt-20 pt-12 pb-10 lg:pb-20 lg:block"
-        data-aos="zoom-in-up">
-        <div
-          class="flex flex-row justify-between items-center rounded-3xl lg:w-full m-auto shadow-xl static bg-kuning-pattern overflow-hidden bg-opacity-95"
-          style="height:7.625rem">
-          <div class="flex flex-row lg:pl-7 md:px-4 px-2">
-            <img src="img/asset/2024/gendang.png" class="h-[7rem] lg:absolute lg:left-0 lg:translate-x-8">
-          </div>
-          <div class="lg:text-center text-center lg:ml-0 lg:mr-0">
-            <h1 class="z-20 font-bohemianSoul lg:text-4xl md:text-3xl text-2xl leading-none md:mb-1 text-base-white">
-              Teaser PKKMB-PKBN 2024
-            </h1>
-          </div>
-          <div class="flex flex-row lg:pr-7 md:px-4 px-2">
-            <img src="img/asset/2024/gendang.png" class="h-[7rem] lg:absolute lg:right-0 lg:-translate-x-8 scale-x-[-1]">
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-full lg:h-72 h-72 lg:pl-16 lg:pr-16">
-        <div class="h-80 lg:grid-cols-1 grid-cols-1">
-          <div class="h-80 lg:grid-cols-1 grid-cols-1">
-            <div class="flex lg:w-full m-auto justify-center items-center col-span-1 z-10 lg:mt-0 mt-8 teaser">
-              <div id="video-selamat-datang" data-aos="zoom-in-down">
-                <iframe class="h-full w-full teaser" width="560" height="315"
-                  src="https://www.youtube.com/embed/56hq1-sRfHg" title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
-              </div>
+    <!-- Teaser Section -->
+    <div class="relative"> <!-- relative pindah ke sini -->
+      
+      <!-- Header -->
+      <div class="grid lg:grid-cols-1 grid-cols-1 md:gap-6 h-auto align-items-start lg:align-items-stretch lg:items-center lg:py-0">
+        <div class="lg:pl-16 lg:pr-16 md:px-8 sm:px-2 col-span-1 relative lg:pt-20 md:pt-20 pt-12 pb-10 lg:pb-20 lg:block"
+             data-aos="zoom-in-up">
+          <div class="flex flex-row justify-between items-center rounded-3xl lg:w-full m-auto shadow-xl static bg-[#8B2F4B] overflow-hidden bg-opacity-95 mt-[50px]"
+               style="height:7.625rem">
+            <div class="flex flex-row lg:pl-7 md:px-4 px-2">
+              <img src="{{ elemen1 }}" alt="ornamen kiri" class="h-12 w-auto">
+            </div>
+            <div class="lg:text-center text-center lg:ml-0 lg:mr-0">
+              <h1 class="z-20 font-brasikaDisplay lg:text-4xl md:text-3xl text-2xl leading-none md:mb-1 text-[#F9C46B]">
+                Teaser PKKMB-PKBN 2025
+              </h1>
+            </div>
+            <div class="flex flex-row lg:pr-7 md:px-4 px-2">
+              <img src="{{ elemen1 }}" alt="ornamen kanan" class="h-12 w-auto">
             </div>
           </div>
         </div>
+
+        <!-- Frame maroon -->
+        <div class="relative bg-[#8B1E3F] p-3 mt-10 rounded-lg shadow-lg w-fit mx-auto mb-[-75px]">
+          <div class="w-[90vw] max-w-4xl aspect-video bg-black rounded-md overflow-hidden">
+            <iframe class="w-full h-full"
+                    src="https://www.youtube.com/embed/56hq1-sRfHg"
+                    title="Teaser Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+          </div>
+        </div>
       </div>
+
+      <!-- Ornamen tambahan -->
+      <img src="img/asset/2025/tugu 0 km.png" 
+           alt="tugu 0 km" 
+           class="absolute bottom-0 left-4 w-[171px] h-[419px] h-auto z-10 mb-[-150px] ml-[50px]">
+
+      <img src="img/asset/2025/maleo.png" 
+           alt="burung maleo" 
+           class="absolute bottom-0 right-4 w-[155px] h-[194px] z-10 mb-[-180px] mr-[50px]">
     </div>
   </div>
 </div>
-
 @push('css')
   <style>
     .teaser {

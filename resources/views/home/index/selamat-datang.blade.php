@@ -1,5 +1,6 @@
-<header class="w-full overflow-hidden bg-background1-pattern bg-center bg-no-repeat p-0">
+<header class="w-full h-screen overflow-hidden p-0 bg-[img/asset/2025/vektor.png] bg-center">
 
+  <div class="absolute inset-0 bg-gradient-to-b from-[#e15586] via-[#8b2f4b] to-[#1e2a4a] bg-center z-0 mix-blend-multiply"></div>
     {{-- desktop --}}
     <div class="relative hidden h-screen w-full md:flex">
 
@@ -58,8 +59,8 @@
             </section>
 
              {{-- Elemen Bawah --}}
-              <div class="absolute bottom-0 left-0 w-full h-20 bg-no-repeat bg-center bg-cover">
-                <img src = "resources/images/pattern/2025/motif_.jpg">
+              <div class="absolute bottom-0 left-0 w-full h-20">
+                <img src = "images/pattern/2025/motif_.jpg">
               </div>
             {{-- Elemen Bawah End --}}
         </div>

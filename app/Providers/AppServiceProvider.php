@@ -40,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
         defined('maskot4')   || define('maskot4', asset('img/maskot/2025/maskot 4.png'));
         defined('maskot5')   || define('maskot5', asset('img/maskot/2025/maskot 5.png'));
         defined('maskot6')   || define('maskot6', asset('img/maskot/2025/maskot 6.png'));
-
+        defined('elemen1') || define('elemen1', asset('img/asset/elemen.png'));
         
 
         Blade::component('admin-layout', AdminLayout::class);
