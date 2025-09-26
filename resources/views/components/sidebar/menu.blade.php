@@ -3,7 +3,7 @@
 <li class="items-center">
     @if ($active)
         <a href="{{ $href }}"
-            class="box-border block py-2 pl-5 mx-2 text-sm font-bold capitalize rounded-lg font-poppins bg-coklat-2 text-base-white">
+            class="box-border block py-2 pl-5 mx-2 text-sm font-bold capitalize rounded-lg font-poppins bg-2025-1 text-base-white">
             @if ($id == 'pengaduan')
                 <div class="container-badge icon-container">
                     <i class="{{ $icon }} fa-fw mr-2 text-lg"></i>

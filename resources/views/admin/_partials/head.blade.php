@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<title>{{ $title }} | PKKMB-PKBN 2024</title>
+<title>{{ $title }} | PKKMB-PKBN 2025</title>
 <link rel="shortcut icon" href="{{ LOGO }}" type="image/x-icon">
 
 @livewireStyles

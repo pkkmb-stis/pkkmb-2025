@@ -1,7 +1,7 @@
 <div>
     {{--<div x-data="{ rekapHarian: @entangle('rekapHarian') }">--}}
     <div x-data="{ rekapHarian: false }">
-        <x-button class="uppercase rounded-3xl text-coklat-1 bg-kuning-1 hover:bg-kuning-hover whitespace-nowrap"
+        <x-button class="uppercase rounded-3xl text-2025-1 bg-kuning-1 hover:bg-kuning-hover whitespace-nowrap"
             type="button" x-on:click="rekapHarian = true">
             Rekap Harian
         </x-button>

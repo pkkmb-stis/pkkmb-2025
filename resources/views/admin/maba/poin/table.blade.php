@@ -84,12 +84,12 @@
                                 x-on:click="window.innerWidth < 1024 ? $wire.show({{ $p->id }}) : null">
                                 <td class="px-6 py-3 text-center">
                                     <x-button wire:click="show({{ $p->id }})"
-                                        class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5 hidden lg:inline">
+                                        class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5 hidden lg:inline">
                                         Detail
                                     </x-button>
                                     @can(PERMISSION_UPDATE_POIN)
                                         <x-button
-                                            class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5 px-5 sm:block lg:inline mb-2"
+                                            class="rounded-3xl bg-2025-2 hover:bg-base-orange-600 mx-0.5 px-5 sm:block lg:inline mb-2"
                                             wire:click.stop='edit({{ $p->id }})'
                                             x-on:click="initializeEditJenisPoin()">
                                             Edit

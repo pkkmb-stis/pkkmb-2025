@@ -8,7 +8,7 @@
 </div>
 
 <div x-cloak x-show="openDropdown" @click.away="openDropdown = false"
-    class="absolute right-0 z-50 py-2 text-base bg-white divide-y rounded shadow-lg text-coklat-1 top-10 max-w-52">
+    class="absolute right-0 z-50 py-2 text-base bg-white divide-y rounded shadow-lg text-2025-1 top-10 max-w-52">
     <a href="{{ route('home.index') }}"
         class="block w-full py-2 font-bold transition px-7 hover:bg-base-brown-400 whitespace-nowrap">Halaman
         Utama</a>

@@ -1,5 +1,5 @@
 <div class="block border-solid md:min-w-full md:hidden">
-    <div class="flex items-center justify-between px-5 py-1 my-1 bg-coklat-2">
+    <div class="flex items-center justify-between px-5 py-1 my-1 bg-2025-1">
         <!-- Logo Menu HP -->
         <div class="flex items-center justify-center text-sm whitespace-nowrap">
             <a href="{{ route('home.index') }}">

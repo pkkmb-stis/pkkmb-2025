@@ -97,7 +97,7 @@
                                     Batal
                                 </x-button>
                                 <x-button
-                                    class="uppercase rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 text-md"
+                                    class="uppercase rounded-3xl bg-2025-2 hover:bg-2025-1 text-md"
                                     type="submit" x-on:click="openedit = false">
                                     Edit Poin
                                 </x-button>

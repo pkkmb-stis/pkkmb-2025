@@ -13,7 +13,7 @@ export default {
     theme: {
         extend: {
             backgroundImage: (theme) => ({
-                "background1-pattern": "url('@/images/pattern/2025/background desktop 1.png')",
+                "background1-pattern": "url('@/images/pattern/2025/backgrounddesktop1.png')",
                 "merah-pattern": "url('@/images/pattern/2024/merah.png')",
                 "merah1-pattern": "url('@/images/pattern/2024/merah1.png')",
                 "merah2-pattern": "url('@/images/pattern/2024/merah2.png')",
@@ -59,6 +59,14 @@ export default {
                     500: "#49687F",
                     400: "#778E9E",
                     100: "#CDCAEE",
+                },
+                2025: {
+                    1:"#8B2F4B",
+                    2:"#E15585",
+                    3:"#1E2A4A",
+                    4:"#74C2F0",
+                    5:"#F9C46B",
+                    
                 },
                 merah: {
                     700: "#d52d2d",
