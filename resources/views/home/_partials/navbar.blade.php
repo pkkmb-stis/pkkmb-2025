@@ -65,26 +65,75 @@
             @auth
                 <li class="mx-8">
                     <a href="{{ route('home.dashboard') }}"
-                        class="{{ $menu == 'Dashboard' ? 'text-2025-2 underline u-offset-2' : '' }} transition hover:text-2025-2">Dashboard</a>
+                        class="{{ $menu == 'Dashboard' ? 'shadow-lg text-2025-1' : 'hover:text-2025-1 active:text-2025-1' }} 
+                            relative z-0 inline-block rounded-xl px-4 py-2 transition-all duration-300 group hover:shadow-lg active:shadow-lg">
+                        
+                        <span class="absolute inset-0 z-[-1] rounded-xl 
+                                    bg-[linear-gradient(to_right,#FEF2DE,#FBE2B8,#FEF2DE)] 
+                                    transition-transform duration-300 ease-in-out 
+                                    group-hover:scale-x-100 group-active:scale-x-100 
+                                    {{ $menu == 'Dashboard' ? 'scale-x-100' : 'scale-x-0' }}"></span>
+                        
+                        <span>Dashboard</span>
+                    </a>
                 </li>
             @endauth
 
             <li class="mx-8">
                 <a href="{{ route('home.timeline') }}"
-                    class="{{ $menu == 'Timeline' ? 'text-2025-2 underline u-offset-2' : '' }} transition hover:text-2025-2">
-                    Timeline</a>
+                    class="{{ $menu == 'Timeline' ? 'shadow-lg text-2025-1' : 'hover:text-2025-1 active:text-2025-1' }} 
+                        relative z-0 inline-block rounded-xl px-4 py-2 transition-all duration-300 group hover:shadow-lg active:shadow-lg">
+                    
+                    <span class="absolute inset-0 z-[-1] rounded-xl 
+                                bg-[linear-gradient(to_right,#FEF2DE,#FBE2B8,#FEF2DE)] 
+                                transition-transform duration-300 ease-in-out 
+                                group-hover:scale-x-100 group-active:scale-x-100 
+                                {{ $menu == 'Timeline' ? 'scale-x-100' : 'scale-x-0' }}"></span>
+                    
+                    <span>Timeline</span>
+                </a>
             </li>
             <li class="mx-8">
                 <a href="{{ route('home.galeri') }}"
-                    class="{{ $menu == 'Galeri' ? 'text-2025-2 underline u-offset-2' : '' }} transition hover:text-2025-2">Galeri</a>
+                    class="{{ $menu == 'Galeri' ? 'shadow-lg text-2025-1' : 'hover:text-2025-1 active:text-2025-1' }} 
+                        relative z-0 inline-block rounded-xl px-4 py-2 transition-all duration-300 group hover:shadow-lg active:shadow-lg">
+                    
+                    <span class="absolute inset-0 z-[-1] rounded-xl 
+                                bg-[linear-gradient(to_right,#FEF2DE,#FBE2B8,#FEF2DE)] 
+                                transition-transform duration-300 ease-in-out 
+                                group-hover:scale-x-100 group-active:scale-x-100 
+                                {{ $menu == 'Galeri' ? 'scale-x-100' : 'scale-x-0' }}"></span>
+                    
+                    <span>Galeri</span>
+                </a>
             </li>
             <li class="mx-8">
                 <a href="{{ route('home.ppo') }}"
-                    class="{{ $menu == 'Panitia' ? 'text-2025-2 underline u-offset-2' : '' }} transition hover:text-2025-2">Panitia</a>
+                    class="{{ $menu == 'Panitia' ? 'shadow-lg text-2025-1' : 'hover:text-2025-1 active:text-2025-1' }} 
+                        relative z-0 inline-block rounded-xl px-4 py-2 transition-all duration-300 group hover:shadow-lg active:shadow-lg">
+                    
+                    <span class="absolute inset-0 z-[-1] rounded-xl 
+                                bg-[linear-gradient(to_right,#FEF2DE,#FBE2B8,#FEF2DE)] 
+                                transition-transform duration-300 ease-in-out 
+                                group-hover:scale-x-100 group-active:scale-x-100 
+                                {{ $menu == 'Panitia' ? 'scale-x-100' : 'scale-x-0' }}"></span>
+                    
+                    <span>Panitia</span>
+                </a>
             </li>
             <li class="mx-8">
                 <a href="{{ route('home.tentang') }}"
-                    class="{{ $menu == 'Tentang' ? 'text-2025-2 underline u-offset-2' : '' }} transition hover:text-2025-2">Tentang</a>
+                    class="{{ $menu == 'Tentang' ? 'shadow-lg text-2025-1' : 'hover:text-2025-1 active:text-2025-1' }} 
+                        relative z-0 inline-block rounded-xl px-4 py-2 transition-all duration-300 group hover:shadow-lg active:shadow-lg">
+                    
+                    <span class="absolute inset-0 z-[-1] rounded-xl 
+                                bg-[linear-gradient(to_right,#FEF2DE,#FBE2B8,#FEF2DE)] 
+                                transition-transform duration-300 ease-in-out 
+                                group-hover:scale-x-100 group-active:scale-x-100 
+                                {{ $menu == 'Tentang' ? 'scale-x-100' : 'scale-x-0' }}"></span>
+                    
+                    <span>Tentang</span>
+                </a>
             </li>
         </ul>
 
@@ -110,11 +159,11 @@
                                 @endif
                             </div>
 
-                            <a class="block px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
+                            <a class="block px-12 py-2 font-bold text-center transition text-md hover:bg-2025-2 hover:text-base-white"
                                 href="{{ route('home.profil') }}">Profil Saya</a>
 
                             @can(PERMISSION_AKSES_ADMIN)
-                                <a class="flex items-center justify-between px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
+                                <a class="flex items-center justify-between px-12 py-2 font-bold text-center transition text-md hover:bg-2025-2 hover:text-base-white"
                                     href="{{ route('dashboard') }}">
                                     <!-- Teks Halaman Admin -->
                                     <span>Halaman Admin</span>
@@ -132,7 +181,7 @@
                             <form action="{{ route('logout') }}" method="post" class="p-0 m-0">
                                 @csrf
                                 <button type="submit"
-                                    class="w-full px-12 py-2 font-bold text-center transition border-b text-md hover:bg-base-brown-400">Logout</button>
+                                    class="w-full px-12 py-2 font-bold text-center transition border-b text-md hover:bg-2025-2 hover:text-base-white">Logout</button>
                             </form>
                         </div>
                     </div>
