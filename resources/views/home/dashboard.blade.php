@@ -1,6 +1,5 @@
 <x-home-layout menu="Dashboard" title="Dashboard">
     <div class="px-4 pt-24 pb-16 mt-6 sm:px-6 md:px-8 md:pt-28 lg:px-10 mx-10">
-
         <x-card class="px-2 sm:px-5" style="border: 4px solid #1E1E1E;">
             <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
                 <img src="{{ asset('img\asset\2025\Elemen 1.png') }}" 
@@ -82,10 +81,14 @@
                             </div>
                         </div>
                         
-                        <div class="flex flex-col gap-6">
-                            @include('components.presensi')   {{-- Full 1 baris --}}
-                            @include('components.pengaduan') {{-- Enter ke bawah --}}
-                        </div>
+                        <div class="flex flex-col md:flex-row gap-6">
+    <div class="flex-1">
+        @include('components.presensi')
+    </div>
+    <div class="flex-1">
+        @include('components.pengaduan')
+    </div>
+</div>
 
 
                         <div class="col-span-1 lg:col-span-5">
@@ -102,7 +105,7 @@
                         </div>
                     </div> --}}
 
-                    <div class="grid grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             @livewire('home.dashboard.absensi.list-absensi')
                         </div>
