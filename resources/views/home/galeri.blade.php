@@ -69,7 +69,7 @@
 
                         <div class="relative">
                             <img src="{{ asset('img/asset/2025/background_subjudul.png') }}" alt="BG" class="h-12 rounded-lg">
-                            <span class="absolute inset-0 flex items-center justify-center text-[#8B2F4B] -translate-y-1">
+                            <span class="absolute inset-0 flex items-center justify-center text-2025-1 -translate-y-1">
                                 {{ $t->title }}
                             </span>
                         </div>
@@ -109,7 +109,7 @@
                         @if (!empty($t->link_gallery))
                             <div class="flex w-full items-center justify-end">
                                 <x-button :tagA='true' href="{{ $t->link_gallery }}" target="_blank"
-                                    class="rounded-3xl bg-base-orange-500 text-sm hover:bg-base-orange-600 sm:text-base">
+                                    class="rounded-3xl bg-2025-4 text-sm hover:bg-2025-3 sm:text-base">
                                     Selengkapnya
                                 </x-button>
                             </div>
