@@ -67,11 +67,11 @@
                         <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
                             class="h-7 w-8">
 
-                        <div class="relative">
-                            <img src="{{ asset('img/asset/2025/background_subjudul.png') }}" alt="BG" class="h-12 rounded-lg">
-                            <span class="absolute inset-0 flex items-center justify-center text-2025-1 -translate-y-1">
+                        <div class="flex justify-center items-center">
+                            <h2 class="px-3 lg:px-5 py-2 rounded-full text-center text-sm sm:text-sm md:text-sm lg:text-lg text-2025-1 mx-4 z-10 bg-[radial-gradient(circle,#ffffff,#FFD183)]"
+                                style="text-align: center; filter: drop-shadow(0 0 0.25rem #000);">
                                 {{ $t->title }}
-                            </span>
+                            </h2>
                         </div>
 
                         <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
