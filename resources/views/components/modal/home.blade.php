@@ -12,13 +12,13 @@
                     <div class="w-full">
                         <div class="flex flex-row">
                             <div class="flex flex-row items-center justify-between w-full py-4 md:px-12">
-                                <img src="img/asset/2024/gendang.png"
+                                <img src="img/asset/2025/Cempaka tunggal.png"
                                     class="absolute h-[4rem] translate-x-2 sm:left-0 sm:h-[5rem] sm:translate-x-8">
                                 <p
                                     class="w-full text-xl font-bold tracking-wide text-center text-white font-aringgo sm:text-3xl md:text-4xl lg:text-5xl">
                                     {{ $judul }}
                                 </p>
-                                <img src="img/asset/2024/gendang.png"
+                                <img src="img/asset/2025/Cempaka tunggal.png"
                                     class="absolute right-0 h-[4rem] -translate-x-2 scale-x-[-1] sm:h-[5rem] sm:-translate-x-8">
                             </div>
                         </div>
