@@ -40,11 +40,11 @@
       <!-- Ornamen tambahan -->
       <img src="img/asset/2025/tugu 0 km.png" 
            alt="tugu 0 km" 
-           class="absolute bottom-0 left-4 w-[171px] h-[419px] h-auto z-10 mb-[-150px] ml-[50px]">
+           class="absolute bottom-0 left-4 w-[171px] h-[419px] h-auto z-10 mb-[-240px] ml-[50px]">
 
       <img src="img/asset/2025/maleo.png" 
            alt="burung maleo" 
-           class="absolute bottom-0 right-4 w-[155px] h-[194px] z-10 mb-[-180px] mr-[50px]">
+           class="absolute bottom-0 right-4 w-[200px] h-[239px] z-10 mb-[-280px] mr-[50px]">
     </div>
   </div>
 </div>
