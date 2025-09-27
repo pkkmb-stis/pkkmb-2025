@@ -28,60 +28,51 @@
         @php
             $i = 0;
         @endphp
-        <div class="mx-auto mb-0 mt-4 flex w-[90%] justify-center overflow-hidden rounded-lg sm:my-4">
+        <div class="mx-auto mb-0 -mt-4 sm:-mt-8 md:-mt-10 lg:-mt-12 flex w-[90%] justify-center overflow-hidden rounded-lg pb-10 sm:pb-15 md:pb-20">
             <div class="ml-4">
                 @foreach ($timeline as $t)
                     @php
                         $isLast = $i === count($timeline) - 1;
-
                         $startDate = Carbon\Carbon::parse($t->waktu_mulai->format('Y-m-d'));
                         $endDate = $t->waktu_akhir
                             ? Carbon\Carbon::parse($t->waktu_akhir->format('Y-m-d'))
                             : $startDate;
                         $today = Carbon\Carbon::today();
 
-                        // Default background color
                         $bgColor = '#C0C0C0';
 
-                        // Mengatur warna solid berdasarkan status (wait atau done)
                         if ($endDate->lt($today)) {
                             $bgColor = '#F9C46B';
                         } elseif ($startDate->eq($today)) {
                             $bgColor = '#F9C46B';
                         }
 
-                        // Menentukan warna untuk status circle
                         $color = $bgColor == '#F9C46B' ? 'bg-yellow-500' : 'bg-gray-400'; // Yellow for done, gray for wait
 
-                        // Menentukan elemen gambar yang akan digunakan
                         $rightElement = '';
                         if ($i % 2 == 0) {
-                            // Untuk status "wait" menggunakan wait1 dan wait2
                             $rightElement = $bgColor == '#F9C46B' ? 'patterndone1.png' : 'patternwait1.png';
                         } else {
-                            // Untuk status "done" menggunakan done1 dan done2
                             $rightElement = $bgColor == '#F9C46B' ? 'patterndone2.png' : 'patternwait2.png';
                         }
                     @endphp
-                    <div class="relative mt-[-4px] w-full">
-                        <div class="{{ $isLast ? 'ml-1' : 'pb-6 border-l-4 border-solid border-black' }} px-4">
-
-                            <!-- Judul acara -->
-                            <h1 class="mb-2 font-chaTime text-lg font-bold text-coklat-1">{{ $t->title }}</h1>
-                            <div class="rounded-lg px-4 py-2 pr-52 font-poppins text-white bg-cover bg-center bg-no-repeat border-2 border-solid border-2025-3"
+                    <div class="relative mt-[-4px] w-full {{ $loop->first ? 'pt-1' : '' }}">
+                        <div class="{{ $isLast ? 'ml-1' : 'pb-6 border-l-4 border-solid border-2025-3' }} px-4">
+                            <h1 class="mb-2 font-chaTime text-lg font-bold text-black">{{ $t->title }}</h1>
+                            <div class="rounded-lg px-4 py-2 pr-52 font-poppins text-black bg-cover bg-center bg-no-repeat border-2 border-solid border-2025-3"
                                 style="background-color: {{ $bgColor }};">
-                                <div class="font-poppins font-bold tracking-wide text-kuning-1">
+                                <div class="font-poppins font-bold tracking-wide text-2025-3">
                                     {{ formatDateIso($t->waktu_mulai, 'D MMMM YYYY') }}
                                     @if ($t->waktu_akhir)
                                         <span x-cloak :class="(width < 512) ? '' : 'hidden'"><br></span>
                                         - {{ formatDateIso($t->waktu_akhir, 'D MMMM YYYY') }}
                                     @endif
                                 </div>
-                                <div class="my-2 w-full border-b-4 border-kuning-1"></div>
+                                <div class="my-2 w-full border-b-2 border-2025-3"></div>
                                 <p>{{ $t->caption != '-' ? $t->caption : '' }}</p>
 
                                 {{-- Lokasi --}}
-                                <div class="text-white">
+                                <div class="text-2025-3">
                                     @if (!empty($t->location))
                                         <div class="my-2 flex flex-row items-center">
                                             <i class="fa-solid fa-location-dot"></i>
@@ -90,20 +81,24 @@
                                     @endif
                                 </div>
 
-                                <div class="absolute top-0 right-0 flex flex-col gap-2 mt-2 mr-4">
-                                    <img src="{{ asset('img/asset/2025/timeline/'.$rightElement) }}" alt="pattern" class="w-40 z-10 mt-7 mr-2" style="height:125px;"/>
+                                <div class="absolute top-0 right-0 translate-x-[50%] md:translate-x-[58.5%] flex flex-col gap-2 mt-2 {{ $i === 0 ? 'top-1' : 'top-0 -mt-[2px]' }}">
+                                    <img src="{{ asset('img/asset/2025/timeline/'.$rightElement) }}"
+                                        alt="pattern"
+                                        class="w-[34.75%] z-10 mt-7"
+                                        style="height:25%;" />
                                 </div>
+
+
                             </div>
                         </div>
 
-                        <!-- Lingkaran status acara -->
-                        <div class="absolute top-0 ml-[-12px] -mt-[2px]">
-                            <!-- Gambar untuk status "done" -->
+                        <div class="absolute ml-[-12px] {{ $i === 0 ? 'top-1' : 'top-0 -mt-[2px]' }}">
                             <img 
                                 src="{{ asset('img/asset/2025/timeline/' . ($color == 'bg-yellow-500' ? 'cempakadone.png' : 'cempakawait.png')) }}" 
                                 alt="status" 
                                 class="w-8 h-8" />
                         </div>
+
                     </div>
                     @php
                         $i++;
