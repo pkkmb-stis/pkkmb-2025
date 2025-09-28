@@ -5,19 +5,19 @@
       <!-- ================== HP ================== -->
       <div class="block lg:hidden">
         <!-- Header -->
-        <div class="grid grid-cols-1 md:gap-6 h-auto align-items-start py-12 pb-10" data-aos="zoom-in-up">
+        <div class="grid grid-cols-1 md:gap-6 h-auto align-items-start py-5 pb-5" data-aos="zoom-in-up">
           <div class="col-span-1 relative">
-            <div class="flex flex-col items-center justify-center rounded-2xl bg-[#8B2F4B] bg-opacity-95 shadow-xl py-4">
-              <img src="{{ elemen1 }}" alt="ornamen kiri" class="h-10 w-auto mb-2">
-              <h1 class="font-brasikaDisplay text-2xl text-[#F9C46B] text-center">
+            <img src="{{ elemen1 }}" alt="ornamen kiri" class="mt-[10px] h-12 w-[50px] left-4 absolute">
+            <div class="flex flex-col items-center justify-center rounded-2xl bg-[#8B2F4B] bg-opacity-95 shadow-xl py-4 items-center w-[379px] mx-auto">
+              <h1 class="font-brasikaDisplay text-[14px] text-[#F9C46B] text-center">
                 Teaser PKKMB-PKBN 2025
               </h1>
-              <img src="{{ elemen1 }}" alt="ornamen kanan" class="h-10 w-auto mt-2 scale-x-[-1]">
+            <img src="{{ elemen1 }}" alt="ornamen kanan" class="mt-[10px] h-12 w-[50px] absolute right-4">
             </div>
           </div>
 
           <!-- Frame maroon -->
-          <div class="relative bg-[#8B1E3F] p-2 mt-6 rounded-lg shadow-lg w-[95vw] mx-auto">
+          <div class="relative bg-[#8B1E3F] p-2 mt-6 rounded-lg shadow-lg w-[95vw] mx-auto mb-[-50px]">
             <div class="aspect-video bg-black rounded-md overflow-hidden">
               <iframe class="w-full h-full"
                       src="https://www.youtube.com/embed/56hq1-sRfHg"
@@ -29,20 +29,12 @@
             </div>
           </div>
         </div>
-
-        <!-- Ornamen -->
-        <img src="img/asset/2025/tugu 0 km.png"
-             alt="tugu 0 km"
-             class="absolute bottom-0 left-2 w-[100px] z-10 mb-[-120px]">
-        <img src="img/asset/2025/maleo.png"
-             alt="burung maleo"
-             class="absolute bottom-0 right-2 w-[120px] z-10 mb-[-150px]">
       </div>
 
       <!-- ================== PC/Laptop ================== -->
       <div class="hidden lg:block">
         <!-- Header -->
-        <div class="grid lg:grid-cols-1 grid-cols-1 md:gap-6 h-auto align-items-start lg:py-0">
+        <div class="grid lg:grid-cols-1 grid-cols-1 md:gap-6 h-auto align-items-start lg:py-0 mt-[-20px]">
           <div class="lg:pl-16 lg:pr-16 col-span-1 relative lg:pt-20 pb-10 lg:pb-20 lg:block"
                data-aos="zoom-in-up">
             <div class="flex flex-row justify-between items-center rounded-3xl lg:w-full m-auto shadow-xl static bg-[#8B2F4B] overflow-hidden bg-opacity-95 mt-[50px]"
@@ -86,6 +78,7 @@
     </div>
   </div>
 </div>
+
 @push('css')
   <style>
     .teaser {

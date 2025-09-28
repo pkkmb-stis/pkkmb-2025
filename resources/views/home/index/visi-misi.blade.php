@@ -4,20 +4,23 @@
   <div class="block lg:hidden">
     <!-- Header HP -->
     <div class="col-span-1 relative pt-12 px-4" data-aos="zoom-in-up">
-      <div class="flex flex-col justify-center items-center rounded-2xl w-full m-auto shadow-xl bg-[#8B2F4B] overflow-hidden" style="height:auto">
-        <img src="{{ elemen1 }}" class="h-[7rem] w-auto mb-2">
-        <h1 class="font-brasikaDisplay text-2xl text-[#F9C46B] text-center">
-          Visi dan Misi PKKMB-PKBN 2024
+      <div class="flex flex-col items-center justify-center w-full items-center mx-auto shadow-xl bg-[#8B2F4B] overflow-hidden" style="height:34px">
+        <img src="{{ elemen1 }}" alt="ornamen kiri" class="mt-[10px] h-[34px] w-[78px] left-4 absolute">
+        <h1 class="font-brasikaDisplay text-[14px] text-[#F9C46B] text-center">
+        Visi dan Misi
         </h1>
-        <img src="{{ elemen1 }}" class="h-[7rem] w-auto mt-2 scale-x-[-1]">
+        <img src="{{ elemen1 }}" alt="ornamen kanan" class="mt-[10px] h-[34px] w-[78px] absolute right-4">
       </div>
     </div>
 
     <!-- Visi HP -->
     <div class="py-8 px-4">
-      <div class="bg-[#8B2F4B] text-white px-6 py-8 rounded-xl relative text-center shadow-lg">
-        <div class="z-0 absolute inset-0 bg-cover opacity-[20%]"
-             style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center;">
+      <div class="bg-[#8B2F4B] text-white px-6 py-8 rounded-2xl relative text-center shadow-lg">
+        <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1 bg-cover opacity-[20%]"
+             style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:52%; ">
+        </div>
+        <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[105px] bg-cover bg-repeat-y opacity-[20%]"
+             style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:48%; ">
         </div>
         <h2 class="text-lg font-semibold mb-3 font-poppins tracking-widest">VISI:</h2>
         <p class="text-base leading-relaxed font-nunito relative z-10">
@@ -29,9 +32,18 @@
 
     <!-- Misi HP -->
     <div class="py-6 px-4">
-      <div class=" text-white px-6 py-8 rounded-2xl relative shadow-lg overflow-hidden">
-        <div class="z-0 absolute inset-0 bg-cover opacity-[20%]"
-             style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center;">
+      <div class="bg-[#8B2F4B] text-white px-6 py-8 rounded-2xl relative shadow-lg overflow-hidden">
+        <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-100px] bg-cover opacity-[20%]"
+             style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:30%;">
+        </div>
+        <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1 bg-cover opacity-[20%]"
+             style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:30%;">
+        </div>
+        <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[97px] bg-cover opacity-[20%]"
+             style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:30%;">
+        </div>
+        <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[200px] bg-cover opacity-[20%]"
+             style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:30%;">
         </div>
         <h2 class="text-center text-lg font-semibold mb-4 font-poppins tracking-widest relative z-10">MISI:</h2>
         <ol class="text-base leading-relaxed font-poppins list-decimal pl-4 relative z-10">
@@ -55,7 +67,7 @@
         </div>
         <div class="text-center">
           <h1 class="font-brasikaDisplay text-4xl leading-none text-[#F9C46B]">
-            Visi dan Misi PKKMB-PKBN 2024
+            Visi dan Misi PKKMB-PKBN 2025
           </h1>
         </div>
         <div class="flex flex-row lg:pr-7 justify-center items-center">
@@ -70,7 +82,7 @@
         <div class="flex-1 p-4">
           <div class="bg-[#8B2F4B] text-white px-8 py-12 rounded-lg h-full text-center relative shadow-xl">
             <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cover opacity-[20%]"
-                 style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:87%;">
+                 style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:100%;">
             </div>
             <h2 class="text-2xl font-semibold mb-4 font-poppins tracking-widest">VISI:</h2>
             <p class="text-2xl leading-relaxed font-nunito relative z-10">
