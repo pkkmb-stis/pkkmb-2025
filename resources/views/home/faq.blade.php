@@ -13,21 +13,26 @@
 
 <x-home-layout menu="FAQ" title="FAQ">
     <!-- Judul -->
-    <div class="grid lg:pt-32 md:pt-28 pt-24">
-        <div class="sm:px-16 md:px-20 xl:px-16 md:pb-12 pb-4 px-8 w-full">
-            <div class="flex flex-row justify-center items-end gap-4 w-full h-full">
-                <img src="{{ asset('img/maskot/kambe faq.png') }}" alt="wave" class="z-10 sm:w-32 w-24">
-                <div class="flex flex-col h-full justify-center items-center">
-                    <img src="{{ asset('img/asset/2024/Elemen 4.png') }}" alt="Elemen 4">
-                    <h1 class="font-thin xl:text-4xl lg:text-3xl text-sm leading-normal text-merah-1 font-aringgo text-center py-3 lg:py-4 px-6 sm:px-12 bg-putih-100 rounded-full align-middle drop-shadow-md"
-                        >
-                        FAQ
-                    </h1>
-                    <img src="{{ asset('img/asset/2024/Elemen 4.png') }}" alt="Elemen 4" class="rotate-180">
+    <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16">
+    {{-- Header --}}
+        <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
+            <img src="{{ asset('img/maskot/2025/maskot 0.png') }}" alt="wave" class="z-10 w-14 sm:w-24 md:w-28 lg:w-32 lg:-translate-x-4 transform translate-y-[-10px]">
+                <div class="flex h-full flex-col items-center justify-center">
+                    <div class="flex flex-row items-center justify-center gap-4 mt-14 transform translate-y-[-10px]">
+                        <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                            alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
+                        <h1
+                            class="flex items-center justify-center rounded-full px-10 py-3 sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6
+                                font-brasikaDisplay text-center text-sm font-thin leading-normal 
+                                drop-shadow-md sm:text-xl lg:text-3xl xl:text-4xl z-0 relative border-4"
+                            style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
+                            FAQ
+                        </h1>
+                        <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                            alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
+                    </div>
                 </div>
-                <img src="{{ asset('img/maskot/kambe faq.png') }}" alt="wave"
-                    class="z-10 sm:w-32 w-24 scale-x-[-1]">
-            </div>
+            <img src="{{ asset('img/maskot/2025/maskot 0b.png') }}" alt="wave" class="z-10 w-14 sm:w-24 md:w-28 lg:w-32 lg:translate-x-4 transform translate-y-[-10px]">
         </div>
     </div>
 

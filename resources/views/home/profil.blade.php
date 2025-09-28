@@ -1,43 +1,26 @@
 <x-home-layout menu="Profil_Saya" title="Profil Saya">
-    <div class="w-full px-4 pb-4 pt-20 sm:px-8 sm:pt-24 md:px-12 md:pt-28 lg:px-16 lg:pt-32 xl:px-20">
-        <div class="flex w-full flex-row items-center justify-center gap-2 sm:gap-4">
-            <!-- Maskot kiri dengan ukuran yang lebih seimbang -->
-            <img src="{{ asset('img/maskot/2025/maskot 3.png') }}"
-                alt="Maskot kiri"
-                class="z-10 w-20 sm:w-28 md:w-36 lg:w-44"
-                loading="lazy">
-            
-            <!-- Container judul dengan struktur yang disederhanakan untuk centering yang akurat -->
-            <div class="flex flex-row items-center justify-center">
-                <!-- Ornamen kiri (selalu terlihat) -->
-                <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}"
-                    alt="Ornamen kiri"
-                    class="w-14 sm:w-20 md:w-24 lg:w-28 -mr-10 sm:-mr-16 md:-mr-20 lg:-mr-24 z-10 -mt-4 sm:-mt-6 md:-mt-8"
-                    loading="lazy">
-                
-                <!-- Judul utama dengan border yang konsisten -->
-                <h1 class="flex items-center justify-center rounded-full px-6 py-2 sm:px-10 sm:pt-3 sm:pb-5 md:px-12 md:pt-4 md:pb-5 lg:px-14 lg:pt-3 lg:pb-5
-                        font-brasikaDisplay text-center font-semibold leading-tight
-                        drop-shadow-lg text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl
-                        border-4 transition-all duration-300"
-                    style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
-                    PROFIL SAYA
-                </h1>
-                
-                <!-- Ornamen kanan (selalu terlihat) -->
-                <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}"
-                    alt="Ornamen kanan"
-                    class="w-14 sm:w-20 md:w-24 lg:w-28 -ml-10 sm:-ml-16 md:-ml-20 lg:-ml-24 z-10 -mt-4 sm:-mt-6 md:-mt-8 scale-x-[-1]"
-                    loading="lazy">
-            </div>
-            
-            <!-- Maskot kanan dengan ukuran yang lebih seimbang dan konsisten -->
-            <img src="{{ asset('img/maskot/2025/maskot 4.png') }}"
-                alt="Maskot kanan"
-                class="z-10 w-20 sm:w-28 md:w-36 lg:w-44"
-                loading="lazy">
-        </div>
-    </div>
+      <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16">
+      {{-- Header --}}
+          <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
+              <img src="{{ asset('img/maskot/2025/maskot 1.png') }}" alt="wave" class="z-10 w-14 sm:w-24 md:w-28 lg:w-32 lg:-translate-x-4 transform translate-y-[-10px]">
+                  <div class="flex h-full flex-col items-center justify-center">
+                      <div class="flex flex-row items-center justify-center gap-4 mt-14 transform translate-y-[-10px]">
+                          <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                              alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
+                          <h1
+                              class="flex items-center justify-center rounded-full px-10 py-3 sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6
+                                  font-brasikaDisplay text-center text-sm font-thin leading-normal 
+                                  drop-shadow-md sm:text-xl lg:text-3xl xl:text-4xl z-0 relative border-4"
+                              style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
+                              GALERI
+                          </h1>
+                          <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                              alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
+                      </div>
+                  </div>
+              <img src="{{ asset('img/maskot/2025/maskot 4.png') }}" alt="wave" class="z-10 w-14 sm:w-24 md:w-28 lg:w-32 lg:translate-x-4 transform translate-y-[-10px]">
+          </div>
+      </div>
 
     <!-- Main Content Section -->
     <div class="my-6 sm:my-8 w-full px-2 sm:px-4">
