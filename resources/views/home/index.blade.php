@@ -9,6 +9,8 @@
 
         @include('home.index.visi-misi')
 
+        @include('home.index.maskot')
+
         @if ($video->count() > 0)
             @include('home.index.serba-serbi')
         @endif
