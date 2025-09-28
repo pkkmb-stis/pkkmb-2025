@@ -52,7 +52,7 @@
                                 <td class="px-6 py-3 text-center">
 
                                     @can(PERMISSION_UPDATE_BERITA)
-                                        <x-button class="px-5 mr-1 rounded-3xl bg-base-orange-500 hover:bg-base-orange-600"
+                                        <x-button class="px-5 mr-1 rounded-3xl bg-2025-2 hover:bg-2025-1"
                                             :tagA="true" href="{{ route('berita.edit', ['id' => $row->id]) }}">
                                             Edit
                                         </x-button>
@@ -105,7 +105,7 @@
                             </dl>
                             @can(PERMISSION_UPDATE_BERITA)
                                 <x-button
-                                    class="w-full mt-3 text-center bg-base-orange-500 hover:bg-base-orange-600 rounded-3xl"
+                                    class="w-full mt-3 text-center bg-2025-2 hover:bg-2025-1 rounded-3xl"
                                     :tagA="true" href="{{ route('berita.edit', ['id' => $row->id]) }}">
                                     Edit
                                 </x-button>

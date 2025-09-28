@@ -108,7 +108,7 @@
                         href="{{ route('input-nilai') }}">
                         Kembali
                     </x-button>
-                    <x-button class="cursor-pointer rounded-3xl bg-base-orange-500 hover:bg-base-orange-600"
+                    <x-button class="cursor-pointer rounded-3xl bg-2025-2 hover:bg-2025-1"
                         wire:loading.class="hidden">
                         Simpan
                     </x-button>

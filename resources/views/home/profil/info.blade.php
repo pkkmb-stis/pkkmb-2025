@@ -8,52 +8,52 @@
 
                 <input type="file" id="photo" class="hidden" wire:model="photo">
             </x-label-input>
-            <p class="text-xs text-gray-600 italic" wire:loading wire:target="photo">Uploading ...
+            <p class="text-xs text-black italic" wire:loading wire:target="photo">Uploading ...
         </div>
 
         <div class="col-span-8">
             <div class="">
-                <div class="flex items-center py-3">
-                    <div class="flex rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden">
-                        <div class=" px-4 text-gray-50 text-sm font-bohemianSoul font-semibold bg-merah-1 py-2">
-                            <i class="fa fa-id-card  text-white fa-fw "></i>
+               <div class="flex items-center py-3">
+                    <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden" style = "border-radius: 20px;">
+                        <div class="text-center text-black text-sm font-poppins font-semibold bg-2025-5 py-2">
+                            <i class="fa fa-id-card text-black fa-fw mr-2"></i>
                             @if (auth()->user()->hasRole(ROLE_PANITIA))
                                 Username
                             @else
                                 No Ujian
                             @endif
-                            </div>
-                        <div class="text-sm text-gray-600 ml-2 py-2 font-nunito">{{ $user->username }}</div>
+                        </div>
+                        <div class="text-center text-sm font-poppins font-semibold text-black py-2">{{ $user->username }}</div>
                     </div>
                 </div>
 
                 @if ($user->is_maba)
                 <div class="flex items-center py-3">
-                    <div class=" flex rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden">
-                        <div class="px-4 text-center text-gray-50 text-sm font-bohemianSoul font-semibold bg-merah-1 py-2">
-                            <i class="fa-solid fa-address-card text-white fa-fw"></i>
-                            NIMB</div>
-                        <div class=" text-center text-sm font-nunito text-gray-600 ml-2 py-2">{{ $user->nimb ?? '-' }}</div>
+                    <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden" style = "border-radius: 20px;">
+                        <div class="text-center text-black text-sm font-poppins font-semibold bg-2025-5 py-2">
+                            <i class="fa-solid fa-address-card text-black fa-fw mr-2"></i>
+                            NIMB
+                        </div>
+                        <div class="text-center text-sm font-poppins font-semibold text-black py-2">{{ $user->nimb ?? '-' }}</div>
                     </div>
                 </div>
-
                 @endif
 
                 <div class="flex items-center py-3">
-                    <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden">
-                        <div class="text-center text-gray-50 text-sm font-bohemianSoul font-semibold bg-merah-1 py-2">
-                            <i class="fa fa-user  text-white fa-fw mr-2"></i>
-                            Nama</div>
-                        <div class=" text-center text-sm font-nunito text-gray-600 py-2">{{ $user->name }}</div>
+                    <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden" style = "border-radius: 20px;">
+                        <div class="text-center text-black text-sm font-poppins font-semibold bg-2025-5 py-2">
+                            <i class="fa fa-user  text-black fa-fw mr-2"></i>
+                            Nama Lengkap</div>
+                        <div class=" text-center text-sm font-poppins font-semibold text-black py-2">{{ $user->name }}</div>
                     </div>
                 </div>
 
                 <div class="flex items-center py-3">
-                    <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden">
-                        <div class="text-center text-gray-50 text-sm font-bohemianSoul font-semibold bg-merah-1 py-2">
-                            <i class="fa fa-envelope  text-white fa-fw mr-2"></i>
+                    <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden" style = "border-radius: 20px;">
+                        <div class="text-center text-black text-sm font-poppins font-semibold bg-2025-5 py-2">
+                            <i class="fa fa-envelope  text-black fa-fw mr-2"></i>
                             Email</div>
-                        <div class=" text-center text-sm font-nunito text-gray-600  py-2">{{ $user->email }}</div>
+                        <div class=" text-center text-sm font-poppins font-semibold text-black  py-2">{{ $user->email }}</div>
                     </div>
                 </div>
 
@@ -62,11 +62,11 @@
                 @if ($user->is_maba)
 
                 <div class="flex items-center py-3">
-                    <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden">
-                        <div class="text-center text-gray-50 text-sm font-bohemianSoul font-semibold bg-merah-1 py-2">
-                            <i class="fa fa-grin-tears text-white fa-fw mr-2"></i>
+                    <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden" style = "border-radius: 20px;">
+                        <div class="text-center text-black text-sm font-poppins font-semibold bg-2025-5 py-2">
+                            <i class="fa fa-grin-tears text-black fa-fw mr-2"></i>
                             Nama Khas</div>
-                        <div class=" text-center text-sm font-nunito text-gray-600  py-2">{{ $user->nama_statistik ?? '-' }}</div>
+                        <div class=" text-center text-sm font-poppins font-semibold text-black  py-2">{{ $user->nama_statistik ?? '-' }}</div>
                     </div>
                 </div>
                 @endif
@@ -74,20 +74,20 @@
                 @if ($kelompok)
                 <div>
                     <div class="flex items-center py-3 ">
-                        <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden">
-                            <div class="text-center text-gray-50 text-sm font-bohemianSoul font-semibold bg-merah-1 py-2">
-                                <i class="fa fa-user-friends text-white fa-fw mr-2"></i>
+                        <div class="rounded-md bg-putih-400 w-[90%] mx-auto overflow-hidden" style = "border-radius: 20px;">
+                            <div class="text-center text-black text-sm font-poppins font-semibold bg-2025-5 py-2">
+                                <i class="fa fa-user-friends text-black fa-fw mr-2"></i>
                                 Kelompok
                             </div>
-                            <div class=" text-center text-sm text-gray-600  py-2">
+                            <div class=" text-center text-sm text-black  py-2">
                                 <div x-on:click="showDetailKelompok = true"
-                                class="text-sm text-gray-600 hover:text-base-green-400 cursor-pointer">
+                                class="text-sm text-black hover:text-base-green-400 font-semibold cursor-pointer">
                                 {{ $kelompok->nama }}
                                 </div>
                             </div>
                     </div>
                     </div>
-                    <p class="text-xs text-gray-50 italic block ml-5 2xl:ml-7">
+                    <p class="text-xs text-black italic block ml-5 2xl:ml-7">
                         Silakan klik nama kelompok untuk melihat
                         detail kelompok
                     </p>
@@ -100,7 +100,7 @@
 
     @if ($user->hasRole(ROLE_PANITIA))
     <div class="w-full flex justify-center my-4">
-        <x-button class="bg-kuning-600 hover:filter hover:brightness-75 w-[90%] text-center font-bohemianSoul rounded-3xl" x-on:click="showModalQR = true">
+        <x-button class="bg-2025-1 hover:filter hover:brightness-75 w-[90%] text-center font-poppins rounded-3xl" x-on:click="showModalQR = true">
             QR Code
         </x-button>
     </div>
@@ -122,7 +122,7 @@
 
     @if ($user->is_maba)
     <div class="w-full flex justify-center mb-3">
-        <x-button :tagA="true" class="bg-kuning-600 hover:filter hover:brightness-75 uppercase rounded-2xl text-center text-base font-normal whitespace-nowrap my-3 mx-auto w-[90%] font-bohemianSoul"
+        <x-button :tagA="true" class="bg-kuning-600 hover:filter hover:brightness-75 uppercase rounded-2xl text-center text-base font-normal whitespace-nowrap my-3 mx-auto w-[90%] font-poppins"
             target="_blank" href="{{ route('home.cocard', ['id' => $user->id])}}">
             Download Co Card
         </x-button>
@@ -131,10 +131,10 @@
 {{--
     <div class="divide-y-2 md:hidden">
         <div class="flex items-center py-3">
-            <i class="fa fa-user text-white fa-fw mr-2"></i>
+            <i class="fa fa-user text-black fa-fw mr-2"></i>
             <div>
                 <div class="text-xs font-poppins font-semibold">Nama</div>
-                <div class="text-sm text-gray-600">{{ $user->name }}</div>
+                <div class="text-sm text-black">{{ $user->name }}</div>
             </div>
         </div>
 
@@ -142,7 +142,7 @@
             <i class="fa fa-envelope text-base-blue-400 fa-fw mr-2"></i>
             <div>
                 <div class="text-xs font-poppins font-semibold">Email</div>
-                <div class="text-sm text-gray-600">{{ $user->email }}</div>
+                <div class="text-sm text-black">{{ $user->email }}</div>
             </div>
         </div>
 
@@ -152,7 +152,7 @@
             <i class="fa-solid fa-address-card text-base-blue-400 fa-fw mr-2"></i>
             <div>
                 <div class="text-xs font-poppins font-semibold">NIMB</div>
-                <div class="text-sm text-gray-600">{{ $user->nimb ?? '-' }}</div>
+                <div class="text-sm text-black">{{ $user->nimb ?? '-' }}</div>
             </div>
         </div>
 
@@ -160,7 +160,7 @@
             <i class="fa fa-grin-tears text-base-blue-400 fa-fw mr-2"></i>
             <div>
                 <div class="text-xs font-poppins font-semibold">Nama Khas</div>
-                <div class="text-sm text-gray-600">{{ $user->nama_statistik }}</div>
+                <div class="text-sm text-black">{{ $user->nama_statistik }}</div>
             </div>
         </div>
 
@@ -171,11 +171,11 @@
                 <div>
                     <div class="text-xs font-poppins font-semibold">Kelompok</div>
                     <div x-on:click="showDetailKelompok = true"
-                        class="text-sm text-gray-600 hover:text-base-green-400 cursor-pointer">
+                        class="text-sm text-black hover:text-base-green-400 cursor-pointer">
                         {{ $kelompok->nama }}</div>
                 </div>
             </div>
-            <p class="text-xs text-gray-600 italic md:hidden block">Silakan klik nama kelompok untuk melihat detail
+            <p class="text-xs text-black italic md:hidden block">Silakan klik nama kelompok untuk melihat detail
                 kelompok
         </div>
         @endif

@@ -35,13 +35,13 @@
                             </dl>
                         </div>
                         <div class="flex items-start ml-auto md:hidden">
-                            <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5 hidden sm:block"
+                            <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5 hidden sm:block"
                                 :tagA="true" href="{{ route('formulir.detail', ['id' => $formulir->id]) }}">
                                 Detail
                             </x-button>
                             @can(PERMISSION_UPDATE_FORMULIR)
                                 <x-button wire:click.stop="$emit('openDetailFormulir', {{ $formulir->id }})"
-                                    class="mx-0.5 px-5 rounded-3xl bg-base-orange-500 hover:bg-base-orange-600">
+                                    class="mx-0.5 px-5 rounded-3xl bg-2025-2 hover:bg-2025-1">
                                     Edit
                                 </x-button>
                             @endcan
@@ -60,13 +60,13 @@
                         {{ $formulir->nama_sheet }}
                     </td>
                     <td class="hidden px-6 py-3 text-center md:table-cell">
-                        <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5" :tagA="true"
+                        <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5" :tagA="true"
                             href="{{ route('formulir.detail', ['id' => $formulir->id]) }}">
                             Detail
                         </x-button>
                         @can(PERMISSION_UPDATE_FORMULIR)
                             <x-button wire:click.stop="$emit('openDetailFormulir', {{ $formulir->id }})"
-                                class="mx-0.5 rounded-3xl px-5 bg-base-orange-500 hover:bg-base-orange-600">
+                                class="mx-0.5 rounded-3xl px-5 bg-2025-2 hover:bg-2025-1">
                                 Edit
                             </x-button>
                         @endcan

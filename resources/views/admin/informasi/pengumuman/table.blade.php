@@ -52,13 +52,13 @@
                                 </td>
                                 <td class="hidden px-6 py-3 text-center sm:table-cell">
                                     <x-button wire:click="show({{ $p->id }})"
-                                        class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5">
+                                        class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5">
                                         Detail
                                     </x-button>
 
                                     @can(PERMISSION_UPDATE_PENGUMUMAN)
                                         <x-button
-                                            class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 px-5 mx-0.5"
+                                            class="rounded-3xl bg-2025-2 hover:bg-2025-1 px-5 mx-0.5"
                                             wire:click='edit({{ $p->id }})'>
                                             Edit
                                         </x-button>
@@ -115,7 +115,7 @@
                             <div class="flex w-full mt-3 space-x-2">
                                 @can(PERMISSION_UPDATE_PENGUMUMAN)
                                     <x-button wire:click.stop="edit({{ $p->id }})"
-                                        class="w-full bg-base-orange-500 hover:bg-base-orange-600 rounded-3xl">
+                                        class="w-full bg-2025-2 hover:bg-2025-1 rounded-3xl">
                                         Edit
                                     </x-button>
                                 @endcan

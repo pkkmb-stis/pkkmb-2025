@@ -48,7 +48,7 @@
 
                                 <td class="px-6 py-3 text-center">
                                     @if ($status == 0)
-                                        <x-button class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5"
+                                        <x-button class="rounded-3xl bg-2025-2 hover:bg-2025-1 mx-0.5"
                                             x-on:click="modalUbahStatus = true; namaUbahStatus = `{{ addslashes($user->name) }}`; idUbahStatus = '{{ $user->id }}'">
                                             Ubah Status
                                         </x-button>
@@ -80,7 +80,7 @@
                             <div>
                                 @if ($status == 0)
                                     @can(PERMISSION_UPDATE_FORMULIR)
-                                        <x-button class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5"
+                                        <x-button class="rounded-3xl bg-2025-2 hover:bg-2025-1 mx-0.5"
                                             x-on:click="modalUbahStatus = true; namaUbahStatus = `{{ addslashes($user->name) }}`; idUbahStatus = '{{ $user->id }}'">
                                             Ubah Status
                                         </x-button>
@@ -153,7 +153,7 @@
                                 <x-button class="mr-2 bg-gray-500 rounded-3xl hover:bg-gray-600"
                                     x-on:click="modalUbahStatus = false">Batal
                                 </x-button>
-                                <x-button class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600"
+                                <x-button class="rounded-3xl bg-2025-2 hover:bg-2025-1"
                                     x-on:click="modalUbahStatus = false; $wire.ubahStatus(idUbahStatus)">Ya,
                                     yakin</x-button>
                             </x-slot>

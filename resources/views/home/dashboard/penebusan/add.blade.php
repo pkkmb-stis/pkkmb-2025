@@ -55,7 +55,7 @@
                                         </x-button>
                                         @if ($deadline)
                                             <x-button
-                                                class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover uppercase text-md"
+                                                class="rounded-3xl bg-2025-1 hover:bg-coklat-hover uppercase text-md"
                                                 type="submit">
                                                 Tambah Penebusan
                                             </x-button>

@@ -36,7 +36,7 @@
         <div class="mx-auto overflow-hidden w-[80%] rounded-lg my-6">
             <h1 class="indent-8 md:text-lg text-base text-merah-1 font-bohemianSoul hr">{{ $faq->pertanyaan }}</h1>
             <div class="w-full flex justify-start">
-                <p class="p-4 bg-coklat-2 text-xs md:text-base my-3 rounded-xl shadow-sm w-[97%] text-white text-justify font-nunito"
+                <p class="p-4 bg-2025-1 text-xs md:text-base my-3 rounded-xl shadow-sm w-[97%] text-white text-justify font-nunito"
                     style="box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)">
                     {{ $faq->jawaban }}</p>
             </div>

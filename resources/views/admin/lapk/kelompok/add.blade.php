@@ -44,7 +44,7 @@
                   x-on:click="isModalOpen = false; search = false" wire:click="selectUser">
                   Batal
                 </x-button>
-                <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover" wire:click="addKelompok">
+                <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover" wire:click="addKelompok">
                   Tambah Kelompok
                 </x-button>
               </div>

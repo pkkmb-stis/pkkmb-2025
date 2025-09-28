@@ -72,7 +72,7 @@
         @endif
     </x-table>
     <div class="flex justify-end">
-        <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover" :tagA="true"
+        <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover" :tagA="true"
             href="{{ route('user.detail.poin', ['id' => $user->id]) }}">
             Detail
         </x-button>

@@ -61,13 +61,13 @@
                                 class="border-b border-gray-200 hover:bg-blueGray-100 {{ $loop->even ? 'bg-gray-50' : '' }}">
                                 <td class="px-6 py-3 text-center">
                                     <x-button wire:click="show({{ $p->id }})"
-                                        class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5">
+                                        class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5">
                                         Detail
                                     </x-button>
 
                                     @can(PERMISSION_UPDATE_PENEBUSAN)
                                         <x-button
-                                            class="rounded-3xl px-5 bg-base-orange-500 hover:bg-base-orange-600 mx-0.5"
+                                            class="rounded-3xl px-5 bg-2025-2 hover:bg-2025-1 mx-0.5"
                                             wire:click='edit({{ $p->id }})'>
                                             Edit
                                         </x-button>
@@ -149,7 +149,7 @@
                         <div class="flex self-stretch justify-between space-x-2">
                             @can(PERMISSION_UPDATE_PENEBUSAN)
                                 <x-button wire:click="edit({{ $p->id }})"
-                                    class="flex-grow bg-base-orange-500 hover:bg-base-orange-600 rounded-3xl">Edit</x-button>
+                                    class="flex-grow bg-2025-2 hover:bg-2025-1 rounded-3xl">Edit</x-button>
                             @endcan
                         </div>
                     </x-card>
@@ -232,7 +232,7 @@
                                     <x-button :tagA="true"
                                         download="{{ str_replace('penebusan/', '', $penebusanToShow->link) }}"
                                         href="{{ storage($penebusanToShow->link) }}"
-                                        class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover my-0.5 mx-0.5">
+                                        class="rounded-3xl bg-2025-1 hover:bg-coklat-hover my-0.5 mx-0.5">
                                         <i class="mr-1 fa fa-download fa-fw"></i>Periksa Tugas
                                     </x-button>
                                 </div>

@@ -48,7 +48,7 @@
                         <td class="hidden px-6 py-3 text-center sm:table-cell">{{ $user->getIp() }}</td>
                         <td class="px-6 py-3 text-center">
                             @if ($canUpdateAll || in_array($user->kelompok_id, $kelompokCanEdit))
-                                <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5" :tagA="true"
+                                <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5" :tagA="true"
                                     href="{{ route('input-nilai.detail', ['id' => $user->id]) }}">
                                     Beri Nilai
                                 </x-button>
