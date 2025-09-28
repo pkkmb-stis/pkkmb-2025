@@ -34,7 +34,7 @@ export default {
                 "card-profile": "url('@/images/pattern/2024/card.png')",
                 "event-odd": "url('@/images/pattern/2024/event-odd.png')",
                 "event-even": "url('@/images/pattern/2024/event-even.png')",
-                "profil-left": "url('@/images/pattern/2025/Rectangle 31.png')",
+                "profil-left": "url('@/images/pattern/2025/profil-info.png')",
                 "profil-pattern": "url('@/images/pattern/2025/patternprofil.png')",
             }),
             fontFamily: {
