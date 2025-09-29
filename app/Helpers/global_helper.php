@@ -259,7 +259,7 @@ if (!function_exists('getPanitia')) {
             ],
             [
                 'nama' => 'Zaskia Bening Mulia',
-                'foto' => 'img/ppo/bph/Athiyah Tsurayya.png',
+                'foto' => 'img/ppo/bph/Zaskia Bening Mulia.png',
                 'jabatan' => 'Bendahara II'
             ],
         ];
@@ -725,267 +725,99 @@ if (!function_exists('getDosen')) {
      *
      * @return array
      */
-    function getDosen()
-    {
-        $pelindung = [
-            [
-                'nama' => 'Dr. Erni Tri Astuti, M.Math.',
-                'foto' => 'img/dosen/pelindung/Erni Tri Astuti.png',
-                'jabatan' => 'Pelindung'
-            ]
-        ];
+    if (!function_exists('getDosen')) {
+        /**
+         * getDosen
+         *
+         * @return array
+         */
+        function getDosen()
+        {
+            $pelindung = [
+                ['nama' => 'Dr. Erni Tri Astuti, M.Math.', 'foto' => 'img/dosen/pelindung/Erni Tri Astuti.png', 'jabatan' => 'Pelindung']
+            ];
+            $pengarah = [
+                ['nama' => 'Prof. Setia Pramana, S.Si., M.Sc., Ph.D', 'foto' => 'img/dosen/pengarah/Setia.png', 'jabatan' => 'Pengarah'],
+                ['nama' => 'Prof. Dr. Hardius Usman, S.Si., M.Si.', 'foto' => 'img/dosen/pengarah/hardius.png', 'jabatan' => 'Pengarah'],
+                ['nama' => 'Dr. Yunarso Anang Sulistiadi, M.Eng.', 'foto' => 'img/dosen/pengarah/Yunarso Anang.png', 'jabatan' => 'Pengarah'],
+            ];
+            $pembina = [
+                ['nama' => 'Bambang Nurcahyo S.E., M.M.', 'foto' => 'img/dosen/pembina/Bambang Nurcahyo.png', 'jabatan' => 'Pembina'],
+                ['nama' => 'Nurseto Wisnumurti, S.Si., M.Stat.', 'foto' => 'img/dosen/pembina/Nurseto Wisnumurti.png', 'jabatan' => 'Pembina'],
+                ['nama' => 'Dr. Azka Ubaidillah, SST, M.Si.', 'foto' => 'img/dosen/pembina/AZka.png', 'jabatan' => 'Pembina'],
+                ['nama' => 'Ibnu Santoso, SST, M.T.', 'foto' => 'img/dosen/pembina/Ibnu.png', 'jabatan' => 'Pembina'],
+                ['nama' => 'Agung Priyo Utomo, S.Si., M.T.', 'foto' => 'img/dosen/pembina/Agung PU.png', 'jabatan' => 'Pembina'],
+            ];
+            $penanggung_jawab = [
+                ['nama' => 'Wahyudin, S.Si., MAP, MPP', 'foto' => 'img/dosen/penanggungg_jawab/Wahyudin.png', 'jabatan' => 'Penanggung Jawab'],
+                ['nama' => 'Dwy Bagus Cahyono, SST, M.T.', 'foto' => 'img/dosen/penanggungg_jawab/Dwy Bagus.png', 'jabatan' => 'Penanggung Jawab'],
+                ['nama' => 'Sofyan Ayatulloh, SST', 'foto' => 'img/dosen/penanggungg_jawab/Sofyan Ayatulloh.png', 'jabatan' => 'Penanggung Jawab'],
+            ];
+            $pengawas = [
+                ['nama' => 'Liza Kurnia Sari, S.Si., M.Stat.', 'foto' => 'img/dosen/pengawas/Liza.png', 'jabatan' => 'Koordinator'],
+                ['nama' => 'Yaya Setiadi, M.M., M.Pd.', 'foto' => 'img/dosen/pengawas/Yaya Setiadi.png', 'jabatan' => 'Anggota'],
+                ['nama' => 'Retnaningsih, S.Si., M.E.', 'foto' => 'img/dosen/pengawas/Retnaningsih.png', 'jabatan' => 'Anggota'],
+                ['nama' => 'Firdaus, MBA', 'foto' => 'img/dosen/pengawas/Firdaus.png', 'jabatan' => 'Anggota'],
+                ['nama' => 'Nofita Istiana, SST, M.Si.', 'foto' => 'img/dosen/pengawas/Nofita.png', 'jabatan' => 'Anggota'],
+            ];
+            // Mengubah nama variabel agar tidak bentrok
+            $bph_dosen = [
+                ['nama' => 'Dr. Timbang Sirait, S.Stat., M.Si.', 'foto' => 'img/dosen/bph/Timbang.png', 'jabatan' => 'Ketua Pelaksana'],
+                ['nama' => 'Dr. Sarni Maniar Berliana, SST, M.Si.', 'foto' => 'img/dosen/bph/Sarni.png', 'jabatan' => 'Wakil Ketua'],
+                ['nama' => 'Luci Wulansari, S.Si., M.S.E.', 'foto' => 'img/dosen/bph/Luci Wulansari.png', 'jabatan' => 'Koor Bendahara'],
+                ['nama' => 'Rina Hardiyanti, SST', 'foto' => 'img/dosen/bph/Rina.png', 'jabatan' => 'Bendahara'],
+                ['nama' => 'Winih Budiarti, SST, M.Stat.', 'foto' => 'img/dosen/bph/Winih Budiarti.png', 'jabatan' => 'Koor Sekretariat'],
+                ['nama' => 'Maya Hayuningtyas, S.E.', 'foto' => 'img/dosen/bph/Maya.png', 'jabatan' => 'Sekretariat'],
+            ];
+            $acara_dosen = [
+                ['nama' => 'Dr. Rita Yuliana, S.Si., MSE', 'foto' => 'img/dosen/acara/Rita.png', 'jabatan' => 'Koordinator'],
+                ['nama' => 'Dr. Ernawati Pasaribu, S.Si., M.E.', 'foto' => 'img/dosen/acara/Ernawati.png', 'jabatan' => 'Anggota'],
+                ['nama' => 'Farashintha Julhija Karim, S.E., M.Si.', 'foto' => 'img/dosen/acara/Farashintha.png', 'jabatan' => 'Anggota'],
+            ];
+            $lapk_dosen = [
+                ['nama' => 'Budyanra, SST, M.Stat.', 'foto' => 'img/dosen/lapk/Budyanra.png', 'jabatan' => 'Koordinator'],
+                ['nama' => 'Christiana Anggraeni Putri, SST, M.Si.', 'foto' => 'img/dosen/lapk/Christiana Anggraeni Putri.png', 'jabatan' => 'Anggota'],
+                ['nama' => 'Salwa Rizqina Putri, S.Tr.Stat.', 'foto' => 'img/dosen/lapk/Salwa Rizqina Putri.png', 'jabatan' => 'Anggota'],
+            ];
+            $hpd_dosen = [
+                ['nama' => 'Efri Diah Utami, SST, M.Stat.', 'foto' => 'img/dosen/hpd/Efri Diah.png', 'jabatan' => 'Koordinator'],
+                ['nama' => 'Avi Rudianita Widya, SST, M.Si.', 'foto' => 'img/dosen/hpd/Avi Rudianita Widya.png', 'jabatan' => 'Anggota'],
+                ['nama' => 'Eko Putra Wahyuddin S.Tr.Stat.', 'foto' => 'img/dosen/hpd/Eko Putra Wahyuddin.png', 'jabatan' => 'Anggota'],
+            ];
+            $gramti_dosen = [
+                ['nama' => 'Robert Kurniawan, SST, M.Si.', 'foto' => 'img/dosen/gramti/Robert Kurniawan.png', 'jabatan' => 'Koordinator'],
+                ['nama' => 'Sri Herwanto Dwi Hatmo, S.Si., M.A.', 'foto' => 'img/dosen/gramti/Sri Herwanto Dwi Hatmo.png', 'jabatan' => 'Anggota'],
+            ];
+            $tibum_dosen = [
+                ['nama' => 'Sugiarto, SST, S.Si., M.M.', 'foto' => 'img/dosen/tibum/Sugiarto.png', 'jabatan' => 'Koordinator'],
+                ['nama' => 'Erna Nurmawati, SST, M.T.', 'foto' => 'img/dosen/tibum/Erna Nurmawati.png', 'jabatan' => 'Anggota'],
+            ];
+            $ppm_dosen = [
+                ['nama' => 'Lia Yuliana, S.Si., M.T.', 'foto' => 'img/dosen/ppm/Lia.png', 'jabatan' => 'Koordinator'],
+                ['nama' => 'Rini Rahani, SST, M.Stat.', 'foto' => 'img/dosen/ppm/Rini Rahani.png', 'jabatan' => 'Anggota'],
+            ];
+            $umum_dosen = [
+                ['nama' => 'Sri Widaryani, S.E., M.Si.', 'foto' => 'img/dosen/umum/Sri Widaryani.png', 'jabatan' => 'Koordinator'],
+                ['nama' => 'Rini Silvi, SST, M.Stat.', 'foto' => 'img/dosen/umum/Rini Silvi.png', 'jabatan' => 'Anggota'],
+                ['nama' => 'Cahyo Wibowo, SST', 'foto' => 'img/dosen/umum/Cahyo Wibowo.png', 'jabatan' => 'Anggota'],
+            ];
 
-        $pengarah = [
-            [
-                'nama' => 'Prof. Setia Pramana, S.Si., M.Sc., Ph.D',
-                'foto' => 'img/dosen/pengarah/Setia.png',
-                'jabatan' => 'Pengarah'
-            ],
-            [
-                'nama' => 'Prof. Dr. Hardius Usman, S.Si., M.Si.',
-                'foto' => 'img/dosen/pengarah/hardius.png',
-                'jabatan' => 'Pengarah'
-            ],
-            [
-                'nama' => 'Dr. Yunarso Anang Sulistiadi, M.Eng.',
-                'foto' => 'img/dosen/pengarah/Yunarso Anang.png',
-                'jabatan' => 'Pengarah'
-            ],
-        ];
-
-        $pembina = [
-            [
-                'nama' => 'Bambang Nurcahyo S.E., M.M.',
-                'foto' => 'img/dosen/pembina/Bambang Nurcahyo.png',
-                'jabatan' => 'Pembina'
-            ],
-            [
-                'nama' => 'Nurseto Wisnumurti, S.Si., M.Stat.',
-                'foto' => 'img/dosen/pembina/Nurseto Wisnumurti.png',
-                'jabatan' => 'Pembina'
-            ],
-            [
-                'nama' => 'Dr. Azka Ubaidillah, SST, M.Si.',
-                'foto' => 'img/dosen/pembina/AZka.png',
-                'jabatan' => 'Pembina'
-            ],
-            [
-                'nama' => 'Ibnu Santoso, SST, M.T.',
-                'foto' => 'img/dosen/pembina/Ibnu.png',
-                'jabatan' => 'Pembina'
-            ],
-            [
-                'nama' => 'Agung Priyo Utomo, S.Si., M.T.',
-                'foto' => 'img/dosen/pembina/Agung PU.png',
-                'jabatan' => 'Pembina'
-            ],
-        ];
-
-        $penanggung_jawab = [
-            [
-                'nama' => 'Wahyudin, S.Si., MAP, MPP',
-                'foto' => 'img/dosen/penanggungg_jawab/Wahyudin.png',
-                'jabatan' => 'Penanggung Jawab'
-            ],
-            [
-                'nama' => 'Dwy Bagus Cahyono, SST, M.T.',
-                'foto' => 'img/dosen/penanggungg_jawab/Dwy Bagus.png',
-                'jabatan' => 'Penanggung Jawab'
-            ],
-            [
-                'nama' => 'Sofyan Ayatulloh, SST',
-                'foto' => 'img/dosen/penanggungg_jawab/Sofyan Ayatulloh.png',
-                'jabatan' => 'Penanggung Jawab'
-            ],
-        ];
-
-        $pengawas = [
-            [
-                'nama' => 'Liza Kurnia Sari, S.Si., M.Stat.',
-                'foto' => 'img/dosen/pengawas/Liza.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Yaya Setiadi, M.M., M.Pd.',
-                'foto' => 'img/dosen/pengawas/Yaya Setiadi.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Retnaningsih, S.Si., M.E.',
-                'foto' => 'img/dosen/pengawas/Retnaningsih.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Firdaus, MBA',
-                'foto' => 'img/dosen/pengawas/Firdaus.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Nofita Istiana, SST, M.Si.',
-                'foto' => 'img/dosen/pengawas/Nofita.png',
-                'jabatan' => 'Anggota'
-            ],
-        ];
-
-        $bph = [
-            [
-                'nama' => 'Dr. Timbang Sirait, S.Stat., M.Si.',
-                'foto' => 'img/dosen/bph/Timbang.png',
-                'jabatan' => 'Ketua Pelaksana'
-            ],
-            [
-                'nama' => 'Dr. Sarni Maniar Berliana, SST, M.Si.',
-                'foto' => 'img/dosen/bph/Sarni.png',
-                'jabatan' => 'Wakil Ketua'
-            ],
-            [
-                'nama' => 'Luci Wulansari, S.Si., M.S.E.',
-                'foto' => 'img/dosen/bph/Luci Wulansari.png',
-                'jabatan' => 'Koor Bendahara'
-            ],
-            [
-                'nama' => 'Rina Hardiyanti, SST',
-                'foto' => 'img/dosen/bph/Rina.png',
-                'jabatan' => 'Bendahara'
-            ],
-            [
-                'nama' => 'Winih Budiarti, SST, M.Stat.',
-                'foto' => 'img/dosen/bph/Winih Budiarti.png',
-                'jabatan' => 'Koor Sekretariat'
-            ],
-            [
-                'nama' => 'Maya Hayuningtyas, S.E.',
-                'foto' => 'img/dosen/bph/Maya.png',
-                'jabatan' => 'Sekretariat'
-            ]
-        ];
-
-        $acara = [
-            [
-                'nama' => 'Dr. Rita Yuliana, S.Si., MSE',
-                'foto' => 'img/dosen/acara/Rita.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Dr. Ernawati Pasaribu, S.Si., M.E.',
-                'foto' => 'img/dosen/acara/Ernawati.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Farashintha Julhija Karim, S.E., M.Si.',
-                'foto' => 'img/dosen/acara/Farashintha.png',
-                'jabatan' => 'Anggota'
-            ],
-        ];
-
-        $lapk = [
-            [
-                'nama' => 'Budyanra, SST, M.Stat.',
-                'foto' => 'img/dosen/lapk/Budyanra.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Christiana Anggraeni Putri, SST, M.Si.',
-                'foto' => 'img/dosen/lapk/Christiana Anggraeni Putri.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Salwa Rizqina Putri, S.Tr.Stat.',
-                'foto' => 'img/dosen/lapk/Salwa Rizqina Putri.png',
-                'jabatan' => 'Anggota'
-            ],
-        ];
-
-        $hpd = [
-            [
-                'nama' => 'Efri Diah Utami, SST, M.Stat.',
-                'foto' => 'img/dosen/hpd/Efri Diah.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Avi Rudianita Widya, SST, M.Si.',
-                'foto' => 'img/dosen/hpd/Avi Rudianita Widya.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Eko Putra Wahyuddin S.Tr.Stat.',
-                'foto' => 'img/dosen/hpd/Eko Putra Wahyuddin.png',
-                'jabatan' => 'Anggota'
-            ],
-        ];
-
-        $gramti = [
-            [
-                'nama' => 'Robert Kurniawan, SST, M.Si.',
-                'foto' => 'img/dosen/gramti/Robert Kurniawan.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Sri Herwanto Dwi Hatmo, S.Si., M.A.',
-                'foto' => 'img/dosen/gramti/Sri Herwanto Dwi Hatmo.png',
-                'jabatan' => 'Anggota'
-            ],
-        ];
-
-        $tibum = [
-            [
-                'nama' => 'Sugiarto, SST, S.Si., M.M.',
-                'foto' => 'img/dosen/tibum/Sugiarto.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Erna Nurmawati, SST, M.T.',
-                'foto' => 'img/dosen/tibum/Erna Nurmawati.png',
-                'jabatan' => 'Anggota'
-            ],
-
-        ];
-
-        $ppm = [
-            [
-                'nama' => 'Lia Yuliana, S.Si., M.T.',
-                'foto' => 'img/dosen/ppm/Lia.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Rini Rahani, SST, M.Stat.',
-                'foto' => 'img/dosen/ppm/Rini Rahani.png',
-                'jabatan' => 'Anggota'
-            ],
-        ];
-
-        $umum = [
-            [
-                'nama' => 'Sri Widaryani, S.E., M.Si.',
-                'foto' => 'img/dosen/umum/Sri Widaryani.png',
-                'jabatan' => 'Koordinator'
-            ],
-            [
-                'nama' => 'Rini Silvi, SST, M.Stat.',
-                'foto' => 'img/dosen/umum/Rini Silvi.png',
-                'jabatan' => 'Anggota'
-            ],
-            [
-                'nama' => 'Cahyo Wibowo, SST',
-                'foto' => 'img/dosen/umum/Cahyo Wibowo.png',
-                'jabatan' => 'Anggota'
-            ],
-        ];
-
-        return [
-            'pelindung' => $pelindung,
-            'pengarah' => $pengarah,
-            'pembina' => $pembina,
-            'penanggung_jawab' => $penanggung_jawab,
-            'pengawas' => $pengawas,
-            'bph' => $bph,
-            'acara' => $acara,
-            'lapk' => $lapk,
-            'hpd' => $hpd,
-            'gramti' => $gramti,
-            'tibum' => $tibum,
-            'ppm' => $ppm,
-            'umum' => $umum
-        ];
+            // Menggunakan nama kunci yang unik
+            return [
+                'pelindung' => $pelindung,
+                'pengarah' => $pengarah,
+                'pembina' => $pembina,
+                'penanggung_jawab' => $penanggung_jawab,
+                'pengawas' => $pengawas,
+                'bph_dosen' => $bph_dosen,
+                'acara_dosen' => $acara_dosen,
+                'lapk_dosen' => $lapk_dosen,
+                'hpd_dosen' => $hpd_dosen,
+                'gramti_dosen' => $gramti_dosen,
+                'tibum_dosen' => $tibum_dosen,
+                'ppm_dosen' => $ppm_dosen,
+                'umum_dosen' => $umum_dosen
+            ];
+        }
     }
 }
