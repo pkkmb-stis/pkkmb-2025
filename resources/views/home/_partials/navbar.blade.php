@@ -185,35 +185,11 @@
                             </form>
                         </div>
 
-                        <a class="block px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
-                            href="{{ route('home.profil') }}">Profil Saya</a>
-
-                        @can(PERMISSION_AKSES_ADMIN)
-                        <a class="flex items-center justify-between px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
-                            href="{{ route('dashboard') }}">
-                            <!-- Teks Halaman Admin -->
-                            <span>Halaman Admin</span>
-
-                            <!-- Badge Pengaduan -->
-                            @can(PERMISSION_SHOW_KENDALA)
-                            <div class="container-badge adminBadge-container">
-                                @livewire('admin.maba.kendala.pengaduan-badge')
-                            </div>
-                            @endcan
-                        </a>
-                        @endcan
-
-
-                        <form action="{{ route('logout') }}" method="post" class="p-0 m-0">
-                            @csrf
-                            <button type="submit"
-                                class="w-full px-12 py-2 font-bold text-center transition border-b text-md hover:bg-base-brown-400">Logout</button>
-                        </form>
                     </div>
                 </div>
             </div>
             @else
-                <a class="px-5 py-1 font-bold font-poppins transition border-2 rounded-full border-2025-1 bg-2025-1 font-poppins text-base-white hover:bg-white hover:text-2025-1" 
+                <a class="px-5 py-1 font-bold transition border-2 rounded-full border-2025-1 bg-2025-1 font-poppins text-base-white hover:bg-white hover:text-2025-1" 
                     href="{{ route('login') }}">
                     Masuk
                 </a>

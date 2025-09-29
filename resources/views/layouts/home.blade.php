@@ -22,7 +22,7 @@
             @livewire('home.pengumuman')
             @stack('float')
             <a href="{{ route('home.faq') }}" class="w-auto my-2 md:my-4 mx-auto">
-                <span class="text-xs text-center md:text-base text-white bg-kuning-600 p-[0.35rem] py-[0.4rem] md:py-2 rounded-full font-bold hover:bg-base-white hover:text-kuning-600 transition-all border-gray-50 hover:border-kuning-600 border-2">FAQ</span>
+                <span class="text-xs text-center md:text-base text-white bg-2025-5 p-[0.35rem] py-[0.4rem] md:py-2 rounded-full font-bold hover:bg-base-white hover:text-2025-5 transition-all border-gray-50 hover:border-2025-5 border-2">FAQ</span>
             </a>
         </div>
     </div>

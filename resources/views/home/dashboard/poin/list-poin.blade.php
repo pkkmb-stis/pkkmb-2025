@@ -1,5 +1,5 @@
 <div x-data="{ showModalDetail: @entangle('showModalDetail') }" x-on:close-modal.window="showModalDetail = false">
-    <x-card class="px-2 sm:px-5" style="border: 4px solid #1E1E1E;">
+    <x-card class="px-2 sm:px-5" style="border: 4px solid #1E2A4A;">
         <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
             <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
                 class="h-7 w-8">
@@ -47,7 +47,7 @@
         @if (count($poin) > 0)
             <div class="flex justify-end mt-3">
                 <x-button
-                    class="uppercase rounded-3xl text-md whitespace-nowrap bg-base-blue-300 hover:bg-base-blue-400"
+                    class="uppercase rounded-3xl text-md whitespace-nowrap bg-2025-1 hover:bg-2025-2"
                     :tagA="true" href="{{ route('home.profil') . '?menu=poin' }}">
                     Selengkapnya
                 </x-button>

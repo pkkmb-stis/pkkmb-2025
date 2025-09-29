@@ -1,4 +1,4 @@
-<div>
+<div class="mt-4">
     <canvas x-init="run{{$attributes['id'].'_canvas'}}()" id='{{$attributes['id']}}-canvas'></canvas>
 
     <p class="text-center mt-2 text-md">Banyak Poin Berdasarkan Kategori </p>

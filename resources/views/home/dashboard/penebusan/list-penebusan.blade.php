@@ -1,7 +1,7 @@
 <div>
     <div x-data="{ showModalDelete: false, jenispoinTitle: '', user_name: '', update_pada: '', penebusanId: '', showModalDetail: @entangle('showModalDetail') }">
 
-        <x-card class="px-2 sm:px-5">
+        <x-card class="px-2 sm:px-5" style="border: 4px solid #1E2A4A;">
             <div class="mb-4 flex flex-row justify-between">
                 <h5 class="font-bohemianSoul text-xl font-normal text-gray-700">List Penebusan</h5>
                 <div>

@@ -3,7 +3,7 @@
         x-on:livewire-upload-finish="isUploading = false" x-on:livewire-upload-error="isUploading = false"
         x-on:livewire-upload-progress="progress = $event.detail.progress">
 
-        <x-button class="uppercase rounded-3xl bg-coklat-1 hover:bg-base-brown-600" type="button"
+        <x-button class="uppercase rounded-3xl bg-2025-1 hover:bg-2025-2" type="button"
             x-on:click="addmodal = true; slim.set([])">
             Tambah Penebusan
         </x-button>

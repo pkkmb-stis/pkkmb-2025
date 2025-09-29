@@ -39,7 +39,7 @@
                                 WIB</small>
                         </div>
 
-                        <div class="overflow-hidden rounded-lg border-solid border-2 bg-[#990101]"
+                        <div class="overflow-hidden rounded-lg border-solid border-2 bg-2025-2"
                             x-show="openDetailPengumuman === {{ $c->id }}"
                             x-on:click.outside="openDetailPengumuman = ''">
                             <div class="m-2 text-white">

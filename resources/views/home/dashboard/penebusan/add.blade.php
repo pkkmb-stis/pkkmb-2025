@@ -3,7 +3,7 @@
     @else
         <div x-data="{ addmodal: false }">
 
-            <x-button class="rounded-3xl bg-coklat-1 hover:bg-base-brown-600 uppercase ml-1" type="button"
+            <x-button class="rounded-3xl bg-2025-1 hover:bg-2025-2 uppercase ml-1" type="button"
                 x-on:click="addmodal = true">
                 Tambah Penebusan
             </x-button>

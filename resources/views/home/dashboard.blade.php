@@ -4,10 +4,7 @@
         background-position: top center;
         background-size: 100% auto;
     ">
-    <div class="px-4 mt-0 pt-16 pb-8 mt-6 sm:px-6 md:px-8 md:pt-20 lg:px-10 mx-10">
-        {{-- <div class="w-full">
-            <img src="{{ asset('img\asset\2025\BG_pink_dashboard.png') }}" alt="Background Atas" class="w-full object-cover">
-        </div> --}}
+    <div class="px-1 pt-16 pb-8 mt-6 sm:px-6 md:px-8 md:pt-20 lg:px-10 mx-10">
 
         <x-card class="px-2 mt-4 sm:px-5" style="border: 4px solid #1E1E1E;">
             <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
@@ -17,7 +14,7 @@
                 
                 <div class="text-xl font-medium md:text-2xl">
                     {{ getGreeting() }}, {{ $user->name }}!
-                </div>    
+                </div>
 
                 <img src="{{ asset('img\asset\2025\Elemen 1.png') }}" 
                     alt="elemen 1" 
@@ -30,7 +27,7 @@
             @if ($user->kelompok)
                 <div class="mt-3">
                     @if ($user->kelompok->link_group_wa)
-                        <x-button class="mx-0.5 rounded-3xl bg-green-500 p-1 hover:bg-green-600" :tagA="true"
+                        <x-button class="m-0.5 rounded-3xl bg-green-500 p-1 hover:bg-green-600" :tagA="true"
                             href="{{ $user->kelompok->link_group_wa }}" target="_blank">
                             <i class="mr-1 fa-brands fa-whatsapp"></i>
                             <span>Group WA</span>
@@ -38,7 +35,7 @@
                     @endif
 
                     @if ($user->kelompok->link_zoom)
-                        <x-button class="mx-0.5 rounded-3xl bg-blue-500 p-1 hover:bg-blue-600" :tagA="true"
+                        <x-button class="m-0.5 rounded-3xl bg-blue-500 p-1 hover:bg-blue-600" :tagA="true"
                             href="{{ $user->kelompok->link_zoom }}" target="_blank">
                             <i class="mr-1 fa-solid fa-video"></i>
                             Zoom Kelas
@@ -46,7 +43,7 @@
                     @endif
 
                     @if ($user->kelompok->link_classroom)
-                        <x-button class="mx-0.5 rounded-3xl bg-lime-500 p-1 hover:bg-lime-600" :tagA="true"
+                        <x-button class="m-0.5 rounded-3xl bg-lime-500 p-1 hover:bg-lime-600" :tagA="true"
                             href="{{ $user->kelompok->link_classroom }}" target="_blank">
                             <i class="mr-1 fa-solid fa-chalkboard-teacher"></i>
                             Classroom
@@ -93,16 +90,6 @@
                                 @livewire('home.dashboard.kendala.list-kendala')
                             </div>
                         </div>
-                        
-                        <div class="flex flex-col md:flex-row gap-6">
-                            <div class="flex-1">
-                                @include('components.presensi')
-                            </div>
-                            <div class="flex-1">
-                                @include('components.pengaduan')
-                            </div>
-                        </div>
-
 
                         <div class="col-span-1 lg:col-span-5">
                             @livewire('home.dashboard.poin.chart')

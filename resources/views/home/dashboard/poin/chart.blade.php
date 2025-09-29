@@ -1,6 +1,6 @@
 <div class="h-full">
     {{-- <div class="mb-5"> --}}
-    <x-card class="bg-white rounded-xl shadow-md p-4 h-auto" style="border: 4px solid #1E1E1E;">
+    <x-card class="bg-white rounded-xl shadow-md p-4 h-auto" style="border: 4px solid #1E2A4A;">
         <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
             <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
                 class="h-7 w-8">
@@ -29,17 +29,17 @@
     {{-- </div> --}}
 
     @if (auth()->user()->is_maba)
-        {{-- <div class="mb-3"> --}}
+        <div class="bg-white rounded-xl shadow-md p-2 mt-4 h-auto" style="border: 4px solid #1E2A4A;">
             <x-card>
                 <x-bar-poin id="bar" bonus="{{ $poin['bonus'] ?? 0 }}" pelanggaran="{{ $poin['pelanggaran'] ?? 0 }}"
                     penebusan="{{ $poin['penebusan'] ?? 0 }}" />
             </x-card>
-        {{-- </div> --}}
-        {{-- <div class="mb-5"> --}}
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-2 mt-4 h-auto" style="border: 4px solid #1E2A4A;">
             <x-card>
                 <x-doughnut-poin id='donat' poin="{{ $poin['akumulasi'] }}" poin-max="{{ POIN_MAKSIMAL }}"
                     poin-cadangan="{{ $poin['cadangan'] }}" />
             </x-card>
-        {{-- </div> --}}
+        </div>
     @endif
 </div>

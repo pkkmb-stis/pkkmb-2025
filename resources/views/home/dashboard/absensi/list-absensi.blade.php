@@ -1,5 +1,5 @@
 <div class="h-full" x-data="{ showDetailAbsensi: @entangle('showDetailAbsensi') }">
-    <x-card class="px-2 sm:px-5" style="border: 4px solid #1E1E1E;">
+    <x-card class="px-2 sm:px-5" style="border: 4px solid #1E2A4A;">
         <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
             <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
                 class="h-7 w-8">

@@ -4,7 +4,7 @@
         <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
             @foreach ($events as $event)
             <div>
-                <x-card class="sm:px-5 px-2 mb-3">
+                <x-card class="sm:px-5 px-2 mb-3" style="border: 4px solid #1E2A4A;">
                     <h5 class="text-sm font-poppins">
                         Presensi {{ $event->title }}
                         <span
