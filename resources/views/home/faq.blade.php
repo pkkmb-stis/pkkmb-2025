@@ -59,7 +59,7 @@
 
 <x-home-layout menu="FAQ" title="FAQ">
     <!-- Judul -->
-    <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16">
+    <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16 -mb-8">
     {{-- Header --}}
         <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
             <img src="{{ asset('img/maskot/2025/maskot 0.png') }}" alt="wave" class="z-10 w-14 sm:w-24 md:w-28 lg:w-32 lg:-translate-x-4 transform translate-y-[-10px]">
@@ -83,14 +83,14 @@
     </div>
 
 {{-- Container utama dengan background --}}
-<div class="w-full relative overflow-hidden pb-6 sm:pb-8 md:pb-12 lg:pb-16"        
-     style="background-image: url('{{ asset('img/asset/2025/wafe-panjang.png') }}'); 
-            background-size: 100% 100%, cover; 
+<div class="w-full relative isolate overflow-hidden pb-6 sm:pb-8 md:pb-12 lg:pb-16 -mb-8"        
+     style="background-image: url('{{ asset('img/asset/2025/wave-panjang.png') }}'); 
+            background-size: cover; 
             background-repeat: no-repeat; 
             background-position: top center; 
             padding-top: 100px;"> 
 
-{{-- Burung Maleo Kiri (posisi diatur ulang) --}}
+    {{-- Burung Maleo Kiri (posisi diatur ulang) --}}
     <img src="{{ asset('img/asset/2025/maleo.png') }}" alt="Maleo" 
          class="absolute left-4 top-0 
                 w-28 h-32 sm:w-32 md:w-36 lg:w-40 
@@ -131,5 +131,8 @@
             </p>
         </div>
     </div>
-@endforeach
+    @endforeach
+
+    </div>
+</div>
 </x-home-layout>

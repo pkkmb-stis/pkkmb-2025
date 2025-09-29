@@ -24,16 +24,25 @@
             </div>
         </div>
 
-        {{-- ======================= PERUBAHAN DIMULAI DI SINI ======================= --}}
 
-        {{-- 1. Wrapper untuk membuat Stacking Context baru --}}
         <div class="relative isolate">
+            {{-- Burung Maleo Kiri (posisi diatur ulang) --}}
+            <img src="{{ asset('img/asset/2025/rumah.png') }}" alt="rumah"
+                class="absolute left-4 top-0 md:-mt-16 lg:-mt-10 -mt-24
+                        w-0 sm:w-40 md:w-44 lg:w-52
+                        z-0"
+                style="object-fit: contain;">
 
-            {{-- 2. Elemen Gambar Wave di Latar Belakang (MENGGUNAKAN <img>) --}}
+            {{-- Burung Maleo Kanan (posisi diatur ulang) --}}
+            <img src="{{ asset('img/asset/2025/rumah.png') }}" alt="rumah"
+                class="absolute right-4 top-0 md:-mt-14 lg:-mt-8 -mt-20
+                        w-0 sm:w-40 md:w-44 lg:w-52
+                        z-0 scale-x-[-1]"
+                style="object-fit: contain;">
+
             <img src="{{ asset('img/asset/2025/wave.png') }}" alt="Latar belakang wave"
                 class="absolute inset-0 w-full h-full object-cover object-top">
 
-            {{-- 3. Konten Asli Anda (DIBERI Z-INDEX AGAR DI ATAS GAMBAR) --}}
             <div class="relative z-10 w-full md:mt-12 mt-8 overflow-hidden px-5 sm:px-10 lg:px-28">
                 {{-- Visi --}}
                 <div class="text-center py-5 sm:px-10 px-5 mt-24">
@@ -65,7 +74,6 @@
                 </div>
             </div>
         </div>
-        {{-- ======================= PERUBAHAN BERAKHIR DI SINI ======================= --}}
 
     </div>
 </x-home-layout>
