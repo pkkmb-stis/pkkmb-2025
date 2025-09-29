@@ -1,4 +1,4 @@
-<div class="bg-[#FFEAC8] mix-blend-multiply">
+<div class="max-w-full overflow-hidden bg-[#FFEAC8] mix-blend-multiply">
 
   <!-- ================= TAMPIILAN HP ================= -->
   <div class="block lg:hidden">
@@ -31,7 +31,7 @@
     </div>
 
     <!-- Misi HP -->
-    <div class="py-6 px-4">
+    <div class="py-6 px-4 overflow-hidden max-w-full">
       <div class="bg-[#8B2F4B] text-white px-6 py-8 rounded-2xl relative shadow-lg overflow-hidden">
         <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[-100px] bg-cover opacity-[20%]"
              style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:30%;">
@@ -94,7 +94,7 @@
       </div>
 
       <!-- Misi PC -->
-      <div class="flex flex-row-reverse mx-auto w-full justify-center items-stretch px-12 py-6" data-aos="fade-left">
+      <div class="overflow-hidden flex flex-row-reverse mx-auto max-w-full justify-center items-stretch px-12 py-6" data-aos="fade-left">
         <div class="flex-1 p-4">
           <div class="bg-[#8B2F4B] text-white px-8 py-12 rounded-[50px] h-full relative overflow-hidden shadow-xl">
             <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cover opacity-[20%]"
