@@ -5,24 +5,30 @@
     <div class="relative hidden h-screen w-full md:flex">
 
             {{-- Elemen Kiri --}}
-            <div class="absolute bottom-0 left-6 mb-[54px] flex flex-row items-end lg:left-10 xl:left-18 2xl:left-26">
-                <img class="h-[200px] lg:h-[200px] 2xl:h-[371px] mb-[175px]" src="{{ asset('img/asset/2025/rumah.png') }}"
-                    alt="Rumah Adat Tongkonan" style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade left">
-                <img class="shakeanim z-10 ml-[-240px] w-[180px] lg:w-[180px] 2xl:w-[250px] mb-[125px]" src="{{ maskot5 }}" alt="Tora"
-                    style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade left">
-            </div>
-            {{-- Elemen Kiri End --}}
+    <div class="absolute bottom-0 left-4 mb-8 flex flex-row items-end sm:left-6 md:left-10 lg:left-14 xl:left-25 2xl:left-28">
+        <img class="h-[120px] sm:h-[160px] md:h-[200px] lg:h-[260px] xl:h-[320px] 2xl:h-[371px] mb-[80px] sm:mb-[120px] md:mb-[175px]"
+             src="{{ asset('img/asset/2025/rumah.png') }}"
+             alt="Rumah Adat Tongkonan"
+             style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade-left">
+        <img class="shakeanim z-10 ml-[-100px] sm:ml-[-160px] md:ml-[-200px] lg:ml-[-240px] w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[250px] mb-[60px] sm:mb-[90px] md:mb-[125px]"
+             src="{{ maskot5 }}" alt="Tora"
+             style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade-left">
+    </div>
+    {{-- Elemen Kiri End --}}
 
-            {{-- Elemen Kanan --}}
-            <div class="absolute bottom-0 right-6 mb-[54px] flex flex-row items-end lg:right-10 xl:right-18 2xl:right-26">
-                <img class="shakeanim2 z-10 mr-[-240px] w-[180px] lg:w-[180px] 2xl:w-[250px] mb-[125px]" src="{{ maskot6 }}" alt="Tira"
-                    style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade right">
-                <img class="h-[200px] lg:h-[200px] 2xl:h-[371px] mb-[175px]" src="{{ asset('img/asset/2025/rumah.png') }}"
-                    alt="Rumah Adat Tongkonan" style="filter: drop-shadow(0 0 2px #fff); transform: scaleX(-1);" data-aos="fade right">
-            </div>
-            {{-- Elemen Kanan End --}}
+    {{-- Elemen Kanan --}}
+    <div class="absolute bottom-0 right-4 mb-8 flex flex-row items-end sm:right-6 md:right-10 lg:right-14 xl:right-25 2xl:right-28">
+        <img class="shakeanim2 z-10 mr-[-100px] sm:mr-[-160px] md:mr-[-200px] lg:mr-[-240px] w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[250px] mb-[60px] sm:mb-[90px] md:mb-[125px]"
+             src="{{ maskot6 }}" alt="Tira"
+             style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade-right">
+        <img class="h-[120px] sm:h-[160px] md:h-[200px] lg:h-[260px] xl:h-[320px] 2xl:h-[371px] mb-[80px] sm:mb-[120px] md:mb-[175px]"
+             src="{{ asset('img/asset/2025/rumah.png') }}"
+             alt="Rumah Adat Tongkonan"
+             style="filter: drop-shadow(0 0 2px #fff); transform: scaleX(-1);" data-aos="fade-right">
+    </div>
+    {{-- Elemen Kanan End --}}
 
-            {{-- Elemen Tengah --}}
+                {{-- Elemen Tengah --}}
             <section class="flex flex-col items-center justify-center flex-grow text-center py-10">    
             <div class="flex h-full w-full flex-col items-center justify-center text-center">
                 <img class="w-32 md:w-[212px] lg:w-[193px] mb-[-80px]" src="{{ LOGO }}" alt="Logo PKKMB-PKBN 2025">
@@ -37,7 +43,7 @@
                     </text>
                 </svg>
 
-                <h1 class="text-[#FFDBE8] font-brasikaDisplay text-4xl md:text-5xl lg:text-6xl mb-2 flex items-center justify-center"
+           <h1 class="text-[#FFDBE8] font-brasikaDisplay text-4xl md:text-5xl lg:text-6xl mb-2 flex items-center justify-center"
                     style="line-height:1.25; filter: drop-shadow(0 0 14px #FF3B7F);">
                     Mahasiswa Baru
                 </h1>
@@ -55,8 +61,10 @@
                     <img src="{{ asset('img/asset/2025/Elemen 1.png') }}" class="w-[63px] md:wd-[63px] transform scale-x-[-1]">
                 </div>
             </div>
-            {{-- Elemen Tengah End --}}
-            </section>
+
+        </div>
+    </section>
+    {{-- Elemen Tengah End --}}
         </div>
     </div>
 
