@@ -38,7 +38,7 @@
                         class="{{ $menu == 'Galeri' ? 'bg-2025-1 text-2025-5' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-2025-1 hover:text-2025-5">
                         <i class="mr-2 fa-solid fa-image"></i>
                         Galeri</a>
-                    <a href="{{ route('home.ppo') }}"
+                    <a href="{{ route('home.panitia') }}"
                         class="{{ $menu == 'Panitia' ? 'bg-2025-1 text-2025-5' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-2025-1 hover:text-2025-5">
                         <i class="mr-2 fa-solid fa-address-card"></i>
                         Panitia</a>
@@ -108,7 +108,7 @@
                 </a>
             </li>
             <li class="mx-8">
-                <a href="{{ route('home.ppo') }}"
+                <a href="{{ route('home.panitia') }}"
                     class="{{ $menu == 'Panitia' ? 'shadow-lg text-2025-1' : 'hover:text-2025-1 active:text-2025-1' }} 
                         relative z-0 inline-block rounded-xl px-4 py-2 transition-all duration-300 group hover:shadow-lg active:shadow-lg">
                     
