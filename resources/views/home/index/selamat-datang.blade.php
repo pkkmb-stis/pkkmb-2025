@@ -10,7 +10,7 @@
              src="{{ asset('img/asset/2025/rumah.png') }}"
              alt="Rumah Adat Tongkonan"
              style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade-left">
-        <img class="shakeanim z-10 ml-[-100px] sm:ml-[-160px] md:ml-[-200px] lg:ml-[-240px] w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[250px] mb-[60px] sm:mb-[90px] md:mb-[125px]"
+        <img class="shakeanim z-10 ml-[-100px] sm:ml-[-160px] md:ml-[-180px] lg:ml-[-240px] w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[250px] mb-[60px] sm:mb-[90px] md:mb-[125px]"
              src="{{ maskot5 }}" alt="Tora"
              style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade-left">
     </div>
@@ -18,7 +18,7 @@
 
     {{-- Elemen Kanan --}}
     <div class="absolute bottom-0 right-4 mb-8 flex flex-row items-end sm:right-6 md:right-10 lg:right-14 xl:right-25 2xl:right-28">
-        <img class="shakeanim2 z-10 mr-[-100px] sm:mr-[-160px] md:mr-[-200px] lg:mr-[-240px] w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[250px] mb-[60px] sm:mb-[90px] md:mb-[125px]"
+        <img class="shakeanim2 z-10 mr-[-100px] sm:mr-[-160px] md:mr-[-180px] lg:mr-[-240px] w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[250px] mb-[60px] sm:mb-[90px] md:mb-[125px]"
              src="{{ maskot6 }}" alt="Tira"
              style="filter: drop-shadow(0 0 2px #fff);" data-aos="fade-right">
         <img class="h-[120px] sm:h-[160px] md:h-[200px] lg:h-[260px] xl:h-[320px] 2xl:h-[371px] mb-[80px] sm:mb-[120px] md:mb-[175px]"
@@ -31,7 +31,7 @@
                 {{-- Elemen Tengah --}}
             <section class="flex flex-col items-center justify-center flex-grow text-center py-10">    
             <div class="flex h-full w-full flex-col items-center justify-center text-center">
-                <img class="w-32 md:w-[212px] lg:w-[193px] mb-[-80px]" src="{{ LOGO }}" alt="Logo PKKMB-PKBN 2025">
+                <img class="ml-[25px] w-[100px] md:w-[193px] lg:w-[193px] mb-[-80px]" src="{{ LOGO }}" alt="Logo PKKMB-PKBN 2025">
                 <svg viewBox="0 -100 750 300" class="flex w-auto h-auto md:w-96 overflow-visible mb-2 items-center justify-center ml-[15px]">
                     <defs>
                         <path id="curveDown" d="M 50 200 Q 360 120 667 200" fill="tranparent"/>
@@ -92,7 +92,7 @@
             {{-- Elemen Tengah --}}
            <section class="flex flex-col items-center justify-center flex-grow text-center py-10 mt-[-200px]">    
             <div class="flex h-full w-full flex-col items-center justify-center text-center">
-                <img class="w-[100px] md:w-[212px] lg:w-[193px] mb-[-80px]" src="{{ LOGO }}" alt="Logo PKKMB-PKBN 2025">
+                <img class="w-[150px] lg:w-[193px] mb-[-90px] ml-[15px] sm:mb-[-150px] :mb-[]" src="{{ LOGO }}" alt="Logo PKKMB-PKBN 2025">
                 <svg viewBox="0 -100 750 300" class="flex w-auto h-auto md:w-96 overflow-visible mb-[-5px] items-center justify-center ml-[15px]">
                     <defs>
                         <path id="curveDown" d="M 50 200 Q 360 120 667 200" fill="tranparent"/>
