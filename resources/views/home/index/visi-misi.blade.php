@@ -3,16 +3,16 @@
   <!-- ================= TAMPIILAN HP ================= -->
   <div class="block lg:hidden overflow-hidden">
     <!-- Header HP -->
-    <div class="col-span-1 relative pt-12 px-4" data-aos="zoom-in-up">
+    <div class="col-span-1 relative pt-12 px-4 mt-5" data-aos="zoom-in-up">
       <div class="flex flex-col items-center justify-center w-full mx-auto shadow-xl 
             bg-[#8B2F4B] overflow-hidden relative" style="height:34px">
   <img src="img/asset/2025/elemen.png" alt="ornamen kiri" 
-       class="mt-0 h-[34px] w-[60px] absolute left-0">
-  <h1 class="font-brasikaDisplay text-[14px] text-[#F9C46B] text-center">
+       class="mt-0 h-[34px] w-[60px] md:w-[78px] absolute left-0">
+  <h1 class="font-brasikaDisplay text-[14px] md:text-[20px] text-[#F9C46B] text-center">
     Visi dan Misi
   </h1>
   <img src="img/asset/2025/elemen.png" alt="ornamen kanan" 
-       class="mt-0 h-[34px] w-[60px] absolute right-0">
+       class="mt-0 h-[34px] w-[60px] md:w-[78px] absolute right-0">
 </div>
     </div>
 
@@ -54,7 +54,7 @@
     <div class="lg:pl-16 lg:pr-16 col-span-1 relative lg:pt-20" data-aos="zoom-in-up">
       <div class="flex flex-row justify-between items-center rounded-3xl w-full m-auto shadow-xl bg-[#8B2F4B] overflow-hidden" style="height:7.625rem">
         <div class="flex flex-row lg:pl-7 justify-center items-center">
-          <img src="{{ elemen1 }}" class="h-[12rem] w-auto lg:absolute lg:left-0">
+          <img src="img/asset/2025/elemen.png" class="h-[120px] w-[273px] lg:w-[180px] lg:h-[100px] xl:w-[273px] xl:w-[120px] lg:absolute lg:left-0">
         </div>
         <div class="text-center">
           <h1 class="font-brasikaDisplay text-4xl leading-none text-[#F9C46B]">
@@ -62,7 +62,7 @@
           </h1>
         </div>
         <div class="flex flex-row lg:pr-7 justify-center items-center">
-          <img src="{{ elemen1 }}" class="h-[12rem] w-auto lg:absolute lg:right-0 scale-x-[-1]">
+          <img src="img/asset/2025/elemen.png" class="h-[120px] w-[273px] lg:w-[180px] lg:h-[100px] xl:w-[273px] xl:w-[120px] lg:absolute lg:right-0 scale-x-[-1]">
         </div>
       </div>
     </div>
