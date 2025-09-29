@@ -196,18 +196,36 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function ppo()
-    {
-        return view('home.ppo', getPanitia());
-    }
+    // public function ppo()
+    // {
+    //     return view('home.ppo', getPanitia());
+    // }
 
     /**
      * dosen, halaman panitia dosen
      *
      * @return void
      */
-    public function dosen()
+    // public function dosen()
+    // {
+    //     return view('home.dosen', getDosen());
+    // }
+
+    /**
+     * panitia, halaman panitia
+     *
+     * @return void
+     */
+    public function panitia()
     {
-        return view('home.dosen', getDosen());
+        // Ambil data dari kedua sumber
+        $ppoData = getPanitia();
+        $dosenData = getDosen();
+
+        // Gabungkan kedua array data menjadi satu
+        $allData = array_merge($ppoData, $dosenData);
+
+        // Kirim semua data yang sudah digabung ke view
+        return view('home.panitia', $allData);
     }
 }
