@@ -38,7 +38,7 @@
                         class="{{ $menu == 'Galeri' ? 'bg-2025-1 text-2025-5' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-2025-1 hover:text-2025-5">
                         <i class="mr-2 fa-solid fa-image"></i>
                         Galeri</a>
-                    <a href="{{ route('home.ppo') }}"
+                    <a href="{{ route('home.panitia') }}"
                         class="{{ $menu == 'Panitia' ? 'bg-2025-1 text-2025-5' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-2025-1 hover:text-2025-5">
                         <i class="mr-2 fa-solid fa-address-card"></i>
                         Panitia</a>
@@ -108,7 +108,7 @@
                 </a>
             </li>
             <li class="mx-8">
-                <a href="{{ route('home.ppo') }}"
+                <a href="{{ route('home.panitia') }}"
                     class="{{ $menu == 'Panitia' ? 'shadow-lg text-2025-1' : 'hover:text-2025-1 active:text-2025-1' }} 
                         relative z-0 inline-block rounded-xl px-4 py-2 transition-all duration-300 group hover:shadow-lg active:shadow-lg">
                     
@@ -139,16 +139,16 @@
 
         <div class="flex items-center">
             @auth
-                <div x-data="{ dropDownOpen: false }" class="relative">
-                    <div class="container-badge icon-container">
-                        <livewire:home.profil.foto />
+            <div x-data="{ dropDownOpen: false }" class="relative">
+                <div class="container-badge icon-container">
+                    <livewire:home.profil.foto />
 
-                        @can(PERMISSION_SHOW_KENDALA)
-                            <span class="animate-pulse">@livewire('admin.maba.kendala.pengaduan-badge')</span>
-                        @endcan
-                    </div>
-                    <div x-cloak x-show="dropDownOpen" x-on:click.away="dropDownOpen = false"
-                        class="absolute right-0 pb-2 rounded-md shadow-lg top-12 whitespace-nowrap bg-gray-50 text-coklat-1">
+                    @can(PERMISSION_SHOW_KENDALA)
+                    <span class="animate-pulse">@livewire('admin.maba.kendala.pengaduan-badge')</span>
+                    @endcan
+                </div>
+                <div x-cloak x-show="dropDownOpen" x-on:click.away="dropDownOpen = false"
+                    class="absolute right-0 pb-2 rounded-md shadow-lg top-12 whitespace-nowrap bg-gray-50 text-coklat-1">
 
                         <div class="divide-y">
                             <div class="px-3 py-2 pt-3 text-center cursor-not-allowed">
@@ -184,8 +184,34 @@
                                     class="w-full px-12 py-2 font-bold text-center transition border-b text-md hover:bg-2025-2 hover:text-base-white">Logout</button>
                             </form>
                         </div>
+
+                        <a class="block px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
+                            href="{{ route('home.profil') }}">Profil Saya</a>
+
+                        @can(PERMISSION_AKSES_ADMIN)
+                        <a class="flex items-center justify-between px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
+                            href="{{ route('dashboard') }}">
+                            <!-- Teks Halaman Admin -->
+                            <span>Halaman Admin</span>
+
+                            <!-- Badge Pengaduan -->
+                            @can(PERMISSION_SHOW_KENDALA)
+                            <div class="container-badge adminBadge-container">
+                                @livewire('admin.maba.kendala.pengaduan-badge')
+                            </div>
+                            @endcan
+                        </a>
+                        @endcan
+
+
+                        <form action="{{ route('logout') }}" method="post" class="p-0 m-0">
+                            @csrf
+                            <button type="submit"
+                                class="w-full px-12 py-2 font-bold text-center transition border-b text-md hover:bg-base-brown-400">Logout</button>
+                        </form>
                     </div>
                 </div>
+            </div>
             @else
                 <a class="px-5 py-1 font-bold font-poppins transition border-2 rounded-full border-2025-1 bg-2025-1 font-poppins text-base-white hover:bg-white hover:text-2025-1" 
                     href="{{ route('login') }}">
