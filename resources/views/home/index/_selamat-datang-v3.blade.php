@@ -97,7 +97,7 @@
     {{-- <img class="absolute inset-x-0 h-[210px] w-full"
         src="{{ asset('images/pattern/2024/hero-wave2.png') }}" alt="wave"> --}}
     <div class="absolute inset-x-0">
-        <div class="h-[125px] w-full translate-y-[-2] bg-base-orange-500">
+        <div class="h-[125px] w-full translate-y-[-2] bg-2025-2">
         </div>
         <div class="h-[50px] w-full translate-y-[-2] bg-gradient-to-b from-base-orange-500 to-[rgba(255,255,255,1)]">
         </div>

@@ -101,7 +101,7 @@
                         </td>
                         <td class="hidden px-6 py-3 text-center sm:table-cell">
                             <x-button wire:click="$emit('openDetailGallery', {{ $g->id }})"
-                                class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5">
+                                class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5">
                                 Detail
                             </x-button>
 

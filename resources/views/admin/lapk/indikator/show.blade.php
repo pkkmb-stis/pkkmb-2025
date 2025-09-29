@@ -23,7 +23,7 @@
                             <td class="hidden px-6 py-3 xl:table-cell">{{ $k->nama }}</td>
                             <td class="px-6 py-3 text-center">{{ $k->sks }}</td>
                             <td class="px-6 py-3 text-center">
-                                <x-button class="mr-2 rounded-3xl bg-coklat-2 hover:bg-coklat-hover"
+                                <x-button class="mr-2 rounded-3xl bg-2025-1 hover:bg-coklat-hover"
                                     wire:click="setField({{ $k->id }})">
                                     Detail
                                 </x-button>
@@ -153,7 +153,7 @@
                                     Batal
                                 </x-button>
                                 @if ($canEdit)
-                                    <x-button class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600">
+                                    <x-button class="rounded-3xl bg-2025-2 hover:bg-2025-1">
                                         Ubah Indikator
                                     </x-button>
                                 @endif

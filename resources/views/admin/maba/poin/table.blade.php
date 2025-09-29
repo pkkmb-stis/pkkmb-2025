@@ -89,7 +89,7 @@
                                     </x-button>
                                     @can(PERMISSION_UPDATE_POIN)
                                         <x-button
-                                            class="rounded-3xl bg-2025-2 hover:bg-base-orange-600 mx-0.5 px-5 sm:block lg:inline mb-2"
+                                            class="rounded-3xl bg-2025-2 hover:bg-2025-1 mx-0.5 px-5 sm:block lg:inline mb-2"
                                             wire:click.stop='edit({{ $p->id }})'
                                             x-on:click="initializeEditJenisPoin()">
                                             Edit
@@ -184,7 +184,7 @@
                             </dl>
                             @can(PERMISSION_UPDATE_POIN)
                                 <x-button wire:click.stop="edit({{ $p->id }})"
-                                    class="w-full mt-3 bg-base-orange-500 hover:bg-base-orange-600 rounded-3xl">Edit</x-button>
+                                    class="w-full mt-3 bg-2025-2 hover:bg-2025-1 rounded-3xl">Edit</x-button>
                             @endcan
                         </div>
                     </x-card>

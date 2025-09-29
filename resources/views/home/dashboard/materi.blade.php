@@ -41,7 +41,7 @@
                             <span> Unduh</span>
                             </x-button> --}}
                                 <x-button href="{{ $content->link }}"
-                                    class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 text-white-800 font-bold uppercase text-md mr-2"
+                                    class="rounded-3xl bg-2025-2 hover:bg-2025-1 text-white-800 font-bold uppercase text-md mr-2"
                                     :tagA=true target="blank">
                                     <i class="fa-solid fa-book text-white-800"></i>
                                     <span> Lihat Materi</span>

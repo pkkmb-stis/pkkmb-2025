@@ -8,7 +8,7 @@
                 <tr class="border-b border-gray-200 hover:bg-blueGray-100 {{ $loop->even ? 'bg-gray-50' : '' }}">
                     <td class="px-6 py-3 text-center">
                         <small
-                            class="p-1 px-3 text-xs rounded-full bg-base-orange-500 whitespace-nowrap text-coklat-1">{{ $permission->name }}</small>
+                            class="p-1 px-3 text-xs rounded-full bg-2025-2 whitespace-nowrap text-coklat-1">{{ $permission->name }}</small>
                     </td>
                     <td class="px-6 py-3">{{ $permission->description }}</td>
                 </tr>

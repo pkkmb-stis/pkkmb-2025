@@ -14,13 +14,13 @@
 
                             <div class="mt-2">
                                 <x-button wire:click="show({{$p->id}})"
-                                    class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5 my-0.5">
+                                    class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5 my-0.5">
                                     Detail
                                 </x-button>
 
                                 @if($p->link)
                                 <x-button :tagA="true" download="{{ str_replace('penebusan/', '', $p->link) }}"
-                                    href="{{storage($p->link)}}" class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 my-0.5 mx-0.5">
+                                    href="{{storage($p->link)}}" class="rounded-3xl bg-2025-2 hover:bg-2025-1 my-0.5 mx-0.5">
                                     <i class="mr-1 fa fa-download fa-fw"></i>Periksa Tugas</x-button>
                                 @endif
                             </div>

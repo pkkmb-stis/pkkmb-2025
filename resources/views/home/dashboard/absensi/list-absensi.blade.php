@@ -1,20 +1,18 @@
 <div class="h-full" x-data="{ showDetailAbsensi: @entangle('showDetailAbsensi') }">
     <x-card class="px-2 sm:px-5" style="border: 4px solid #1E1E1E;">
         <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
-            <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" 
-                alt="Cempaka Merah" 
-                class="w-8 h-7">
-            
-            <div class="relative">
-                <img src="{{ asset('img/asset/2025/background_subjudul.png') }}" alt="BG" class="h-12 rounded-lg">
-                <span class="absolute inset-0 flex items-center justify-center text-[#8B2F4B] -translate-y-1">
+            <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
+                class="h-7 w-8">
+
+            <div class="flex justify-center items-center">
+                <h2 class="px-3 lg:px-8 py-2 rounded-full text-center text-sm sm:text-sm md:text-sm lg:text-lg text-2025-1 mx-4 z-10 bg-[radial-gradient(circle,#ffffff,#FFD183)]"
+                    style="text-align: center; filter: drop-shadow(0 0 0.25rem #000);">
                     List Presensi
-                </span>
+                </h2>
             </div>
-            
-            <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" 
-                alt="Cempaka Merah" 
-                class="w-8 h-7">
+
+            <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
+                class="h-7 w-8">
         </h5>
         <div class="divide-y">
             @forelse ($absensi as $absen)

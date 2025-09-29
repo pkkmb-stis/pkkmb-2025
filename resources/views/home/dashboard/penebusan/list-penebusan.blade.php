@@ -22,13 +22,13 @@
 
                                 <div class="mt-2">
                                     <x-button wire:click="show({{ $p->id }})"
-                                        class="mx-0.5 my-0.5 rounded-3xl bg-coklat-2 hover:bg-coklat-hover">
+                                        class="mx-0.5 my-0.5 rounded-3xl bg-2025-1 hover:bg-coklat-hover">
                                         Detail
                                     </x-button>
 
                                     @if ($p->status == PENEBUSAN_MENUNGGU_UPLOAD || $p->status == PENEBUSAN_BUTUH_REVISI)
                                         <x-button
-                                            class="mx-0.5 my-0.5 rounded-3xl bg-base-orange-500 hover:bg-base-orange-600"
+                                            class="mx-0.5 my-0.5 rounded-3xl bg-2025-2 hover:bg-2025-1"
                                             wire:click="$emit('mabaUploadPenebusan', {{ $p->id }})">
                                             Upload Tugas
                                         </x-button>

@@ -5,11 +5,11 @@
         });">
         {{-- Header --}}
             <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
-                <img src="{{ asset('img/maskot/2025/maskot 5.png') }}" alt="wave" class="z-10 w-36 sm:w-36 md:w-48 lg:w-48 lg:-translate-x-4 transform translate-y-[-10px]">
+                <img src="{{ asset('img/maskot/2025/maskot 5.png') }}" alt="wave" class="z-10 w-24 sm:w-36 md:w-48 lg:w-48 lg:-translate-x-4 transform translate-y-[-10px]">
                     <div class="flex h-full flex-col items-center justify-center">
                         <div class="flex flex-row items-center justify-center gap-4 mt-14 transform translate-y-[-10px]">
                             <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                                alt="Elemen 4" class="w-24 sm:w-20 md:w-28 lg:w-28 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
+                                alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
                             <h1
                                 class="flex items-center justify-center rounded-full px-10 py-3 sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6
                                     font-brasikaDisplay text-center text-sm font-thin leading-normal 
@@ -18,10 +18,10 @@
                                 TIMELINE
                             </h1>
                             <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                                alt="Elemen 4" class="w-24 sm:w-20 md:w-28 lg:w-28 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
+                                alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
                         </div>
                     </div>
-                <img src="{{ asset('img/maskot/2025/maskot 2.png') }}" alt="wave" class="z-10 w-28 sm:w-28 md:w-40 lg:w-40 lg:translate-x-4 transform translate-y-[-10px]">
+                <img src="{{ asset('img/maskot/2025/maskot 2.png') }}" alt="wave" class="z-10 w-20 sm:w-28 md:w-40 lg:w-40 lg:translate-x-4 transform translate-y-[-10px]">
             </div>
         </div>
 
@@ -59,36 +59,36 @@
                     <div class="relative mt-[-4px] w-full {{ $loop->first ? 'pt-1' : '' }}">
                         <div class="{{ $isLast ? 'ml-1' : 'pb-6 border-l-4 border-solid border-2025-3' }} px-4">
                             <h1 class="mb-2 font-chaTime text-xl font-bold text-black">{{ $t->title }}</h1>
-                            <div class="rounded-lg px-4 py-2 lg:pr-52 font-poppins text-black bg-cover bg-center bg-no-repeat border-2 border-solid border-2025-3"
+
+                            <div class="relative flex overflow-hidden rounded-lg border-2 border-solid border-2025-3 bg-cover bg-center bg-no-repeat"
                                 style="background-color: {{ $bgColor }};">
-                                <div class="font-poppins font-bold tracking-wide text-2025-3">
-                                    {{ formatDateIso($t->waktu_mulai, 'D MMMM YYYY') }}
-                                    @if ($t->waktu_akhir)
-                                        <span x-cloak :class="(width < 512) ? '' : 'hidden'"><br></span>
-                                        - {{ formatDateIso($t->waktu_akhir, 'D MMMM YYYY') }}
-                                    @endif
-                                </div>
-                                <div class="my-2 w-full border-b-2 border-2025-3"></div>
-                                <p>{{ $t->caption != '-' ? $t->caption : '' }}</p>
+                                
+                                <div class=" py-2 px-4 w-full md:w-[80%]">
+                                    <div class="font-poppins font-bold tracking-wide text-2025-3">
+                                        {{ formatDateIso($t->waktu_mulai, 'D MMMM YYYY') }}
+                                        @if ($t->waktu_akhir)
+                                            <span x-cloak :class="(width < 512) ? '' : 'hidden'"><br></span>
+                                            - {{ formatDateIso($t->waktu_akhir, 'D MMMM YYYY') }}
+                                        @endif
+                                    </div>
+                                    <div class="my-2 w-full border-b-2 border-2025-3"></div>
+                                    <p>{{ $t->caption != '-' ? $t->caption : '' }}</p>
 
-                                {{-- Lokasi --}}
-                                <div class="text-2025-3">
-                                    @if (!empty($t->location))
-                                        <div class="my-2 flex flex-row items-center">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                            <div class="ml-2">{{ $t->location }}</div>
-                                        </div>
-                                    @endif
+                                    {{-- Lokasi --}}
+                                    <div class="text-2025-3">
+                                        @if (!empty($t->location))
+                                            <div class="my-2 flex flex-row items-center">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                                <div class="ml-2">{{ $t->location }}</div>
+                                            </div>
+                                        @endif
+                                    </div>
                                 </div>
 
-                                <div class="absolute top-0 right-0 translate-x-[50%] md:translate-x-[59%] flex flex-col gap-2 mt-2 {{ $i === 0 ? 'top-1' : 'top-0 -mt-[2px]' }}">
+                                <div class="absolute top-0 right-0 mr-3 h-full w-[20%] hidden md:block">
                                     <img src="{{ asset('img/asset/2025/timeline/'.$rightElement) }}"
                                         alt="pattern"
-                                        class="w-[34.75%] z-10 mt-7 sm:hidden md:hidden lg:block object-cover"
-                                        style="height:25%;" />
-                                </div>
-
-
+                                        class="h-full w-full object-cover" /> </div>
                             </div>
                         </div>
 
@@ -98,7 +98,6 @@
                                 alt="status" 
                                 class="w-8 h-8" />
                         </div>
-
                     </div>
                     @php
                         $i++;

@@ -42,14 +42,14 @@
                                     {{ formatDateIso($row->waktu_akhir) }}
                                 </td>
                                 <td class="px-6 py-3 text-center">
-                                    <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5"
+                                    <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5"
                                         :tagA="true" href="{{ route('absensi.detail', ['id' => $row->id]) }}">
                                         Detail
                                     </x-button>
 
                                     @can(PERMISSION_UPDATE_EVENT)
                                         <x-button
-                                            class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 px-5 mx-0.5"
+                                            class="rounded-3xl bg-2025-2 hover:bg-2025-1 px-5 mx-0.5"
                                             wire:click='edit({{ $row->id }})'>
                                             Edit
                                         </x-button>
@@ -100,7 +100,7 @@
                         <div class="flex self-stretch justify-between space-x-2">
                             @can(PERMISSION_UPDATE_EVENT)
                                 <x-button
-                                    class="rounded-3xl flex-grow  bg-base-orange-500 hover:bg-base-orange-600 px-5 mx-0.5"
+                                    class="rounded-3xl flex-grow  bg-2025-2 hover:bg-2025-1 px-5 mx-0.5"
                                     wire:click.stop='edit({{ $row->id }})'>
                                     Edit
                                 </x-button>

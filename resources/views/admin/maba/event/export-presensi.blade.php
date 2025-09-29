@@ -30,7 +30,7 @@
                         class="mr-2 uppercase bg-gray-500 rounded-3xl hover:bg-gray-600 text-md" type="button">
                         Tutup
                     </x-button>
-                    <x-button class="uppercase rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 text-md" type="submit">
+                    <x-button class="uppercase rounded-3xl bg-2025-2 hover:bg-2025-1 text-md" type="submit">
                         Download Rekap
                     </x-button>
                 </div>

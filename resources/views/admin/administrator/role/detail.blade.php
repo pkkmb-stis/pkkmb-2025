@@ -45,7 +45,7 @@
                         Kembali
                     </x-button>
                     @can(PERMISSION_UPDATE_PERMISSION_ROLE)
-                    <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover" wire:click="addPermission">Tambah</x-button>
+                    <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover" wire:click="addPermission">Tambah</x-button>
                     @endcan
                 </div>
 

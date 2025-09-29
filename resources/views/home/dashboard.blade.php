@@ -1,7 +1,15 @@
 <x-home-layout menu="Dashboard" title="Dashboard">
-    <div class="px-4 pt-24 pb-16 mt-6 sm:px-6 md:px-8 md:pt-28 lg:px-10 mx-10">
+    <div class="relative bg-no-repeat bg-center" style="
+        background-image: url('{{ asset('img/asset/2025/BG_pink_dashboard.png') }}');
+        background-position: top center;
+        background-size: 100% auto;
+    ">
+    <div class="px-4 mt-0 pt-16 pb-8 mt-6 sm:px-6 md:px-8 md:pt-20 lg:px-10 mx-10">
+        {{-- <div class="w-full">
+            <img src="{{ asset('img\asset\2025\BG_pink_dashboard.png') }}" alt="Background Atas" class="w-full object-cover">
+        </div> --}}
 
-        <x-card class="px-2 sm:px-5" style="border: 4px solid #1E1E1E;">
+        <x-card class="px-2 mt-4 sm:px-5" style="border: 4px solid #1E1E1E;">
             <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
                 <img src="{{ asset('img\asset\2025\Elemen 1.png') }}" 
                     alt="elemen 1" 
@@ -46,6 +54,10 @@
                     @endif
                 </div>
             @endif
+
+            {{-- <div class="w-full">
+                <img src="{{ asset('img\asset\2025\BG_kuning_dashboard.png') }}" alt="Background bawah" class="w-full object-cover">
+            </div> --}}
         </x-card>
 
         @if (auth()->user()->is_maba || $user->hasRole(ROLE_PANITIA))
@@ -82,9 +94,13 @@
                             </div>
                         </div>
                         
-                        <div class="flex flex-col gap-6">
-                            @include('components.presensi')   {{-- Full 1 baris --}}
-                            @include('components.pengaduan') {{-- Enter ke bawah --}}
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-1">
+                                @include('components.presensi')
+                            </div>
+                            <div class="flex-1">
+                                @include('components.pengaduan')
+                            </div>
                         </div>
 
 
@@ -102,7 +118,7 @@
                         </div>
                     </div> --}}
 
-                    <div class="grid grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             @livewire('home.dashboard.absensi.list-absensi')
                         </div>

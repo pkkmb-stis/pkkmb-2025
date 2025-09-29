@@ -19,7 +19,7 @@
             <div class="flex justify-between mb-4">
                 <h2 class="text-xl font-semibold font-bohemianSoul">Preview {{ $filename }}</h2>
                 <button id="download-btn"
-                    class="text-white px-4 py-2 rounded-3xl bg-coklat-2 hover:bg-coklat-hover">Download</button>
+                    class="text-white px-4 py-2 rounded-3xl bg-2025-1 hover:bg-coklat-hover">Download</button>
             </div>
             <iframe id="pdf-preview-iframe" class="w-full h-full mb-4" style="height: 70vh;"></iframe>
         </div>

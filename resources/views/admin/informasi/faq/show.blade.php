@@ -44,7 +44,7 @@
                     </td>
                     <td class="hidden w-48 px-6 py-3 text-center sm:table-cell">
                         <x-button wire:click="$emit('openDetailFaq', {{ $faq->id }})"
-                            class="mx-0.5 rounded-3xl bg-coklat-2 hover:bg-coklat-hover">
+                            class="mx-0.5 rounded-3xl bg-2025-1 hover:bg-coklat-hover">
                             Detail
                         </x-button>
 

@@ -93,7 +93,7 @@
                     <div wire:loading.remove wire:target="addAnggota">
                         <div wire:loading.remove wire:target="updateKelompok">
                             @if ($canAddDeleteAnggota)
-                                <x-button type="button" class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover"
+                                <x-button type="button" class="rounded-3xl bg-2025-1 hover:bg-coklat-hover"
                                     wire:click="addAnggota">
                                     Tambah Anggota
                                 </x-button>
@@ -101,7 +101,7 @@
 
                             @if ($canUpdateKelompok)
                                 <x-button type="submit"
-                                    class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5 mr-1">
+                                    class="rounded-3xl bg-2025-2 hover:bg-2025-1 mx-0.5 mr-1">
                                     Update Kelompok
                                 </x-button>
                             @endif

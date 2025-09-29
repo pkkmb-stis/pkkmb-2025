@@ -52,7 +52,7 @@
                         </td>
                         <td class="hidden px-6 py-3 text-center sm:table-cell">{{ $k->anggota_count }}</td>
                         <td class="hidden px-6 py-3 text-center sm:table-cell">
-                            <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover" :tagA="true"
+                            <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover" :tagA="true"
                                 href="{{ route('lapk.kelompok.detail', ['id' => $k->id]) }}">
                                 Detail
                             </x-button>
