@@ -90,7 +90,7 @@
             background-position: top center; 
             padding-top: 100px;"> 
 
-{{{-- Burung Maleo Kiri (posisi diatur ulang) --}}
+{{-- Burung Maleo Kiri (posisi diatur ulang) --}}
     <img src="{{ asset('img/asset/2025/maleo.png') }}" alt="Maleo" 
          class="absolute left-4 top-0 
                 w-28 h-32 sm:w-32 md:w-36 lg:w-40 
