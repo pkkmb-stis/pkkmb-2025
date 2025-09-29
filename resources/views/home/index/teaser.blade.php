@@ -75,8 +75,8 @@
     </div>
 
     <!-- Frame maroon -->
-    <div class="relative bg-[#8B1E3F] p-3 mt-10 rounded-lg shadow-lg w-fit mx-auto mb-[-75px]">
-      <div class="w-[90vw] max-w-4xl aspect-video bg-black rounded-md overflow-hidden">
+    <div class="relative bg-[#8B1E3F] p-3 mt-10 rounded-lg shadow-lg mx-auto mb-[-75px] lg:w-[620px] lg:h-[415px] xl:w-[799px] xl:h-[493px] mx-auto my-auto">
+      <div class="lg:h-[385px] lg:w-[591px] xl:w-[760px] xl:h-[470px] max-w-4xl aspect-video bg-black rounded-md overflow-hidden mx-auto my-auto">
         <iframe class="w-full h-full"
                 src="https://www.youtube.com/embed/56hq1-sRfHg"
                 title="Teaser Video"
@@ -99,7 +99,7 @@
   <img src="img/asset/2025/maleo.png"
        alt="burung maleo"
        class="hidden sm:block absolute bottom-0 right-4 
-            w-[80px] sm:w-[100px] md:w-[140px] lg:w-[200px] 
+            w-[80px] lg:w-[150px] xl:w-[200px]
             h-auto z-10 mb-[-120px] sm:mb-[-180px] md:mb-[-240px] lg:mb-[-280px] 
             mr-[10px] sm:mr-[15px] lg:mr-[25px]">
     </div>
