@@ -6,36 +6,34 @@
          class="flex-shrink-0 w-12 mr-2 sm:w-16 md:w-20 sm:mr-4 md:mr-6">
 
     <!-- Strip Biru -->
-<div class="flex items-center justify-center gap-2 sm:gap-4 md:gap-6
-            px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-5
-            bg-[#1D2A44] rounded-md md:rounded-lg max-w-full">
+    <div class="strip-biru flex items-center justify-center
+                px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-5
+                bg-[#1D2A44] rounded-md md:rounded-lg w-full max-w-[95%] mx-auto">
 
-    <!-- Ornamen Kiri -->
-    <div class="flex items-center gap-1 sm:gap-2 md:gap-3">
-        <img src="{{ asset('img/asset/2025/Cempaka ungu.png') }}"
-             alt="Bunga"
-             class="w-5 sm:w-7 md:w-9">
-        <img src="{{ asset('img/asset/2025/Cempaka merah.png') }}"
-             alt="Bunga"
-             class="w-7 sm:w-9 md:w-12">
+        <!-- Ornamen Kiri -->
+        <div class="flex items-center gap-1 mr-2 sm:gap-2 md:gap-3 sm:mr-4">
+            <img src="{{ asset('img/asset/2025/Cempaka ungu.png') }}" alt="Bunga" class="w-4 sm:w-6 md:w-9">
+            <img src="{{ asset('img/asset/2025/Cempaka merah.png') }}" alt="Bunga" class="w-6 sm:w-8 md:w-12">
+        </div>
+
+        <!-- Tulisan ditumpuk -->
+        <div class="flex flex-col items-center text-center">
+            <h1 class="font-caruban text-[#F4C542] tracking-wide
+                       text-lg sm:text-2xl md:text-4xl lg:text-5xl leading-tight">
+                Galeri PKKMB
+            </h1>
+            <h1 class="font-caruban text-[#F4C542] tracking-wide
+                       text-lg sm:text-2xl md:text-4xl lg:text-5xl leading-tight">
+                PKBN 2025
+            </h1>
+        </div>
+
+        <!-- Ornamen Kanan -->
+        <div class="flex items-center gap-1 ml-2 sm:gap-2 md:gap-3 sm:ml-4">
+            <img src="{{ asset('img/asset/2025/Cempaka merah.png') }}" alt="Bunga" class="w-6 sm:w-8 md:w-12">
+            <img src="{{ asset('img/asset/2025/Cempaka ungu.png') }}" alt="Bunga" class="w-4 sm:w-6 md:w-9">
+        </div>
     </div>
-
-    <!-- Teks -->
-    <h1 class="font-caruban text-[#F4C542] tracking-wide text-center
-               text-xl sm:text-3xl md:text-5xl lg:text-[60px] px-2">
-        Galeri PKKMB - PKBN 2025
-    </h1>
-
-    <!-- Ornamen Kanan -->
-    <div class="flex items-center gap-1 sm:gap-2 md:gap-3">
-        <img src="{{ asset('img/asset/2025/Cempaka merah.png') }}"
-             alt="Bunga"
-             class="w-7 sm:w-9 md:w-12">
-        <img src="{{ asset('img/asset/2025/Cempaka ungu.png') }}"
-             alt="Bunga"
-             class="w-5 sm:w-7 md:w-9">
-    </div>
-</div>
 
     <!-- Burung Enggang Kanan -->
     <img src="{{ asset('img/asset/2025/burung_enggang.png') }}"
@@ -43,44 +41,53 @@
          class="flex-shrink-0 w-12 ml-2 sm:w-16 md:w-20 sm:ml-4 md:ml-6 -scale-x-100">
 </div>
 
-
 <!-- ===================== GALERI CAROUSEL ===================== -->
-<div class="pb-4 lg:pb-12 bg-putih-pattern bg-fixed rounded-[1.875rem_0_0_4.6875rem] flex-1">
-    <div class="w-4/5 mx-auto mt-6 owl-carousel galeri-carousel">
+<div class="pb-6 lg:pb-12 bg-putih-pattern bg-fixed rounded-[1.875rem_0_0_4.6875rem] flex-1">
+    <div class="w-11/12 mx-auto mt-6 owl-carousel galeri-carousel">
+
         <!-- Slide 1 -->
         <div class="grid grid-cols-3 gap-4">
             <div class="col-span-2">
-                <img src="{{ asset('img/galeri/1.jpg') }}" class="object-cover w-full h-auto transition-transform transform hover:scale-105 md:rounded-xl rounded-tl-xl">
+                <img src="{{ asset('img/galeri/1.jpg') }}"
+                     class="object-cover w-full h-64 transition-transform transform shadow-md md:h-80 rounded-xl hover:scale-105">
             </div>
-            <div class="col-span-1">
-                <img src="{{ asset('img/galeri/2.jpg') }}" class="object-cover w-full h-full transition-transform transform hover:scale-105 md:rounded-xl rounded-tr-xl">
+            <div>
+                <img src="{{ asset('img/galeri/2.jpg') }}"
+                     class="object-cover w-full h-64 transition-transform transform shadow-md md:h-80 rounded-xl hover:scale-105">
             </div>
         </div>
 
         <!-- Slide 2 -->
         <div class="grid grid-cols-3 gap-4">
             <div>
-                <img src="{{ asset('img/galeri/3.jpg') }}" class="object-cover w-full h-full transition-transform transform hover:scale-105 md:rounded-xl">
+                <img src="{{ asset('img/galeri/3.jpg') }}"
+                     class="object-cover w-full h-64 transition-transform transform shadow-md md:h-80 rounded-xl hover:scale-105">
             </div>
             <div>
-                <img src="{{ asset('img/galeri/4.jpg') }}" class="object-cover w-full h-full transition-transform transform hover:scale-105 md:rounded-xl rounded-bl-xl">
+                <img src="{{ asset('img/galeri/4.jpg') }}"
+                     class="object-cover w-full h-64 transition-transform transform shadow-md md:h-80 rounded-xl hover:scale-105">
             </div>
             <div>
-                <img src="{{ asset('img/galeri/5.jpg') }}" class="object-cover w-full h-full transition-transform transform hover:scale-105 md:rounded-xl">
+                <img src="{{ asset('img/galeri/5.jpg') }}"
+                     class="object-cover w-full h-64 transition-transform transform shadow-md md:h-80 rounded-xl hover:scale-105">
             </div>
         </div>
 
         <!-- Slide 3 -->
         <div class="grid grid-cols-3 gap-4">
             <div>
-                <img src="{{ asset('img/galeri/6.jpg') }}" class="object-cover w-full h-full transition-transform transform hover:scale-105 md:rounded-xl rounded-bl-xl">
+                <img src="{{ asset('img/galeri/6.jpg') }}"
+                     class="object-cover w-full h-64 transition-transform transform shadow-md md:h-80 rounded-xl hover:scale-105">
             </div>
             <div class="col-span-2">
-                <img src="{{ asset('img/galeri/7.jpg') }}" class="object-cover w-full h-full transition-transform transform hover:scale-105 md:rounded-xl rounded-br-xl">
+                <img src="{{ asset('img/galeri/7.jpg') }}"
+                     class="object-cover w-full h-64 transition-transform transform shadow-md md:h-80 rounded-xl hover:scale-105">
             </div>
         </div>
+
     </div>
 </div>
+
 
 
 <!-- ===================== SCRIPT ===================== -->
@@ -140,6 +147,16 @@ $(document).ready(function () {
 .owl-carousel .owl-nav button:hover {
     background: rgba(0,0,0,0.85);
     transform: scale(1.1);
+}
+
+/* Tambahan biar strip biru aman di HP */
+@media (max-width: 640px) {
+    .strip-biru h1 {
+        font-size: 1.2rem;
+    }
+    .strip-biru img {
+        max-width: 22px;
+    }
 }
 </style>
 @endpush
