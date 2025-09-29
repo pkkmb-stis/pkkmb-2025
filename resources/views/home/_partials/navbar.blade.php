@@ -22,12 +22,12 @@
                     </a>
 
                     @auth
-                        <a href="{{ route('home.dashboard') }}"
-                            class="{{ $menu == 'Dashboard' ? 'bg-merah-1 text-base-orange-500' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-merah-1 hover:text-base-orange-500">Dashboard</a>
+                    <a href="{{ route('home.dashboard') }}"
+                        class="{{ $menu == 'Dashboard' ? 'bg-merah-1 text-base-orange-500' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-merah-1 hover:text-base-orange-500">Dashboard</a>
 
-                        <a href="{{ route('home.profil') }}"
-                            class="{{ $menu == 'Profil_Saya' ? 'bg-merah-1 text-base-orange-500' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-merah-1 hover:text-base-orange-500">Profil
-                            Saya</a>
+                    <a href="{{ route('home.profil') }}"
+                        class="{{ $menu == 'Profil_Saya' ? 'bg-merah-1 text-base-orange-500' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-merah-1 hover:text-base-orange-500">Profil
+                        Saya</a>
                     @endauth
 
                     <a href="{{ route('home.timeline') }}"
@@ -38,7 +38,7 @@
                         class="{{ $menu == 'Galeri' ? 'bg-merah-1 text-base-orange-500' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-merah-1 hover:text-base-orange-500">
                         <i class="mr-2 fa-solid fa-image"></i>
                         Galeri</a>
-                    <a href="{{ route('home.ppo') }}"
+                    <a href="{{ route('home.panitia') }}"
                         class="{{ $menu == 'Panitia' ? 'bg-merah-1 text-base-orange-500' : '' }} mt-3 px-10 py-2 text-center text-lg font-light transition hover:bg-merah-1 hover:text-base-orange-500">
                         <i class="mr-2 fa-solid fa-address-card"></i>
                         Panitia</a>
@@ -63,10 +63,10 @@
 
         <ul class="items-center hidden font-semibold font-brasikaDisplay lg:flex">
             @auth
-                <li class="mx-8">
-                    <a href="{{ route('home.dashboard') }}"
-                        class="{{ $menu == 'Dashboard' ? 'text-merah-2 underline u-offset-2' : '' }} transition hover:text-merah-2">Dashboard</a>
-                </li>
+            <li class="mx-8">
+                <a href="{{ route('home.dashboard') }}"
+                    class="{{ $menu == 'Dashboard' ? 'text-merah-2 underline u-offset-2' : '' }} transition hover:text-merah-2">Dashboard</a>
+            </li>
             @endauth
 
             <li class="mx-8">
@@ -79,7 +79,7 @@
                     class="{{ $menu == 'Galeri' ? 'text-merah-2 underline u-offset-2' : '' }} transition hover:text-merah-2">Galeri</a>
             </li>
             <li class="mx-8">
-                <a href="{{ route('home.ppo') }}"
+                <a href="{{ route('home.panitia') }}"
                     class="{{ $menu == 'Panitia' ? 'text-merah-2 underline u-offset-2' : '' }} transition hover:text-merah-2">Panitia</a>
             </li>
             <li class="mx-8">
@@ -90,58 +90,58 @@
 
         <div class="flex items-center">
             @auth
-                <div x-data="{ dropDownOpen: false }" class="relative">
-                    <div class="container-badge icon-container">
-                        <livewire:home.profil.foto />
+            <div x-data="{ dropDownOpen: false }" class="relative">
+                <div class="container-badge icon-container">
+                    <livewire:home.profil.foto />
 
-                        @can(PERMISSION_SHOW_KENDALA)
-                            <span class="animate-pulse">@livewire('admin.maba.kendala.pengaduan-badge')</span>
-                        @endcan
-                    </div>
-                    <div x-cloak x-show="dropDownOpen" x-on:click.away="dropDownOpen = false"
-                        class="absolute right-0 pb-2 rounded-md shadow-lg top-12 whitespace-nowrap bg-gray-50 text-coklat-1">
+                    @can(PERMISSION_SHOW_KENDALA)
+                    <span class="animate-pulse">@livewire('admin.maba.kendala.pengaduan-badge')</span>
+                    @endcan
+                </div>
+                <div x-cloak x-show="dropDownOpen" x-on:click.away="dropDownOpen = false"
+                    class="absolute right-0 pb-2 rounded-md shadow-lg top-12 whitespace-nowrap bg-gray-50 text-coklat-1">
 
-                        <div class="divide-y">
-                            <div class="px-3 py-2 pt-3 text-center cursor-not-allowed">
-                                <p class="text-sm">{{ auth()->user()->name }}</p>
-                                @if (auth()->user()->is_maba)
-                                    <small class="italic">{{ auth()->user()->nama_statistik }} |
-                                        {{ auth()->user()->username }}</small>
-                                @endif
-                            </div>
-
-                            <a class="block px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
-                                href="{{ route('home.profil') }}">Profil Saya</a>
-
-                            @can(PERMISSION_AKSES_ADMIN)
-                                <a class="flex items-center justify-between px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
-                                    href="{{ route('dashboard') }}">
-                                    <!-- Teks Halaman Admin -->
-                                    <span>Halaman Admin</span>
-
-                                    <!-- Badge Pengaduan -->
-                                    @can(PERMISSION_SHOW_KENDALA)
-                                        <div class="container-badge adminBadge-container">
-                                            @livewire('admin.maba.kendala.pengaduan-badge')
-                                        </div>
-                                    @endcan
-                                </a>
-                            @endcan
-
-
-                            <form action="{{ route('logout') }}" method="post" class="p-0 m-0">
-                                @csrf
-                                <button type="submit"
-                                    class="w-full px-12 py-2 font-bold text-center transition border-b text-md hover:bg-base-brown-400">Logout</button>
-                            </form>
+                    <div class="divide-y">
+                        <div class="px-3 py-2 pt-3 text-center cursor-not-allowed">
+                            <p class="text-sm">{{ auth()->user()->name }}</p>
+                            @if (auth()->user()->is_maba)
+                            <small class="italic">{{ auth()->user()->nama_statistik }} |
+                                {{ auth()->user()->username }}</small>
+                            @endif
                         </div>
+
+                        <a class="block px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
+                            href="{{ route('home.profil') }}">Profil Saya</a>
+
+                        @can(PERMISSION_AKSES_ADMIN)
+                        <a class="flex items-center justify-between px-12 py-2 font-bold text-center transition text-md hover:bg-base-brown-400"
+                            href="{{ route('dashboard') }}">
+                            <!-- Teks Halaman Admin -->
+                            <span>Halaman Admin</span>
+
+                            <!-- Badge Pengaduan -->
+                            @can(PERMISSION_SHOW_KENDALA)
+                            <div class="container-badge adminBadge-container">
+                                @livewire('admin.maba.kendala.pengaduan-badge')
+                            </div>
+                            @endcan
+                        </a>
+                        @endcan
+
+
+                        <form action="{{ route('logout') }}" method="post" class="p-0 m-0">
+                            @csrf
+                            <button type="submit"
+                                class="w-full px-12 py-2 font-bold text-center transition border-b text-md hover:bg-base-brown-400">Logout</button>
+                        </form>
                     </div>
                 </div>
+            </div>
             @else
-                <a class="px-5 py-1 font-bold font-poppins transition border-2 rounded-full border-[#8B2F4B] bg-[#8B2F4B] font-poppins text-base-white hover:bg-2025-2" 
-                    href="{{ route('login') }}">
-                    Masuk
-                </a>
+            <a class="px-5 py-1 font-bold font-poppins transition border-2 rounded-full border-[#8B2F4B] bg-[#8B2F4B] font-poppins text-base-white"
+                href="{{ route('login') }}">
+                Masuk
+            </a>
             @endauth
         </div>
         {{-- End Menu Desktop --}}
