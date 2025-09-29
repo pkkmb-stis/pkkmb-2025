@@ -39,7 +39,7 @@
                                     <div class="flex flex-col items-end md:hidden">
                                         @can(PERMISSION_UPDATE_AKSES_ADMIN)
                                             <x-button
-                                                class="py-1 mb-1 rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 md:mb-0 md:ml-2 whitespace-nowrap"
+                                                class="py-1 mb-1 rounded-3xl bg-2025-2 hover:bg-2025-1 md:mb-0 md:ml-2 whitespace-nowrap"
                                                 :tagA="true" href="{{ route('user.detail', ['id' => $user->id]) }}">
                                                 Tambah Akses
                                             </x-button>
@@ -79,7 +79,7 @@
                             </td>
                             <td class="hidden py-3 text-center md:table-cell">
                                 @can(PERMISSION_UPDATE_AKSES_ADMIN)
-                                    <x-button class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600"
+                                    <x-button class="rounded-3xl bg-2025-2 hover:bg-2025-1"
                                         :tagA="true" href="{{ route('user.detail', ['id' => $user->id]) }}">
                                         Tambah Akses
                                     </x-button>

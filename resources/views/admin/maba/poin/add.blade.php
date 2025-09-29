@@ -105,7 +105,7 @@
                   x-on:click='addmodal = false' wire:click="resetAll">
                   Tutup
                 </x-button>
-                <x-button class="uppercase rounded-3xl bg-coklat-2 hover:bg-coklat-hover text-md" type="submit">
+                <x-button class="uppercase rounded-3xl bg-2025-1 hover:bg-coklat-hover text-md" type="submit">
                   Tambah Poin
                 </x-button>
               </div>

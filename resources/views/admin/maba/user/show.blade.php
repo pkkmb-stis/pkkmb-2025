@@ -43,7 +43,7 @@
 
                             <td class="hidden px-6 py-3 xl:table-cell">{{ $user->email }}</td>
                             <td class="px-6 py-3 text-center">
-                                <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover" :tagA="true"
+                                <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover" :tagA="true"
                                     href="{{ route('user.detail', ['id' => $user->id]) }}">
                                     Detail
                                 </x-button>

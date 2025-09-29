@@ -5,11 +5,11 @@
         });">
         {{-- Header --}}
             <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
-                <img src="{{ asset('img/maskot/2025/maskot 5.png') }}" alt="wave" class="z-10 w-36 sm:w-36 md:w-48 lg:w-48 lg:-translate-x-4 transform translate-y-[-10px]">
+                <img src="{{ asset('img/maskot/2025/maskot 5.png') }}" alt="wave" class="z-10 w-24 sm:w-36 md:w-48 lg:w-48 lg:-translate-x-4 transform translate-y-[-10px]">
                     <div class="flex h-full flex-col items-center justify-center">
                         <div class="flex flex-row items-center justify-center gap-4 mt-14 transform translate-y-[-10px]">
                             <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                                alt="Elemen 4" class="w-24 sm:w-20 md:w-28 lg:w-28 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
+                                alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
                             <h1
                                 class="flex items-center justify-center rounded-full px-10 py-3 sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6
                                     font-brasikaDisplay text-center text-sm font-thin leading-normal 
@@ -18,10 +18,10 @@
                                 TIMELINE
                             </h1>
                             <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                                alt="Elemen 4" class="w-24 sm:w-20 md:w-28 lg:w-28 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
+                                alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
                         </div>
                     </div>
-                <img src="{{ asset('img/maskot/2025/maskot 2.png') }}" alt="wave" class="z-10 w-28 sm:w-28 md:w-40 lg:w-40 lg:translate-x-4 transform translate-y-[-10px]">
+                <img src="{{ asset('img/maskot/2025/maskot 2.png') }}" alt="wave" class="z-10 w-20 sm:w-28 md:w-40 lg:w-40 lg:translate-x-4 transform translate-y-[-10px]">
             </div>
         </div>
 

@@ -76,21 +76,21 @@
                     @endif --}}
                     {{-- @if (auth()->user()->status_kelulusan == STATUS_LULUS_PKKMB_PKBN || auth()->user()->status_kelulusan == STATUS_LULUS_PKKMB)
                         <x-button :tagA="true"
-                            class="my-4 uppercase text-md whitespace-nowrap rounded-3xl bg-coklat-2 hover:bg-coklat-hover md:my-0 md:mr-2"
+                            class="my-4 uppercase text-md whitespace-nowrap rounded-3xl bg-2025-1 hover:bg-coklat-hover md:my-0 md:mr-2"
                             target="_blank" href="{{ route('home.sertifikat') }}">
                             Download Sertifikat PKKMB
                         </x-button>
                     @endif --}}
                     @if (auth()->user()->status_kelulusan == STATUS_LULUS_BERSYARAT)
                         <x-button :tagA="true"
-                            class="ml-auto text-right uppercase rounded-3xl text-md whitespace-nowrap bg-coklat-2 hover:bg-coklat-hover"
+                            class="ml-auto text-right uppercase rounded-3xl text-md whitespace-nowrap bg-2025-1 hover:bg-coklat-hover"
                             target="_blank" href="https://wa.me/{{ $nowa }}">
                             Hubungi PK
                         </x-button>
                     @endif
                     {{-- @if (auth()->user()->status_kelulusan == STATUS_LULUS_PKKMB_PKBN || auth()->user()->status_kelulusan == STATUS_LULUS_PKBN)
                         <x-button :tagA="true"
-                            class="uppercase rounded-3xl text-md whitespace-nowrap bg-coklat-2 hover:bg-coklat-hover"
+                            class="uppercase rounded-3xl text-md whitespace-nowrap bg-2025-1 hover:bg-coklat-hover"
                             target="_blank" href="{{ route('home.sertifikat-pkbn') }}">
                             Download Sertifikat PKBN
                         </x-button>

@@ -25,7 +25,7 @@
                             <li>
                                 <div class="flex justify-center mt-4">
                                     <x-button tagA="true" href="{{ $formulir->link_form }}" target="_blank"
-                                        class="block w-3/4 text-lg text-center rounded-full bg-base-orange-500 hover:bg-base-orange-600">
+                                        class="block w-3/4 text-lg text-center rounded-full bg-2025-2 hover:bg-2025-1">
                                         Isi {{ $formulir->nama_formulir }}
                                     </x-button>
                                 </div>

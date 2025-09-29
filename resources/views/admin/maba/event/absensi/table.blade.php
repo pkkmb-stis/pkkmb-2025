@@ -84,7 +84,7 @@
                                     <td class="px-6 py-3 text-center">
                                         @if ($canAddNewAbsen)
                                             <x-button
-                                                class="rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5"
+                                                class="rounded-3xl bg-2025-2 hover:bg-2025-1 mx-0.5"
                                                 wire:click="$emit('openModalAddAbsensi', {{ $user->id }}, {{ $event->id }})">
                                                 Ubah Status
                                             </x-button>
@@ -109,7 +109,7 @@
                                     {{ $user->name }}
                                 </span>
                                 @if ($canAddNewAbsen)
-                                    <x-button class="bg-base-orange-500 hover:bg-base-orange-600 rounded-3xl"
+                                    <x-button class="bg-2025-2 hover:bg-2025-1 rounded-3xl"
                                         wire:click="$emit('openModalAddAbsensi', {{ $user->id }}, {{ $event->id }})">
                                         Ubah Status
                                     </x-button>
@@ -189,7 +189,7 @@
                                     </td>
 
                                     <td class="px-6 py-3 text-center">
-                                        <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5"
+                                        <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5"
                                             wire:click="$emit('openModalDetailAbsensi', {{ $user->user_id }}, {{ $user->event_id }})">
                                             Detail
                                         </x-button>

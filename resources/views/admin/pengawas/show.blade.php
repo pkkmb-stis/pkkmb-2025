@@ -50,12 +50,12 @@
 
                                 <td class="px-6 py-3 text-center">
                                     @can(PERMISSION_UPDATE_LAPORAN_KEGIATAN)
-                                        <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5"
+                                        <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5"
                                             :tagA="true" href="{{ $row->link }}" target="_blank">
                                             Preview
                                         </x-button>
                                         <x-button
-                                            class="px-5 rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 mx-0.5"
+                                            class="px-5 rounded-3xl bg-2025-2 hover:bg-2025-1 mx-0.5"
                                             wire:click='edit({{ $row->id }})'>
                                             Edit
                                         </x-button>
@@ -104,11 +104,11 @@
                             </dl>
                             <div class="flex justify-end mt-3 space-x-2">
                                 @can(PERMISSION_UPDATE_MATERI)
-                                    <x-button class="text-center bg-coklat-2 hover:bg-coklat-hover rounded-3xl"
+                                    <x-button class="text-center bg-2025-1 hover:bg-coklat-hover rounded-3xl"
                                         :tagA="true" href="{{ $row->link }}" target="_blank">
                                         Preview
                                     </x-button>
-                                    <x-button class="text-center bg-base-orange-500 hover:bg-base-orange-600 rounded-3xl"
+                                    <x-button class="text-center bg-2025-2 hover:bg-2025-1 rounded-3xl"
                                         wire:click='edit({{ $row->id }})'>
                                         Edit
                                     </x-button>

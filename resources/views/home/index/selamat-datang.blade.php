@@ -57,12 +57,6 @@
             </div>
             {{-- Elemen Tengah End --}}
             </section>
-
-             {{-- Elemen Bawah --}}
-              <div class="absolute bottom-0 left-0 w-full h-20">
-                <img src = "images/pattern/2025/motif_.jpg">
-              </div>
-            {{-- Elemen Bawah End --}}
         </div>
     </div>
 
@@ -122,10 +116,6 @@
             </div>
             {{-- Elemen Tengah End --}}
             </section>
-
-            {{-- Elemen Bawah --}}
-
-            {{-- Elemen Bawah End --}}
         </div>
     </div>
 </header>

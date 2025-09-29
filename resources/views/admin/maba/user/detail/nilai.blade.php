@@ -120,7 +120,7 @@
                 dan status kelulusan sudah ada</small>
 
             <div class="flex flex-col mt-2 space-y-2 lg:space-y-0 lg:space-x-2 lg:flex-row lg:mt-0 whitespace-nowrap">
-                <x-button :tagA="true" class="text-center rounded-3xl bg-base-orange-500 hover:bg-base-orange-600"
+                <x-button :tagA="true" class="text-center rounded-3xl bg-2025-2 hover:bg-2025-1"
                     href="{{ route('input-nilai.detail', ['id' => $user->id]) }}">
                     Edit Nilai
                 </x-button>

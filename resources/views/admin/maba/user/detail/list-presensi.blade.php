@@ -22,7 +22,7 @@
                                     <span class="text-xs italic font-bold sm:hidden">(Click For Detail)</span>
                                 @else
                                     <small
-                                        class="p-1 px-3 text-xs text-white rounded-full bg-coklat-2 whitespace-nowrap">Belum
+                                        class="p-1 px-3 text-xs text-white rounded-full bg-2025-1 whitespace-nowrap">Belum
                                         Absen</small>
                                 @endif
                             </dd>
@@ -55,7 +55,7 @@
 
                     <td class="hidden px-6 py-3 text-center sm:table-cell">
                         @if ($absen->pivot)
-                            <x-button class="rounded-3xl bg-coklat-2 hover:bg-coklat-hover mx-0.5"
+                            <x-button class="rounded-3xl bg-2025-1 hover:bg-coklat-hover mx-0.5"
                                 wire:click="openDetailAbsensi({{ $absen->pivot }}, '{{ $absen->title }}')">
                                 Detail
                             </x-button>

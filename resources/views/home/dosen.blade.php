@@ -37,17 +37,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Pelindung
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -83,17 +83,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Pengarah
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -113,17 +113,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Pembina
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -143,17 +143,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Penanggung Jawab
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -173,17 +173,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Pengawas
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -215,17 +215,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Badan Pengurus Harian
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -269,17 +269,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Seksi Acara
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -311,17 +311,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Seksi LAPK
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -353,17 +353,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Seksi HPD
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -395,17 +395,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Seksi Gramti
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -437,17 +437,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Seksi Tibum
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -479,17 +479,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Seksi PPM
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 
@@ -521,17 +521,17 @@
         <div class="flex justify-center">
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div class="flex flex-col justify-between mt-8">
                 <div class="self-center px-5 text-center font-bohemianSoul text-[12px] text-merah-1 md:text-lg">
                     Seksi Umum
                 </div>
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
             <div>
                 <img src="{{ asset('img/asset/2024/jam-gadang.png') }}" alt="wave" class="z-10 h-20">
-                <div class="h-1 bg-coklat-2"></div>
+                <div class="h-1 bg-2025-1"></div>
             </div>
         </div>
 

@@ -44,7 +44,7 @@
 
                                     <div class="flex justify-end pr-5 mt-3 mb-4">
                                         <button type="button" onclick="toggleModal('{{ $b->id }}')"
-                                            class="px-8 py-2 text-base font-semibold transition-all duration-500 border rounded-full hover:bg-coklat-2 hover:text-gray-50 text-coklat-1 font-poppins"
+                                            class="px-8 py-2 text-base font-semibold transition-all duration-500 border rounded-full hover:bg-2025-1 hover:text-gray-50 text-coklat-1 font-poppins"
                                             style="width: 6.4375rem; height: 2.4375rem; border-color:#3F2A1D; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);">
                                             Baca
                                         </button>

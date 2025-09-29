@@ -92,7 +92,7 @@
                         :tagA="true" href="{{ route('berita') }}">
                         Kembali
                     </x-button>
-                    <x-button class="uppercase rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 text-md"
+                    <x-button class="uppercase rounded-3xl bg-2025-2 hover:bg-2025-1 text-md"
                         type="submit" wire:loading.remove wire:target="thumbnails">
                         Simpan Berita
                     </x-button>

@@ -34,7 +34,7 @@
 
                                 <div class="mt-3 sm:mt-0">
                                     <x-button href="{{ $p['link'] }}"
-                                        class="px-5 mr-2 font-bold uppercase rounded-3xl bg-base-orange-500 hover:bg-base-orange-600 text-white-800 text-md"
+                                        class="px-5 mr-2 font-bold uppercase rounded-3xl bg-2025-2 hover:bg-2025-1 text-white-800 text-md"
                                         :tagA=true download="{{ $p['downloadName'] }}">
                                         <i class="mr-1 fa-solid fa-book text-white-800"></i>
                                         <span> Unduh</span>

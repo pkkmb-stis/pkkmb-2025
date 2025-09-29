@@ -41,7 +41,7 @@
         <p class="mr-2 text-xs italic text-gray-600">Jika kamu lupa password lama
             silakan
             gunakan fitur lupa password di halaman login</p>
-        <x-button class="text-sm capitalize bg-merah-1 hover:bg-merah-2 whitespace-nowrap rounded-2xl" type="submit">
+        <x-button class="text-sm capitalize bg-2025-1 hover:bg-2025-2 whitespace-nowrap rounded-2xl" type="submit">
             Ubah Password
         </x-button>
     </div>

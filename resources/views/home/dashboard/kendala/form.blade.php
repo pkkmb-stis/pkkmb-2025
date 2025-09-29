@@ -69,7 +69,7 @@
                                 type="button" wire:click="resetAll">
                                 Batal
                             </x-button>
-                            <x-button class="uppercase rounded-3xl bg-coklat-2 hover:bg-coklat-hover text-md"
+                            <x-button class="uppercase rounded-3xl bg-2025-1 hover:bg-coklat-hover text-md"
                                 type="submit" wire:loading.remove>
                                 Kirim
                             </x-button>
