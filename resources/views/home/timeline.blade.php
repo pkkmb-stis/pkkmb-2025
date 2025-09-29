@@ -63,7 +63,7 @@
                             <div class="relative flex overflow-hidden rounded-lg border-2 border-solid border-2025-3 bg-cover bg-center bg-no-repeat"
                                 style="background-color: {{ $bgColor }};">
                                 
-                                <div class=" py-2 px-4 w-full md:w-[80%]">
+                                <div class="font-poppins py-2 px-4 w-full md:w-[80%]">
                                     <div class="font-poppins font-bold tracking-wide text-2025-3">
                                         {{ formatDateIso($t->waktu_mulai, 'D MMMM YYYY') }}
                                         @if ($t->waktu_akhir)
