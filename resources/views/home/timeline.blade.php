@@ -59,36 +59,36 @@
                     <div class="relative mt-[-4px] w-full {{ $loop->first ? 'pt-1' : '' }}">
                         <div class="{{ $isLast ? 'ml-1' : 'pb-6 border-l-4 border-solid border-2025-3' }} px-4">
                             <h1 class="mb-2 font-chaTime text-xl font-bold text-black">{{ $t->title }}</h1>
-                            <div class="rounded-lg px-4 py-2 lg:pr-52 font-poppins text-black bg-cover bg-center bg-no-repeat border-2 border-solid border-2025-3"
+
+                            <div class="relative flex overflow-hidden rounded-lg border-2 border-solid border-2025-3 bg-cover bg-center bg-no-repeat"
                                 style="background-color: {{ $bgColor }};">
-                                <div class="font-poppins font-bold tracking-wide text-2025-3">
-                                    {{ formatDateIso($t->waktu_mulai, 'D MMMM YYYY') }}
-                                    @if ($t->waktu_akhir)
-                                        <span x-cloak :class="(width < 512) ? '' : 'hidden'"><br></span>
-                                        - {{ formatDateIso($t->waktu_akhir, 'D MMMM YYYY') }}
-                                    @endif
-                                </div>
-                                <div class="my-2 w-full border-b-2 border-2025-3"></div>
-                                <p>{{ $t->caption != '-' ? $t->caption : '' }}</p>
+                                
+                                <div class=" py-2 px-4 w-full md:w-[80%]">
+                                    <div class="font-poppins font-bold tracking-wide text-2025-3">
+                                        {{ formatDateIso($t->waktu_mulai, 'D MMMM YYYY') }}
+                                        @if ($t->waktu_akhir)
+                                            <span x-cloak :class="(width < 512) ? '' : 'hidden'"><br></span>
+                                            - {{ formatDateIso($t->waktu_akhir, 'D MMMM YYYY') }}
+                                        @endif
+                                    </div>
+                                    <div class="my-2 w-full border-b-2 border-2025-3"></div>
+                                    <p>{{ $t->caption != '-' ? $t->caption : '' }}</p>
 
-                                {{-- Lokasi --}}
-                                <div class="text-2025-3">
-                                    @if (!empty($t->location))
-                                        <div class="my-2 flex flex-row items-center">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                            <div class="ml-2">{{ $t->location }}</div>
-                                        </div>
-                                    @endif
+                                    {{-- Lokasi --}}
+                                    <div class="text-2025-3">
+                                        @if (!empty($t->location))
+                                            <div class="my-2 flex flex-row items-center">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                                <div class="ml-2">{{ $t->location }}</div>
+                                            </div>
+                                        @endif
+                                    </div>
                                 </div>
 
-                                <div class="absolute top-0 right-0 translate-x-[50%] md:translate-x-[59%] flex flex-col gap-2 mt-2 {{ $i === 0 ? 'top-1' : 'top-0 -mt-[2px]' }}">
+                                <div class="absolute top-0 right-0 mr-3 h-full w-[20%] hidden md:block">
                                     <img src="{{ asset('img/asset/2025/timeline/'.$rightElement) }}"
                                         alt="pattern"
-                                        class="w-[34.75%] z-10 mt-7 sm:hidden md:hidden lg:block object-cover"
-                                        style="height:25%;" />
-                                </div>
-
-
+                                        class="h-full w-full object-cover" /> </div>
                             </div>
                         </div>
 
@@ -98,7 +98,6 @@
                                 alt="status" 
                                 class="w-8 h-8" />
                         </div>
-
                     </div>
                     @php
                         $i++;
