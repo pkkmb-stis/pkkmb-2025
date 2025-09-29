@@ -1,7 +1,7 @@
 <div class="max-w-full overflow-hidden bg-[#FFEAC8] mix-blend-multiply">
 
   <!-- ================= TAMPIILAN HP ================= -->
-  <div class="block lg:hidden">
+  <div class="block lg:hidden overflow-hidden">
     <!-- Header HP -->
     <div class="col-span-1 relative pt-12 px-4" data-aos="zoom-in-up">
       <div class="flex flex-col items-center justify-center w-full mx-auto shadow-xl 
