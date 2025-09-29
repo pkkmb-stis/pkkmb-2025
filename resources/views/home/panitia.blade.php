@@ -25,28 +25,8 @@
         }
 
         .dosen-backdrop {
-            background-image: url('{{ asset("img/asset/2025/Backdrop Dosen.png") }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
+            min-height: 125vh;
             position: relative;
-            overflow: hidden;
-        }
-
-        .bg-dosen-pattern {
-            background-image: url('{{ asset("img/asset/2025/Pattern Backdrop Dosen.png") }}');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 70%;
-            opacity: 0.4;
-            z-index: 1;
         }
 
         /* MOTIF */
@@ -544,9 +524,25 @@
     {{-- Dosen/Tendik Section --}}
     <section class="relative dosen-backdrop" x-data="dosenSlider()">
         {{-- Pattern Overlay - DIUBAH --}}
-        <div class="bg-dosen-pattern"></div>
+        
+        <div class="relative overflow-visible">
+  <!-- Backdrop dasar -->
+  <img 
+    src="{{ asset('img/asset/2025/backdrop_Tendik.png') }}" 
+    alt="Backdrop Tendik"
+    class="absolute left-0 top-[-310px] w-full object-cover z-[0]"
+  >
+
+  <!-- Pattern backdrop dosen (di tengah) -->
+  <img 
+    src="{{ asset('img/asset/2025/Pattern Backdrop Dosen.png') }}" 
+    alt="Backdrop Dosen"
+    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] z-[1]"
+  >
+</div>
         
         {{-- Motif untuk dosen --}}
+
         <img src="{{ asset('img/asset/2025/motif pt1.png') }}" class="dosen-motif-top-right" alt="Motif Top Right">
         <img src="{{ asset('img/asset/2025/motif pt1.png') }}" class="dosen-motif-bottom-left" alt="Motif Bottom Left">
         
