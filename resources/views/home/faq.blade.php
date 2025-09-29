@@ -9,6 +9,52 @@
         border-top: 4px solid #000000;
         margin-top: 0.5em;
     }
+
+    .faq-container {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .faq-container:hover {
+        transform: scale(1.03); 
+        z-index: 30; 
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 0.75rem; 
+    }
+
+    @media (max-width: 768px) {
+        .faq-wrapper {
+            width: 90%;
+        }
+
+        .faq-question h1 {
+            font-size: 1rem; 
+        }
+        .faq-answer p {
+            font-size: 0.875rem; 
+        }
+    }
+
+    @media (max-width: 640px) {
+        .faq-wrapper {
+            width: 95%;
+        }
+
+        .faq-question img[alt="ornamen"] {
+            display: none;
+        }
+
+        .faq-question {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            justify-content: center; 
+        }
+
+        img[alt="Maleo"] {
+            width: 5rem; 
+            height: auto;
+        }
+    }
+
 </style>
 
 <x-home-layout menu="FAQ" title="FAQ">
@@ -36,29 +82,54 @@
         </div>
     </div>
 
+{{-- Container utama dengan background --}}
+<div class="w-full relative overflow-hidden pb-6 sm:pb-8 md:pb-12 lg:pb-16"        
+     style="background-image: url('{{ asset('img/asset/2025/wafe-panjang.png') }}'); 
+            background-size: 100% 100%, cover; 
+            background-repeat: no-repeat; 
+            background-position: top center; 
+            padding-top: 100px;"> 
+
+{{{-- Burung Maleo Kiri (posisi diatur ulang) --}}
+    <img src="{{ asset('img/asset/2025/maleo.png') }}" alt="Maleo" 
+         class="absolute left-4 top-0 
+                w-28 h-32 sm:w-32 md:w-36 lg:w-40 
+                z-0 scale-x-[-1]" 
+         style="object-fit: contain;">
+
+    {{-- Burung Maleo Kanan (posisi diatur ulang) --}}
+    <img src="{{ asset('img/asset/2025/maleo.png') }}" alt="Maleo" 
+         class="absolute right-4 top-0 
+                w-28 h-32 sm:w-32 md:w-36 lg:w-40 
+                z-0" 
+         style="object-fit: contain;">
+
+    <div class="faq-wrapper mx-auto w-[80%] sm:w-[75%] md:w-[70%] relative z-10">
+
     @foreach ($faqs as $faq)
-        {{-- Page tiap pertanyaan kiri --}}
-        <div class="mx-auto overflow-hidden w-[80%] rounded-lg my-6">
-            <h1 class="indent-8 md:text-lg text-base text-merah-1 font-bohemianSoul hr">{{ $faq->pertanyaan }}</h1>
-            <div class="w-full flex justify-start">
-                <p class="p-4 bg-2025-1 text-xs md:text-base my-3 rounded-xl shadow-sm w-[97%] text-white text-justify font-nunito"
-                    style="box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)">
-                    {{ $faq->jawaban }}</p>
-            </div>
+    <div class="faq-container mx-auto w-[80%] my-6 relative z-10">
+
+        {{-- Kotak Pertanyaan --}}
+        <div class="relative flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 bg-gradient-to-b from-[#F4E2CE] to-[#F9C46B] border-2 border-[#A25869] rounded-t-xl rounded-b-md shadow-md mb-[-10px] z-20">
+            
+        {{-- Ornamen Kiri --}}
+            <img src="{{ asset('img/asset/2025/Cempaka_Merah_polos .png') }}" alt="ornamen" class="w-8 h-8 hidden sm:block">
+
+            {{-- Teks Pertanyaan --}}
+            <h1 class="flex-grow text-center text-base sm:text-lg text-[#1E2A4A] font-bohemianSoul leading-tight">
+                {{ $faq->pertanyaan }}
+            </h1>
+
+            {{-- Ornamen Kanan --}}
+            <img src="{{ asset('img/asset/2025/Cempaka_Merah_polos .png') }}" alt="ornamen" class="w-8 h-8 hidden sm:block">
         </div>
-    @endforeach
-    {{-- Page tiap pertanyaan kanan --}}
-    {{-- @php
-        $i++
-        @endphp --}}
-    {{-- <div class="mx-auto overflow-hidden w-[90%] rounded-lg font-poppins my-6">
-        <div class="w-full flex justify-end">
-            <h1 class="indent-8 md:text-lg text-base  text-gray-700 font-bachelorReg hr">{{ pertanyaan()[$i] }}</h1>
+
+        {{-- Kotak Jawaban --}}
+        <div class="relative bg-gradient-to-b from-[#FFF2E2] to-[#FFE2BF] border-2 border-[#A25869] rounded-b-xl px-4 py-3 sm:px-6 sm:py-4 pt-6 z-10">
+            <p class="text-xs sm:text-base text-[#1E2A4A] font-nunito leading-snug">
+                {{ $faq->jawaban }}
+            </p>
         </div>
-        <div class="w-full flex justify-start">
-            <div class="w-[1.75%] bg-base-theme-100 rounded-l-lg my-3 -mr-1"></div>
-            <div class="w-[1.75%] bg-base-theme-400 rounded-l-lg my-3 -mr-1 z-10"></div>
-            <p class="p-4 bg-base-theme-500 text-xs md:text-base  my-3 rounded-lg shadow-sm w-[97%] text-gray-100 text-justify">{{ jawaban()[$i] }}</p>
-        </div>
-    </div> --}}
+    </div>
+@endforeach
 </x-home-layout>
