@@ -59,18 +59,19 @@
                             urutannya terisi 0</p> --}}
 
                         {{-- <div class="mb-3">
-              <x-label-input for="caption">Caption</x-label-input>
-              <x-textarea name="caption" wire:model.defer="caption" id="caption" cols="30" rows="6"
-                disabled="{{ !$canUpdate }}">
-              </x-textarea>
-              <x-error-input name="caption" />
-            </div> --}}
+                            <x-label-input for="caption">Caption</x-label-input>
+                            <x-textarea name="caption" wire:model.defer="caption" id="caption" cols="30" rows="6"
+                                disabled="{{ !$canUpdate }}">
+                            </x-textarea>
+                            <x-error-input name="caption" />
+                        </div> --}}
 
 
                         <div class="flex justify-end mt-4">
                             <div wire:loading.remove wire:target="update">
+                                {{-- PERUBAHAN DI SINI: Menggunakan wire:click ke method PHP --}}
                                 <x-button class="mr-2 uppercase bg-gray-500 rounded-3xl hover:bg-gray-600 text-md"
-                                    type="button" x-on:click="showDetailGallery = false">
+                                    type="button" wire:click="closeDetailGallery">
                                     Batal
                                 </x-button>
 

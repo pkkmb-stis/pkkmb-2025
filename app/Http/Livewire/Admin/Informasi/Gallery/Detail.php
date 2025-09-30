@@ -20,6 +20,13 @@ class Detail extends Component
         $this->canUpdate = userHasPermission(PERMISSION_UPDATE_GALLERY);
     }
 
+    public function closeDetailGallery()
+    {
+        $this->showDetailGallery = false;
+        $this->gallery = null; // KUNCI: Reset objek model yang membungkus @if
+        $this->resetValidation();
+    }
+
     /**
      * open modal detail gallery
      *
@@ -82,6 +89,7 @@ class Detail extends Component
             }
             $this->showDetailGallery = false;
         }
+        $this->closeDetailGallery();
     }
 
     public function render()
