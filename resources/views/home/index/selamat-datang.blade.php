@@ -1,4 +1,4 @@
-<header class="w-full h-screen overflow-hidden p-0 bg-[img/asset/2025/vektor.png] bg-center">
+<header class="w-full h-screen overflow-hidden pt-10 p-0 bg-[img/asset/2025/vektor.png] bg-center">
 
   <div class="absolute inset-0 bg-gradient-to-b from-[#e15586] via-[#8b2f4b] to-[#1e2a4a] bg-center z-0 mix-blend-multiply"></div>
     {{-- desktop --}}
