@@ -36,6 +36,7 @@ export default {
                 "event-even": "url('@/images/pattern/2024/event-even.png')",
                 "profil-left": "url('@/images/pattern/2025/profil-info.png')",
                 "profil-pattern": "url('@/images/pattern/2025/patternprofil.png')",
+                "login-kanan": "url('@/images/pattern/2025/login-kanan.png')",
             }),
             fontFamily: {
                 bhinneka: ["Bhinneka", ...defaultTheme.fontFamily.sans],
@@ -72,6 +73,7 @@ export default {
                     3:"#1E2A4A",
                     4:"#74C2F0",
                     5:"#F9C46B",
+                    login:"#FBE2B8"
                     
                 },
                 merah: {
