@@ -15,16 +15,15 @@
 
     <!-- Kontainer judul -->
     <div class="relative flex items-center justify-center mt-[5px]"> 
-      <!-- ⬅️ geser ke bawah biar tidak tabrakan -->
       <div class="relative bg-[#8B2F4B] px-6 py-3 rounded-2xl 
-                  w-[1306px] lg:w-[1006px] xl:w-[1106px] max-w-6xl 
+                  w-[1306px] lg:w-[866px] xl:w-[966px] max-w-6xl 
                   h-[116px] text-center flex items-center justify-center 
                   rounded-[5rem] z-10">
         <!-- Ornamen kiri -->
         <img src="img/asset/2025/Karawo Pinang.png" 
              class="absolute left-0 top-1/2 -translate-y-1/2 w-[120px] lg:w-[110px] xl:w-[120px] h-auto">
         <!-- Judul -->
-        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-[46px] text-[#F9C46B] font-brasikaDisplay tracking-wide">
+        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-[34px] text-[#F9C46B] font-brasikaDisplay tracking-wide">
           Maskot PKKMB - PKBN 2025
         </h1>
         <!-- Ornamen kanan -->
@@ -39,24 +38,54 @@
                bg-no-repeat bg-center lg:bg-[length:60%_auto] xl:bg-[50%_auto] 2xl:bg-[40%_auto]" 
         style="background-image: url('img/asset/2025/Pulau Sulawesi.png');">
 
-  <!-- Maskot kiri -->
-  <div class="absolute top-[10%] left-[5%] flex items-center space-x-2 md:space-x-4 animate-bounce-slow">
-    <img src="{{ maskot0 }}" alt="Tora" class="w-[15vw] max-w-[120px]">
-    <div class="relative bg-white text-black p-3 md:p-4 rounded-full max-w-[806px] shadow-lg text-xs md:text-sm">
-      <p>Halo aku <b>Tora</b>, Lorem ipsum dolor sit amet...</p>
-      <div class="absolute top-1/2 -left-3 transform -translate-y-1/2 w-0 h-0 
-                  border-t-[10px] border-b-[10px] border-r-[14px] border-transparent border-r-white"></div>
+   <!-- Maskot kiri (Tora) -->
+  <div class="absolute lg:top-[5%] lg:left-[5%] xl:top-[80px] xl:left-[10%] 2xl:top-[80px] 2xl:left-[10%] flex items-center space-x-5 animate-bounce-slow">
+    <!-- Container maskot + awan -->
+    <div class="relative flex flex-col items-center">
+      <!-- Maskot -->
+      <img src="{{ maskot0 }}" alt="Tora" 
+           class="w-[150px] h-auto z-10">
+      <!-- Awan -->
+      <img src="img/asset/2025/Awan Tora.png" alt="Awan" 
+           class="w-[180px] -mt-6">
+    </div>
+
+    <!-- Bubble Chat -->
+    <div class="relative bg-white text-black p-5 rounded-2xl shadow-lg 
+                max-w-[420px]">
+      <p class="text-lg leading-relaxed">
+        Halo aku <b>Tora</b>, Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <!-- ekor ke kiri -->
+      <div class="absolute top-1/2 -left-4 transform -translate-y-1/2 
+                  w-0 h-0 border-t-[12px] border-b-[12px] border-r-[16px] 
+                  border-t-transparent border-b-transparent border-r-white"></div>
     </div>
   </div>
 
-  <!-- Maskot kanan -->
-  <div class="absolute bottom-[10%] right-[5%] flex items-center space-x-2 md:space-x-4 animate-bounce-slow">
-    <div class="relative bg-white text-black p-3 md:p-4 rounded-full max-w-[250px] shadow-lg text-xs md:text-sm">
-      <p>Halo aku <b>Tira</b>, Lorem ipsum dolor sit amet...</p>
-      <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 w-0 h-0 
-                  border-t-[10px] border-b-[10px] border-l-[14px] border-transparent border-l-white"></div>
+  <!-- Maskot kanan (Tira) -->
+  <div class="absolute lg:bottom-[10%] lg:right-[8%] xl:bottom-[10%] xl:right-[8%] 2xl:bottom-[200px] 2xl:right-[15%] flex items-center space-x-5 animate-bounce-slow z-10">
+    <!-- Bubble Chat -->
+    <div class="relative bg-white text-black p-5 rounded-2xl shadow-lg 
+                max-w-[420px]">
+      <p class="text-lg leading-relaxed">
+        Halo aku <b>Tira</b>, Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <!-- ekor ke kanan -->
+      <div class="absolute top-1/2 -right-4 transform -translate-y-1/2 
+                  w-0 h-0 border-t-[12px] border-b-[12px] border-l-[16px] 
+                  border-t-transparent border-b-transparent border-l-white"></div>
     </div>
-    <img src="{{ maskot4 }}" alt="Tira" class="w-[15vw] max-w-[120px]">
+
+    <!-- Container maskot + awan -->
+    <div class="relative flex flex-col items-center">
+      <!-- Maskot -->
+      <img src="{{ maskot4 }}" alt="Tira" 
+           class="w-[150px] h-auto z-10">
+      <!-- Awan -->
+      <img src="img/asset/2025/Awan Tira.png" alt="Awan" 
+           class="w-[180px] -mt-8">
+    </div>
   </div>
 
   <!-- Ikon tambahan -->
@@ -110,18 +139,18 @@
     </div>
 
   <!-- Konten Utama -->
-  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover bg-[length:90%_auto] sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/Pulau Sulawesi.png') ;">
+  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover bg-[length:95%] sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/Pulau Sulawesi.png') ;">
 
  <!-- Maskot kiri (Tora) -->
-<div class="absolute top-[100px] left-[15%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow right-[50px]">
+<div class="absolute top-[100px] left-[15%] sm:left-[10%] md:left-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow ">
   <!-- Container maskot + awan -->
   <div class="relative flex flex-col left-[2%] items-center right-[50px]">
     <!-- Maskot -->
     <img src="{{ maskot0 }}" alt="Tora" 
-         class="w-[80px] h-auto sm:w-[120px] md:w-[150px] z-10">
+         class="w-[89px] h-auto sm:w-[120px] md:w-[120px] ml-[-15px] z-10">
     <!-- Awan -->
     <img src="img/asset/2025/Awan Tora.png" alt="Awan" 
-         class="w-[100px] sm:w-[140px] md:w-[180px] -mt-6">
+         class="w-[100px] sm:w-[140px] md:w-[180px] -mt-5">
   </div>
 
   <!-- Bubble Chat -->
@@ -138,7 +167,7 @@
 </div>
 
 <!-- Maskot kanan (Tira) -->
-<div class="absolute bottom-[200px] right-[15%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow left-[50px]">
+<div class="absolute bottom-[200px] right-[15%] sm:right-[10%] md:right-[5%] md:bottom-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow">
   <!-- Bubble Chat -->
   <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg 
               max-w-[240px] sm:max-w-[340px] md:max-w-[420px]">
@@ -155,7 +184,7 @@
   <div class="relative flex flex-col items-center ">
     <!-- Maskot -->
     <img src="{{ maskot4 }}" alt="Tira" 
-         class="w-[80px] h-auto sm:w-[120px] md:w-[150px] z-10 left-[50px]">
+         class="w-[89px] h-auto sm:w-[120px] md:w-[120px] z-10">
     <!-- Awan -->
     <img src="img/asset/2025/Awan Tira.png" alt="Awan" 
          class="w-[100px] sm:w-[140px] md:w-[180px] -mt-8">

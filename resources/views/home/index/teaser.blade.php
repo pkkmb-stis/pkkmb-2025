@@ -6,7 +6,7 @@
       <div class="block lg:hidden">
         <!-- Header -->
         <div class="grid grid-cols-1 h-auto py-5" data-aos="zoom-in-up">
-          <div class="relative w-[90vw] max-w-sm mx-auto">
+          <div class="relative w-[90vw] max-w-sm mx-auto mt-[60px]">
         <!-- Ornamen kiri -->
             <img src="img/asset/2025/elemen.png" 
                  alt="ornamen kiri" 
@@ -43,14 +43,14 @@
 
       <!-- ================== PC/Laptop ================== -->
       <div class="hidden lg:block relative">
-  <div class="grid grid-cols-1 gap-6 h-auto lg:py-0 mt-0 z-0">
-    <div class="col-span-1 relative lg:pt-16 pb-10 lg:pb-20" data-aos="zoom-in-up">
+  <div class="grid grid-cols-1 h-auto lg:py-0 mt-0 z-0">
+    <div class="col-span-1 relative lg:pt-16 pb-10 lg:pb-20 mt-0" data-aos="zoom-in-up">
 
       <!-- Kontainer Header Responsive -->
       <div class="relative flex flex-row items-center justify-center rounded-3xl 
                   w-[95vw] sm:w-[85vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 
                   max-w-4xl mx-auto shadow-xl bg-[#8B2F4B] bg-opacity-95 
-                  px-4 sm:px-6 py-4">
+                  px-4 sm:px-6 py-4 md:mt-[100px] lg:mt-0">
 
         <!-- Ornamen kiri -->
         <img src="img/asset/2025/elemen.png" 
@@ -75,7 +75,7 @@
     </div>
 
     <!-- Frame maroon -->
-    <div class="relative bg-[#8B1E3F] p-3 mt-10 rounded-lg shadow-lg mx-auto mb-[-75px] lg:w-[620px] lg:h-[415px] xl:w-[799px] xl:h-[493px] mx-auto my-auto">
+    <div class="relative bg-[#8B1E3F] p-3 mt-10 rounded-lg shadow-lg mx-auto md:mb-[-150px] lg:mb-[-75px] lg:w-[620px] lg:h-[415px] xl:w-[799px] xl:h-[493px] mx-auto my-auto">
       <div class="lg:h-[385px] lg:w-[591px] xl:w-[760px] xl:h-[470px] max-w-4xl aspect-video bg-black rounded-md overflow-hidden mx-auto my-auto">
         <iframe class="w-full h-full"
                 src="https://www.youtube.com/embed/56hq1-sRfHg"

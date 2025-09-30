@@ -29,7 +29,7 @@
     {{-- Elemen Kanan End --}}
 
                 {{-- Elemen Tengah --}}
-            <section class="flex flex-col items-center justify-center flex-grow text-center py-10">    
+    <section class="flex flex-col items-center justify-center flex-grow text-center py-10">    
             <div class="flex h-full w-full flex-col items-center justify-center text-center">
                 <img class="ml-[25px] w-[100px] md:w-[193px] lg:w-[193px] mb-[-80px]" src="{{ LOGO }}" alt="Logo PKKMB-PKBN 2025">
                 <svg viewBox="0 -100 750 300" class="flex w-auto h-auto md:w-96 overflow-visible mb-2 items-center justify-center ml-[15px]">
@@ -61,12 +61,9 @@
                     <img src="{{ asset('img/asset/2025/Elemen 1.png') }}" class="w-[63px] md:wd-[63px] transform scale-x-[-1]">
                 </div>
             </div>
-
+            {{-- Elemen Tengah End --}}
         </div>
     </section>
-    {{-- Elemen Tengah End --}}
-        </div>
-    </div>
 
     {{-- mobile --}}
     <div class="relative flex h-screen w-full md:hidden">

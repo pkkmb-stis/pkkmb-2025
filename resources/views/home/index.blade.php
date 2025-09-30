@@ -5,6 +5,8 @@
 
     <!-- Section -->
     <section class="font-caruban">
+        @include('home.index.transisi-selendang-hero-teaser')
+
         @include('home.index.teaser')
 
         @include('home.index.visi-misi')

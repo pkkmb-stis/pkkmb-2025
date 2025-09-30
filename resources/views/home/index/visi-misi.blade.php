@@ -3,7 +3,7 @@
   <!-- ================= TAMPIILAN HP ================= -->
   <div class="block lg:hidden overflow-hidden">
     <!-- Header HP -->
-    <div class="col-span-1 relative pt-12 px-4 mt-5" data-aos="zoom-in-up">
+    <div class="col-span-1 relative pt-12 px-4 " data-aos="zoom-in-up">
       <div class="flex flex-col items-center justify-center w-full mx-auto shadow-xl 
             bg-[#8B2F4B] overflow-hidden relative" style="height:34px">
   <img src="img/asset/2025/elemen.png" alt="ornamen kiri" 
