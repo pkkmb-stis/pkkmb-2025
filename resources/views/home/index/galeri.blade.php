@@ -90,7 +90,7 @@
 
 
 
-<!-- ===================== SCRIPT ===================== -->
+<<!-- ===================== SCRIPT ===================== -->
 @push('script-bottom')
 <script>
 $(document).ready(function () {
@@ -102,11 +102,7 @@ $(document).ready(function () {
         autoplayHoverPause: true,
         items: 1,
         dots: true,
-        nav: true,
-        navText: [
-            '<div class="text-gray-700 custom-nav-prev">&#10094;</div>',
-            '<div class="text-gray-700 custom-nav-next">&#10095;</div>'
-        ],
+        nav: false, // 🔴 panah dihapus
         responsive: {
             0: { items: 1 },
             768: { items: 1 },
@@ -117,36 +113,10 @@ $(document).ready(function () {
 </script>
 
 <style>
-/* Custom posisi tombol nav */
+/* Custom posisi tombol nav (tidak diperlukan lagi jika nav:false) */
+/* Kalau mau jaga-jaga biar tetap bersih bisa dipaksa hilang */
 .owl-carousel .owl-nav {
-    position: absolute;
-    top: 50%;
-    left: -80px;   /* makin keluar ke kiri */
-    right: -80px;  /* makin keluar ke kanan */
-    width: calc(100% + 160px);
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.owl-carousel .owl-nav button {
-    background: rgba(0,0,0,0.6);
-    color: white;
-    border-radius: 9999px;
-    width: 60px;   /* ukuran lebih besar */
-    height: 60px;
-    font-size: 28px; /* teks panah lebih besar */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: auto;
-    transition: all 0.2s ease-in-out;
-}
-
-.owl-carousel .owl-nav button:hover {
-    background: rgba(0,0,0,0.85);
-    transform: scale(1.1);
+    display: none !important;
 }
 
 /* Tambahan biar strip biru aman di HP */
