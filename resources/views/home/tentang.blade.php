@@ -4,11 +4,11 @@
         <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16">
             {{-- Header (Tidak diubah) --}}
             <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
-                <img src="{{ asset('img/maskot/2025/maskot 3.png') }}" alt="wave" class="z-10 w-14 sm:w-24 md:w-28 lg:w-32 lg:-translate-x-4 transform translate-y-[-10px]">
+                <img src="{{ asset('img/maskot/2025/maskot 3.png') }}" alt="wave" class="z-10 w-14 sm:w-20 md:w-24 lg:w-28 mt-8 sm:mt-[34px] lg:-translate-x-4 transform translate-y-[-10px]">
                 <div class="flex h-full flex-col items-center justify-center">
                     <div class="flex flex-row items-center justify-center gap-4 mt-14 transform translate-y-[-10px]">
                         <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                             alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
+                            alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
                         <h1
                             class="flex items-center justify-center rounded-full px-10 py-3 sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6
                                    font-brasikaDisplay text-center text-sm font-thin leading-normal 
@@ -17,10 +17,10 @@
                             TENTANG
                         </h1>
                         <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                             alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
+                            alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
                     </div>
                 </div>
-                <img src="{{ asset('img/maskot/2025/maskot 4.png') }}" alt="wave" class="z-10 w-14 sm:w-24 md:w-28 lg:w-32 lg:translate-x-4 transform translate-y-[-10px]">
+                <img src="{{ asset('img/maskot/2025/maskot 4.png') }}" alt="wave" class="z-10 w-14 sm:w-20 md:w-24 lg:w-28 mt-8 sm:mt-[34px] lg:translate-x-4 transform translate-y-[-10px]">
             </div>
         </div>
 
