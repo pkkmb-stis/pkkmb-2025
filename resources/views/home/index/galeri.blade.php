@@ -1,5 +1,5 @@
 <!-- ===================== HEADER GALERI ===================== -->
-<div class="w-full flex justify-center items-center bg-[#EFE5D0] py-4 md:py-6 relative overflow-hidden">
+<div class="w-full flex justify-center items-center bg-[#EFE5D0] py-4 md:py-6 relative overflow-hidden mt-6">
     <!-- Burung Enggang Kiri -->
     <img src="{{ asset('img/asset/2025/burung_enggang.png') }}"
          alt="Burung Enggang"
@@ -42,7 +42,7 @@
 </div>
 
 <!-- ===================== GALERI CAROUSEL ===================== -->
-<div class="pb-6 lg:pb-12 bg-putih-pattern bg-fixed rounded-[1.875rem_0_0_4.6875rem] flex-1">
+<div class="pb-6 lg:pb-12 pt-6 lg:pt-12 bg-putih-pattern bg-fixed rounded-b-[30px] flex-1">
     <div class="w-11/12 mx-auto mt-6 owl-carousel galeri-carousel">
 
         <!-- Slide 1 -->

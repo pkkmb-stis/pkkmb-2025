@@ -7,7 +7,7 @@
     @stack('script-top')
 </head>
 
-<body class="font-mulish bg-[size:600px] bg-background2-pattern bg-[#FBE2B8]">
+<body class="font-mulish bg-[size:600px] bg-background2-pattern bg-[#FFEAC8]">
     {{-- Toast dari session --}}
     <x-toast classStart="lg:top-24 top-20" classEnd="lg:top-32 top-28" />
 

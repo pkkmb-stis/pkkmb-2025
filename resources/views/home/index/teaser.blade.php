@@ -1,4 +1,4 @@
-<div class="bg-[#FFEAC8] mix-blend-multiply">
+<div class="mix-blend-multiply">
   <div class="pb-40" id="teaser">
     <div class="relative">
 

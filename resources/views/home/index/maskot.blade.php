@@ -14,10 +14,10 @@
     </div>
 
     <!-- Kontainer judul -->
-    <div class="relative flex items-center justify-center mt-[5px]"> 
+    <div class="relative flex items-center justify-center mt-[5px] lg:mt-0"> 
       <div class="relative bg-[#8B2F4B] px-6 py-3 rounded-2xl 
                   w-[1306px] lg:w-[866px] xl:w-[966px] max-w-6xl 
-                  h-[116px] text-center flex items-center justify-center 
+                  h-[120px] text-center flex items-center justify-center 
                   rounded-[5rem] z-10">
         <!-- Ornamen kiri -->
         <img src="img/asset/2025/Karawo Pinang.png" 

@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <nav
-    class="fixed top-0 left-0 right-0 z-20 px-4 py-2 mx-3 my-2 transition-all duration-500 shadow-xl rounded-2xl bg-2025-5 bg-opacity-80 backdrop-blur-lg backdrop-filter sm:mx-4 sm:my-2 sm:px-8 md:mx-4 md:my-2 md:px-12 lg:mx-4 lg:my-2 lg:px-16 xl:mx-4 xl:my-2 xl:px-24">
+    class="fixed top-0 left-0 right-0 z-50 px-4 py-2 mx-3 my-2 transition-all duration-500 shadow-xl rounded-2xl bg-2025-5 bg-opacity-80 backdrop-blur-lg backdrop-filter sm:mx-4 sm:my-2 sm:px-8 md:mx-4 md:my-2 md:px-12 lg:mx-4 lg:my-2 lg:px-16 xl:mx-4 xl:my-2 xl:px-24">
     <div class="flex items-center justify-between gap-4 font-semibold text-2025-1">
 
         {{-- Menu HP --}}

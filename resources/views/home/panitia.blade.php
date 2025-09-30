@@ -111,7 +111,7 @@
         .ppo-preview-gramti { background-image: url('{{ asset("img/asset/2025/kartugramti_ppo.png") }}'); }
         .ppo-preview-tibum { background-image: url('{{ asset("img/asset/2025/kartutibum_ppo.png") }}'); }
         .ppo-preview-ppm { background-image: url('{{ asset("img/asset/2025/kartuppm_ppo.png") }}'); }
-        .ppo-preview-acara { background-image: url('{{ asset("img/asset/2025/kartuumum_ppo.png") }}'); }
+        .ppo-preview-acara { background-image: url('{{ asset("img/asset/2025/kartuacara_ppo.png") }}'); }
         .ppo-preview-lapk { background-image: url('{{ asset("img/asset/2025/kartulapk_ppo.png") }}'); }
 
         .dosen-preview-card.active {

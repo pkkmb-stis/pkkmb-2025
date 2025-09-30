@@ -12,7 +12,7 @@
                                   font-brasikaDisplay text-center text-sm font-thin leading-normal 
                                   drop-shadow-md sm:text-xl lg:text-3xl xl:text-4xl z-0 relative border-4"
                               style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
-                              GALERI
+                              PROFIL SAYA
                           </h1>
                           <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
                               alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
@@ -30,7 +30,7 @@
                 
                 <!-- Panel Kiri - Info Profil (28% width) dengan background yang disesuaikan -->
                 <div class="col-span-1 rounded-t-lg sm:rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none 
-                        pt-4 sm:pt-6 shadow-lg sm:shadow-xl order-1 relative z-10 min-h-[300px] lg:min-h-[500px] 
+                        pt-4 sm:pt-6 shadow-lg sm:shadow-xl order-1 min-h-[300px] lg:min-h-[500px] 
                         bg-profil-left bg-cover bg-center bg-no-repeat">
                     <!-- Component info profil akan dimuat di sini -->
                     <livewire:home.profil.info />
@@ -41,7 +41,7 @@
                 <div class="col-span-1 bg-gradient-to-br from-amber-50 to-orange-100 
                            p-3 sm:p-4 md:p-6 shadow-lg sm:shadow-xl 
                            rounded-b-lg sm:rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none 
-                           order-2 relative z-10 min-h-[400px]">
+                           order-2 min-h-[400px]">
                     
                     <!-- Tab Navigation dengan spacing yang lebih baik -->
                     <div class="mb-4 sm:mb-6 flex flex-col sm:flex-row justify-center 

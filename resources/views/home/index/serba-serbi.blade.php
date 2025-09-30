@@ -1,4 +1,4 @@
-<div class="w-full px-0 pb-10 overflow-hidden bg-fixed bg-putih-pattern" id="serba-serbi" style="border-radius: 30px;">
+<div class="w-full rounded-b-[30px] px-0 pb-10 overflow-hidden bg-fixed bg-putih-pattern" id="serba-serbi">
     <!-- ===== HEADER SERBA SERBI ===== -->
     <div class="flex justify-center m-8">
         <div class="relative w-full p-0">

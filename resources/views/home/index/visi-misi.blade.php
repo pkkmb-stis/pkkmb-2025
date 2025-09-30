@@ -1,4 +1,4 @@
-<div class="max-w-full overflow-hidden bg-[#FFEAC8] mix-blend-multiply">
+<div class="max-w-full overflow-hidden mix-blend-multiply">
 
   <!-- ================= TAMPIILAN HP ================= -->
   <div class="block lg:hidden overflow-hidden">
