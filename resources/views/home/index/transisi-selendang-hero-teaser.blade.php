@@ -1,5 +1,5 @@
 <!-- SELENDANG TRANSISI DESKTOP -->
-<div class="relative z-40 w-full h-[80px] lg:h-[133px] hidden md:block bg-[#1e2a4ad8] mt-[-40px] flex items-center justify-center">
+<div class="relative z-0 w-full h-[80px] lg:h-[133px] hidden md:block bg-[#1e2a4ad8] mt-[-40px] flex items-center justify-center">
   
   <!-- Selendang Atas -->
   <img src="img/asset/2025/selendang 1.png" 
@@ -15,7 +15,7 @@
 
 
 <!-- SELENDANG TRANSISI MOBILE -->
-<div class="relative z-[50] w-full md:h-[80px] overflow-visible -mt-1 block md:hidden">
+<div class="relative z-0 w-full md:h-[80px] overflow-visible -mt-1 block md:hidden">
   <!-- Layer Atas -->
     <!-- Selendang Atas -->
   <img src="img/asset/2025/selendang 1.png" 
