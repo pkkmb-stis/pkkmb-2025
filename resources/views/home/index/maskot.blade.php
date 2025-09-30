@@ -15,10 +15,10 @@
 
     <!-- Kontainer judul -->
     <div class="relative flex items-center justify-center mt-[5px] lg:mt-0"> 
-      <div class="relative bg-[#8B2F4B] px-6 py-3 rounded-2xl 
+      <div class="relative bg-[#8B2F4B] px-6 py-3 rounded-[6rem] 
                   w-[1306px] lg:w-[866px] xl:w-[966px] max-w-6xl 
                   h-[120px] text-center flex items-center justify-center 
-                  rounded-[5rem] z-10">
+                  z-10">
         <!-- Ornamen kiri -->
         <img src="img/asset/2025/Karawo Pinang.png" 
              class="absolute left-0 top-1/2 -translate-y-1/2 w-[120px] lg:w-[110px] xl:w-[120px] h-auto">
@@ -39,7 +39,7 @@
         style="background-image: url('img/asset/2025/Pulau Sulawesi.png');">
 
    <!-- Maskot kiri (Tora) -->
-  <div class="absolute lg:top-[5%] lg:left-[5%] xl:top-[80px] xl:left-[10%] 2xl:top-[80px] 2xl:left-[10%] flex items-center space-x-5 animate-bounce-slow">
+  <div class="absolute z-20 lg:top-[5%] lg:left-[5%] xl:top-[80px] xl:left-[10%] 2xl:top-[80px] 2xl:left-[10%] flex items-center space-x-5 animate-bounce-slow">
     <!-- Container maskot + awan -->
     <div class="relative flex flex-col items-center">
       <!-- Maskot -->
@@ -90,7 +90,6 @@
 
   <!-- Ikon tambahan -->
   <img src="img/asset/2025/rumah.png" class="absolute lg:bottom-[40%] lg:left-[28%] xl:bottom-[40%] xl:left-[30%] 2xl:bottom-[40%] 2xl:left-[35%] w-[5vw] max-w-[54px]" alt="">
-  <img src="img/asset/2025/pedang bara.png" class="absolute lg:top-[10%] lg:right-[22%] xl:top-[10%] xl:right-[28%] 2xl:top-[9%] 2xl:right-[32%] w-[5vw] max-w-[54px]" alt="">
   <img src="img/asset/2025/tugu 0 km.png" class="absolute lg:top-[35%] lg:left-[30%]  xl:bottom-[60%] xl:left-[33%] 2xl:bottom-[60%] 2xl:left-[36%] w-[3vw] max-w-[24px]" alt="">
   <img src="img/asset/2025/burung.png" class="absolute lg:bottom-[30%] lg:left-[47%] xl:bottom-[25%] xl:left-[48%] 2xl:bottom-[25%] 2xl:left-[48%] w-[5vw] max-w-[54px]" alt="">
   <img src="img/asset/2025/maleo.png" class="absolute lg:bottom-[20%] lg:left-[53%] xl:bottom-[15%] xl:left-[55%] 2xl:bottom-[15%] 2xl:left-[55%] w-[5vw] max-w-[54px]" alt="">
@@ -139,10 +138,10 @@
     </div>
 
   <!-- Konten Utama -->
-  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover bg-[length:90%] sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/Pulau Sulawesi.png') ;">
+  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/Pulau Sulawesi.png') ;">
 
  <!-- Maskot kiri (Tora) -->
-<div class="absolute top-[100px] left-[15%] sm:left-[10%] md:left-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow ">
+<div class="absolute top-[100px] left-[15%] sm:left-[10%] md:left-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow mr-3 ">
   <!-- Container maskot + awan -->
   <div class="relative flex flex-col left-[2%] items-center right-[50px]">
     <!-- Maskot -->
@@ -167,7 +166,7 @@
 </div>
 
 <!-- Maskot kanan (Tira) -->
-<div class="absolute bottom-[200px] right-[15%] sm:right-[10%] md:right-[5%] md:bottom-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow">
+<div class="absolute bottom-[200px] right-[15%] sm:right-[10%] md:right-[5%] md:bottom-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow ml-3">
   <!-- Bubble Chat -->
   <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg 
               max-w-[240px] sm:max-w-[340px] md:max-w-[420px]">
