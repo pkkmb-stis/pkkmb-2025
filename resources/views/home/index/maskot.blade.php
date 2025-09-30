@@ -53,7 +53,7 @@
     <!-- Bubble Chat -->
     <div class="relative bg-white text-black p-5 rounded-2xl shadow-lg 
                 max-w-[420px]">
-      <p class="text-lg leading-relaxed">
+      <p class="text-lg leading-relaxed font-poppins">
         Halo aku <b>Tora</b>, Aku adalah maskot pria yang melambangkan semangat, keberanian, dan kegigihan.
       </p>
       <!-- ekor ke kiri -->
@@ -68,7 +68,7 @@
     <!-- Bubble Chat -->
     <div class="relative bg-white text-black p-5 rounded-2xl shadow-lg 
                 max-w-[420px]">
-      <p class="text-lg leading-relaxed">
+      <p class="text-lg leading-relaxed font-poppins">
         Halo aku <b>Tira</b>, aku adalah maskot wanita melambangkan semangat, keberanian, dan kegigihan.
       </p>
       <!-- ekor ke kanan -->
@@ -139,7 +139,7 @@
     </div>
 
   <!-- Konten Utama -->
-  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover bg-[length:91%] sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/Pulau Sulawesi.png') ;">
+  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover bg-[length:90%] sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/Pulau Sulawesi.png') ;">
 
  <!-- Maskot kiri (Tora) -->
 <div class="absolute top-[100px] left-[15%] sm:left-[10%] md:left-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow ">
@@ -156,7 +156,7 @@
   <!-- Bubble Chat -->
   <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg 
               max-w-[240px] sm:max-w-[340px] md:max-w-[420px]">
-    <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+    <p class="text-sm sm:text-base md:text-lg leading-relaxed font-poppins">
       Halo aku <b>Tora</b>, Aku adalah maskot yang melambangkan semangat, keberanian, dan kegigihan
     </p>
     <!-- ekor ke kiri -->
@@ -171,7 +171,7 @@
   <!-- Bubble Chat -->
   <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg 
               max-w-[240px] sm:max-w-[340px] md:max-w-[420px]">
-    <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+    <p class="text-sm sm:text-base md:text-lg leading-relaxed font-poppins">
       Halo aku <b>Tira</b>, Aku adalah maskot wanita yang melambangkan semangat, keberanian, dan kegigihan
     </p>
     <!-- ekor ke kanan -->
