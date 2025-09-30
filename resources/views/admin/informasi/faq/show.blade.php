@@ -1,7 +1,7 @@
 <div>
     <x-card x-data="{ showModalDelete: false, 'faqQuestion': '', 'faqId': '' }">
         <div class="flex items-center justify-between mb-3">
-            <h5 class="text-xl font-normal text-gray-700 font-bohemianSoul">FAQ PKKMB-PKBN 2024</h5>
+            <h5 class="text-xl font-normal text-gray-700 font-bohemianSoul">FAQ PKKMB-PKBN 2025</h5>
             @can(PERMISSION_ADD_FAQ)
                 @livewire('admin.informasi.faq.add')
             @endcan

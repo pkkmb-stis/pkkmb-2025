@@ -1,4 +1,4 @@
-<x-admin-layout menu="Atur Kelompok" title="Kelompok PKKMB-PKBN 2024">
+<x-admin-layout menu="Atur Kelompok" title="Kelompok PKKMB-PKBN 2025">
     @if ($halaman == "utama")
     <!-- <div class="flex items-center justify-between mb-3">
         <h5 class="text-lg font-medium text-gray-600">Daftar Kelompok</h5>

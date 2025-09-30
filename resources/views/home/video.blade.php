@@ -1,4 +1,4 @@
-<x-home-layout menu="Galeri" title="Galeri Video - PKKMB-PKBN 2024">
+<x-home-layout menu="Galeri" title="Galeri Video - PKKMB-PKBN 2025">
   <!-- GALERI VIDEO -->
   <div class="font-archivo px-8 sm:px-8 md:px-12 xl:px-16">
 

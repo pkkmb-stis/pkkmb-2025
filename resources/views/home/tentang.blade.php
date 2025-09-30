@@ -1,4 +1,4 @@
-<x-home-layout menu="Tentang" title="Tentang PKKMB - PKKMB-PKBN 2024">
+<x-home-layout menu="Tentang" title="Tentang PKKMB - PKKMB-PKBN 2025">
 
     <div class="font-nunito -mb-8">
         <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16">

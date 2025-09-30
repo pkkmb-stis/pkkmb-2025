@@ -54,7 +54,7 @@
     <div class="relative bg-white text-black p-5 rounded-2xl shadow-lg 
                 max-w-[420px]">
       <p class="text-lg leading-relaxed">
-        Halo aku <b>Tora</b>, Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Halo aku <b>Tora</b>, Aku adalah maskot pria yang melambangkan semangat, keberanian, dan kegigihan.
       </p>
       <!-- ekor ke kiri -->
       <div class="absolute top-1/2 -left-4 transform -translate-y-1/2 
@@ -69,7 +69,7 @@
     <div class="relative bg-white text-black p-5 rounded-2xl shadow-lg 
                 max-w-[420px]">
       <p class="text-lg leading-relaxed">
-        Halo aku <b>Tira</b>, Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Halo aku <b>Tira</b>, aku adalah maskot wanita melambangkan semangat, keberanian, dan kegigihan.
       </p>
       <!-- ekor ke kanan -->
       <div class="absolute top-1/2 -right-4 transform -translate-y-1/2 
@@ -157,7 +157,7 @@
   <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg 
               max-w-[240px] sm:max-w-[340px] md:max-w-[420px]">
     <p class="text-sm sm:text-base md:text-lg leading-relaxed">
-      Halo aku <b>Tora</b>, Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Halo aku <b>Tora</b>, Aku adalah maskot yang melambangkan semangat, keberanian, dan kegigihan
     </p>
     <!-- ekor ke kiri -->
     <div class="absolute top-1/2 -left-4 transform -translate-y-1/2 
@@ -172,7 +172,7 @@
   <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg 
               max-w-[240px] sm:max-w-[340px] md:max-w-[420px]">
     <p class="text-sm sm:text-base md:text-lg leading-relaxed">
-      Halo aku <b>Tira</b>, Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Halo aku <b>Tira</b>, Aku adalah maskot wanita yang melambangkan semangat, keberanian, dan kegigihan
     </p>
     <!-- ekor ke kanan -->
     <div class="absolute top-1/2 -right-4 transform -translate-y-1/2 

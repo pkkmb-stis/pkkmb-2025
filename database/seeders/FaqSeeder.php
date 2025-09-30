@@ -36,7 +36,7 @@ class FaqSeeder extends Seeder
             "Maba/miba menggunakan sepatu kets dengan warna dominan hitam",
             "Minimal terdapat satu saku depan pada pakaian dinas harian",
             "Mengulang kegiatan PKKMB-PKBN tahun depan",
-            "Maba/miba bisa melihat informasi tentang PKKMB di web pkkmb.stis.ac.id/2024, jika terdapat pertanyaan silakan bertanya ke PK masing-masing",
+            "Maba/miba bisa melihat informasi tentang PKKMB di web pkkmb.stis.ac.id/2025, jika terdapat pertanyaan silakan bertanya ke PK masing-masing",
             "Peralatan yang diwajibkan tetap harus dibawa walaupun tidak dipakai.",
             "Atribut yang disediakan kampus meliputi Pakaian Dinas Olahraga (PDO) dan Pakaian Dinas Lapangan (PDL). Selain itu maba/miba dapat membeli perlengkapan lainnya pada dana usaha yang dikelola oleh kewirausahaan mahasiswa Politeknik Statistika STIS, ataupun mempersiapkan secara pribadi.",
             "Maba/miba menggunakan pakaian hitam putih dan batik dengan celana/rok kain di hari rabu, seperti ketentuan di buku panduan",

@@ -115,9 +115,9 @@
     $(window).resize(function() {
       var width = $(document).width();
       if (width <= 900) {
-        $('#title-visimisi').html('Visi dan Misi<br>PKKMB-PKBN 2024');
+        $('#title-visimisi').html('Visi dan Misi<br>PKKMB-PKBN 2025');
       } else {
-        $('#title-visimisi').html('Visi dan Misi PKKMB-PKBN 2024');
+        $('#title-visimisi').html('Visi dan Misi PKKMB-PKBN 2025');
       }
     });
   </script>
