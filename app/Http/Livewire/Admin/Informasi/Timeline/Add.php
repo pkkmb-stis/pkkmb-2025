@@ -8,7 +8,7 @@ use Livewire\Component;
 class Add extends Component
 {
     public $showModalAdd = false;
-    public $title, $caption, $waktuMulai, $waktuAkhir, $location, $link_gallery;
+    public $title, $caption, $waktuMulai, $waktuAkhir, $location;
 
     /**
      * resetAll input
@@ -17,7 +17,7 @@ class Add extends Component
      */
     public function resetAll()
     {
-        $this->reset('title', 'caption', 'waktuMulai', 'waktuAkhir', 'location', 'link_gallery', 'showModalAdd');
+        $this->reset('title', 'caption', 'waktuMulai', 'waktuAkhir', 'location', 'showModalAdd');
     }
 
     /**
@@ -47,7 +47,6 @@ class Add extends Component
                     'waktu_mulai' => $this->waktuMulai,
                     'waktu_akhir' => $this->waktuAkhir,
                     'location' => $this->location,
-                    'link_gallery' => $this->link_gallery,
                 ]);
                 $this->dispatchBrowserEvent('updated', ['title' => 'Berhasil menambah timeline', 'icon' => 'success', 'iconColor' => 'green']);
                 $this->emit('refreshAdminTimeline');

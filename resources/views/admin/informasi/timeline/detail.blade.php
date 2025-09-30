@@ -42,13 +42,6 @@
                         <x-error-input name="location" />
                     </div>
 
-                    <div class="mb-3">
-                        <x-label-input for="link2">Link Galeri</x-label-input>
-                        <x-input type="text" class="w-full" wire:model.defer="link_gallery" id="link2"
-                            disabled="{{ !$canUpdate }}" />
-                        <x-error-input name="link_gallery" />
-                    </div>
-
                     <div class="flex justify-end mt-4">
                         <div wire:loading.remove wire:target="update">
                             <x-button class="mr-2 uppercase bg-gray-500 rounded-3xl hover:bg-gray-600 text-md"

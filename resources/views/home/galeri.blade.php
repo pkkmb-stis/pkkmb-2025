@@ -105,18 +105,6 @@
                         </div>
                     </div>
 
-                    {{-- Tampilkan bila sudah login --}}
-                    @auth
-                        @if (!empty($t->link_gallery))
-                            <div class="flex w-full items-center justify-end">
-                                <x-button :tagA='true' href="{{ $t->link_gallery }}" target="_blank"
-                                    class="rounded-3xl bg-2025-4 text-sm hover:bg-2025-3 sm:text-base">
-                                    Selengkapnya
-                                </x-button>
-                            </div>
-                        @endif
-                    @endauth
-
                 </div> </div>
             @php
                 $i++;

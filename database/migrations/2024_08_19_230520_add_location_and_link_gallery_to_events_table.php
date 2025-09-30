@@ -15,7 +15,6 @@ class AddLocationAndLinkGalleryToEventsTable extends Migration
     {
         Schema::table('events', function (Blueprint $table) {
             $table->string('location')->nullable();
-            $table->string('link_gallery')->nullable();
         });
     }
 
@@ -28,7 +27,6 @@ class AddLocationAndLinkGalleryToEventsTable extends Migration
     {
         Schema::table('events', function (Blueprint $table) {
             $table->dropColumn('location');
-            $table->dropColumn('link_gallery');
         });
     }
 }

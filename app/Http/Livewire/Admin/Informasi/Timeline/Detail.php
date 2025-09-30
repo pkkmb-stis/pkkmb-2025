@@ -8,7 +8,7 @@ use Livewire\Component;
 class Detail extends Component
 {
     public $showModalDetail = false, $canUpdate;
-    public $title, $caption, $waktuMulai, $waktuAkhir, $location, $link_gallery, $timeline;
+    public $title, $caption, $waktuMulai, $waktuAkhir, $location, $timeline;
 
     protected $listeners = ['openDetailTimeline'];
 
@@ -38,7 +38,6 @@ class Detail extends Component
         $this->waktuMulai = $timeline->waktu_mulai;
         $this->waktuAkhir = $timeline->waktu_akhir;
         $this->location = $timeline->location;
-        $this->link_gallery = $timeline->link_gallery;
         $this->showModalDetail = true;
     }
 
@@ -67,7 +66,6 @@ class Detail extends Component
                 'waktu_mulai' => $this->waktuMulai,
                 'waktu_akhir' => $this->waktuAkhir ? $this->waktuAkhir : null,
                 'location' => $this->location,
-                'link_gallery' => $this->link_gallery,
             ]);
             $this->dispatchBrowserEvent('updated', ['title' => 'Berhasil mengubah timeline', 'icon' => 'success', 'iconColor' => 'green']);
             $this->emit('refreshAdminTimeline');
