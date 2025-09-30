@@ -24,8 +24,7 @@
         </div>
         <h2 class="text-lg font-semibold mb-3 font-poppins tracking-widest">VISI:</h2>
         <p class="text-base leading-relaxed font-nunito relative z-10">
-          “Membangun Mahasiswa yang Tangguh Serta Siap Menempuh Pendidikan
-          Untuk Menjadi Calon ASN Ahli di Bidang Statistik dan Komputasi Statistik yang BerAKHLAK”
+          “Membentuk Mahasiswa yang Aktif, Adaptif, Kolaboratif, dan Komunikatif serta Menjadi Mampu Agen Perubahan demi Mewujudkan Statistisi yang Berkualitas dan ASN yang BerAKHLAK dengan Rasa Nasionalisme yang Tinggi”
         </p>
       </div>
     </div>
@@ -38,11 +37,10 @@
         </div>
         <h2 class="text-center text-lg font-semibold mb-4 font-poppins tracking-widest relative z-10">MISI:</h2>
         <ol class="text-base leading-relaxed font-poppins list-decimal pl-4 relative z-10">
-          <li>Menumbuhkan ketaqwaan kepada Tuhan Yang Maha Esa.</li>
-          <li>Merancang kegiatan untuk memaksimalkan komunikasi...</li>
-          <li>Merancang kegiatan yang mengedepankan keaktifan...</li>
-          <li>Membentuk mahasiswa yang mempunyai budi pekerti...</li>
-          <li>bla bla bla...</li>
+          <li>Menanamkan  rasa taqwa kepada Tuhan Yang Maha Esa </li>
+          <li>Mewujudkan kegiatan yang mengedepankan keaktifan dengan komunikasi yang baik melalui pemahaman visi misi Politeknik Statistika STIS maupun BPS, serta menerapkan core value ASN, BerAKHLAK. </li>
+          <li>Mewujudkan kegiatan yang dapat membantu mahasiswa baru sebagai agen perubahan melalui kolaborasi yang terorganisir sehingga mampu beradaptasi di lingkungan perkuliahan.</li>
+          <li>Membentuk mahasiswa yang berjiwa pemimpin, berpikir kritis, serta memiliki rasa nasionalisme yang tinggi.</li>
         </ol>
       </div>
     </div>
@@ -77,8 +75,7 @@
             </div>
             <h2 class="text-2xl font-semibold mb-4 font-poppins tracking-widest">VISI:</h2>
             <p class="text-2xl leading-relaxed font-nunito relative z-10">
-              “Membangun Mahasiswa yang Tangguh Serta Siap Menempuh Pendidikan
-              Untuk Menjadi Calon ASN Ahli di Bidang Statistik dan Komputasi Statistik yang BerAKHLAK”
+              “Membentuk Mahasiswa yang Aktif, Adaptif, Kolaboratif, dan Komunikatif serta Menjadi Mampu Agen Perubahan demi Mewujudkan Statistisi yang Berkualitas dan ASN yang BerAKHLAK dengan Rasa Nasionalisme yang Tinggi”
             </p>
           </div>
         </div>
@@ -93,15 +90,10 @@
             </div>
             <h2 class="text-center text-2xl font-semibold mb-4 font-poppins tracking-widest relative z-10">MISI:</h2>
             <ol class="text-2xl leading-relaxed font-poppins list-decimal pl-6 relative z-10">
-              <li>Menumbuhkan ketaqwaan kepada Tuhan Yang Maha Esa.</li>
-              <li>Merancang kegiatan untuk memaksimalkan komunikasi...</li>
-              <li>Merancang kegiatan yang mengedepankan keaktifan...</li>
-              <li>Membentuk mahasiswa yang mempunyai budi pekerti...</li>
-              <li>bla bla bla...</li>
-              <li>bla bla bla...</li>
-              <li>bla bla bla...</li>
-              <li>bla bla bla...</li>
-              <li>bla bla bla...</li>
+              <li>Menanamkan  rasa taqwa kepada Tuhan Yang Maha Esa </li>
+              <li>Mewujudkan kegiatan yang mengedepankan keaktifan dengan komunikasi yang baik melalui pemahaman visi misi Politeknik Statistika STIS maupun BPS, serta menerapkan core value ASN, BerAKHLAK. </li>
+              <li>Mewujudkan kegiatan yang dapat membantu mahasiswa baru sebagai agen perubahan melalui kolaborasi yang terorganisir sehingga mampu beradaptasi di lingkungan perkuliahan.</li>
+              <li>Membentuk mahasiswa yang berjiwa pemimpin, berpikir kritis, serta memiliki rasa nasionalisme yang tinggi.</li>
             </ol>
           </div>
         </div>

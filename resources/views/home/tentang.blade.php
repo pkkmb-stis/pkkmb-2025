@@ -50,7 +50,7 @@
                         <img class="md:w-48 w-28 mx-auto z-10" src="{{ LOGO }}" alt="Logo PKKMB">
                     </div>
                     <p class="text-putih-100 lg:text-lg lg:px-24 md:text-base text-sm leading-tight text-center my-5">
-                        Membangun Mahasiswa yang Tangguh Serta Siap Menempuh Pendidikan Untuk Menjadi Calon ASN Ahli di Bidang Statistik dan Komputasi Statistik yang BerAKHLAK
+                        Membentuk Mahasiswa yang Aktif, Adaptif, Kolaboratif, dan Komunikatif serta Menjadi Mampu Agen Perubahan demi Mewujudkan Statistisi yang Berkualitas dan ASN yang BerAKHLAK dengan Rasa Nasionalisme yang Tinggi
                     </p>
                 </div>
 
