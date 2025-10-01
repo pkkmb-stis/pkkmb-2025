@@ -325,8 +325,8 @@
                 <table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
                         <td class="header">
-                            <a href="https://pkkmb.stis.ac.id/2024" style="display: inline-block;">
-                                <img src="https://pkkmb.stis.ac.id/2024/img/logo/logo_2024.png" class="logo"
+                            <a href="https://pkkmb.stis.ac.id/2025" style="display: inline-block;">
+                                <img src="https://pkkmb.stis.ac.id/2025/img/logo/logo_2025.png" class="logo"
                                     alt="Logo PKKMB-PKBN">
                             </a>
                         </td>
@@ -341,7 +341,7 @@
                                 <tr>
                                     <td class="content-cell">
                                         {{ Illuminate\Mail\Markdown::parse('Halo, <b>' . $name . '</b>!') }}
-                                        {{ Illuminate\Mail\Markdown::parse('Berkaitan dengan akses website <a href="https://pkkmb.stis.ac.id/2024">https://pkkmb.stis.ac.id/2024</a>, berikut kami sampaikan informasi akun milik Anda: ') }}
+                                        {{ Illuminate\Mail\Markdown::parse('Berkaitan dengan akses website <a href="https://pkkmb.stis.ac.id/2025">https://pkkmb.stis.ac.id/2025</a>, berikut kami sampaikan informasi akun milik Anda: ') }}
 
                                         {{ Illuminate\Mail\Markdown::parse('<b>Username:</b> ' . $username . '<br><b>Password:</b> ' . $password) }}
 
@@ -357,7 +357,7 @@
                                                                     role="presentation">
                                                                     <tr>
                                                                         <td>
-                                                                            <a href="https://pkkmb.stis.ac.id/2024/login"
+                                                                            <a href="https://pkkmb.stis.ac.id/2025/login"
                                                                                 target="_blank" rel="noopener"
                                                                                 style="color: white; text-decoration: none; background-color: #2d3748; padding: 10px 20px; border-radius: 5px;">
                                                                                 Login
@@ -387,7 +387,7 @@
                                             role="presentation">
                                             <tr>
                                                 <td>
-                                                    {{ Illuminate\Mail\Markdown::parse('If you are having trouble clicking the "Login" button, copy and paste the URL below into your web browser: <a href="https://pkkmb.stis.ac.id/2024/login">https://pkkmb.stis.ac.id/2024/login</a>') }}
+                                                    {{ Illuminate\Mail\Markdown::parse('If you are having trouble clicking the "Login" button, copy and paste the URL below into your web browser: <a href="https://pkkmb.stis.ac.id/2025/login">https://pkkmb.stis.ac.id/2025/login</a>') }}
                                                 </td>
                                             </tr>
                                         </table>

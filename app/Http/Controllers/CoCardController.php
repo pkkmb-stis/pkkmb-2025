@@ -13,8 +13,9 @@ class CoCardController extends Controller
     public function __construct()
     {
         $this->color = '#000000';
-        $this->font_medium = public_path('arial_narrow.TTF');
-        $this->font_bold = public_path('arial_narrow_bold.ttf');
+        $this->font_medium = public_path('Poppins-Regular.TTF');
+        $this->font_bold = public_path('Poppins-Bold.ttf');
+        $this->font_bold_belakang = public_path('arial_narrow_bold.ttf');
     }
 
     /**
@@ -67,8 +68,8 @@ class CoCardController extends Controller
         });
 
         // Nama Kelompok
-        $imgDepan->text($namaKelompok, 1063, 290.7, function ($font) {
-            $font->file($this->font_medium);
+        $imgDepan->text($namaKelompok, 1063, 340.7, function ($font) {
+            $font->file($this->font_bold);
             $font->size(100);
             $font->color($this->color);
             $font->align('center');
@@ -76,9 +77,9 @@ class CoCardController extends Controller
         });
 
         // Nama Maba
-        $imgDepan->text($namaMaba, 1063, 1255.5, function ($font) {
-            $font->file($this->font_medium);
-            $font->size(125);
+        $imgDepan->text($namaMaba, 1063, 1250.5, function ($font) {
+            $font->file($this->font_bold);
+            $font->size(115);
             $font->color($this->color);
             $font->align('center');
             $font->valign('center');
@@ -147,12 +148,11 @@ class CoCardController extends Controller
         // Kotak NIMB
         $imgBelakang->rectangle(236.4, 376.4, 1895.4, 1264.8, function ($draw) {
             $draw->background('rgb(255, 255, 255)');
-            $draw->border(12.5, 'rgb(0, 0, 0)');
         });
 
         // NIMB
         $imgBelakang->text($user->nimb, 1065.9, 820.6, function ($font) {
-            $font->file($this->font_bold);
+            $font->file($this->font_bold_belakang);
             $font->size(660);
             $font->color($this->color);
             $font->align('center');

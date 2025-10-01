@@ -16,7 +16,7 @@
         </div>
 
         <div class="mt-3">
-            <x-button class="w-full mt-4 text-lg transition bg-abu-1 hover:bg-abu-hover font-poppins">
+            <x-button class="w-full mt-4 text-lg transition bg-2025-1 hover:bg-2025-2 font-poppins">
                 Reset Password
             </x-button>
 

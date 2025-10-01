@@ -25,7 +25,7 @@
             <x-label for="password" value="{{ __('Password') }}" class="mb-2" />
             <div class="relative flex flex-row items-center">
                 <input :type="showPassword ? 'text' : 'password'" id="password"
-                    class="block w-full px-4 py-2 mt-1 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.05)] border border-transparent focus:outline-none focus:ring-2 focus:ring-brown-600 focus:border-transparent"
+                    class="block w-full px-4 py-2 mt-1 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.05)] border border-transparent focus:outline-none focus:ring-2 focus:ring-2025-1 focus:border-transparent"
                     name="password" required autocomplete="current-password">
                 <i class="absolute right-0 flex items-center pr-3 mr-2 cursor-pointer fa fa-eye"
                     x-on:click="showPassword = !showPassword" style="z-index: 1;"></i>
