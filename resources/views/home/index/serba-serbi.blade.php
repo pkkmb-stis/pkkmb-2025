@@ -1,31 +1,37 @@
-<div class="w-full rounded-b-[30px] px-0 pb-10 overflow-hidden bg-fixed bg-putih-pattern" id="serba-serbi">
-    <!-- ===== HEADER SERBA SERBI ===== -->
-    <div class="flex justify-center m-8">
-        <div class="relative w-full p-0">
-            <div class="flex items-center justify-center w-auto h-auto text-center">
-                <div class="relative flex items-center justify-center w-full px-0 py-4 text-center rounded-lg">
-                    <!-- Layer background biru tua -->
-                    <div class="absolute inset-0 bg-[#1C2E4A] rounded-lg"></div>
+<div class="w-full px-0 pb-10 overflow-hidden bg-fixed bg-cover opacity" id="serba-serbi">
+<!-- ===== HEADER SERBA SERBI ===== -->
+<div class="flex justify-center mt-6 sm:mt-10 lg:mt-12">
+  <div class="relative w-full">
+    <!-- Layer background biru tua -->
+    <div class="w-full bg-[#1C2E4A] relative flex items-center justify-center
+                h-12 sm:h-14 md:h-16 lg:h-20 xl:h-20">
 
-                    <!-- Ornamen kiri -->
-                    <img src="{{ asset('img/asset/2025/ornament serba_serbi.png') }}"
-                         alt="ornamen kiri"
-                         class="absolute left-0 object-contain w-20 -translate-y-1/2 top-1/2 md:w-28" />
+    <!-- Ornamen kiri -->
+<img src="{{ asset('img/asset/2025/ornament serba_serbi.png') }}"
+     alt="ornamen kiri"
+     class="absolute left-0 z-20 object-contain w-16 -translate-y-1/2 sm:w-20 md:w-28 lg:w-36 xl:w-40 top-1/2" />
 
-                    <!-- Ornamen kanan mirror -->
-                    <img src="{{ asset('img/asset/2025/ornament serba_serbi.png') }}"
-                         alt="ornamen kanan"
-                         class="absolute right-0 top-1/2 w-20 md:w-28 -translate-y-1/2 object-contain scale-x-[-1]" />
+<!-- Ornamen kanan -->
+<img src="{{ asset('img/asset/2025/ornament serba_serbi.png') }}"
+     alt="ornamen kanan"
+     class="absolute right-0 object-contain top-1/2 -translate-y-1/2 scale-x-[-1]
+            w-16 sm:w-20 md:w-28 lg:w-36 xl:w-40 z-20" />
 
-                    <!-- Judul di tengah -->
-                    <div class="relative bg-[#8B2F4B] text-[#F9C46B] font-bohemianSoul px-20 sm:px-24 md:px-40 lg:px-64 py-4 text-3xl md:text-4xl lg:text-5xl rounded-lg shadow-lg">
-                        Serba - Serbi
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Judul di tengah -->
+<div class="relative bg-[#8B2F4B] text-[#F9C46B] font-bohemianSoul
+            flex items-center justify-center text-center
+            h-full w-8/12 sm:w-10/12 md:w-8/12 lg:w-9/12
+            text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl
+            rounded-lg shadow-lg px-3 sm:px-6 z-10">
+  Serba - Serbi
+</div>
+
     </div>
-    <!-- ===== END HEADER ===== -->
+  </div>
+</div>
+
+
+<!-- ===== END HEADER ===== -->
 
     <!-- ===== VIDEO CAROUSEL ===== -->
     <div class="flex items-center justify-center gap-4 bg-top bg-repeat-x bg-motif1 md:gap-8">
