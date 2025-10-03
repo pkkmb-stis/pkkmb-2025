@@ -1,101 +1,131 @@
-<div class="bg-kuning-pattern" style="border-radius: 30px 30px 30px 30px;">
-    <div class="static px-0 pb-10 mt-5 bg-bottom bg-repeat-x" id="serba-serbi" style="border-radius: 30px 30px 30px 30px;">
+<!-- ===== HEADER SERBA SERBI ===== -->
+<div class="flex justify-center mt-6 mb-10 sm:mt-10 lg:mt-12">
+  <div class="relative w-full">
+    <!-- Layer background biru tua -->
+    <div class="w-full bg-[#1C2E4A] relative flex items-center justify-center
+                h-12 sm:h-14 md:h-16 lg:h-20 xl:h-20">
 
-        <div class="flex justify-center m-8">
-            <div class="relative w-full p-0">
-                <div class="flex items-center justify-center w-auto h-auto pl-3 mt-8"
-                    style="border-radius: 30px 30px 0px 0px; background: #8B4513">
-                    <div class="flex items-center justify-center w-full h-auto text-center">
-                        <div class="flex items-center justify-center w-full px-10 py-1 text-3xl font-normal leading-normal text-center text-white lg:px-40 md:px-28 sm:px-16 bg-coklat3-pattern lg:text-5xl md:text-4xl font-bohemianSoul"
-                            style="border-radius: 30px 30px 0px 0px">
-                            Lini Masa
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <!-- Ornamen kiri -->
+      <img src="{{ asset('img/asset/2025/ornament serba_serbi.png') }}"
+          alt="ornamen kiri"
+          class="absolute left-0 z-20 object-contain w-16 -translate-y-1/2 sm:w-20 md:w-28 lg:w-36 xl:w-40 top-1/2" />
 
-        <!-- Kotak Berita -->
-        <div class="lg:pl-16 lg:pr-16 pb-14">
+      <!-- Ornamen kanan -->
+      <img src="{{ asset('img/asset/2025/ornament serba_serbi.png') }}"
+          alt="ornamen kanan"
+          class="absolute right-0 object-contain top-1/2 -translate-y-1/2 scale-x-[-1]
+                 w-16 sm:w-20 md:w-28 lg:w-36 xl:w-40 z-20" />
 
-            <div class="owl-carousel berita-carousel lg:pt-12">
-                @foreach ($berita as $b)
-                    <div class="shadow-2xl overflow-hidden z-10 relative h-[28rem]"
-                        style="border-radius: 2.5rem 2.5rem 0rem 0rem;">
-                        <div class="block h-full">
-                            <div class="overflow-hidden w-full h-[60%]"
-                                style="border-radius: 2.5rem 2.5rem 0rem 0rem; border: 3px solid #3F2A1D; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);">
-                                <img class="z-0 block object-cover w-full h-full" src="{{ storage($b->thumbnails) }}"
-                                    alt="Foto Berita">
-                            </div>
-                            <div class="bg-black flex justify-center bg-opacity-60 items-end h-[40%] ">
-                                <div
-                                    class="z-10  w-3/4 h-full md:w-[85%] w-[95%] overflow-hidden bg-gray-50 rounded-lg">
-                                    <div class="top-0 w-full pt-2 pl-4 pr-5 h-11" style="background: #3F2A1D;">
-                                        <p class="text-2xl font-bold leading-normal font-nunito"
-                                            style="color: #ECECEC;">
-                                            {{ strlen(strip_tags($b->judul)) > 25 ? substr_replace(preg_replace('/\s|&nbsp;/', ' ', strip_tags($b->judul)), '...', 25) : $b->judul }}
-                                        </p>
-                                    </div>
-                                    <p class="pt-2 pl-4 pr-5 text-sm font-medium leading-tight font-nunito"
-                                        style="color: #434343;">
-                                        {{ substr_replace(preg_replace('/\s|&nbsp;/', ' ', strip_tags($b->content)), '...', 100) }}
-                                    </p>
+      <!-- Judul di tengah -->
+      <div class="relative bg-[#8B2F4B] text-[#F9C46B] font-bohemianSoul
+                  flex items-center justify-center text-center
+                  h-full w-8/12 sm:w-10/12 md:w-8/12 lg:w-9/12
+                  text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl
+                  rounded-lg shadow-lg px-3 sm:px-6 z-10">
+        Lini Masa
+      </div>
 
-                                    <div class="flex justify-end pr-5 mt-3 mb-4">
-                                        <button type="button" onclick="toggleModal('{{ $b->id }}')"
-                                            class="px-8 py-2 text-base font-semibold transition-all duration-500 border rounded-full hover:bg-2025-1 hover:text-gray-50 text-coklat-1 font-poppins"
-                                            style="width: 6.4375rem; height: 2.4375rem; border-color:#3F2A1D; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);">
-                                            Baca
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
     </div>
-
-    @livewire('home.modal-berita')
-
+  </div>
 </div>
 
 
+
+<div class="bg-repeat bg-linimasa-gradient bg-blend-overlay">
+    <!-- ORNAMEN GARIS CEMPAKA BIRU -->
+<div class="w-full">
+    <img src="{{ asset('img/asset/2025/garis cempaka biru.png') }}"
+    alt="ornamen garis"
+    class="object-cover w-full">
+
+</div>
+  <div id="serba-serbi" class="px-0 pb-10 mt-5 rounded-[30px] bg-repeat-x bg-merah">
+
+    <!-- Kotak Berita (Carousel) -->
+    <div class="pt-4 pb-8 lg:pt-8 lg:px-16">
+      <div class="owl-carousel berita-carousel">
+
+        @foreach ($berita as $b)
+          <div class="relative overflow-hidden shadow-xl
+                      w-[90%] sm:w-[20rem] md:w-[22rem] lg:w-[26rem]
+                      rounded-[1.5rem] border-[2px] border-[#F9C46B] bg-white mx-auto
+                      flex flex-col h-full">
+
+            <!-- FOTO BERITA -->
+            <div class="w-full overflow-hidden rounded-t-[1.5rem]">
+              <img class="object-cover w-full h-40 sm:h-48 md:h-56 lg:h-60"
+                   src="{{ storage($b->thumbnails) }}"
+                   alt="Foto Berita">
+            </div>
+
+            <!-- KONTEN CARD -->
+            <div class="flex flex-col justify-between bg-gray-50 rounded-b-[1.5rem] flex-1">
+
+              <!-- JUDUL -->
+              <div class="flex items-center w-full px-4 py-2 bg-[#F9C46B]">
+                <p class="font-nunito font-bold text-[#1E2A4A]
+                          text-sm sm:text-base md:text-lg lg:text-xl truncate">
+                  > {{ strlen(strip_tags($b->judul)) > 25
+                      ? substr_replace(preg_replace('/\s|&nbsp;/', ' ', strip_tags($b->judul)), '...', 25)
+                      : $b->judul }}
+                </p>
+              </div>
+
+              <!-- DESKRIPSI -->
+              <p class="flex-1 px-4 pt-2 text-xs font-medium leading-tight text-gray-700 sm:text-sm md:text-base font-nunito">
+                {{ substr_replace(preg_replace('/\s|&nbsp;/', ' ', strip_tags($b->content)), '...', 100) }}
+              </p>
+
+              <!-- BUTTON BACA -->
+              <div class="flex justify-end px-4 pb-4 mt-3">
+                <button type="button" onclick="toggleModal('{{ $b->id }}')"
+                  class="px-6 py-2 text-sm font-semibold text-[#1E2A4A] bg-[#F9C46B]
+                         rounded-full shadow-md hover:bg-[#E7B556] transition">
+                  Baca
+                </button>
+              </div>
+
+            </div>
+          </div>
+        @endforeach
+
+      </div>
+    </div>
+
+  </div>
+  @livewire('home.modal-berita')
+</div>
+
 @push('css')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 @endpush
 
-
 @push('script-bottom')
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script type="text/javascript">
-        function toggleModal(id) {
-            Livewire.emit('openModalBeritaHarian', `${id}`)
-        }
-        $(document).ready(function() {
-            $(".berita-carousel").owlCarousel({
-                loop: true,
-                nav: false,
-                center: {{ $berita->count() == 1 ? 'true' : 'false' }},
-                margin: 26,
-                items: {{ $berita->count() }},
-                dotsClass: "custom-berita-dots",
-                dotClass: "custom-berita-dot",
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 2.5
-                    }
-                },
-                navText: [
-                    '<div class="custom-nav-prev"></div>',
-                    '<div class="custom-nav-next"></div>'
-                ]
-            });
-        });
-    </script>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script type="text/javascript">
+      function toggleModal(id) {
+          Livewire.emit('openModalBeritaHarian', `${id}`)
+      }
+      $(document).ready(function() {
+          $(".berita-carousel").owlCarousel({
+              loop: true,
+              nav: false,
+              center: {{ $berita->count() == 1 ? 'true' : 'false' }},
+              margin: 20,
+              dotsClass: "custom-berita-dots",
+              dotClass: "custom-berita-dot",
+              autoplay: true,
+              autoplayTimeout: 4000,
+              autoplayHoverPause: true,
+              smartSpeed: 800,
+              responsive: {
+                  0: { items: 1, margin: 10 },
+                  480: { items: 1.2, margin: 14 },
+                  640: { items: 1.5, margin: 18 },
+                  768: { items: 2, margin: 20 },
+                  1024: { items: 2.5 }
+              }
+          });
+      });
+  </script>
 @endpush

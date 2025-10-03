@@ -1,31 +1,37 @@
 kelompok,nama_kelompok,nama_pk
-1,Kalkulus,Adrian Januartha
-2,Aljabar Linier,Adrian Januartha
-3,"Metode Statistika ",Ahmad Excell Ramadhan
-4,Metode Numerik,Ahmad Excell Ramadhan
-5,Pengantar Teknologi Informasi,Berniko Surya Wibawa
-6,Algoritma dan Pemograman,Berniko Surya Wibawa
-7,Pemograman Berbasis Web,Bunga Musva Cotva
-8,Pemograman Berbasis Objek,Bunga Musva Cotva
-9,Komputasi Statistik,Fatikha Nuraziza
-10,Matematika Diskrit,Fatikha Nuraziza
-11,Metode Penarikan Sampel,Helmi Handi Pratama
-12,Statistika Matematika,Helmi Handi Pratama
-13,Official Statistics,Janitra Hayu Pramestya
-14,Pengantar Model Persamaan Struktural,Janitra Hayu Pramestya
-15,Pengantar Demografi,Kadek Sri Nagitha Suaryanti
-16,Pengantar Ekonomi,Kadek Sri Nagitha Suaryanti
-17,Analisis Regresi,Marsya Audia Cholisah
-18,Eksplorasi dan Visualisasi Data,Marsya Audia Cholisah
-19,Basis Data,Mohammad Zidane Akbar Satriaji
-20,Sistem Informasi Geografis,Mohammad Zidane Akbar Satriaji
-21,Pengantar Sains Data,Najwa Alya Fauziah
-22,Statistik Neraca Nasional,Najwa Alya Fauziah
-23,Analisis Data Kategorik,Rafi Ariq Hakim
-24,Analisis Peubah Ganda,Rafi Ariq Hakim
-25,Analisis Runtun Waktu,Rayhan Ardi Fardian
-26,Teknik Demografi,Rayhan Ardi Fardian
-27,Metode Survei,Uswatun NIsa Ritonga
-28,Data Mining dan Big Data,Uswatun NIsa Ritonga
-29,Analisis Data Spasial,Zahra Khairunnisa
-30,Analisis Data Kependudukan,Zahra Khairunnisa
+1,Gottfried Achenwall,Zahra Khairunnisa
+2,John Sinclair,Zahra Khairunnisa
+3,Francis Galton,Helmi Handi Pratama
+4,Karl Pearson,Helmi Handi Pratama
+5,William Sealy Gosset,Kukuh Bagus Purnomo Sidik
+6,Ronald Fisher,Kukuh Bagus Purnomo Sidik
+7,Prasanta Chandra Mahalanobis,Imam Mansyur
+8,Ragnar Frich,Imam Mansyur
+9,Bradley Efron,Anindya Zahra Damayanti
+10,Blaise Pascal,Anindya Zahra Damayanti
+11,Carl Gauss,Sanda Yulianti
+12,Gertrude Cox,Sanda Yulianti
+13,Charles Spearman,Kadek Sri Nagitha Suaryanti 
+14,Pafnuty Chebyshev,Kadek Sri Nagitha Suaryanti 
+15,Isaac Newton,Ariella Syifa Maheswari
+16,Aleksandr Lyapunov,Ariella Syifa Maheswari
+17,Abraham De Moivre,Nikolaus Agape
+18,Adolphe Quetelet,Nikolaus Agape
+19,Florence Nightingale,Indah Dwi Yuniati
+20,John Tukey,Indah Dwi Yuniati
+21,George Dantzig,Difya Ayu Meisya Nurjanah
+22,Thomas Bayes,Difya Ayu Meisya Nurjanah
+23,John Graunt,Malika Dzikra Kalila Ramadhani
+24,William Farr,Malika Dzikra Kalila Ramadhani
+25,Charles Babbage,Saveria Risanti Hutasoit
+26,Alan Turing,Saveria Risanti Hutasoit
+27,Konrad Zuse,Mohammad Zidane Akbar Satriaji
+28,Grace Hopper,Mohammad Zidane Akbar Satriaji
+29,Ada Lovelace,Ashy Sulfidah
+30,Patrict Naughton,Ashy Sulfidah
+31,James Gosling,Grace Sovia Ginting
+32,Brendan Eich,Grace Sovia Ginting
+33,John von Neumann,Najwa Alya Fauziah
+34,Dennis Richie,Najwa Alya Fauziah
+35,Howard Aiken,Ego Stiven Rafliza
+36,Berners-Lee,Ego Stiven Rafliza

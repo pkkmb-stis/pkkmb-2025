@@ -41,7 +41,7 @@
             </label>
         </div>
 
-       <div class="flex flex-col items-center mt-3">
+        <div class="flex flex-col items-center mt-3">
         <x-button class="inline-flex items-center justify-center px-8 py-3 text-lg font-bold text-white transition-all rounded-full shadow-lg bg-gradient-to-b from-pink-500 to-indigo-900 hover:brightness-110 hover:scale-105">
         Masuk
     </x-button>

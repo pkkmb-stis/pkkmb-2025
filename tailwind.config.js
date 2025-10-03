@@ -23,7 +23,12 @@ export default {
                 "profil-left": "url('@/images/pattern/2025/profil-info.png')",
                 "profil-pattern": "url('@/images/pattern/2025/patternprofil.png')",
                 "login-kanan": "url('@/images/pattern/2025/login-kanan.png')",
+                "login-mobile": "url('@/images/pattern/2025/login-mobile.png')",
                 "galeri": "url('@/images/pattern/2025/pattern galeri.png')",
+               "linimasa-gradient": "linear-gradient(to bottom, rgba(139,47,75,0.9), rgba(139,47,75,0.9), rgba(30,42,74,0.95)), url('@/images/pattern/2025/motif linimasa.png')",
+
+
+
             }),
             fontFamily: {
                 bhinneka: ["Bhinneka", ...defaultTheme.fontFamily.sans],
