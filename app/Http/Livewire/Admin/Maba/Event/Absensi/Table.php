@@ -86,7 +86,12 @@ class Table extends Component
             $query = User::join('events_user AS eu', 'eu.user_id', '=', 'users.id')
                 ->where('eu.event_id', $this->event->id)
                 ->orderBy('eu.created_at', 'desc')
-                ->select('users.*', 'eu.status as attendance_status', 'eu.created_at as attendance_created_at');
+                ->select('users.*', 
+                        'eu.status as attendance_status', 
+                        'eu.created_at as attendance_created_at',
+                        'eu.link as link',
+                        'eu.user_id as user_id',
+                        'eu.event_id as event_id');
 
             if ($this->statusAbsensi != -1)
                 $query = $query->where('eu.status', $this->statusAbsensi);
