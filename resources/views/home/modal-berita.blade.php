@@ -33,13 +33,16 @@
                 </x-slot>
 
                 <x-slot name="closeButton">
-                    <div x-on:click="showModalBerita = false">
+                    {{-- DIUBAH: Menggunakan wire:click untuk memanggil fungsi di backend --}}
+                    <div wire:click="closeBerita" class="cursor-pointer">
                         <x-close-button />
                     </div>
                 </x-slot>
 
-                <div class="ql-editor text-gray-50">{{ strip_tags($berita->content) }}</div>
-
+                {{-- DISARANKAN: Menggunakan {!! !!} untuk merender HTML dari editor --}}
+                <div class="ql-editor">
+                    {!! $berita->content !!}
+                </div>
 
             </x-modal.berita>
         </div>
@@ -50,6 +53,7 @@
     <style>
         .ql-editor {
             color: white;
+            /* Anda mungkin perlu menambahkan gaya lain dari quill.snow.css di sini jika diperlukan */
         }
     </style>
 @endpush
