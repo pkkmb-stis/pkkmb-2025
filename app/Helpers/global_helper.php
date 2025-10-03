@@ -554,7 +554,7 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Koordinator'
             ],
             [
-                'nama' => 'Ahmad Rafi\'izra Nugraha',
+                'nama' => 'Ahmad Rafiizra Nugraha',
                 'foto' => 'img/ppo/ppm/Ahmad Rafiizra Nugraha.png',
                 'jabatan' => 'Anggota'
             ],
@@ -579,8 +579,8 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Reva Auliya Qurrota A\'yun',
-                'foto' => 'img/ppo/ppm/Reva Auliya Qurrota A\'yun.png',
+                'nama' => 'Reva Auliya Qurrota Ayun',
+                'foto' => 'img/ppo/ppm/Reva Auliya Qurrota Ayun.png',
                 'jabatan' => 'Anggota'
             ],
             [
