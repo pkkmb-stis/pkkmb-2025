@@ -9,14 +9,15 @@
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
 
-        <div class="block">
-            <x-label for="username" value="No Ujian / Username" class="mb-2" />
-            <x-input id="username" class="block w-full mt-1" type="text" name="username" :value="old('username')"
-                required autofocus />
+        <div>
+            <x-label for="username" value="No Ujian / Username" class="mb-2 font-poppins" />
+            <input type="text" :value="old('username')"
+                class="block w-full px-4 py-2 mt-1 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.05)] border border-transparent focus:outline-none focus:ring-2 focus:ring-brown-600 focus:border-transparent"
+                name="username" required autofocus>
         </div>
 
-        <div class="mt-3">
-            <x-button class="w-full mt-4 text-lg transition bg-gradient-to-b from-pink-500 to-indigo-900 hover:brightness-110 hover:scale-105 font-poppins">
+        <div class="flex flex-col items-center mt-4">
+            <x-button class="inline-flex items-center justify-center px-8 py-3 text-lg font-bold text-white transition-all rounded-full shadow-lg bg-gradient-to-b from-pink-500 to-indigo-900 hover:brightness-110 hover:scale-105 font-poppins">
                 Reset Password
             </x-button>
 
