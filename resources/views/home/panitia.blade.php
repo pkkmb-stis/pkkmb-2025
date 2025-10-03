@@ -45,9 +45,19 @@
             opacity: 0.6;
             z-index: 2;
         }
-        .dosen-motif-top-right { top: 25px; right: 25px; transform: rotate(15deg); }
-        .dosen-motif-bottom-left { bottom: 25px; left: 25px; transform: rotate(-15deg); }
-
+        .dosen-backdrop-pattern {
+            position: absolute;
+            top: 60px;                /* mulai agak turun setelah header */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            height: auto;             
+            min-height: 600px;        
+            object-fit: cover;        
+            object-position: top;     
+            z-index: 0;               
+        }
         /* =========================
            TITLE CONTAINER
         ========================= */
@@ -66,8 +76,8 @@
         .preview-cards-stack,
         .dosen-preview-stack {
             position: relative;
-            width: 550px; /* diperbesar agar proporsional */
-            height: 260px; /* lebih tinggi agar card besar muat */
+            width: 650px; /* diperbesar agar proporsional */
+            height: 320px; /* lebih tinggi agar card besar muat */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -81,17 +91,17 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            width: 200px; /* sebelumnya 130px */
-            height: 230px; /* sebelumnya 150px */
+            width: 260px; 
+            height: 320px; 
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            font-size: 1.3rem; /* sebelumnya 0.9rem */
+            font-size: 1.6rem; 
             font-weight: bold;
             filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
-            border-radius: 18px;
+            border-radius: 20px;
         }
         .stacked-card.active, .dosen-preview-card.active {
             transform: translateX(0) scale(1.2) rotate(0deg);
@@ -197,11 +207,11 @@
         .ppo-member-card img,
         .dosen-member-card img {
             position: absolute;
-            top: 35px; /* turunkan posisi foto */
+            top: 30px; /* turunkan posisi foto */
             left: 50%;
             transform: translateX(-50%);
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             border: 3px solid #fff;
             object-fit: cover;
@@ -263,17 +273,19 @@
             padding: 12px;
             transition: transform 0.3s ease;
             z-index: 25;
+            height: 60px;
         }
 
         .carousel-chevron:hover,
         .dosen-carousel-chevron:hover {
             transform: scale(1.1);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
 
         .carousel-chevron img,
         .dosen-carousel-chevron img {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 60px;
         }
 
         /* =========================
@@ -533,24 +545,16 @@
     class="absolute left-0 top-[-310px] w-full object-cover z-[0]"
   >
 
-  <!-- Pattern backdrop dosen (di tengah) -->
-  <img 
+    <img 
     src="{{ asset('img/asset/2025/Pattern Backdrop Dosen.png') }}" 
     alt="Backdrop Dosen"
-    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] z-[1]"
-  >
-</div>
-        
-        {{-- Motif untuk dosen --}}
-
-        <img src="{{ asset('img/asset/2025/motif pt1.png') }}" class="dosen-motif-top-right" alt="Motif Top Right">
-        <img src="{{ asset('img/asset/2025/motif pt1.png') }}" class="dosen-motif-bottom-left" alt="Motif Bottom Left">
-        
+    class="dosen-backdrop-pattern"
+    />
+</div>        
         {{-- Dosen Title --}}
         <div class="dosen-title-container">
             <img src="{{ asset('img/asset/2025/Title Card Dosen.png') }}" alt="Judul Dosen Tendik" class="w-80 md:w-96 mx-auto">
         </div>
-
         {{-- Main Dosen Content --}}
         <div class="dosen-content">
             {{-- Preview Cards Stack --}}
@@ -721,9 +725,37 @@
                         members: @json($penanggung_jawab ?? [])
                     },
                     {
-                        name: 'Pengawas',
-                        members: @json($pengawas ?? [])
-                    }
+                        name: 'BPH Dosen',
+                        members: @json($bph_dosen ?? [])
+                    },
+                    {
+                        name: 'Acara',
+                        members: @json($acara_dosen ?? [])
+                    },
+                                        {
+                        name: 'LAPK',
+                        members: @json($lapk_dosen ?? [])
+                    },
+                    {
+                        name: 'HPD',
+                        members: @json($hpd_dosen ?? [])
+                    },
+                    {
+                        name: 'Gramti',
+                        members: @json($gramti_dosen ?? [])
+                    },
+                    {
+                        name: 'Tibum',
+                        members: @json($tibum_dosen ?? [])
+                    },
+                    {
+                        name: 'PPM',
+                        members: @json($ppm_dosen ?? [])
+                    },
+                    {
+                        name: 'Umum',
+                        members: @json($umum_dosen ?? [])
+                    },
                 ],
                 get visibleDosenDivisions() {
                     const divisions = this.divisions;
