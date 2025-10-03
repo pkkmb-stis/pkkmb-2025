@@ -32,17 +32,18 @@
 
 
 <div class="bg-repeat bg-linimasa-gradient bg-blend-overlay">
-    <!-- ORNAMEN GARIS CEMPAKA BIRU -->
-<div class="w-full">
+  <!-- ORNAMEN GARIS CEMPAKA BIRU -->
+  <div class="w-full">
     <img src="{{ asset('img/asset/2025/garis cempaka biru.png') }}"
     alt="ornamen garis"
     class="object-cover w-full">
+  </div>
 
-</div>
-  <div id="serba-serbi" class="px-0 pb-10 mt-5 rounded-[30px] bg-repeat-x bg-merah">
+  <!-- Tambahkan padding agar tidak mepet di HP -->
+  <div id="serba-serbi" class="px-4 sm:px-6 md:px-10 lg:px-16 pb-10 mt-5 rounded-[30px] bg-repeat-x bg-merah">
 
     <!-- Kotak Berita (Carousel) -->
-    <div class="pt-4 pb-8 lg:pt-8 lg:px-16">
+    <div class="relative pt-4 pb-8 lg:pt-8"> <!-- relative penting untuk panah -->
       <div class="owl-carousel berita-carousel">
 
         @foreach ($berita as $b)
@@ -72,7 +73,8 @@
               </div>
 
               <!-- DESKRIPSI -->
-              <p class="flex-1 px-4 pt-2 text-xs font-medium leading-tight text-gray-700 sm:text-sm md:text-base font-nunito">
+              <p class="flex-1 px-4 pt-2 text-xs font-medium leading-tight text-gray-700
+                         sm:text-sm md:text-base font-nunito min-h-[60px]">
                 {{ substr_replace(preg_replace('/\s|&nbsp;/', ' ', strip_tags($b->content)), '...', 100) }}
               </p>
 
@@ -80,7 +82,7 @@
               <div class="flex justify-end px-4 pb-4 mt-3">
                 <button type="button" onclick="toggleModal('{{ $b->id }}')"
                   class="px-6 py-2 text-sm font-semibold text-[#1E2A4A] bg-[#F9C46B]
-                         rounded-full shadow-md hover:bg-[#E7B556] transition">
+                         rounded-full shadow-md hover:bg-[#E7B556] transition font-poppins">
                   Baca
                 </button>
               </div>
@@ -98,34 +100,112 @@
 
 @push('css')
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+  <style>
+    .berita-carousel .owl-stage {
+      display: flex !important;
+      align-items: stretch !important;
+    }
+    .berita-carousel .owl-item {
+      display: flex;
+      padding: 6px; /* jarak antar card */
+    }
+    .berita-carousel .owl-item > div {
+      display: flex;
+      flex: 1 1 auto;
+    }
+
+/* ==== STYLE PANAH ==== */
+/* ==== STYLE PANAH BERITA (sama dengan galeri) ==== */
+
+/* Default (PC/Laptop) panah di kanan-kiri luar */
+.berita-carousel {
+  position: relative;
+}
+
+.berita-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: -60px;    /* keluar dari kiri */
+  right: -60px;   /* keluar dari kanan */
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% + 120px);  /* ruang tambahan biar keluar */
+  pointer-events: none;
+  z-index: 50;
+}
+
+.berita-carousel .owl-nav button {
+  background: #F9C46B !important;   /* kuning */
+  color: #1E2A4A !important;        /* panah biru tua */
+  font-size: 1.5rem !important;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.berita-carousel .owl-nav button:hover {
+  background: #E7B556 !important;   /* hover lebih gelap */
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+/* ==== Versi HP: panah di bawah tengah ==== */
+@media (max-width: 640px) {
+  .berita-carousel .owl-nav {
+    position: relative;
+    top: auto;
+    bottom: -20px;  /* kasih jarak di bawah carousel */
+    left: auto;
+    right: auto;
+    transform: none;
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .berita-carousel .owl-nav button {
+    font-size: 1.2rem !important;
+    width: 38px;
+    height: 38px;
+  }
+}
+  </style>
 @endpush
+
 
 @push('script-bottom')
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
   <script type="text/javascript">
-      function toggleModal(id) {
-          Livewire.emit('openModalBeritaHarian', `${id}`)
+       $(".berita-carousel").owlCarousel({
+      loop: true,
+      nav: {{ $berita->count() > 1 ? 'true' : 'false' }},
+      navText: ['‹','›'], // panah kiri kanan
+      center: {{ $berita->count() == 1 ? 'true' : 'false' }},
+      dots: false, // ⬅️ ini buat hapus bulat-bulat
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      smartSpeed: 800,
+      responsive: {
+          0: { items: 1, margin: 16 },
+          480: { items: 1.2, margin: 18 },
+          640: { items: 1.5, margin: 20 },
+          768: { items: 2, margin: 24 },
+          1024: { items: 2.5, margin: 28 }
       }
-      $(document).ready(function() {
-          $(".berita-carousel").owlCarousel({
-              loop: true,
-              nav: false,
-              center: {{ $berita->count() == 1 ? 'true' : 'false' }},
-              margin: 20,
-              dotsClass: "custom-berita-dots",
-              dotClass: "custom-berita-dot",
-              autoplay: true,
-              autoplayTimeout: 4000,
-              autoplayHoverPause: true,
-              smartSpeed: 800,
-              responsive: {
-                  0: { items: 1, margin: 10 },
-                  480: { items: 1.2, margin: 14 },
-                  640: { items: 1.5, margin: 18 },
-                  768: { items: 2, margin: 20 },
-                  1024: { items: 2.5 }
-              }
-          });
-      });
+  });
   </script>
 @endpush
+<!-- ===== END HEADER SERBA SERBI ===== -->
