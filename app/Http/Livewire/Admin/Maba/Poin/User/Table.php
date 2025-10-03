@@ -10,11 +10,13 @@ use Livewire\WithPagination;
 class Table extends Component
 {
     use WithPagination;
+    
     public $tanggal_poin_user;
     public $selected_day_user;
     public $search;
-    public $jenisUser = "semua"; // maba dan panitia
+    public $jenisUser = "semua";
     public $tipePoin = -1;
+    public $filterDateMode = 'dropdown';
     protected $listeners = ['reloadTablePoinUser' => '$refresh'];
 
     public function updating($name, $value)
@@ -26,15 +28,13 @@ class Table extends Component
     {
         $tanggal_filter = null;
 
-        if ($this->selected_day_user) {
+        if ($this->filterDateMode === 'dropdown' && $this->selected_day_user) {
             $dayDate = Day::getDateByName($this->selected_day_user);
             if ($dayDate) {
                 $tanggal_filter = $dayDate->format('Y-m-d');
             }
-        }
-
-        elseif ($this->tanggal_poin_user) { 
-        $tanggal_filter = $this->tanggal_poin_user;
+        } elseif ($this->filterDateMode === 'manual' && $this->tanggal_poin_user) {
+            $tanggal_filter = $this->tanggal_poin_user;
         }
 
         $search = '%' . $this->search . '%';
@@ -44,26 +44,18 @@ class Table extends Component
         ]);
     }
 
-    /**
-     * Reset filter method
-     */
     public function resetFilter()
     {
-        $this->selected_day_user = null;
-        $this->tanggal_poin_user = null;
+        $this->reset('selected_day_user', 'tanggal_poin_user');
     }
-
 
     private function getHasil($date, $search)
     {
         $hasil = User::poinUser($this->tipePoin);
 
-        $hasil->where(function ($query) use ($date, $search) {
-            if ($date) {
-                $query->where('terakhir_update', 'like', $date . '%');
-            }
-            
-            $query->where('users.name', 'like', '%' . $search . '%');
+        $hasil->where(function ($query) use ($search) {
+            // Filter non-agregat tetap di 'where'
+            $query->where('users.name', 'like', $search);
 
             if ($this->jenisUser == 'panitia') {
                 $query->role(ROLE_PANITIA);
@@ -78,6 +70,10 @@ class Table extends Component
             }
         });
 
+        // Pindahkan kondisi filter tanggal ke 'having'
+        if ($date) {
+            $hasil->having('terakhir_update', 'like', $date . '%');
+        }
 
         return $hasil->paginate(NUMBER_OF_PAGINATION);
     }
