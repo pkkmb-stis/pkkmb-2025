@@ -11,8 +11,7 @@
     <!-- GALERI FOTO -->
     <div class="px-8 font-archivo sm:px-8 md:px-12 xl:px-16">
 
-<div class="grid grid-cols-2 mx-4 mt-6 mb-8 gap-x-0 font-bohemianSoul sm:mb-10 lg:grid-cols-12">
-
+        <div class="grid w-full px-8 pt-24 pb-4 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16">
         {{-- Header --}}
             <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
                 <img src="{{ asset('img/maskot/2025/maskot 1.png') }}" alt="wave" class="z-10 w-14 sm:w-20 md:w-24 lg:w-28 mt-8 sm:mt-[34px]sm:mt-[34px] lg:-translate-x-4 transform translate-y-[-10px]">

@@ -20,7 +20,7 @@
         <div class="flex flex-col items-center text-center">
             <h1 class="font-caruban text-[#F4C542] tracking-wide
                        text-lg sm:text-2xl md:text-4xl lg:text-5xl leading-tight">
-                Galeri PKKMB PKBN 2025
+                Galeri PKKMB 2025
             </h1>
         </div>
 
@@ -86,7 +86,6 @@
 
 
 
-<!-- ===================== SCRIPT ===================== -->
 @push('script-bottom')
 <script>
 $(document).ready(function () {
@@ -98,7 +97,11 @@ $(document).ready(function () {
         autoplayHoverPause: true,
         items: 1,
         dots: true,
-        nav: false, // 🔴 panah dihapus
+        nav: true,
+        navText: [
+            '<span class="custom-prev">&#10094;</span>',
+            '<span class="custom-next">&#10095;</span>'
+        ],
         responsive: {
             0: { items: 1 },
             768: { items: 1 },
@@ -109,20 +112,67 @@ $(document).ready(function () {
 </script>
 
 <style>
-/* Custom posisi tombol nav (tidak diperlukan lagi jika nav:false) */
-/* Kalau mau jaga-jaga biar tetap bersih bisa dipaksa hilang */
-.owl-carousel .owl-nav {
-    display: none !important;
+
+/* ==== PC/Laptop: Panah di kanan-kiri luar galeri ==== */
+.galeri-carousel {
+  position: relative;
 }
 
-/* Tambahan biar strip biru aman di HP */
-@media (max-width: 640px) {
-    .strip-biru h1 {
-        font-size: 1.2rem;
-    }
-    .strip-biru img {
-        max-width: 22px;
-    }
+.galeri-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: -60px;   /* panah kiri keluar */
+  right: -60px;  /* panah kanan keluar */
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% + 120px); /* kasih ruang biar panah di luar */
+  pointer-events: none; /* biar nggak nutupin layout */
 }
+
+.galeri-carousel .owl-nav button {
+  background: #F9C46B !important;
+  color: #1E2A4A !important;
+  font-size: 1.5rem !important;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  pointer-events: auto; /* aktif klik */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeri-carousel .owl-nav button:hover {
+  background: #E7B556 !important;
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+/* ==== HP/Tablet kecil: Panah tetap di bawah tengah ==== */
+@media (max-width: 768px) {
+  .galeri-carousel .owl-nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .galeri-carousel .owl-nav button {
+    font-size: 1.2rem !important;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+
 </style>
 @endpush
