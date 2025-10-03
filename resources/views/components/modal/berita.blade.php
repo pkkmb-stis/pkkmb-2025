@@ -4,7 +4,7 @@
         <div class="w-full pb-5 border-b-4 border-solid rounded-t" style="border-color:#8B4513">
             <div class="z-0 flex flex-row items-center w-full">
                 <div class="w-full">
-                    <div class="relative flex flex-row w-full">
+                    <div class="relative flex flex-row w-full mt-7 md:mt-10 ">
                         <div class="w-full py-4 rounded-lg bg-background1-pattern md:px-12">
                             <p class="text-base font-bold text-center font-bachelor md:text-xl lg:text-2xl"
                                 style="color: #ECECEC;">

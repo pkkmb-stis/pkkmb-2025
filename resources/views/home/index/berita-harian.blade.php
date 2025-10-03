@@ -93,7 +93,6 @@
 
       </div>
     </div>
-
   </div>
   @livewire('home.modal-berita')
 </div>
@@ -184,12 +183,16 @@
 
 
 @push('script-bottom')
-  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-  <script type="text/javascript">
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script type="text/javascript">
+    function toggleModal(id) {
+          Livewire.emit('openModalBeritaHarian', `${id}`)
+      }
+      $(document).ready(function() {
        $(".berita-carousel").owlCarousel({
-  loop: true,
-  nav: {{ $berita->count() > 1 ? 'true' : 'false' }},
-  navText: [
+        loop: true,
+        nav: {{ $berita->count() > 1 ? 'true' : 'false' }},
+        navText: [
     '<span class="custom-prev">&#10094;</span>',
     '<span class="custom-next">&#10095;</span>'
   ],
@@ -205,8 +208,9 @@
       640: { items: 1.5, margin: 20 },
       768: { items: 2, margin: 24 },
       1024: { items: 2.5, margin: 28 }
-  }
-});
+   }
+          });
+      });
 
   </script>
 @endpush
