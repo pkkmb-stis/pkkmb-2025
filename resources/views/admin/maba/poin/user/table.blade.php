@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <x-table :theads="['Nama', 'Kategori', 'Jumlah Pelanggaran', 'Jumlah Poin', 'Terakhir Update']" class="mb-3" :breakpointVisibility="[
+            <x-table :theads="['Nama', 'Kategori', 'Jumlah Per Tipe Poin', 'Jumlah Poin', 'Terakhir Update']" class="mb-3" :breakpointVisibility="[
                 3 => ['lg' => 'hidden'], // Hide terakhir update on lg
                 1 => ['md' => 'hidden'], // Hide kategori on md
             ]">
