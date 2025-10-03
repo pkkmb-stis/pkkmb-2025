@@ -23,8 +23,8 @@ class Add extends Component
 
     public $rand;
     
-    // Properti baru untuk pilihan tanggal
-    public $date_choice_type = 'dropdown';
+    // Properti untuk pilihan tanggal
+    public $date_choice_type = 'dropdown'; // Default diubah ke 'manual'
     public $manual_date;
 
     public function resetForm()
@@ -34,14 +34,13 @@ class Add extends Component
 
     public function resetAll($closeModal = true)
     {
-        // Baris ini sudah diupdate untuk membersihkan properti baru
         $this->reset('alasan', 'jenispoin', 'poin', 'urutan_input', 'users','image', 'selected_day_add', 'manual_date');
         $this->resetValidation();
         if ($closeModal)
             $this->reset('addmodal');
         
         // Reset pilihan ke nilai default
-        $this->date_choice_type = 'dropdown';
+        $this->date_choice_type = 'manual';
     }
 
     public function mount()
@@ -80,9 +79,6 @@ class Add extends Component
         if (!userHasPermission(PERMISSION_ADD_POIN))
             return $this->dispatchBrowserEvent('updated', ['title' => 'Kamu tidak memiliki akses untuk menambah poin', 'icon' => 'error', 'iconColor' => 'red']);
         else {
-            // --- PERUBAHAN DIMULAI DI SINI ---
-
-            //* Validasi yang sudah dimodifikasi
             $validationRules = [
                 'poin' => 'required|numeric',
                 'alasan' => 'max:160',
@@ -90,7 +86,7 @@ class Add extends Component
                 'users' => 'required|array',
             ];
 
-            if ($this->date_choice_type === 'manual') {
+            if ($this->date_choice_type === 'manual' && $this->manual_date) {
                 $validationRules['manual_date'] = 'required|date';
             }
 
@@ -100,28 +96,23 @@ class Add extends Component
             
             $this->validate($validationRules);
 
-            // Logika upload gambar (tidak berubah, hanya dipindahkan setelah validasi)
             $filename = null;
             if (isset($this->image)) {
                 $filename = sha1(uniqid(mt_rand(), true)) . '.' . $this->image->getClientOriginalExtension();
                 $this->image->storeAs('images/bukti-poin', $filename, 'public');
             }
 
-            //* Simpan
             try {
-                // Logika penentuan tanggal yang baru
                 $urutanInput = null;
-                if ($this->date_choice_type === 'manual') {
+                if ($this->date_choice_type === 'manual' && $this->manual_date) {
                     $urutanInput = \Carbon\Carbon::parse($this->manual_date)->format('Y-m-d') . ' ' . now()->format('H:i:s');
-                } else if ($this->selected_day_add) {
+                } else if ($this->date_choice_type === 'dropdown' && $this->selected_day_add) {
                     $dayDate = Day::getDateByName($this->selected_day_add);
                     if ($dayDate) {
                         $urutanInput = $dayDate->format('Y-m-d') . ' ' . now()->format('H:i:s');
                     }
                 }
                 
-                // --- AKHIR DARI PERUBAHAN ---
-
                 $data = [
                     'urutan_input' => $urutanInput ?? now(),
                     'poin' => $this->poin,
@@ -129,7 +120,6 @@ class Add extends Component
                     'filename' => $filename,
                 ];
 
-                // filter user yang sudah melakukan pelanggaran tidak dapat poin penghargaan
                 if($this->jenisPoinSelected->category == CATEGORY_JENISPOIN_PENGHARGAAN){
                     $this->users = Poin::filterUsers($this->users,$this->jenisPoinSelected,$data);
                 }
@@ -149,7 +139,7 @@ class Add extends Component
                 $this->emit('reloadTableInputPoin');
             } catch (\Throwable $th) {
                 DB::rollBack();
-
+                report($th);
                 $this->dispatchBrowserEvent('updated', [
                     'title' => 'Gagal menambahkan poin',
                     'icon' => 'error',
@@ -163,21 +153,6 @@ class Add extends Component
         $this->emit('resetSlim');
     }
 
-    /**
-     * On update status, reset deadline
-     */
-    public function updatedStatus()
-    {
-        if ($this->status != MAP_CATEGORY['penebusan_user'][2]) {
-            $this->reset('deadline');
-        }
-    }
-
-    /**
-     * closeModal add poion
-     *
-     * @return void
-     */
     public function closeModal()
     {
         $this->addmodal = false;

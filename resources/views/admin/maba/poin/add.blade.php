@@ -62,50 +62,37 @@
                                 <x-error-input name="poin" />
                             </div>
                             
-                            {{-- Lokasi: .../views/admin/maba/poin/add.blade.php --}}
-
-                            <div class="mb-3" x-data="{ choice: @entangle('date_choice_type') }">
-                                <x-label-input>Pilih Metode Penentuan Hari</x-label-input>
+                            {{-- Blok Input Tanggal yang Sudah Diperbarui --}}
+                            <div class="mb-3 p-3 bg-gray-50 border border-gray-200 rounded-md" x-data="{ choice: @entangle('date_choice_type') }">
+                                <p class="text-sm font-medium text-gray-800 mb-2">Tentukan Tanggal Poin (Opsional)</p>
+                            
+                                <div class="flex items-center space-x-4 mb-3">
+                                    <div class="flex items-center">
+                                        <input wire:model.live="date_choice_type" @click="choice = 'dropdown'" id="add_mode_dropdown" type="radio" value="dropdown" class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                        <label for="add_mode_dropdown" class="ml-2 block text-sm text-gray-900">Pilih Hari</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input wire:model.live="date_choice_type" @click="choice = 'manual'" id="add_mode_manual" type="radio" value="manual" class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                        <label for="add_mode_manual" class="ml-2 block text-sm text-gray-900">Input Manual</label>
+                                    </div>
+                                </div>
                                 
-                                <div class="flex items-center space-x-4 mt-2 mb-3">
-                                    <label class="flex items-center">
-                                        <input 
-                                            type="radio" 
-                                            wire:model="date_choice_type" 
-                                            value="dropdown" 
-                                            @click="choice = 'dropdown'" 
-                                            name="date_choice_method" {{-- <-- TAMBAHKAN INI --}}
-                                            class="form-radio text-coklat-1 focus:ring-base-brown-200">
-                                        <span class="ml-2">Pilih dari Dropdown Hari</span>
-                                    </label>
-                                    <label class="flex items-center">
-                                        <input 
-                                            type="radio" 
-                                            wire:model="date_choice_type" 
-                                            value="manual" 
-                                            @click="choice = 'manual'" 
-                                            name="date_choice_method" {{-- <-- TAMBAHKAN INI --}}
-                                            class="form-radio text-coklat-1 focus:ring-base-brown-200">
-                                        <span class="ml-2">Pilih Tanggal Manual</span>
-                                    </label>
-                                </div>
-
-                                {{-- Input Dropdown (Kondisional) --}}
-                                <div x-show="choice === 'dropdown'" x-transition>
-                                    <select wire:model.live="selected_day_add" id="selected_day_add"
-                                        class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
-                                        <option value="">Pilih Hari (Opsional)</option>
-                                        @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
-                                        <option value="{{ $name }}">{{ $description }}</option>
-                                        @endforeach
-                                    </select>
-                                    <x-error-input name="selected_day_add" />
-                                </div>
-
-                                {{-- Input Tanggal Manual (Kondisional) --}}
-                                <div x-show="choice === 'manual'" x-transition>
-                                    <x-date-input wire:model.live="manual_date" id="manual_date" name="manual_date" />
-                                    <x-error-input name="manual_date" />
+                                <div>
+                                    <div x-show="choice === 'dropdown'" x-transition.opacity>
+                                        <select wire:model.live="selected_day_add" id="selected_day_add"
+                                            class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
+                                            <option value="">Pilih Hari (Default: Hari ini)</option>
+                                            @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
+                                            <option value="{{ $name }}">{{ $description }}</option>
+                                            @endforeach
+                                        </select>
+                                        <x-error-input name="selected_day_add" />
+                                    </div>
+                            
+                                    <div x-show="choice === 'manual'" x-transition.opacity>
+                                        <x-input type="date" class="w-full" wire:model.live="manual_date" id="manual_date" name="manual_date" placeholder="dd/mm/yyyy" />
+                                        <x-error-input name="manual_date" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -193,13 +193,13 @@
                                             wire:click="$emit('openModalDetailAbsensi', {{ $user->user_id }}, {{ $user->event_id }})">
                                             Detail
                                         </x-button>
-
-                                        @can(PERMISSION_DELETE_ABSENSI)
-                                            <x-button class="rounded-3xl bg-merah-700 hover:bg-merah-hover mx-0.5"
-                                                x-on:click="modalHapus = true; namaHapus = `{{ addslashes($user->name) }}`; idHapus = '{{ $user->user_id }}'; link = '{{ $user->link }}'">
-                                                Hapus
-                                            </x-button>
-                                        @endcan
+                                    @can(PERMISSION_DELETE_ABSENSI)
+                                        <x-button class="rounded-3xl bg-merah-700 hover:bg-merah-hover mx-0.5"
+                                            wire:click="hapus('{{ $user->user_id }}', '{{ $user->link ?? '' }}')"
+                                            onclick="return confirm('Yakin hapus presensi {{ addslashes($user->name) }}?')">
+                                            Hapus
+                                        </x-button>
+                                    @endcan
                                     </td>
                                 </tr>
                             @empty
@@ -222,12 +222,14 @@
                                 <span class="font-bold text-base-blue-400">
                                     {{ $user->name }}
                                 </span>
-                                @can(PERMISSION_DELETE_ABSENSI)
-                                    <x-button class="rounded-3xl bg-merah-700 hover:bg-merah-hover mx-0.5"
-                                        x-on:click.stop="modalHapus = true; namaHapus = `{{ addslashes($user->name) }}`; idHapus = '{{ $user->user_id }}'; link = '{{ $user->link ?? '' }}'">
-                                        Hapus
-                                    </x-button>
-                                @endcan
+                            @can(PERMISSION_DELETE_ABSENSI)
+                                <x-button class="rounded-3xl bg-merah-700 hover:bg-merah-hover mx-0.5"
+                                    wire:click="hapus('{{ $user->user_id }}', '{{ $user->link ?? '' }}')"
+                                    onclick="return confirm('Yakin hapus presensi {{ addslashes($user->name) }}?')">
+                                    Hapus
+                                </x-button>
+                            @endcan
+                    
                             </div>
                             <div class="mt-1">
                                 <x-status-absensi status="{{ $user->status }}" />
@@ -272,8 +274,8 @@
                                     <x-button class="mr-2 bg-gray-500 rounded-3xl hover:bg-gray-600"
                                         x-on:click="modalHapus = false">Batal
                                     </x-button>
-                                    <x-button class="rounded-3xl bg-merah-700 hover:bg-merah-hover"
-                                        x-on:click="modalHapus = false; $wire.hapus(idHapus, link)">Ya, yakin</x-button>
+                                        <x-button class="rounded-3xl bg-merah-700 hover:bg-merah-hover"
+                                        x-on:click="modalHapus = false; $wire.call('hapus', idHapus, link)">Ya, yakin</x-button>
                                 </x-slot>
                             </x-modal.warning>
                         </x-modal>

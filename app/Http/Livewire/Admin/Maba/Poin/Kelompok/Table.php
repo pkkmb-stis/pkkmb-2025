@@ -11,10 +11,16 @@ use Illuminate\Database\Eloquent\Builder;
 class Table extends Component
 {
     use WithPagination;
+    
+    // Properti filter yang ada
     public $tanggal_poin_kelompok;
-    public $selected_day_kelompok; // NEW: Property untuk dropdown hari
+    public $selected_day_kelompok;
     public $search;
     public $tipePoin = -1;
+
+    // Properti baru untuk mengontrol mode filter tanggal
+    public $filterDateMode = 'dropdown';
+
     protected $listeners = ['reloadTablePoinKelompok' => '$refresh'];
 
     public function updating($name, $value)
@@ -26,14 +32,13 @@ class Table extends Component
     {
         $tanggal_filter = null;
 
-        if ($this->selected_day_kelompok) {
+        // Logika baru untuk menentukan tanggal berdasarkan mode yang dipilih
+        if ($this->filterDateMode === 'dropdown' && $this->selected_day_kelompok) {
             $dayDate = Day::getDateByName($this->selected_day_kelompok);
             if ($dayDate) {
                 $tanggal_filter = $dayDate->format('Y-m-d');
             }
-        }
-
-        elseif ($this->tanggal_poin_kelompok) {
+        } elseif ($this->filterDateMode === 'manual' && $this->tanggal_poin_kelompok) {
             $tanggal_filter = $this->tanggal_poin_kelompok;
         }
 
@@ -46,12 +51,11 @@ class Table extends Component
     }
 
     /**
-     * NEW: Reset filter method
+     * Reset filter tanggal
      */
     public function resetFilter()
     {
-        $this->selected_day_kelompok = null;
-        $this->tanggal_poin_kelompok = null;
+        $this->reset('selected_day_kelompok', 'tanggal_poin_kelompok');
     }
 
     private function getHasil($date, $search)

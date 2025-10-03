@@ -390,13 +390,18 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
+                'nama' => 'Kadek Sri Nagitha Suaryanti',
+                'foto' => 'img/ppo/lapk/Kadek Sri Nagitha Suaryanti.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
                 'nama' => 'Kukuh Bagus Purnomo Sidik',
                 'foto' => 'img/ppo/lapk/Kukuh Bagus Purnomo Sidik.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Melika Dzicra Kalila Wardhani',
-                'foto' => 'img/ppo/lapk/Melika Dzicra Kalila Wardhani.png',
+                'nama' => 'Malika Dzikra Kalila Ramadhani',
+                'foto' => 'img/ppo/lapk/Malika Dzikra Kalila Ramadhani.png',
                 'jabatan' => 'Anggota'
             ],
             [
@@ -405,8 +410,8 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Naya Alya Fauziah',
-                'foto' => 'img/ppo/lapk/Naya Alya Fauziah.png',
+                'nama' => 'Najwa Alya Fauziah',
+                'foto' => 'img/ppo/lapk/Najwa Alya Fauziah.png',
                 'jabatan' => 'Anggota'
             ],
             [
@@ -415,13 +420,13 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Nisa Nur Fadillah',
-                'foto' => 'img/ppo/lapk/Nisa Nur Fadillah.png',
+                'nama' => 'Sanda Yulianti',
+                'foto' => 'img/ppo/lapk/Sanda Yulianti.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Saren Risanti Hutsaoti',
-                'foto' => 'img/ppo/lapk/Saren Risanti Hutsaoti.png',
+                'nama' => 'Saveria Risanti Hutasoit',
+                'foto' => 'img/ppo/lapk/Saveria Risanti Hutasoit.png',
                 'jabatan' => 'Anggota'
             ],
             [
@@ -493,6 +498,11 @@ if (!function_exists('getPanitia')) {
             [
                 'nama' => 'Araminta Abidah',
                 'foto' => 'img/ppo/hpd/Araminta Abidah.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
+                'nama' => 'Dafi Hauranisa',
+                'foto' => 'img/ppo/hpd/Dafi Hauranisa.png',
                 'jabatan' => 'Anggota'
             ],
             [

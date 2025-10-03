@@ -25,7 +25,8 @@ class Table extends Component
     public $canAddNewAbsen = false;
 
     protected $listeners = [
-        'echo-private:absensi,AbsensiUpdated' => '$refresh'
+        'echo-private:absensi,AbsensiUpdated' => '$refresh',
+        'refreshTable' => '$refresh'
     ];
 
     /**
@@ -43,23 +44,48 @@ class Table extends Component
     /**
      * hapus data presensi, maka user tersebut akan masuk kedalam list yang belum absen
      *
-     * @param  mixed $user
+     * @param  mixed $userId
+     * @param  mixed $link
      * @return void
      */
-    public function hapus($user, $link)
+    public function hapus($userId, $link)
     {
-        if (!userHasPermission(PERMISSION_DELETE_ABSENSI))
-            $this->dispatchBrowserEvent('updated', ['title' => 'Kamu tidak memiliki akses untuk menghapus data presensi', 'icon' => 'error', 'iconColor' => 'red']);
-        else {
-            try {
-                if (!empty($link))
-                    Storage::delete($link);
+        if (!userHasPermission(PERMISSION_DELETE_ABSENSI)) {
+            $this->dispatchBrowserEvent('updated', [
+                'title' => 'Kamu tidak memiliki akses untuk menghapus data presensi',
+                'icon' => 'error',
+                'iconColor' => 'red'
+            ]);
+            return;
+        }
 
-                $this->event->user()->detach($user);
-                $this->dispatchBrowserEvent('updated', ['title' => "Berhasil menghapus data presensi", 'icon' => 'success', 'iconColor' => 'green']);
-            } catch (\Throwable $th) {
-                $this->dispatchBrowserEvent('updated', ['title' => 'Gagal menghapus data presensi', 'icon' => 'error', 'iconColor' => 'red']);
+        try {
+            // Debug: lihat parameter yang diterima
+            \Log::info("Menghapus presensi", ['user_id' => $userId, 'link' => $link, 'event_id' => $this->event->id]);
+
+            // Hapus file jika ada
+            if (!empty($link) && $link !== 'null' && $link !== '') {
+                Storage::delete($link);
             }
+
+            // Detach user dari event
+            $this->event->user()->detach($userId);
+
+            $this->dispatchBrowserEvent('updated', [
+                'title' => "Berhasil menghapus data presensi",
+                'icon' => 'success',
+                'iconColor' => 'green'
+            ]);
+
+            // Refresh data - PERBAIKAN: tambahkan ini
+            $this->emit('refreshTable');
+        } catch (\Throwable $th) {
+            \Log::error('Error menghapus presensi: ' . $th->getMessage());
+            $this->dispatchBrowserEvent('updated', [
+                'title' => 'Gagal menghapus data presensi: ' . $th->getMessage(),
+                'icon' => 'error',
+                'iconColor' => 'red'
+            ]);
         }
     }
 
@@ -86,17 +112,18 @@ class Table extends Component
             $query = User::join('events_user AS eu', 'eu.user_id', '=', 'users.id')
                 ->where('eu.event_id', $this->event->id)
                 ->orderBy('eu.created_at', 'desc')
-                ->select('users.*', 
-                        'eu.status as attendance_status', 
-                        'eu.created_at as attendance_created_at',
-                        'eu.link as link',
-                        'eu.user_id as user_id',
-                        'eu.event_id as event_id');
+                ->select(
+                    'users.*',
+                    'eu.status as status', // PERUBAHAN: dari attendance_status jadi status
+                    'eu.created_at as attendance_created_at',
+                    'eu.link as link',
+                    'eu.user_id as user_id',
+                    'eu.event_id as event_id'
+                );
 
             if ($this->statusAbsensi != -1)
                 $query = $query->where('eu.status', $this->statusAbsensi);
         }
-
 
         // Untuk memfilter maba ataupun panitia
         if ($this->isMaba == 1) {
@@ -118,7 +145,6 @@ class Table extends Component
             ->orderby('name')
             ->paginate(NUMBER_OF_PAGINATION);
     }
-
 
     public function render()
     {
