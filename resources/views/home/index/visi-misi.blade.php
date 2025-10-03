@@ -73,7 +73,7 @@
             <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cover opacity-[20%]"
                  style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:100%;">
             </div>
-            <h2 class="text-2xl font-semibold mb-4 font-chaTime tracking-widest">VISI:</h2>
+            <h2 class="text-3xl font-semibold mb-4 font-chaTime tracking-widest">VISI:</h2>
             <p class="text-2xl leading-relaxed font-poppins relative z-10">
               “Membentuk Mahasiswa yang Aktif, Adaptif, Kolaboratif, dan Komunikatif serta Menjadi Mampu Agen Perubahan demi Mewujudkan Statistisi yang Berkualitas dan ASN yang BerAKHLAK dengan Rasa Nasionalisme yang Tinggi”
             </p>
@@ -88,7 +88,7 @@
             <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cover opacity-[20%]"
                  style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:100%;">
             </div>
-            <h2 class="text-center text-2xl font-semibold mb-4 font-chaTime tracking-widest relative z-10">MISI:</h2>
+            <h2 class="text-center text-3xl font-semibold mb-4 font-chaTime tracking-widest relative z-10">MISI:</h2>
             <ol class="text-2xl leading-relaxed font-poppins list-decimal pl-6 relative z-10">
               <li>Menanamkan  rasa taqwa kepada Tuhan Yang Maha Esa </li>
               <li>Mewujudkan kegiatan yang mengedepankan keaktifan dengan komunikasi yang baik melalui pemahaman visi misi Politeknik Statistika STIS maupun BPS, serta menerapkan core value ASN, BerAKHLAK. </li>
