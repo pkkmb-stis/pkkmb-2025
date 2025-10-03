@@ -6,7 +6,7 @@
     ">
     <div class="px-1 pt-16 pb-8 mt-6 sm:px-6 md:px-8 md:pt-20 lg:px-10 mx-10">
 
-        <x-card class="px-2 mt-4 sm:px-5" style="border: 4px solid #1E1E1E;">
+        <x-card class="px-2 mt-4 sm:px-5" style="border: 4px solid #1E2A4A;">
             <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
                 <img src="{{ asset('img\asset\2025\Elemen 1.png') }}" 
                     alt="elemen 1" 
