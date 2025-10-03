@@ -115,72 +115,70 @@
       flex: 1 1 auto;
     }
 
-/* ==== STYLE PANAH ==== */
-/* ==== STYLE PANAH BERITA (sama dengan galeri) ==== */
+    /* ==== STYLE PANAH BERITA (sama dengan galeri) ==== */
+    .berita-carousel {
+      position: relative;
+    }
 
-/* Default (PC/Laptop) panah di kanan-kiri luar */
-.berita-carousel {
-  position: relative;
-}
+    /* Default (PC/Laptop): panah kanan-kiri di luar */
+    .berita-carousel .owl-nav {
+      position: absolute;
+      top: 50%;
+      left: -60px;
+      right: -60px;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% + 120px);
+      pointer-events: none;
+      z-index: 50;
+    }
 
-.berita-carousel .owl-nav {
-  position: absolute;
-  top: 50%;
-  left: -60px;    /* keluar dari kiri */
-  right: -60px;   /* keluar dari kanan */
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: calc(100% + 120px);  /* ruang tambahan biar keluar */
-  pointer-events: none;
-  z-index: 50;
-}
+    .berita-carousel .owl-nav button {
+      background: #F9C46B !important;
+      color: #1E2A4A !important;
+      font-size: 1.5rem !important;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: none !important;
+      outline: none !important;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.berita-carousel .owl-nav button {
-  background: #F9C46B !important;   /* kuning */
-  color: #1E2A4A !important;        /* panah biru tua */
-  font-size: 1.5rem !important;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  border: none !important;
-  outline: none !important;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .berita-carousel .owl-nav button:hover {
+      background: #E7B556 !important;
+      color: #fff !important;
+      transform: scale(1.1);
+    }
 
-.berita-carousel .owl-nav button:hover {
-  background: #E7B556 !important;   /* hover lebih gelap */
-  color: #fff !important;
-  transform: scale(1.1);
-}
+    /* Versi HP: panah di bawah tengah */
+    @media (max-width: 640px) {
+      .berita-carousel .owl-nav {
+        position: relative;
+        top: auto;
+        bottom: -20px;
+        left: auto;
+        right: auto;
+        transform: none;
+        margin-top: 12px;
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+      }
 
-/* ==== Versi HP: panah di bawah tengah ==== */
-@media (max-width: 640px) {
-  .berita-carousel .owl-nav {
-    position: relative;
-    top: auto;
-    bottom: -20px;  /* kasih jarak di bawah carousel */
-    left: auto;
-    right: auto;
-    transform: none;
-    margin-top: 12px;
-    width: 100%;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .berita-carousel .owl-nav button {
-    font-size: 1.2rem !important;
-    width: 38px;
-    height: 38px;
-  }
-}
+      .berita-carousel .owl-nav button {
+        font-size: 1.2rem !important;
+        width: 38px;
+        height: 38px;
+      }
+    }
   </style>
 @endpush
 
@@ -189,23 +187,27 @@
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
   <script type="text/javascript">
        $(".berita-carousel").owlCarousel({
-      loop: true,
-      nav: {{ $berita->count() > 1 ? 'true' : 'false' }},
-      navText: ['‹','›'], // panah kiri kanan
-      center: {{ $berita->count() == 1 ? 'true' : 'false' }},
-      dots: false, // ⬅️ ini buat hapus bulat-bulat
-      autoplay: true,
-      autoplayTimeout: 4000,
-      autoplayHoverPause: true,
-      smartSpeed: 800,
-      responsive: {
-          0: { items: 1, margin: 16 },
-          480: { items: 1.2, margin: 18 },
-          640: { items: 1.5, margin: 20 },
-          768: { items: 2, margin: 24 },
-          1024: { items: 2.5, margin: 28 }
-      }
-  });
+  loop: true,
+  nav: {{ $berita->count() > 1 ? 'true' : 'false' }},
+  navText: [
+    '<span class="custom-prev">&#10094;</span>',
+    '<span class="custom-next">&#10095;</span>'
+  ],
+  center: {{ $berita->count() == 1 ? 'true' : 'false' }},
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplayHoverPause: true,
+  smartSpeed: 800,
+  responsive: {
+      0: { items: 1, margin: 16 },
+      480: { items: 1.2, margin: 18 },
+      640: { items: 1.5, margin: 20 },
+      768: { items: 2, margin: 24 },
+      1024: { items: 2.5, margin: 28 }
+  }
+});
+
   </script>
 @endpush
 <!-- ===== END HEADER SERBA SERBI ===== -->
