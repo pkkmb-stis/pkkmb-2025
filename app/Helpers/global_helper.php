@@ -496,6 +496,11 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
+                'nama' => 'Dafi Hauranisa',
+                'foto' => 'img/ppo/hpd/Dafi Hauranisa.png',
+                'jabatan' => 'Anggota'
+            ],
+            [
                 'nama' => 'Dzaky Aska Pradipta',
                 'foto' => 'img/ppo/hpd/Dzaky Aska Pradipta.png',
                 'jabatan' => 'Anggota'
