@@ -35,7 +35,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center w-full col-span-8 md:w-2/3 md:col-span-4 bg-login-kanan md:bg-login-kanan">
+            <div class="flex justify-center w-full col-span-8 md:w-2/3 md:col-span-4 bg-login-kanan md:bg-login-kanan"
+            style="background-repeat: no-repeat; background-size: cover;">
                 <div class="flex items-center justify-center w-full h-screen ">
                     <div class="md:w-3/4 w-[90%] md:h-3/4 rounded-3xl" style="box-shadow: 0 0 20px rgb(60, 60, 60);">
                         <div
