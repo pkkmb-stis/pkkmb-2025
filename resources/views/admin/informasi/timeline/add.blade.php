@@ -42,12 +42,6 @@
                         <x-error-input name="location" />
                     </div>
 
-                    <div class="mb-3">
-                        <x-label-input for="link">Link Galeri</x-label-input>
-                        <x-input type="text" class="w-full" wire:model.defer="link" id="link" />
-                        <x-error-input name="link" />
-                    </div>
-
                     <div class="flex justify-end mt-4">
                         <div wire:loading.remove wire:target="submit">
                             <x-button class="mr-2 uppercase bg-gray-500 rounded-3xl hover:bg-gray-600 text-md"

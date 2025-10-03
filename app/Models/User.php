@@ -13,6 +13,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
@@ -277,16 +278,47 @@ class User extends Authenticatable
     //     return $hasil;
     // }
 
-    public static function poinUser()
+    public static function poinUser($category = -1)
     {
-        $hasil = User::select('name', 'jenis_poin.category as kategori', JenisPoin::raw('count(jenis_poin.category) as kategori_count'), Poin::raw('sum(jenis_poin_user.poin) as poin_sum'), 'jenis_poin_user.urutan_input as terakhir_update')
+        $query = self::query();
+
+        if ($category == 2) {
+            // KHUSUS KATEGORI 2: Tampilkan semua pengguna.
+            $query->select(
+                'users.id',
+                'users.name',
+                DB::raw('2 as kategori'),
+                DB::raw('COUNT(jpu.id) as kategori_count'),
+                DB::raw('IFNULL(SUM(jpu.poin), 0) as poin_sum'),
+                DB::raw('MAX(jpu.urutan_input) as terakhir_update')
+            )
+            ->leftJoin('jenis_poin_user as jpu', function ($join) {
+                // Kondisi join hanya untuk poin yang termasuk kategori 2
+                $join->on('users.id', '=', 'jpu.user_id')
+                     ->join('jenis_poin as jp', 'jpu.jenis_poin_id', '=', 'jp.id')
+                     ->where('jp.category', '=', 2);
+            })
+            ->groupBy('users.id', 'users.name');
+        } else {
+            // UNTUK KATEGORI 1 & 3 (dan lainnya): Tampilkan hanya pengguna yang memiliki poin.
+            $query->select(
+                'users.id',
+                'users.name',
+                'jenis_poin.category as kategori',
+                DB::raw('COUNT(jenis_poin_user.id) as kategori_count'),
+                DB::raw('SUM(jenis_poin_user.poin) as poin_sum'),
+                DB::raw('MAX(jenis_poin_user.urutan_input) as terakhir_update')
+            )
             ->join('jenis_poin_user', 'users.id', '=', 'jenis_poin_user.user_id')
             ->join('jenis_poin', 'jenis_poin_user.jenis_poin_id', '=', 'jenis_poin.id')
-            ->groupBy('kategori', 'name')
-            ->orderBy('poin_sum', 'asc')
-            ->orderBy('kategori_count', 'asc');
+            ->groupBy('users.id', 'users.name', 'jenis_poin.category');
 
-        return $hasil;
+            if ($category != -1) {
+                $query->where('jenis_poin.category', '=', $category);
+            }
+        }
+
+        return $query->orderBy('poin_sum', 'asc')->orderBy('kategori_count', 'asc');
     }
 
     public static function poinKelompok()

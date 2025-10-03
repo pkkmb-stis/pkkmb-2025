@@ -56,34 +56,28 @@ class Table extends Component
 
     private function getHasil($date, $search)
     {
-        $hasil = User::poinUser();
+        $hasil = User::poinUser($this->tipePoin);
 
         $hasil->where(function ($query) use ($date, $search) {
             if ($date) {
-            $query->where('urutan_input', 'like', $date . '%');
+                $query->where('terakhir_update', 'like', $date . '%');
             }
             
-            $query->where('name', 'like', $search);
+            $query->where('users.name', 'like', '%' . $search . '%');
 
             if ($this->jenisUser == 'panitia') {
-            $query->role(ROLE_PANITIA);
-            } 
-            
-            elseif ($this->jenisUser == 'maba') {
-            $query->has('kelompok');
-            } 
-            
-            else {
-            $query->where(function ($q) {
-                $q->has('kelompok')->orWhere(function ($sub) {
-                    $sub->role(ROLE_PANITIA);
+                $query->role(ROLE_PANITIA);
+            } elseif ($this->jenisUser == 'maba') {
+                $query->has('kelompok');
+            } else {
+                $query->where(function ($q) {
+                    $q->has('kelompok')->orWhere(function ($sub) {
+                        $sub->role(ROLE_PANITIA);
+                    });
                 });
-            });
-        }
+            }
         });
 
-        if ($this->tipePoin != -1)
-            $hasil->where('jenis_poin.category', '=', $this->tipePoin);
 
         return $hasil->paginate(NUMBER_OF_PAGINATION);
     }

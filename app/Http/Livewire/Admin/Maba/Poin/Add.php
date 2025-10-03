@@ -22,6 +22,10 @@ class Add extends Component
     public $jenisPoinSelected;
 
     public $rand;
+    
+    // Properti baru untuk pilihan tanggal
+    public $date_choice_type = 'dropdown';
+    public $manual_date;
 
     public function resetForm()
     {
@@ -30,10 +34,14 @@ class Add extends Component
 
     public function resetAll($closeModal = true)
     {
-        $this->reset('alasan', 'jenispoin', 'poin', 'urutan_input', 'users','image', 'selected_day_add');
+        // Baris ini sudah diupdate untuk membersihkan properti baru
+        $this->reset('alasan', 'jenispoin', 'poin', 'urutan_input', 'users','image', 'selected_day_add', 'manual_date');
         $this->resetValidation();
         if ($closeModal)
             $this->reset('addmodal');
+        
+        // Reset pilihan ke nilai default
+        $this->date_choice_type = 'dropdown';
     }
 
     public function mount()
@@ -69,57 +77,59 @@ class Add extends Component
 
     public function submit()
     {
-
         if (!userHasPermission(PERMISSION_ADD_POIN))
             return $this->dispatchBrowserEvent('updated', ['title' => 'Kamu tidak memiliki akses untuk menambah poin', 'icon' => 'error', 'iconColor' => 'red']);
         else {
-            //* Validasi
+            // --- PERUBAHAN DIMULAI DI SINI ---
+
+            //* Validasi yang sudah dimodifikasi
+            $validationRules = [
+                'poin' => 'required|numeric',
+                'alasan' => 'max:160',
+                'jenispoin' => 'required|numeric',
+                'users' => 'required|array',
+            ];
+
+            if ($this->date_choice_type === 'manual') {
+                $validationRules['manual_date'] = 'required|date';
+            }
+
             if ($this->jenisPoinSelected != null && $this->jenisPoinSelected->category == CATEGORY_JENISPOIN_PELANGGARAN) {
-                $this->validate([
-                    'poin' => 'required|numeric',
-                    'alasan' => 'max:160',
-                    'jenispoin' => 'required|numeric',
-                    'users' => 'required|array',
-                    'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-                ]);
-                if (isset($this->image)) {
-                    $filename = sha1(uniqid(mt_rand(), true)) . '.' . $this->image->getClientOriginalExtension();
-                    $this->image->storeAs('images/bukti-poin', $filename, 'public');
-                } else {
-                    $filename = null;
-                }
-            } else {
-                $this->validate([
-                    'poin' => 'required|numeric',
-                    'alasan' => 'max:160',
-                    'jenispoin' => 'required|numeric',
-                    'users' => 'required|array',
-                ]);
-                $filename = null;
+                $validationRules['image'] = 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048';
+            }
+            
+            $this->validate($validationRules);
+
+            // Logika upload gambar (tidak berubah, hanya dipindahkan setelah validasi)
+            $filename = null;
+            if (isset($this->image)) {
+                $filename = sha1(uniqid(mt_rand(), true)) . '.' . $this->image->getClientOriginalExtension();
+                $this->image->storeAs('images/bukti-poin', $filename, 'public');
             }
 
             //* Simpan
             try {
-                // NEW: Convert selected_day_add to actual datetime
-                $urutanInput = $this->urutan_input;
-                if ($this->selected_day_add) {
+                // Logika penentuan tanggal yang baru
+                $urutanInput = null;
+                if ($this->date_choice_type === 'manual') {
+                    $urutanInput = \Carbon\Carbon::parse($this->manual_date)->format('Y-m-d') . ' ' . now()->format('H:i:s');
+                } else if ($this->selected_day_add) {
                     $dayDate = Day::getDateByName($this->selected_day_add);
                     if ($dayDate) {
-                        // Set to beginning of selected day with current time
                         $urutanInput = $dayDate->format('Y-m-d') . ' ' . now()->format('H:i:s');
                     }
                 }
+                
+                // --- AKHIR DARI PERUBAHAN ---
 
                 $data = [
                     'urutan_input' => $urutanInput ?? now(),
                     'poin' => $this->poin,
                     'alasan' => $this->alasan,
                     'filename' => $filename,
-
-                    // 'is_bintang' => $this->jenisPoinSelected->is_bintang,
                 ];
 
-                //filter user yang sudah melakukan pelanggaran tidak dapat poin penghargaan
+                // filter user yang sudah melakukan pelanggaran tidak dapat poin penghargaan
                 if($this->jenisPoinSelected->category == CATEGORY_JENISPOIN_PENGHARGAAN){
                     $this->users = Poin::filterUsers($this->users,$this->jenisPoinSelected,$data);
                 }
@@ -156,13 +166,13 @@ class Add extends Component
     /**
      * On update status, reset deadline
      */
-
     public function updatedStatus()
     {
         if ($this->status != MAP_CATEGORY['penebusan_user'][2]) {
             $this->reset('deadline');
         }
     }
+
     /**
      * closeModal add poion
      *
@@ -174,6 +184,7 @@ class Add extends Component
         $this->reset('alasan', 'jenispoin', 'poin');
         $this->resetValidation();
     }
+
     public function render()
     {
         return view('admin.maba.poin.add');

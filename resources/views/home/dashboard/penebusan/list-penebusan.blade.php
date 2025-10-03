@@ -2,9 +2,22 @@
     <div x-data="{ showModalDelete: false, jenispoinTitle: '', user_name: '', update_pada: '', penebusanId: '', showModalDetail: @entangle('showModalDetail') }">
 
         <x-card class="px-2 sm:px-5" style="border: 4px solid #1E2A4A;">
-            <div class="mb-4 flex flex-row justify-between">
-                <h5 class="font-bohemianSoul text-xl font-normal text-gray-700">List Penebusan</h5>
-                <div>
+            <div class="mb-4 flex flex-col">
+                <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
+                    <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
+                        class="h-7 w-8">
+
+                    <div class="flex justify-center items-center">
+                        <h2 class="px-5 lg:px-10 py-2 rounded-full text-center text-sm sm:text-sm md:text-sm lg:text-lg text-2025-1 mx-4 z-10 bg-[radial-gradient(circle,#ffffff,#FFD183)]"
+                            style="text-align: center; filter: drop-shadow(0 0 0.25rem #000);">
+                            Pengaduan
+                        </h2>
+                    </div>
+
+                    <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
+                        class="h-7 w-8">
+                </h5>
+                <div class="mt-2">
                     @if (POIN_MINIMUM > $detailPoins['akumulasi'])
                         @livewire('home.dashboard.penebusan.add', ['detailPoin' => $detailPoins ?? null])
                     @endif
