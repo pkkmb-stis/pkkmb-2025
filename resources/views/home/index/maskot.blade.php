@@ -4,13 +4,13 @@
   <!-- Header -->
   <div class="relative flex justify-center">
     <!-- Selendang Atas -->
-    <div class="absolute top-0 left-0 w-full h-[60px] bg-repeat-x bg-center"
-         style="background-image: url('img/asset/2025/motif_.jpg'); background-size: contain; z-index:0;">
+    <div class="absolute top-0 left-0 w-full h-[60px] bg-center"
+         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;">
     </div>
 
     <!-- Selendang Bawah -->
-    <div class="absolute top-[60px] left-0 w-full h-[60px] bg-repeat-x bg-center"
-         style="background-image: url('img/asset/2025/motif_.jpg'); background-size: contain; z-index:0;">
+    <div class="absolute top-[60px] left-0 w-full h-[60px] bg-center"
+         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;">
     </div>
 
     <!-- Kontainer judul -->
@@ -36,7 +36,7 @@
   <!-- Konten Utama -->
   <main class="relative w-full min-h-screen pt-[200px] 
                bg-no-repeat bg-center lg:bg-[length:60%_auto] xl:bg-[50%_auto] 2xl:bg-[40%_auto]" 
-        style="background-image: url('img/asset/2025/Pulau Sulawesi.png');">
+        style="background-image: url('img/asset/2025/bg sulawesi.png');">
 
    <!-- Maskot kiri (Tora) -->
   <div class="absolute z-20 lg:top-[5%] lg:left-[5%] xl:top-[80px] xl:left-[10%] 2xl:top-[80px] 2xl:left-[10%] flex items-center space-x-5 animate-bounce-slow">
@@ -91,19 +91,20 @@
   <!-- Ikon tambahan -->
   <img src="img/asset/2025/rumah.png" class="absolute lg:bottom-[40%] lg:left-[28%] xl:bottom-[40%] xl:left-[30%] 2xl:bottom-[40%] 2xl:left-[35%] w-[5vw] max-w-[54px]" alt="">
   <img src="img/asset/2025/tugu 0 km.png" class="absolute lg:top-[35%] lg:left-[30%]  xl:bottom-[60%] xl:left-[33%] 2xl:bottom-[60%] 2xl:left-[36%] w-[3vw] max-w-[24px]" alt="">
+  <img src="img/asset/2025/pedang bara single.png" class="absolute lg:top-[10%] lg:right-[22%] xl:top-[10%] xl:right-[28%] 2xl:top-[5%] 2xl:right-[32%] w-[2vw] max-w-[54px]" alt="">
   <img src="img/asset/2025/burung.png" class="absolute lg:bottom-[30%] lg:left-[47%] xl:bottom-[25%] xl:left-[48%] 2xl:bottom-[25%] 2xl:left-[48%] w-[5vw] max-w-[54px]" alt="">
   <img src="img/asset/2025/maleo.png" class="absolute lg:bottom-[20%] lg:left-[53%] xl:bottom-[15%] xl:left-[55%] 2xl:bottom-[15%] 2xl:left-[55%] w-[5vw] max-w-[54px]" alt="">
   <img src="img/asset/2025/Es Pisang Ijo.png" class="absolute lg:bottom-[20%] lg:left-[28%] xl:bottom-[20%] xl:left-[33%] 2xl:bottom-[20%] 2xl:left-[36%] w-[5vw] max-w-[54px]" alt="">
 </main>
 
 <!-- Selendang Bawah Layer 1 -->
-  <div class="w-full h-[60px] bg-repeat-x bg-center"
-       style="background-image: url('img/asset/2025/motif_.jpg'); background-size: contain;">
+  <div class="w-full h-[60px] bg-center"
+       style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain;">
   </div>
 
   <!-- Selendang Bawah Layer 2 -->
-  <div class="w-full h-[60px] bg-repeat-x bg-center"
-       style="background-image: url('img/asset/2025/motif_.jpg'); background-size: contain;">
+  <div class="w-full h-[60px] bg-center"
+       style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain;">
   </div>
 
 </div>
@@ -112,13 +113,19 @@
    <!-- ================= TAMPIILAN HP ================= -->
   <div class="block lg:hidden">
     <div class="relative flex justify-center">
-  <!-- Selendang -->
-      <img src="img/asset/2025/motif_.jpg" alt="Selendang" 
-           class="w-full h-24 object-cover rounded-2xl">
+  <!-- Selendang Atas -->
+    <div class="absolute top-0 left-0 w-full h-[50px] bg-center"
+         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;">
+    </div>
+
+    <!-- Selendang Bawah -->
+    <div class="absolute top-[40px] left-0 w-full h-[50px] bg-center"
+         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;">
+    </div>
 
       <!-- Kontainer judul di atas selendang -->
       <div class="absolute inset-0 flex items-center justify-center">
-        <div class="relative bg-[#8B2F4B] px-6 py-3 rounded-[5rem] w-[370px] sm:w-[500px] md:w-[600px] text-center flex items-center justify-center">
+        <div class="relative bg-[#8B2F4B] px-6 py-3 rounded-[5rem] mt-20 w-[370px] sm:w-[500px] md:w-[600px] text-center flex items-center justify-center">
     
           <!-- Ornamen kiri -->
           <img src="img/asset/2025/Karawo Pinang.png" 
@@ -138,10 +145,10 @@
     </div>
 
   <!-- Konten Utama -->
-  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/Pulau Sulawesi.png') ;">
+  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover bg-[length:80%_auto] sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/bg sulawesi.png') ;">
 
  <!-- Maskot kiri (Tora) -->
-<div class="absolute top-[100px] left-[15%] sm:left-[10%] md:left-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow mr-3 ">
+<div class="absolute top-[20%] left-[15%] sm:left-[10%] md:left-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow mr-3 ">
   <!-- Container maskot + awan -->
   <div class="relative flex flex-col left-[2%] items-center right-[50px]">
     <!-- Maskot -->
@@ -190,5 +197,14 @@
   </div>
   </div>
     </main>
+
+     <!-- Selendang Bawah  1 -->
+    <div class="w-full h-[50px] bg-center"
+         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;">
+    </div>
+
+    <!-- Selendang Bawah  2-->
+    <div class="w-full h-[50px] bg-center"
+         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;"></div>
   </div>
 </div>
