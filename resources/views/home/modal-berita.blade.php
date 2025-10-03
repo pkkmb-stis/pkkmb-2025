@@ -1,8 +1,15 @@
 <div x-data="{ showModalBerita: @entangle('showModalBerita') }">
 
     @if ($berita)
-        <div x-cloak x-show="showModalBerita">
-            <x-modal.berita judul="{{ $berita->judul }}" image="{{ storage($berita->thumbnails) }}">
+        {{-- Class untuk backdrop modal dirapikan --}}
+        <div x-cloak x-show="showModalBerita" 
+             class="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black bg-opacity-75 p-4"
+             x-on:keydown.escape.window="showModalBerita = false">
+
+            {{-- DUPLIKAT DAN TYPO SUDAH DIHAPUS. HANYA ADA SATU KOMPONEN MODAL. --}}
+            <x-modal.berita judul="{{ $berita->judul }}" image="{{ storage($berita->thumbnails) }}"
+                            x-on:click.away="showModalBerita = false">
+                
                 <x-slot name="icon">
                     <div class="flex items-center justify-center mr-1 text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
@@ -33,13 +40,11 @@
                 </x-slot>
 
                 <x-slot name="closeButton">
-                    {{-- DIUBAH: Menggunakan wire:click untuk memanggil fungsi di backend --}}
                     <div wire:click="closeBerita" class="cursor-pointer">
                         <x-close-button />
                     </div>
                 </x-slot>
 
-                {{-- DISARANKAN: Menggunakan {!! !!} untuk merender HTML dari editor --}}
                 <div class="ql-editor">
                     {!! $berita->content !!}
                 </div>
@@ -53,7 +58,6 @@
     <style>
         .ql-editor {
             color: white;
-            /* Anda mungkin perlu menambahkan gaya lain dari quill.snow.css di sini jika diperlukan */
         }
     </style>
 @endpush
