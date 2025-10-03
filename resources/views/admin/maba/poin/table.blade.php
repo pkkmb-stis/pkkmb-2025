@@ -21,7 +21,7 @@
         });
     });;">
         <div class="w-full text-center">
-            <img wire:loading wire:target="show,edit" src="{{ asset('/img/icon/loading-ring.svg') }}" class="h-10 my-0"
+            <img wire:loading wire-target="show,edit" src="{{ asset('/img/icon/loading-ring.svg') }}" class="h-10 my-0"
                 alt="">
         </div>
         <x-card class="mb-8">
@@ -55,23 +55,48 @@
                     </x-select-form>
                 </div>
             </div>
+
+            {{-- ================= AWAL BLOK FILTER TANGGAL YANG BARU ================= --}}
             <div class="grid lg:grid-cols-2 lg:gap-6">
                 <div class="mb-3">
-                    <select wire:model.lazy="selected_day_poin" id="selected_day_poin" name="selected_day_poin" 
-                        class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
-                        <option value="">Semua Hari</option>
-                        @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
-                            <option value="{{ $name }}">{{ $description }}</option>
-                        @endforeach
-                    </select>  
+                    
+                    {{-- Input Filter Tanggal Dinamis (Sekarang di atas) --}}
+                    @if ($filterDateMode === 'dropdown')
+                        <div wire:key="filter-dropdown">
+                            <select wire:model.lazy="selected_day_poin" id="selected_day_poin" name="selected_day_poin" class="w-full block px-3 py-2.5 text-base border border-gray-300 rounded-md focus:border-base-brown-300 focus:ring focus:ring-base-brown-200 focus:ring-opacity-50 sm:text-sm sm:leading-5">
+                                <option value="">Semua Hari</option>
+                                @foreach(\App\Models\Day::getDropdownOptionsWithDescription() as $name => $description)
+                                    <option value="{{ $name }}">{{ $description }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    @elseif ($filterDateMode === 'manual')
+                        <div wire:key="filter-manual">
+                            <x-input wire:model.lazy="tanggal_poin" type="date" class="block w-full" />
+                        </div>
+                    @endif
+
+                    {{-- Pilihan Mode Filter Tanggal (Sekarang di bawah input) --}}
+                    <div class="flex items-center space-x-6 mt-2 text-sm">
+                        <div class="flex items-center">
+                            <input wire:model="filterDateMode" type="radio" id="modeDropdown" name="filter_mode" value="dropdown" class="focus:ring-base-brown-500 h-4 w-4 text-base-brown-600 border-gray-300">
+                            <label for="modeDropdown" class="ml-2 block font-medium text-gray-700">Pilih Hari</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input wire:model="filterDateMode" type="radio" id="modeManual" name="filter_mode" value="manual" class="focus:ring-base-brown-500 h-4 w-4 text-base-brown-600 border-gray-300">
+                            <label for="modeManual" class="ml-2 block font-medium text-gray-700">Tanggal Manual</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mb-3">
                     <x-input wire:model.debounce.200ms="search" type="text"
                         placeholder="Cari nama, no ujian, nim atau nimb"
-                        class="block w-full mb-3 placeholder-gray-400" />
+                        class="block w-full placeholder-gray-400" />
                 </div>
             </div>
+            {{-- ================= AKHIR BLOK FILTER TANGGAL YANG BARU ================== --}}
+
             <div class="hidden sm:block">
                 <x-table :theads="['Aksi', 'Nama', 'Jenis Poin', 'Kategori', 'Poin', 'Waktu']" class="mb-3" :breakpointVisibility="[
                     3 => ['xl' => 'hidden'], // Hide kategori on xl
@@ -149,7 +174,6 @@
                     </slot>
                 </x-table>
             </div>
-            <!-- Versi Mobile untuk Tabel Poin -->
             <div class="grid grid-cols-1 gap-4 sm:hidden">
                 @forelse ($poins as $p)
                     <x-card class="flex flex-col items-start justify-between p-4 space-y-3 font-sans clickable-card"

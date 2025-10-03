@@ -16,19 +16,30 @@ class Table extends Component
     use WithPagination, WithFileUploads;
     public $jenispoin, $poin, $alasan, $urutan_input, $tanggal_poin, $image, $filename;
     public $jenisPoinSelected;
-    public $selected_day_poin; 
-    public $selected_day_edit; 
+    public $selected_day_poin;
+    public $selected_day_edit;
     public $selected;
     public $openedit = false;
     public $search;
     public $poinToShow;
-    public $jenisUser = "semua"; 
+    public $jenisUser = "semua";
     public $tipePoin = -1; // semua tipe poin
     public $showModalDetail = false;
     public $jenispoins;
     public $canChangeJenisPoin = true;
 
+    // ==================== PERUBAHAN 1.1 (TAMBAHKAN INI) ====================
+    public $filterDateMode = 'dropdown'; // 'dropdown' atau 'manual'
+    // =======================================================================
+
     protected $listeners = ['reloadTableInputPoin' => '$refresh'];
+
+    // ==================== PERUBAHAN 1.2 (TAMBAHKAN INI) ====================
+    public function updatedFilterDateMode()
+    {
+        $this->reset('selected_day_poin', 'tanggal_poin');
+    }
+    // =======================================================================
 
     public function mount()
     {
@@ -207,15 +218,22 @@ class Table extends Component
     {
         $tanggal_filter = null;
 
-        if ($this->selected_day_poin) {
-            $dayDate = Day::getDateByName($this->selected_day_poin);
-            if ($dayDate) {
-                $tanggal_filter = $dayDate->format('Y-m-d');;
-            }
-        }
+        // ==================== PERUBAHAN 1.3 (UBAH BLOK INI) ====================
+        // Sebelumnya:
+        // if ($this->selected_day_poin) { ... } elseif ($this->tanggal_poin) { ... }
         
-        elseif ($this->tanggal_poin) {
-            $tanggal_filter = $this->tanggal_poin;
+        // Menjadi:
+        if ($this->filterDateMode === 'dropdown') {
+            if ($this->selected_day_poin) {
+                $dayDate = Day::getDateByName($this->selected_day_poin);
+                if ($dayDate) {
+                    $tanggal_filter = $dayDate->format('Y-m-d');;
+                }
+            }
+        } elseif ($this->filterDateMode === 'manual') {
+            if ($this->tanggal_poin) {
+                $tanggal_filter = $this->tanggal_poin;
+            }
         }
 
         $date = $tanggal_filter ? $tanggal_filter . '%' : null;
@@ -232,5 +250,6 @@ class Table extends Component
         $this->selected_day_poin = null;
         $this->tanggal_poin = null;
     }
+
 }
 
