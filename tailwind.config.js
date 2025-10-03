@@ -37,6 +37,7 @@ export default {
                 "profil-left": "url('@/images/pattern/2025/profil-info.png')",
                 "profil-pattern": "url('@/images/pattern/2025/patternprofil.png')",
                 "login-kanan": "url('@/images/pattern/2025/login-kanan.png')",
+                "login-mobile": "url('@/images/pattern/2025/login-mobile.png')",
                 "galeri": "url('@/images/pattern/2025/pattern galeri.png')",
             }),
             fontFamily: {
