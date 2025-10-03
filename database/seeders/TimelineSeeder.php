@@ -19,7 +19,6 @@ class TimelineSeeder extends Seeder
             [
                 'title' => 'Pendaftaran Ulang Online',
                 'waktu_mulai' => Carbon::createFromTimeString('2025-10-06 01:00:00'),
-                'waktu_akhir' => Carbon::createFromTimeString('2025-10-07 01:00:00'),
                 'location' => 'Website Politeknik Statistika STIS'
             ],
             [
