@@ -11,22 +11,21 @@
     <!-- GALERI FOTO -->
     <div class="px-8 font-archivo sm:px-8 md:px-12 xl:px-16">
 
-        <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16">
+<div class="grid grid-cols-2 mx-4 mt-6 mb-8 gap-x-0 font-bohemianSoul sm:mb-10 lg:grid-cols-12">
+
         {{-- Header --}}
             <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
                 <img src="{{ asset('img/maskot/2025/maskot 1.png') }}" alt="wave" class="z-10 w-14 sm:w-20 md:w-24 lg:w-28 mt-8 sm:mt-[34px]sm:mt-[34px] lg:-translate-x-4 transform translate-y-[-10px]">
-                    <div class="flex h-full flex-col items-center justify-center">
+                    <div class="flex flex-col items-center justify-center h-full">
                         <div class="flex flex-row items-center justify-center gap-4 mt-14 transform translate-y-[-10px]">
-                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                                alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
+                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}"
+                                alt="Elemen 4" class="z-10 w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8">
                             <h1
-                                class="flex items-center justify-center rounded-full px-10 py-3 sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6
-                                    font-brasikaDisplay text-center text-sm font-thin leading-normal 
-                                    drop-shadow-md sm:text-xl lg:text-3xl xl:text-4xl z-0 relative border-4"
+                                class="relative z-0 flex items-center justify-center px-10 py-3 text-sm font-thin leading-normal text-center border-4 rounded-full sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6 font-brasikaDisplay drop-shadow-md sm:text-xl lg:text-3xl xl:text-4xl"
                                 style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
                                 GALERI
                             </h1>
-                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
+                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}"
                                 alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
                         </div>
                     </div>
@@ -34,13 +33,13 @@
             </div>
         </div>
 
-        <div class="mx-4 mb-16 mt-8 grid grid-cols-2 gap-x-0 font-bohemianSoul sm:mb-20 lg:grid-cols-12">
+        <div class="grid grid-cols-2 mx-4 mt-8 mb-16 gap-x-0 font-bohemianSoul sm:mb-20 lg:grid-cols-12">
             <a href="{{ route('home.galeri') }}"
-                class="col-span-1 flex items-center justify-center rounded-l-full border-4 border-2025-1 bg-2025-1 py-1 text-base-white lg:col-start-4 lg:col-end-7">
+                class="flex items-center justify-center col-span-1 py-1 border-4 rounded-l-full border-2025-1 bg-2025-1 text-base-white lg:col-start-4 lg:col-end-7">
                 <h1 class="text-lg md:text-xl lg:text-2xl">Foto</h1>
             </a>
             <a href="{{ route('home.video') }}"
-                class="col-span-1 flex items-center justify-center rounded-r-full border-4 border-2025-1 py-1 text-2025-1 hover:bg-2025-1 hover:text-base-white lg:col-start-7 lg:col-end-10">
+                class="flex items-center justify-center col-span-1 py-1 border-4 rounded-r-full border-2025-1 text-2025-1 hover:bg-2025-1 hover:text-base-white lg:col-start-7 lg:col-end-10">
                 <h1 class="text-lg md:text-xl lg:text-2xl">Video</h1>
             </a>
         </div>
@@ -64,11 +63,11 @@
 
                 <div class="relative w-full">
 
-                    <h5 class="mb-4 flex items-center justify-center gap-2 font-brasikaDisplay text-lg font-medium">
+                    <h5 class="flex items-center justify-center gap-2 mb-4 text-lg font-medium font-brasikaDisplay">
                         <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
-                            class="h-7 w-8">
+                            class="w-8 h-7">
 
-                        <div class="flex justify-center items-center">
+                        <div class="flex items-center justify-center">
                             <h2 class="px-3 lg:px-5 py-2 rounded-full text-center text-sm sm:text-sm md:text-sm lg:text-lg text-2025-1 mx-4 z-10 bg-[radial-gradient(circle,#ffffff,#FFD183)]"
                                 style="text-align: center; filter: drop-shadow(0 0 0.25rem #000);">
                                 {{ $t->title }}
@@ -76,7 +75,7 @@
                         </div>
 
                         <img src="{{ asset('img\asset\2025\Cempaka_Merah_polos .png') }}" alt="Cempaka Merah"
-                            class="h-7 w-8">
+                            class="w-8 h-7">
                     </h5>
 
                     <div x-data="{ showModalImage: false }" class="grid grid-cols-2 gap-4 lg:grid-cols-3">
@@ -112,9 +111,9 @@
 
         @empty
             <div class="mb-20 flex w-full flex-col items-center justify-center rounded-[38px] bg-merah3-pattern">
-                <div class="flex h-32 w-full items-center justify-center bg-white bg-opacity-30 p-6 sm:p-8">
+                <div class="flex items-center justify-center w-full h-32 p-6 bg-white bg-opacity-30 sm:p-8">
                     <span
-                        class="text-center font-bohemianSoul text-lg uppercase tracking-wider text-white sm:text-2xl">Belum
+                        class="text-lg tracking-wider text-center text-white uppercase font-bohemianSoul sm:text-2xl">Belum
                         ada gambar yang tersedia</span>
                 </div>
             </div>

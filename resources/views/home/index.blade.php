@@ -22,7 +22,8 @@
         @if ($berita->count() > 0)
             @include('home.index.berita-harian')
         @endif
-
+{{--
+        @include('home.index.transisi-selendang-hero-teaser') --}}
         {{-- @include('home.index.agenda') --}}
     </section>
 
