@@ -238,7 +238,7 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'KPO'
             ],
             [
-                'nama' => 'Muhammad Choiri Krisna Arsyad',
+                'nama' => 'Muhammad Choiri Krisna A.',
                 'foto' => 'img/ppo/bph/Muhammad Choiri Krisna Arsyad.png',
                 'jabatan' => 'WKPO'
             ],
@@ -266,7 +266,7 @@ if (!function_exists('getPanitia')) {
 
         $acara = [
             [
-                'nama' => 'Muhammad Barkah Amaliansyah',
+                'nama' => 'Muhammad Barkah A.',
                 'foto' => 'img/ppo/acara/Muhammad Barkah Amaliansyah.png',
                 'jabatan' => 'Koordinator'
             ],
@@ -281,7 +281,7 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Bungaran Sammy Briandoli Nainggolan',
+                'nama' => 'Bungaran Sammy Briandoli N.',
                 'foto' => 'img/ppo/acara/Bungaran Sammy Briandoli Nainggolan.png',
                 'jabatan' => 'Anggota'
             ],
@@ -395,17 +395,17 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Kukuh Bagus Purnomo Sidik',
+                'nama' => 'Kukuh Bagus Purnomo S.',
                 'foto' => 'img/ppo/lapk/Kukuh Bagus Purnomo Sidik.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Malika Dzikra Kalila Ramadhani',
+                'nama' => 'Malika Dzikra Kalila R.',
                 'foto' => 'img/ppo/lapk/Malika Dzikra Kalila Ramadhani.png',
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Mohammad Zidane A. Satriaji',
+                'nama' => 'Mohammad Zidane A. S.',
                 'foto' => 'img/ppo/lapk/Mohammad Zidane A. Satriaji.png',
                 'jabatan' => 'Anggota'
             ],
@@ -559,7 +559,7 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Deka Sholiha Kartika Habsari',
+                'nama' => 'Deka Sholiha Kartika H.',
                 'foto' => 'img/ppo/ppm/Deka Sholiha Kartika Habsari.png',
                 'jabatan' => 'Anggota'
             ],

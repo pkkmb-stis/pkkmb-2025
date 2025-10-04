@@ -439,14 +439,14 @@
             .ppo-member-card,
             .dosen-member-card {
                 width: 150px;
-                height: 170px;
+                height: 230px;
             }
 
             .ppo-member-card img,
             .dosen-member-card img {
                 width: 70px;
                 height: 70px;
-                top: 25px;
+                top: 30px;
             }
 
             .dosen-title {
@@ -525,7 +525,7 @@
                         <img :src="'{{ asset('') }}' + member.foto" 
                              alt="Foto Anggota"
                              onerror="this.src='{{ asset('img/default-profile.jpg') }}'">
-                        <h3 class="member-name" x-text="member.nama"></h3>
+                        <h3 class="member-name mx-3" x-text="member.nama"></h3>
                         <p class="member-position" x-text="member.jabatan"></p>
                     </div>
                 </template>
@@ -593,7 +593,7 @@
                 <template x-for="member in divisions[activeIndex].members" :key="member.nama">
                     <div class="dosen-member-card">
                         <img :src="'{{ asset('') }}' + member.foto" 
-                             alt="Foto Dosen"
+                             alt="Foto Dosen" class="object-top"
                              onerror="this.src='{{ asset('img/default-profile.jpg') }}'">
                         <h3 class="member-name" x-text="member.nama"></h3>
                         <p class="member-position" x-text="member.jabatan"></p>
@@ -676,13 +676,13 @@
                 },
                 getPreviewCardClass(shortName) {
                     const classMap = {
-                        'BPH': 'ppo-preview-bph',
-                        'Acara': 'ppo-preview-acara',
-                        'LAPK': 'ppo-preview-lapk',
-                        'Gramti': 'ppo-preview-gramti',
-                        'Tibum': 'ppo-preview-tibum',
-                        'PPM': 'ppo-preview-ppm',
-                        'Umum': 'ppo-preview-umum'
+                        'BPH': 'ppo-preview-umum',
+                        'Acara': 'ppo-preview-bph',
+                        'LAPK': 'ppo-preview-acara',
+                        'Gramti': 'ppo-preview-lapk',
+                        'Tibum': 'ppo-preview-gramti',
+                        'PPM': 'ppo-preview-tibum',
+                        'Umum': 'ppo-preview-ppm'
                     };
                     return classMap[shortName] || 'ppo-preview-bph';
                 },
