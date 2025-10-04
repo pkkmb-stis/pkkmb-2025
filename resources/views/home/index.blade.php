@@ -4,8 +4,7 @@
     <!-- End Header -->
 
     <!-- Section -->
-    <section class="font-caruban">
-        @include('home.index.transisi-selendang-hero-teaser')
+    <section class="font-caruban  overflow-x-hidden">
 
         @include('home.index.teaser')
 
