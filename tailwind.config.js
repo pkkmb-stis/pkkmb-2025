@@ -203,9 +203,29 @@ export default {
                         animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
                            },
                         },
+            swayslow1: {
+            '0%, 100%': { 
+                transform: 'translateX(-2%)', 
+            },
+            '50%': { 
+                transform: 'translateX(2%)',  
+            },
+        },
+        
+            swayslow2: {
+            '0%, 100%': { 
+                transform: 'translateX(2%)', 
+            },
+            '50%': { 
+                transform: 'translateX(-2%)', 
+            },
+        },
+            
                     },
             animation: {
+                'swayslow': 'swayslow 8s ease-in-out infinite',
                 'bounce-slow': 'bounceSlow 3s infinite',
+                'swayslow2': 'swayslow2 8s ease-in-out infinite',
                        },
 
 
