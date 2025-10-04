@@ -10,9 +10,9 @@
                 </div>
                 <div class="w-4/5 ml-4 text-2025-1">
                     <h1 class="font-semibold lg:text-2xl md:text-xl text-lg leading-9 font-poppins inline-flex items-center space-x-4">
-                        PKKMB-PKBN 2025
+                        PKKMB 2025
                     </h1>
-                    <p class="text-sm">Membangun Mahasiswa yang Tangguh Serta Siap Menempuh Pendidikan Untuk Menjadi Calon ASN Ahli di Bidang Statistik dan Komputasi Statistik yang BerAKHLAK</p>
+                    <p class="text-sm">Membentuk Mahasiswa yang Aktif, Adaptif, Kolaboratif, dan Komunikatif serta Menjadi Mampu Agen Perubahan demi Mewujudkan Statistisi yang Berkualitas dan ASN yang BerAKHLAK dengan Rasa Nasionalisme yang Tinggi</p>
                 </div>
             </div>
 
@@ -68,7 +68,7 @@
     </div>
 
     <p class="justify-center text-center mt-6 text-2025-1 lg:text-lg md:text-base text-sm pb-4">Copyright &copy;
-        &bull; Seksi GRAMTI PKKMB-PKBN 2025 Politeknik
+        &bull; Seksi GRAMTI PKKMB 2025 Politeknik
         Statistika STIS</p>
 </footer>
 <!-- End Footer -->

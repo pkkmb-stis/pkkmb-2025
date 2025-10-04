@@ -1,4 +1,4 @@
-<x-home-layout menu="Panitia" title="Panitia Pelaksana Operasional - PKKMB-PKBN 2024">
+<x-home-layout menu="Panitia" title="Panitia Pelaksana Operasional - PKKMB 2025">
     <div class="px-8 pt-24 pb-20 sm:px-8 md:px-12 md:pt-28 lg:pt-32 xl:px-16">
 
         <div class="grid w-full px-8 pb-4 sm:px-16 md:px-20 md:pb-12 xl:px-16">

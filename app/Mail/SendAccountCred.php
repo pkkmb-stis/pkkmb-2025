@@ -30,7 +30,7 @@ class SendAccountCred extends Mailable
     public function build()
     {
         return $this->view('emails.send-account-cred')
-            ->subject('(No-Reply) Informasi Akun Website PKKMB-PKBN 2025')
+            ->subject('(No-Reply) Informasi Akun Website PKKMB 2025')
             ->with([
                 'name' => $this->user['name'],
                 'username' => $this->user['username'],

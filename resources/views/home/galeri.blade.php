@@ -1,4 +1,4 @@
-<x-home-layout menu="Galeri" title="Galeri Foto - PKKMB-PKBN 2025">
+<x-home-layout menu="Galeri" title="Galeri Foto - PKKMB 2025">
     @push('css')
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
         <style>

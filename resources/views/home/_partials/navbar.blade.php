@@ -18,7 +18,7 @@
                     </span>
                     <a class="px-10 mb-4 text-center" href="{{ route('home.index') }}">
                         <img src="{{ LOGO }}" alt="LOGO" class="w-20 mx-auto" />
-                        <span class="font-bold font-brasikaDisplay">PKKMB-PKBN 2025</span>
+                        <span class="font-bold font-brasikaDisplay">PKKMB 2025</span>
                     </a>
 
                     @auth
@@ -56,7 +56,7 @@
             <img src="{{ LOGO }}" alt="LOGO" class="hidden w-10 mr-2 lg:inline-block" />
             <span
                 class="gap-2 text-sm font-bold leading-none font-brasikaDisplay hover:text-2025-2 lg:flex lg:flex-col lg:items-start lg:justify-start">
-                <span>PKKMB-PKBN</span>
+                <span>PKKMB</span>
                 <span>2025</span>
             </span>
         </a>

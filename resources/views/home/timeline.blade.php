@@ -1,4 +1,4 @@
-<x-home-layout menu="Timeline" title="Timeline - PKKMB-PKBN 2025">
+<x-home-layout menu="Timeline" title="Timeline - PKKMB 2025">
     <div class="mb-10 grid h-auto w-auto grid-cols-1 justify-items-center px-2 pb-8 pt-24 font-poppins sm:px-12 md:px-16 md:pb-10 md:pt-28 lg:px-24 lg:pb-12 lg:pt-32 xl:pb-14"
         x-data="{ width: window.innerWidth }" x-init="window.addEventListener('resize', () => {
             width = window.innerWidth;

@@ -1,4 +1,4 @@
-<x-home-layout menu="Panitia" title="Profil Panitia - PKKMB PKBN 2025">
+<x-home-layout menu="Panitia" title="Profil Panitia - PKKMB 2025">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>

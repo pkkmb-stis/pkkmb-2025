@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'PKKMB-PKBN Politeknik Statistika STIS',
+    'name' => 'PKKMB Politeknik Statistika STIS',
 
     /*
     |--------------------------------------------------------------------------

@@ -56,7 +56,7 @@
         </div>
         <div class="text-center">
           <h1 class="font-brasikaDisplay text-4xl leading-none text-[#F9C46B]">
-            Visi dan Misi PKKMB-PKBN 2025
+            Visi dan Misi PKKMB 2025
           </h1>
         </div>
         <div class="flex flex-row lg:pr-7 justify-center items-center">
@@ -107,9 +107,9 @@
     $(window).resize(function() {
       var width = $(document).width();
       if (width <= 900) {
-        $('#title-visimisi').html('Visi dan Misi<br>PKKMB-PKBN 2025');
+        $('#title-visimisi').html('Visi dan Misi<br>PKKMB 2025');
       } else {
-        $('#title-visimisi').html('Visi dan Misi PKKMB-PKBN 2025');
+        $('#title-visimisi').html('Visi dan Misi PKKMB 2025');
       }
     });
   </script>

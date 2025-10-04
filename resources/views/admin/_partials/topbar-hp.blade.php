@@ -25,5 +25,5 @@
 <a class="items-center justify-center hidden h-full py-3 overflow-hidden text-sm font-bold uppercase whitespace-nowrap md:flex"
     href="{{ route('home.index') }}">
     <img src="{{ LOGO }}" alt="Logo" width="40" height="40" class="rounded-full">
-    <span class="ml-2 text-base font-normal text-white font-aringgo">PKKMB-PKBN 2025</span>
+    <span class="ml-2 text-base font-normal text-white font-aringgo">PKKMB 2025</span>
 </a>

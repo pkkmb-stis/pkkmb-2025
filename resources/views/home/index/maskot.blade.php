@@ -24,7 +24,7 @@
              class="absolute left-0 top-1/2 -translate-y-1/2 w-[120px] lg:w-[110px] xl:w-[120px] h-auto">
         <!-- Judul -->
         <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-[34px] text-[#F9C46B] font-brasikaDisplay tracking-wide">
-          Maskot PKKMB - PKBN 2025
+          Maskot PKKMB 2025
         </h1>
         <!-- Ornamen kanan -->
         <img src="img/asset/2025/Karawo Pinang.png" 
@@ -133,7 +133,7 @@
 
           <!-- Judul -->
           <h1 class="text-[14px] text-[#F9C46B] font-brasikaDisplay tracking-wide">
-            Maskot PKKMB - PKBN 2025
+            Maskot PKKMB 2025
           </h1>
 
           <!-- Ornamen kanan (mirror) -->

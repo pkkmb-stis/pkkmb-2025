@@ -15,7 +15,7 @@
         <!-- Kontainer judul -->
             <div class="flex items-center justify-center rounded-2xl bg-[#8B2F4B] bg-opacity-95 shadow-xl py-2 px-4">
               <h1 class="font-brasikaDisplay text-sm sm:text-base text-[#F9C46B] text-center">
-                Teaser PKKMB-PKBN 2025
+                Teaser PKKMB 2025
               </h1>
             </div>
 
@@ -62,7 +62,7 @@
         <!-- Judul -->
         <h1 class="font-brasikaDisplay text-[#F9C46B] text-center flex-grow 
                    text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-          Teaser PKKMB-PKBN 2025
+          Teaser PKKMB 2025
         </h1>
 
         <!-- Ornamen kanan -->

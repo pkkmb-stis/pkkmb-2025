@@ -16,34 +16,39 @@ class VideoSeeder extends Seeder
     {
         $data = [
             [
+                'title' => 'After Movie PKKMB 2024',
+                'filename' => 'https://www.youtube.com/embed/PCwOomeNWI0',
+                'urutan' => 1
+            ],
+            [
                 'title' => 'After Movie PKKMB 2023',
                 'filename' => 'https://www.youtube.com/embed/m4Fj1Y1fF6U',
-                'urutan' => 1
+                'urutan' => 2
             ],
             [
                 'title' => 'After Movie MP2K 2022',
                 'filename' => 'https://www.youtube.com/embed/vH_pzodfabo',
-                'urutan' => 2
+                'urutan' => 3
             ],
             [
                 'title' => 'After Movie MP2K 2021',
                 'filename' => 'https://www.youtube.com/embed/wLMnyw5cQ1g',
-                'urutan' => 3
+                'urutan' => 4
             ],
             [
                 'title' => 'After Movie MP2K 2020',
                 'filename' => 'https://www.youtube.com/embed/1OwrQll4Dw0',
-                'urutan' => 4
+                'urutan' => 5
             ],
             [
                 'title' => 'After Movie MP2K 2019',
                 'filename' => 'https://www.youtube.com/embed/1WRd0zrepOg',
-                'urutan' => 5
+                'urutan' => 6
             ],
             [
                 'title' => 'Highlight MP2K 2018',
                 'filename' => 'https://www.youtube.com/embed/pIsPfy_-UCg',
-                'urutan' => 6
+                'urutan' => 7
             ],
         ];
 

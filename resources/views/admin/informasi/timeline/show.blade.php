@@ -1,7 +1,7 @@
 <div>
     <x-card x-data="{ showModalDelete: false, 'timelineTitle': '', 'timelineId': '' }">
         <div class="flex items-center justify-between mb-3">
-            <h5 class="text-xl font-normal text-gray-700 font-bohemianSoul">Timeline PKKMB-PKBN 2025</h5>
+            <h5 class="text-xl font-normal text-gray-700 font-bohemianSoul">Timeline PKKMB 2025</h5>
             @can(PERMISSION_ADD_TIMELINE)
                 @livewire('admin.informasi.timeline.add')
             @endcan
