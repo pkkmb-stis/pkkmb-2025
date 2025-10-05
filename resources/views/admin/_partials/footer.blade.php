@@ -56,12 +56,18 @@
     });
 
     document.addEventListener('livewire:load', function() {
-        window.Echo.private('pengaduan')
-            .listen('PengaduanUpdated', (event) => {
-                if (event.actionType === 'add') {
-                    Livewire.emit('toastShow', 'success',
-                        `Terdapat ${event.pengaduanCount} pengaduan baru.`, true);
-                }
-            });
+        // Pastikan Laravel Echo sudah siap
+        if (window.Echo) {
+            window.Echo.private('pengaduan')
+                .listen('PengaduanUpdated', (event) => {
+                    // Hanya tampilkan toast jika ada pengaduan baru
+                    if (event.actionType === 'add') {
+                        Livewire.emit('toastShow', 'success',
+                            `Terdapat ${event.pengaduanCount} pengaduan baru.`, true);
+                    }
+                });
+        } else {
+            console.error('Laravel Echo (Toast Listener) not initialized.');
+        }
     });
 </script>

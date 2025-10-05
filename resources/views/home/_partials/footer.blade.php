@@ -12,7 +12,7 @@
                     <h1 class="font-semibold lg:text-2xl md:text-xl text-lg leading-9 font-poppins inline-flex items-center space-x-4">
                         PKKMB 2025
                     </h1>
-                    <p class="text-sm">Membentuk Mahasiswa yang Aktif, Adaptif, Kolaboratif, dan Komunikatif serta Menjadi Mampu Agen Perubahan demi Mewujudkan Statistisi yang Berkualitas dan ASN yang BerAKHLAK dengan Rasa Nasionalisme yang Tinggi</p>
+                    <p class="text-sm">Menyiapkan Mahasiswa Kedinasan yang Unggul secara Akademis, BerAKHLAK, Berintegritas, Resilien, Ramah, serta Memegang Nilai-Nilai Luhur Bangsa dan Agama</p>
                 </div>
             </div>
 

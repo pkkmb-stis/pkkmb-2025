@@ -24,7 +24,7 @@
         </div>
         <h2 class="text-lg font-semibold mb-3 font-chaTime tracking-widest">VISI:</h2>
         <p class="text-base leading-relaxed font-poppins relative z-10 font-poppins">
-          “Membentuk Mahasiswa yang Aktif, Adaptif, Kolaboratif, dan Komunikatif serta Menjadi Mampu Agen Perubahan demi Mewujudkan Statistisi yang Berkualitas dan ASN yang BerAKHLAK dengan Rasa Nasionalisme yang Tinggi”
+          “Menyiapkan Mahasiswa Kedinasan yang Unggul secara Akademis, BerAKHLAK, Berintegritas, Resilien, Ramah, serta Memegang Nilai-Nilai Luhur Bangsa dan Agama”
         </p>
       </div>
     </div>
@@ -75,7 +75,7 @@
             </div>
             <h2 class="text-3xl font-semibold mb-4 font-chaTime tracking-widest">VISI:</h2>
             <p class="text-2xl leading-relaxed font-poppins relative z-10">
-              “Membentuk Mahasiswa yang Aktif, Adaptif, Kolaboratif, dan Komunikatif serta Menjadi Mampu Agen Perubahan demi Mewujudkan Statistisi yang Berkualitas dan ASN yang BerAKHLAK dengan Rasa Nasionalisme yang Tinggi”
+              “Menyiapkan Mahasiswa Kedinasan yang Unggul secara Akademis, BerAKHLAK, Berintegritas, Resilien, Ramah, serta Memegang Nilai-Nilai Luhur Bangsa dan Agama”
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@
       <!-- Misi PC -->
       <div class="overflow-hidden flex flex-row-reverse mx-auto max-w-full justify-center items-stretch px-12 py-6" data-aos="fade-left">
         <div class="flex-1 p-4">
-          <div class="bg-[#8B2F4B] text-white px-8 py-12 rounded-[50px] h-full relative overflow-hidden shadow-xl">
+          <div class="bg-[#8B2F4B] text-white px-8 py-12 rounded-lg h-full relative overflow-hidden shadow-xl">
             <div class="z-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cover opacity-[20%]"
                  style="background-image: url('img/asset/2025/timeline/patternwait1.png'); background-position: center; width:50%; height:100%;">
             </div>

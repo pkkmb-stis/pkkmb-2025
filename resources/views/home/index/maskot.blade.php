@@ -34,7 +34,7 @@
   </div>
 
   <!-- Konten Utama -->
-  <main class="relative w-full min-h-screen pt-[200px] 
+  <main class="relative w-full min-h-screen pt-[200px]
                bg-no-repeat bg-center lg:bg-[length:60%_auto] xl:bg-[50%_auto] 2xl:bg-[40%_auto]" 
         style="background-image: url('img/asset/2025/bg sulawesi.png');">
 
@@ -111,100 +111,53 @@
   
 
    <!-- ================= TAMPIILAN HP ================= -->
-  <div class="block lg:hidden">
+<div class="block lg:hidden">
     <div class="relative flex justify-center">
-  <!-- Selendang Atas -->
-    <div class="absolute top-0 left-0 w-full h-[50px] bg-center"
-         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;">
-    </div>
+        <div class="absolute top-0 left-0 w-full h-[50px] bg-center" style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;"></div>
+        <div class="absolute top-[40px] left-0 w-full h-[50px] bg-center" style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;"></div>
 
-    <!-- Selendang Bawah -->
-    <div class="absolute top-[40px] left-0 w-full h-[50px] bg-center"
-         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;">
-    </div>
-
-      <!-- Kontainer judul di atas selendang -->
-      <div class="absolute inset-0 flex items-center justify-center">
-        <div class="relative bg-[#8B2F4B] px-6 py-3 rounded-[5rem] mt-20 w-[370px] sm:w-[500px] md:w-[600px] text-center flex items-center justify-center">
-    
-          <!-- Ornamen kiri -->
-          <img src="img/asset/2025/Karawo Pinang.png" 
-               class="absolute left-0 top-1/2 -translate-y-1/2 w-[50px] h-auto">
-
-          <!-- Judul -->
-          <h1 class="text-[14px] text-[#F9C46B] font-brasikaDisplay tracking-wide">
-            Maskot PKKMB 2025
-          </h1>
-
-          <!-- Ornamen kanan (mirror) -->
-          <img src="img/asset/2025/Karawo Pinang.png" 
-               class="absolute right-0 top-1/2 -translate-y-1/2 w-[50px] h-auto scale-x-[-1]">
-
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="relative bg-[#8B2F4B] px-6 py-3 rounded-[5rem] mt-20 w-[370px] sm:w-[500px] md:w-[600px] text-center flex items-center justify-center">
+                <img src="img/asset/2025/Karawo Pinang.png" class="absolute left-0 top-1/2 -translate-y-1/2 w-[50px] h-auto">
+                <h1 class="text-[14px] text-[#F9C46B] font-brasikaDisplay tracking-wide">Maskot PKKMB 2025</h1>
+                <img src="img/asset/2025/Karawo Pinang.png" class="absolute right-0 top-1/2 -translate-y-1/2 w-[50px] h-auto scale-x-[-1]">
+            </div>
         </div>
-      </div>
     </div>
 
-  <!-- Konten Utama -->
-  <main class="relative w-full min-h-screen bg-no-repeat bg-center bg-cover bg-[length:80%_auto] sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/bg sulawesi.png') ;">
+    <main class="relative w-full flex flex-col items-center gap-y-16 py-24 mt-10 bg-no-repeat bg-center bg-[length:80%_auto] sm:bg-[length:90%_auto] md:bg-[length:80%_auto]" style="background-image: url('img/asset/2025/bg sulawesi.png');">
 
- <!-- Maskot kiri (Tora) -->
-<div class="absolute top-[20%] left-[15%] sm:left-[10%] md:left-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow mr-3 ">
-  <!-- Container maskot + awan -->
-  <div class="relative flex flex-col left-[2%] items-center right-[50px]">
-    <!-- Maskot -->
-    <img src="{{ maskot0 }}" alt="Tora" 
-         class="w-[89px] h-auto sm:w-[120px] md:w-[120px] ml-[-15px] z-10">
-    <!-- Awan -->
-    <img src="img/asset/2025/Awan Tora.png" alt="Awan" 
-         class="w-[100px] sm:w-[140px] md:w-[180px] -mt-5">
-  </div>
+        <div class="w-full flex justify-start items-center space-x-2 animate-bounce-slow pl-4 sm:pl-8">
+            <div class="relative flex flex-col items-center">
+                <img src="{{ maskot0 }}" alt="Tora" class="w-[89px] h-auto sm:w-[120px] z-10">
+                <img src="img/asset/2025/Awan Tora.png" alt="Awan" class="w-[100px] sm:w-[140px] -mt-5">
+            </div>
 
-  <!-- Bubble Chat -->
-  <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg 
-              max-w-[240px] sm:max-w-[340px] md:max-w-[420px]">
-    <p class="text-sm sm:text-base md:text-lg leading-relaxed font-poppins">
-      Halo aku <b>Tora</b>, Aku adalah maskot yang melambangkan semangat, keberanian, dan kegigihan
-    </p>
-    <!-- ekor ke kiri -->
-    <div class="absolute top-1/2 -left-4 transform -translate-y-1/2 
-                w-0 h-0 border-t-[12px] border-b-[12px] border-r-[16px] 
-                border-t-transparent border-b-transparent border-r-white"></div>
-  </div>
-</div>
+            <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg max-w-[200px] sm:max-w-[340px]">
+                <p class="text-sm sm:text-base leading-relaxed font-poppins">
+                    Halo aku <b>Tora</b>, Aku adalah maskot yang melambangkan semangat, keberanian, dan kegigihan
+                </p>
+                <div class="absolute top-1/2 -left-4 transform -translate-y-1/2 w-0 h-0 border-t-[12px] border-b-[12px] border-r-[16px] border-t-transparent border-b-transparent border-r-white"></div>
+            </div>
+        </div>
 
-<!-- Maskot kanan (Tira) -->
-<div class="absolute bottom-[200px] right-[15%] sm:right-[10%] md:right-[5%] md:bottom-[5%] flex items-center space-x-3 sm:space-x-5 animate-bounce-slow ml-3">
-  <!-- Bubble Chat -->
-  <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg 
-              max-w-[240px] sm:max-w-[340px] md:max-w-[420px]">
-    <p class="text-sm sm:text-base md:text-lg leading-relaxed font-poppins">
-      Halo aku <b>Tira</b>, Aku adalah maskot wanita yang melambangkan semangat, keberanian, dan kegigihan
-    </p>
-    <!-- ekor ke kanan -->
-    <div class="absolute top-1/2 -right-4 transform -translate-y-1/2 
-                w-0 h-0 border-t-[12px] border-b-[12px] border-l-[16px] 
-                border-t-transparent border-b-transparent border-l-white"></div>
-  </div>
+        <div class="w-full flex justify-end items-center space-x-2 animate-bounce-slow pr-4 sm:pr-8">
+            <div class="relative bg-white text-black p-3 sm:p-5 rounded-2xl shadow-lg max-w-[200px] sm:max-w-[340px]">
+                <p class="text-sm sm:text-base leading-relaxed font-poppins">
+                    Halo aku <b>Tira</b>, Aku adalah maskot wanita yang melambangkan semangat, keberanian, dan kegigihan
+                </p>
+                <div class="absolute top-1/2 -right-4 transform -translate-y-1/2 w-0 h-0 border-t-[12px] border-b-[12px] border-l-[16px] border-t-transparent border-b-transparent border-l-white"></div>
+            </div>
 
-  <!-- Container maskot + awan -->
-  <div class="relative flex flex-col items-center ">
-    <!-- Maskot -->
-    <img src="{{ maskot4 }}" alt="Tira" 
-         class="w-[89px] h-auto sm:w-[120px] md:w-[120px] z-10">
-    <!-- Awan -->
-    <img src="img/asset/2025/Awan Tira.png" alt="Awan" 
-         class="w-[100px] sm:w-[140px] md:w-[180px] -mt-8">
-  </div>
-  </div>
+            <div class="relative flex flex-col items-center">
+                <img src="{{ maskot4 }}" alt="Tira" class="w-[89px] h-auto sm:w-[120px] z-10">
+                <img src="img/asset/2025/Awan Tira.png" alt="Awan" class="w-[100px] sm:w-[140px] -mt-8">
+            </div>
+        </div>
     </main>
 
-     <!-- Selendang Bawah  1 -->
-    <div class="w-full h-[50px] bg-center"
-         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;">
-    </div>
+    <div class="w-full h-[50px] bg-center" style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;"></div>
 
-    <!-- Selendang Bawah  2-->
-    <div class="w-full h-[50px] bg-center"
-         style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;"></div>
-  </div>
+    <div class="w-full h-[50px] bg-center" style="background-image: url('img/asset/2025/selendang maskot.png'); background-size: contain; z-index:0;"></div>
+</div>
 </div>

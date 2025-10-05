@@ -1,4 +1,4 @@
-<header class="w-full h-[125vh] md:h-[130vh] overflow-hidden pt-10 pb-30 p-0 bg-[img/asset/2025/vektor.png] bg-center">
+<header class="w-full h-[120vh] md:h-[130vh] overflow-hidden pt-10 pb-30 p-0 bg-[img/asset/2025/vektor.png] bg-center">
 
   <div class="absolute inset-0 bg-gradient-to-b from-[#e15586] via-[#8b2f4b] to-[#1e2a4a] bg-center z-0 mix-blend-multiply"></div>
     {{-- desktop --}}
@@ -49,7 +49,7 @@
                 </h1>
                 <span class="text-[#FFFFFF] mt-2 font-chaTime text-2xl lg:text-2xl 2xl:text-4xl flex items-center justify-center"
                     style="filter: drop-shadow(0 5px 6px #FF3B7F);">Politeknik Statistika STIS</span>
-                <p class="text-[#FFE1AF] mt-2 font-chaTime text-2xl lg:text-2xl 2xl:text-3xl flex items-center justify-center"
+                <p class="text-[#FFE1AF] mt-2 font-chaTime text-2xl lg:text-2xl 2xl:text-3xl flex items-center justify-center z-10"
                     style="filter: drop-shadow(0 0.97 0.97 #FFE1AF);">Angkatan</p>
                 <div class="flex item-center justify-center space-x-7 mb-12">
                     <img src="{{ asset('img/asset/2025/Elemen 1.png') }}"
@@ -66,7 +66,7 @@
     </section>
 
     {{-- mobile --}}
-    <div class="relative flex h-screen w-full md:hidden mt-14 sm:mt-24">
+    <div class="relative flex h-screen w-full md:hidden sm:mt-24 top-0">
 
             {{-- Elemen Kiri --}}
             <div class="absolute bottom-0 left-6 mb-[54px] flex flex-row items-end lg:left-10 xl:left-18 2xl:left-26">
@@ -107,7 +107,7 @@
                 </h1>
                 <span class="text-[#FFFFFF] mt-2 font-chaTime text-2xl lg:text-2xl 2xl:text-4xl flex items-center justify-center"
                     style="filter: drop-shadow(0 5px 6px #FF3B7F);">Politeknik Statistika STIS</span>
-                <p class="text-[#FFE1AF] mt-2 font-chaTime text-2xl lg:text-2xl flex items-center justify-center"
+                <p class="text-[#FFE1AF] my-2 font-chaTime text-2xl lg:text-2xl flex items-center justify-center z-10"
                     style="filter: drop-shadow(0 0.97 0.97 #FFE1AF);">Angkatan</p>
                 <div class="flex item-center justify-center space-x-7 mb-12">
                     <img src="{{ asset('img/asset/2025/Elemen 1.png') }}"
@@ -124,18 +124,23 @@
         </div>
     </div>
 
-    <div class="-mt-24 sm:-mt-36 md:mt-0">
+    <div class="-mt-24 sm:-mt-28 md:mt-5">
   <!-- SELENDANG TRANSISI DESKTOP -->
-  <div class="relative z-0 w-full h-[80px] lg:h-[133px] md:block bg-[#1e2a4ad8] mt-[-40px] flex items-center justify-center">
+  <div class="relative z-0 w-full h-[80px] md:bg-gradient-to-b from-2025-3 from-50% to-transparent to-50% lg:h-[133px] mt-[-40px] flex items-center justify-center">
     
     <!-- Selendang Atas -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[200px] lg:h-[300px] w-[105%]">
-      <div class="absolute w-full h-full animate-swayslow-1">
-            <img src="img/asset/2025/selendang 1.png" alt="selendang1" class="w-full h-[200px] lg:h-[300px]" />
-      </div>
-  </div>
+<div class="absolute top-1/4 sm:top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[200px] lg:h-[300px] w-[105%] bg-transparent">
+    
+    <div class="absolute inset-0 bg-profil-pattern bg-2025-3 [mask-image:linear-gradient(to_bottom,white_60%,transparent_60%)] md:bg-none md:bg-transparent">
+        </div>
+
+    <div class="absolute w-full h-full animate-swayslow-1">
+        <img src="img/asset/2025/selendang 1.png" alt="selendang1" class="w-full h-[200px] lg:h-[300px]" />
+    </div>
+
+</div>
     <!-- Selendang Bawah -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[200px] lg:h-[300px] w-[105%]">
+  <div class="absolute top-1/4 sm:top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[200px] lg:h-[300px] w-[105%]">
       <div class="absolute w-full h-full animate-swayslow-2 ">
             <img src="img/asset/2025/selendang 2.png" alt="selendang2" class="w-full h-[200px] lg:h-[300px]" />
       </div>

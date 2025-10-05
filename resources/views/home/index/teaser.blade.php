@@ -5,7 +5,7 @@
       <!-- ================== HP ================== -->
       <div class="block lg:hidden">
         <!-- Header -->
-        <div class="grid grid-cols-1 h-auto py-5" data-aos="zoom-in-up">
+        <div class="grid grid-cols-1 h-auto pb-5" data-aos="zoom-in-up">
           <div class="relative w-[90vw] max-w-sm mx-auto mt-[60px]">
         <!-- Ornamen kiri -->
             <img src="img/asset/2025/elemen.png" 
