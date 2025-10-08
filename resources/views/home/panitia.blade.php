@@ -21,7 +21,8 @@
             background-repeat: no-repeat;
             min-height: 100vh;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
+            padding-bottom: 50px
         }
 
         .dosen-backdrop {
@@ -32,31 +33,20 @@
         /* MOTIF */
         .motif-top-right, .motif-bottom-left {
             position: absolute;
-            width: 130px;
+            width: 220px;
             opacity: 0.85;
             z-index: 5;
         }
         .motif-top-right { top: 20px; right: 25px; transform: rotate(12deg); }
-        .motif-bottom-left { bottom: 20px; left: 25px; transform: rotate(-12deg); }
-
-        .dosen-motif-top-right, .dosen-motif-bottom-left {
-            position: absolute;
-            width: 100px;
-            opacity: 0.6;
-            z-index: 2;
-        }
+        .motif-bottom-left { bottom: 20px; left: 25px; transform: rotate(-12deg); bottom: 100px; height: auto}
         .dosen-backdrop-pattern {
             position: absolute;
-            top: 60px;                /* mulai agak turun setelah header */
-            left: 50%;
-            transform: translateX(-50%);
+            top: 220px; /* bisa disesuaikan agar pas di belakang card */
+            left: 0;
             width: 100%;
-            max-width: 1200px;
-            height: auto;             
-            min-height: 600px;        
-            object-fit: cover;        
-            object-position: top;     
-            z-index: 0;               
+            height: auto;
+            object-fit: cover;
+            z-index: 5; /* berada di bawah card */
         }
         /* =========================
            TITLE CONTAINER
@@ -185,7 +175,11 @@
             overflow: hidden; /* rapikan isi */
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-
+        .dosen-member-card{
+            width: 220px;
+            height: 280px;
+            justify-content: center;
+        }
         .ppo-member-card.highlight {
             background-image: url('{{ asset("img/asset/2025/Card PPO Highlight New.png") }}');
             transform: scale(1.05);
@@ -199,6 +193,8 @@
 
         .dosen-member-card {
             background-image: url('{{ asset("img/asset/2025/Card PPO Highlight New.png") }}');
+            transform: scale(1.05);
+            z-index: 10;
         }
 
         /* =========================
@@ -218,6 +214,9 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.25);
             background: #fff; /* agar pinggiran foto halus */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dosen-member-card img{
+            object-position: top center;
         }
         /* Efek interaktif saat hover */
         .ppo-member-card:hover img,
@@ -265,23 +264,20 @@
         /* =========================
            CAROUSEL BUTTONS - DIUBAH
         ========================= */
+        /* CAROUSEL BUTTONS - DIUBAH */
         .carousel-chevron,
         .dosen-carousel-chevron {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 12px;
-            transition: transform 0.3s ease;
-            z-index: 25;
-            height: 60px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        transform: scale(1);
         }
-
         .carousel-chevron:hover,
         .dosen-carousel-chevron:hover {
-            transform: scale(1.1);
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
         }
-
         .carousel-chevron img,
         .dosen-carousel-chevron img {
             width: 50px;
@@ -298,6 +294,7 @@
             margin: 3rem auto;
             padding: 0 40px;
             position: relative;
+            flex-wrap: wrap; /* penting agar responsive */
             min-height: 300px;
         }
 
@@ -383,6 +380,7 @@
             .description-container {
                 margin-left: 30px;
                 max-width: 350px;
+                flex: 0 0 400px;
             }
 
             .carousel-container {
@@ -402,6 +400,7 @@
                 width: 320px;
                 height: 150px;
                 margin: 0 20px;
+                transition: transform 0.6s ease, opacity 0.4s ease;
             }
 
             .stacked-card,
@@ -461,9 +460,6 @@
                 width: 100px;
             }
 
-            .dosen-motif-top-right, .dosen-motif-bottom-left {
-                width: 80px;
-            }
         }
     </style>
 
@@ -535,22 +531,22 @@
 
     {{-- Dosen/Tendik Section --}}
     <section class="relative dosen-backdrop" x-data="dosenSlider()">
-        {{-- Pattern Overlay - DIUBAH --}}
         
-        <div class="relative overflow-visible">
-  <!-- Backdrop dasar -->
-  <img 
-    src="{{ asset('img/asset/2025/backdrop_Tendik.png') }}" 
-    alt="Backdrop Tendik"
-    class="absolute left-0 top-[-310px] w-full object-cover z-[0]"
-  >
+        <div class="relative w-full">
+        <!-- Backdrop dasar -->
+        <img 
+            src="{{ asset('img/asset/2025/backdrop_Tendik.png') }}" 
+            alt="Backdrop Tendik"
+            class="absolute left-0 top-[-330px] w-full object-cover z-[0]"
+        >
 
-    <img 
-    src="{{ asset('img/asset/2025/Pattern Backdrop Dosen.png') }}" 
-    alt="Backdrop Dosen"
-    class="dosen-backdrop-pattern"
-    />
-</div>        
+        <!-- Pattern Backdrop Dosen -->
+        <img 
+            src="{{ asset('img/asset/2025/Pattern Backdrop Dosen.png') }}" 
+            alt="Backdrop Dosen"
+            class="dosen-backdrop-pattern"
+        >
+        </div>      
         {{-- Dosen Title --}}
         <div class="dosen-title-container">
             <img src="{{ asset('img/asset/2025/Title Card Dosen.png') }}" alt="Judul Dosen Tendik" class="w-80 md:w-96 mx-auto">
@@ -593,9 +589,9 @@
                 <template x-for="member in divisions[activeIndex].members" :key="member.nama">
                     <div class="dosen-member-card">
                         <img :src="'{{ asset('') }}' + member.foto" 
-                             alt="Foto Dosen" class="object-top"
+                             alt="Foto Dosen"
                              onerror="this.src='{{ asset('img/default-profile.jpg') }}'">
-                        <h3 class="member-name" x-text="member.nama"></h3>
+                        <h3 class="member-name mx-6" x-text="member.nama"></h3>
                         <p class="member-position" x-text="member.jabatan"></p>
                     </div>
                 </template>
@@ -626,25 +622,25 @@
                         members: @json($acara ?? [])
                     },
                     lapk: {
-                        name: 'Seksi LAPK',
+                        name: 'Seksi Litbang, Akademik, dan Pendamping Kelompok',
                         shortName: 'LAPK',
                         description: 'Seksi Penelitian dan Pengembangan, Akademik, dan Pendamping Kelompok (LAPK) berperan dalam merancang serta mengelola kegiatan akademik, penelitian, dan pendampingan kelompok mahasiswa baru selama PKKMB, guna memastikan pengalaman belajar yang optimal dan mendukung integrasi sosial di lingkungan kampus.',
                         members: @json($lapk ?? [])
                     },
                     gramti: {
-                        name: 'Seksi Gramti',
+                        name: 'Seksi Pemrograman dan Teknologi Informasi',
                         shortName: 'Gramti',
                         description: 'Mengurus grafis, multimedia, dan teknologi informasi untuk mendukung publikasi dan acara.',
                         members: @json($gramti ?? [])
                     },
                     tibum: {
-                        name: 'Seksi Tibum',
+                        name: 'Seksi Ketertiban Umum',
                         shortName: 'Tibum',
-                        description: 'Menjaga ketertiban dan keamanan selama keberlangsungan seluruh rangkaian acara.',
+                        description: 'Seksi Tibum berperan menjaga disiplin dan ketertiban selama rangkaian kegiatan berlangsung. Tugasnya mencakup penyusunan tata tertib, pengawasan pelaksanaan aturan, pembinaan peserta, serta pelatihan baris-berbaris. Dengan koordinasi lintas seksi, divisi ini memastikan suasana kegiatan tetap kondusif, tertib, dan sesuai dengan nilai-nilai kampus.',
                         members: @json($tibum ?? [])
                     },
                     ppm: {
-                        name: 'Seksi PPM',
+                        name: 'Seksi Pertolongan Pertama dan Medis',
                         shortName: 'PPM',
                         description: 'Seksi Pertolongan Pertama dan Medis (PPM) bertanggung jawab atas penanganan kesehatan dan pertolongan pertama selama kegiatan berlangsung, memastikan keselamatan peserta dan panitia.',
                         members: @json($ppm ?? [])
@@ -652,7 +648,7 @@
                     umum: {
                         name: 'Seksi Umum',
                         shortName: 'Umum',
-                        description: 'Membantu tugas-tugas umum kesekretariatan dan administrasi lainnya.',
+                        description: 'Seksi Umum bertanggung jawab atas pengadaan perlengkapan, konsumsi, dan logistik kegiatan, serta memastikan kelancaran fasilitas dan dekorasi yang mendukung. Selain itu, seksi ini mengelola administrasi internal, berkoordinasi lintas divisi, dan menjalankan tugas tambahan dari Ketua Pelaksana demi terciptanya pelaksanaan PKKMB yang tertib dan profesional.',
                         members: @json($umum ?? [])
                     }
                 },
