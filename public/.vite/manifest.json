@@ -1,0 +1,158 @@
+{
+  "node_modules/canvg/lib/index.es.js": {
+    "file": "js/index.es.js",
+    "name": "index.es",
+    "src": "node_modules/canvg/lib/index.es.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "css/style.css"
+    ],
+    "assets": [
+      "img/backgrounddesktop1.png",
+      "img/pattern-desktop.png",
+      "img/footer-all.png",
+      "img/pattern galeri.png",
+      "img/motif linimasa.png",
+      "img/login-kanan.png",
+      "img/motif 3.png",
+      "img/profil-info.png",
+      "img/patternprofil.png",
+      "img/putih-pattern.png",
+      "fonts/Bachelor Bold.ttf",
+      "fonts/chatime.otf",
+      "fonts/Poppins-Regular.ttf",
+      "fonts/BrasikaDisplay.ttf",
+      "fonts/Caruban-EBK8.ttf",
+      "fonts/Bachelor Regular.ttf",
+      "fonts/Aringgo.ttf",
+      "fonts/BohemianSoul.otf"
+    ]
+  },
+  "node_modules/dompurify/dist/purify.es.js": {
+    "file": "js/purify.es.js",
+    "name": "purify.es",
+    "src": "node_modules/dompurify/dist/purify.es.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/html2canvas/dist/html2canvas.esm.js": {
+    "file": "js/html2canvas.esm.js",
+    "name": "html2canvas.esm",
+    "src": "node_modules/html2canvas/dist/html2canvas.esm.js",
+    "isDynamicEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "css/style.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/fonts/Aringgo.ttf": {
+    "file": "fonts/Aringgo.ttf",
+    "src": "resources/fonts/Aringgo.ttf"
+  },
+  "resources/fonts/Bachelor Bold.ttf": {
+    "file": "fonts/Bachelor Bold.ttf",
+    "src": "resources/fonts/Bachelor Bold.ttf"
+  },
+  "resources/fonts/Bachelor Regular.ttf": {
+    "file": "fonts/Bachelor Regular.ttf",
+    "src": "resources/fonts/Bachelor Regular.ttf"
+  },
+  "resources/fonts/BohemianSoul.otf": {
+    "file": "fonts/BohemianSoul.otf",
+    "src": "resources/fonts/BohemianSoul.otf"
+  },
+  "resources/fonts/BrasikaDisplay.ttf": {
+    "file": "fonts/BrasikaDisplay.ttf",
+    "src": "resources/fonts/BrasikaDisplay.ttf"
+  },
+  "resources/fonts/Caruban-EBK8.ttf": {
+    "file": "fonts/Caruban-EBK8.ttf",
+    "src": "resources/fonts/Caruban-EBK8.ttf"
+  },
+  "resources/fonts/Poppins-Regular.ttf": {
+    "file": "fonts/Poppins-Regular.ttf",
+    "src": "resources/fonts/Poppins-Regular.ttf"
+  },
+  "resources/fonts/chatime.otf": {
+    "file": "fonts/chatime.otf",
+    "src": "resources/fonts/chatime.otf"
+  },
+  "resources/images/pattern/2025/backgrounddesktop1.png": {
+    "file": "img/backgrounddesktop1.png",
+    "src": "resources/images/pattern/2025/backgrounddesktop1.png"
+  },
+  "resources/images/pattern/2025/footer-all.png": {
+    "file": "img/footer-all.png",
+    "src": "resources/images/pattern/2025/footer-all.png"
+  },
+  "resources/images/pattern/2025/login-kanan.png": {
+    "file": "img/login-kanan.png",
+    "src": "resources/images/pattern/2025/login-kanan.png"
+  },
+  "resources/images/pattern/2025/motif 3.png": {
+    "file": "img/motif 3.png",
+    "src": "resources/images/pattern/2025/motif 3.png"
+  },
+  "resources/images/pattern/2025/motif linimasa.png": {
+    "file": "img/motif linimasa.png",
+    "src": "resources/images/pattern/2025/motif linimasa.png"
+  },
+  "resources/images/pattern/2025/pattern galeri.png": {
+    "file": "img/pattern galeri.png",
+    "src": "resources/images/pattern/2025/pattern galeri.png"
+  },
+  "resources/images/pattern/2025/pattern-desktop.png": {
+    "file": "img/pattern-desktop.png",
+    "src": "resources/images/pattern/2025/pattern-desktop.png"
+  },
+  "resources/images/pattern/2025/patternprofil.png": {
+    "file": "img/patternprofil.png",
+    "src": "resources/images/pattern/2025/patternprofil.png"
+  },
+  "resources/images/pattern/2025/profil-info.png": {
+    "file": "img/profil-info.png",
+    "src": "resources/images/pattern/2025/profil-info.png"
+  },
+  "resources/images/pattern/2025/putih-pattern.png": {
+    "file": "img/putih-pattern.png",
+    "src": "resources/images/pattern/2025/putih-pattern.png"
+  },
+  "resources/js/app.js": {
+    "file": "js/app.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/html2canvas/dist/html2canvas.esm.js",
+      "node_modules/dompurify/dist/purify.es.js",
+      "node_modules/canvg/lib/index.es.js"
+    ],
+    "css": [
+      "css/app.css",
+      "css/style.css"
+    ],
+    "assets": [
+      "img/backgrounddesktop1.png",
+      "img/pattern-desktop.png",
+      "img/footer-all.png",
+      "img/pattern galeri.png",
+      "img/motif linimasa.png",
+      "img/login-kanan.png",
+      "img/motif 3.png",
+      "img/profil-info.png",
+      "img/patternprofil.png",
+      "img/putih-pattern.png",
+      "fonts/Bachelor Bold.ttf",
+      "fonts/chatime.otf",
+      "fonts/Poppins-Regular.ttf",
+      "fonts/BrasikaDisplay.ttf",
+      "fonts/Caruban-EBK8.ttf",
+      "fonts/Bachelor Regular.ttf",
+      "fonts/Aringgo.ttf",
+      "fonts/BohemianSoul.otf"
+    ]
+  }
+}
