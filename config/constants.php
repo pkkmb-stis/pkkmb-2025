@@ -165,7 +165,7 @@ defined('ROLE_PENGAWAS') || define('ROLE_PENGAWAS', 'PENGAWAS');
 // List Dimensi
 defined('DIMENSI_BUDI_PEKERTI') || define('DIMENSI_BUDI_PEKERTI', 'Berbudi Pekerti dan Berdisplin Tinggi');
 defined('DIMENSI_BERINTELEKTUAL') || define('DIMENSI_BERINTELEKTUAL', 'Berintelektual');
-defined('DIMENSI_LITERASI') || define('DIMENSI_LITERASI', 'Literasi, Dedikasi, dan Siap Mengabdi Institusi');
+defined('DIMENSI_DEDIKASI') || define('DIMENSI_DEDIKASI', 'Berdedikasi dan Siap Mengabdi Institusi');
 defined('DIMENSI_NASIONALISME') || define('DIMENSI_NASIONALISME', 'Nasionalisme');
 
 // Poin

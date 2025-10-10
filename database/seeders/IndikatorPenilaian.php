@@ -18,13 +18,6 @@ class IndikatorPenilaian extends Seeder
         //Dimensi dan Indikator Penilaian
         Indikator::insert([
             [
-                'nama' => 'Wawasan 4 Pilar Kebangsaan',
-                'dimensi' => DIMENSI_NASIONALISME,
-                'sks' => 2,
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
                 'nama' => 'Etika dan Kedisiplinan',
                 'dimensi' => DIMENSI_BUDI_PEKERTI,
                 'sks' => 3,
@@ -32,7 +25,7 @@ class IndikatorPenilaian extends Seeder
                 'updated_at' => now()
             ],
             [
-                'nama' => 'Kepemimpinan dan Kerjasama',
+                'nama' => 'Pengembangan Diri, Kepemimpinan, dan Kerja sama',
                 'dimensi' => DIMENSI_BUDI_PEKERTI,
                 'sks' => 3,
                 'created_at' => now(),
@@ -60,9 +53,9 @@ class IndikatorPenilaian extends Seeder
                 'updated_at' => now()
             ],
             [
-                'nama' => 'Wawasan Politeknik Statistika STIS-BPS',
-                'dimensi' => DIMENSI_LITERASI,
-                'sks' => 3,
+                'nama' => 'Wawasan Politeknik Statistika STIS - BPS',
+                'dimensi' => DIMENSI_DEDIKASI,
+                'sks' => 4,
                 'created_at' => now(),
                 'updated_at' => now()
             ],

@@ -123,10 +123,9 @@
                         <div class="mb-3">
                             <label for="dimensi" class="block mb-1 font-bold">Dimensi</label>
                             <x-select-form id="dimensi" wire:model.defer="dimensi" disabled="{{ !$canEdit }}">
-                                <option value="{{ DIMENSI_NASIONALISME }}">{{ DIMENSI_NASIONALISME }}</option>
                                 <option value="{{ DIMENSI_BUDI_PEKERTI }}">{{ DIMENSI_BUDI_PEKERTI }}</option>
                                 <option value="{{ DIMENSI_BERINTELEKTUAL }}">{{ DIMENSI_BERINTELEKTUAL }}</option>
-                                <option value="{{ DIMENSI_LITERASI }}">{{ DIMENSI_LITERASI }}</option>
+                                <option value="{{ DIMENSI_DEDIKASI }}">{{ DIMENSI_DEDIKASI }}</option>
                             </x-select-form>
                             <x-error-input name="dimensi" />
                         </div>
