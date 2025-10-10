@@ -13,7 +13,7 @@ class CoCardController extends Controller
     public function __construct()
     {
         $this->color = '#000000';
-        $this->font_medium = public_path('Poppins-Regular.TTF');
+        $this->font_medium = public_path('Poppins-Regular.ttf');
         $this->font_bold = public_path('Poppins-Bold.ttf');
         $this->font_bold_belakang = public_path('arial_narrow_bold.ttf');
     }
