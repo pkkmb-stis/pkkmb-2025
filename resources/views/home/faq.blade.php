@@ -48,39 +48,32 @@
             padding-right: 1rem;
             justify-content: center; 
         }
-
-        img[alt="Maleo"] {
-            width: 5rem; 
-            height: auto;
-        }
     }
 
 </style>
 
 <x-home-layout menu="FAQ" title="FAQ">
     <!-- Judul -->
-    <div class="grid w-full px-8 pb-4 pt-24 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16 -mb-8">
-    {{-- Header --}}
-        <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
-            <img src="{{ asset('img/maskot/2025/maskot 0.png') }}" alt="wave" class="z-10 sm:w-20 md:w-24 lg:w-28 mt-8 sm:mt-[40px] lg:-translate-x-4 transform translate-y-[-10px]">
-                <div class="flex h-full flex-col items-center justify-center">
-                    <div class="flex flex-row items-center justify-center gap-4 mt-14 transform translate-y-[-10px]">
-                        <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                            alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10">
-                        <h1
-                            class="flex items-center justify-center rounded-full px-10 py-3 sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6
-                                font-brasikaDisplay text-center text-sm font-thin leading-normal 
-                                drop-shadow-md sm:text-xl lg:text-3xl xl:text-4xl z-0 relative border-4"
-                            style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
-                            FAQ
-                        </h1>
-                        <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}" 
-                            alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
+            <div class="grid w-full px-8 pt-24 pb-4 sm:px-16 md:px-20 md:pb-5 md:pt-28 lg:pt-32 xl:px-16">
+        {{-- Header --}}
+            <div class="flex h-full w-full flex-row items-end justify-center gap-4 translate-y-[-10px]">
+                <img src="{{ asset('img/maskot/2025/maskot 0.png') }}" alt="wave" class="z-10 w-14 sm:w-20 md:w-24 lg:w-28 mt-8 sm:mt-[34px]sm:mt-[34px] lg:-translate-x-4 transform translate-y-[-10px]">
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <div class="flex flex-row items-center justify-center gap-4 mt-14 transform translate-y-[-10px]">
+                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}"
+                                alt="Elemen 4" class="z-10 w-14 sm:w-20 md:w-28 lg:w-28 -mr-14 sm:-mr-20 md:-mr-28 lg:-mr-28 sm:-mt-5 md:-mt-8 lg:-mt-8">
+                            <h1
+                                class="relative z-0 flex items-center justify-center px-10 py-3 text-sm font-thin leading-normal text-center border-4 rounded-full sm:px-8 sm:pb-4 lg:px-16 lg:py-4 lg:pb-6 font-brasikaDisplay drop-shadow-md sm:text-xl lg:text-3xl xl:text-4xl"
+                                style="color:#1E2A4A; background-color:#FFF3E6; border-color:#1E2A4A;">
+                                FAQ
+                            </h1>
+                            <img src="{{ asset('img/asset/2025/timeline/ornamenjudul1.png') }}"
+                                alt="Elemen 4" class="w-14 sm:w-20 md:w-28 lg:w-28 -ml-14 sm:-ml-20 md:-ml-28 lg:-ml-28 sm:-mt-5 md:-mt-8 lg:-mt-8 z-10 scale-x-[-1]">
+                        </div>
                     </div>
-                </div>
-            <img src="{{ asset('img/maskot/2025/maskot 0b.png') }}" alt="wave" class="z-10 sm:w-20 md:w-24 lg:w-28 mt-8 sm:mt-[40px] lg:translate-x-4 transform translate-y-[-10px]">
+                <img src="{{ asset('img/maskot/2025/maskot 0b.png') }}" alt="wave" class="z-10 w-14 sm:w-20 md:w-24 lg:w-28 mt-8 sm:mt-[34px] lg:translate-x-4 transform translate-y-[-10px]">
+            </div>
         </div>
-    </div>
 
 {{-- Container utama dengan background --}}
 <div class="w-full relative isolate overflow-hidden pb-6 sm:pb-8 md:pb-12 lg:pb-16 -mb-8"        
@@ -90,19 +83,7 @@
             background-position: top center; 
             padding-top: 100px;"> 
 
-    {{-- Burung Maleo Kiri (posisi diatur ulang) --}}
-    <img src="{{ asset('img/asset/2025/maleo.png') }}" alt="Maleo" 
-         class="absolute left-4 top-0 
-                w-28 h-32 sm:w-32 md:w-36 lg:w-40 
-                z-0 scale-x-[-1]" 
-         style="object-fit: contain;">
 
-    {{-- Burung Maleo Kanan (posisi diatur ulang) --}}
-    <img src="{{ asset('img/asset/2025/maleo.png') }}" alt="Maleo" 
-         class="absolute right-4 top-0 
-                w-28 h-32 sm:w-32 md:w-36 lg:w-40 
-                z-0" 
-         style="object-fit: contain;">
 
     <div class="faq-wrapper mx-auto w-[80%] sm:w-[75%] md:w-[70%] relative z-10">
 

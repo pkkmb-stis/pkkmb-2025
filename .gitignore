@@ -5,3 +5,4 @@
 .env.backup
 /.idea
 /.vscode
+/node_modules

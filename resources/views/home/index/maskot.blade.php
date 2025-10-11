@@ -53,8 +53,9 @@
     <!-- Bubble Chat -->
     <div class="relative bg-white text-black p-5 rounded-2xl shadow-lg 
                 max-w-[420px]">
-      <p class="text-lg leading-relaxed font-poppins">
-        Halo aku <b>Tora</b>, Aku adalah maskot pria yang melambangkan semangat, keberanian, dan kegigihan.
+      <p class="text-md leading-relaxed font-poppins">
+        Halo aku <b>Tora</b>, burung hantu yang melambangkan ketajaman melihat dan kebijaksanaan berpikir.
+		Berpakaian adat Seppa Tallung dari Suku Toraja, saya membawa semangat keberagaman.
       </p>
       <!-- ekor ke kiri -->
       <div class="absolute top-1/2 -left-4 transform -translate-y-1/2 
@@ -68,8 +69,9 @@
     <!-- Bubble Chat -->
     <div class="relative bg-white text-black p-5 rounded-2xl shadow-lg 
                 max-w-[420px]">
-      <p class="text-lg leading-relaxed font-poppins">
-        Halo aku <b>Tira</b>, aku adalah maskot wanita melambangkan semangat, keberanian, dan kegigihan.
+      <p class="text-md leading-relaxed font-poppins">
+        Halo aku <b>Tira</b>, burung hantu yang mengajak untuk melihat lebih jauh dan memahami dengan hati.
+		Dengan Baju Pokko khas Suku Toraja, saya mencerminkan keanggunan, ketenangan, dan kecerdasan.
       </p>
       <!-- ekor ke kanan -->
       <div class="absolute top-1/2 -right-4 transform -translate-y-1/2 
