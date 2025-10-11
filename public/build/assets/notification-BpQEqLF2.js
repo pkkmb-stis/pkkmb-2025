@@ -1,0 +1,1 @@
+import{N as i}from"./notyf.es-ZvlfbKa9.js";const t=new i({duration:2e3});Livewire.on("error",o=>{t.error(o)});Livewire.on("success",o=>{t.success(o)});window.addEventListener("updated",function(o){Swal.fire({icon:o.detail.icon,title:o.detail.title,iconColor:o.detail.iconColor,timer:3e3,toast:!0,position:"top-right",timerProgressBar:!0,showConfirmButton:!0})});

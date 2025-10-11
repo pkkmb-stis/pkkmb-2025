@@ -212,6 +212,7 @@
         /* PPO Preview Images - SESUAI ASSET YANG ADA */
         .ppo-preview-bph { background-image: url('{{ asset("img/asset/2025/kartubph_ppo.png") }}'); }
         .ppo-preview-umum { background-image: url('{{ asset("img/asset/2025/kartuumum_ppo.png") }}'); }
+        .ppo-preview-hpd { background-image: url('{{ asset("img/asset/2025/kartuhpd_ppo.png") }}'); }
         .ppo-preview-gramti { background-image: url('{{ asset("img/asset/2025/kartugramti_ppo.png") }}'); }
         .ppo-preview-tibum { background-image: url('{{ asset("img/asset/2025/kartutibum_ppo.png") }}'); }
         .ppo-preview-ppm { background-image: url('{{ asset("img/asset/2025/kartuppm_ppo.png") }}'); }
@@ -1065,6 +1066,12 @@
                         description: 'Seksi Penelitian dan Pengembangan, Akademik, dan Pendamping Kelompok (LAPK) berperan dalam merancang serta mengelola kegiatan akademik, penelitian, dan pendampingan kelompok mahasiswa baru selama PKKMB, guna memastikan pengalaman belajar yang optimal dan mendukung integrasi sosial di lingkungan kampus.',
                         members: @json($lapk ?? [])
                     },
+                    hpd: {
+                        name: 'Seksi Humas Publikasi dan Dokumentasi',
+                        shortName: 'HPD',
+                        description: 'Seksi Humas, Publikasi, dan Dokumentasi (HPD) bertanggung jawab atas pengelolaan komunikasi eksternal, publikasi kegiatan, serta dokumentasi seluruh rangkaian acara PKKMB. Tugasnya meliputi penyusunan strategi humas, pembuatan materi promosi, pengelolaan media sosial, serta pengambilan foto dan video untuk mendukung citra positif kampus dan memastikan informasi tersampaikan dengan efektif kepada seluruh pemangku kepentingan.',
+                        members: @json($hpd ?? [])
+                    },
                     gramti: {
                         name: 'Seksi Pemrograman dan Teknologi Informasi',
                         shortName: 'Gramti',
@@ -1113,7 +1120,8 @@
                         'BPH': 'ppo-preview-umum',
                         'Acara': 'ppo-preview-bph',
                         'LAPK': 'ppo-preview-acara',
-                        'Gramti': 'ppo-preview-lapk',
+                        'HPD': 'ppo-preview-lapk',
+                        'Gramti': 'ppo-preview-hpd',
                         'Tibum': 'ppo-preview-gramti',
                         'PPM': 'ppo-preview-tibum',
                         'Umum': 'ppo-preview-ppm'
