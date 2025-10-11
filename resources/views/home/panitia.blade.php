@@ -240,7 +240,7 @@
         }
 
         .description-title {
-            font-family: 'Bohemian Soul', cursive;
+            font-family: 'Brasika Display', cursive;
             font-size: 2.2rem;
             color: #2D3748;
             margin-bottom: 1rem;
@@ -254,15 +254,17 @@
         }
 
         .description-text {
+            width: 100%;
             font-size: 1.1rem;
             line-height: 1.7;
             color: #2D3748;
             background: rgba(255,255,255,0.25);
             backdrop-filter: blur(10px);
-            padding: 20px;
+            padding: 10px;
             border-radius: 20px;
             border: 1px solid rgba(255,255,255,0.4);
             transition: all 0.3s ease;
+            font-family:'Poppins';
         }
 
         .description-text:hover {
@@ -368,12 +370,11 @@
         NAMA & JABATAN
         ========================= */
         .member-name {
-            font-family: 'Bohemian Soul', cursive;
+            font-family: 'Poppins', cursive;
             font-size: 0.9rem;
-            color: #2D3748;
+            color: #ffffff;
             text-align: center;
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.85);
             margin-top: 125px;
             line-height: 1.4;
             padding: 0 8px;
@@ -387,6 +388,7 @@
 
         /* Jabatan */
         .member-position {
+            font-family: 'Poppins', cursive;
             font-size: 0.85rem;
             color: #2D3748;
             text-align: center;
@@ -468,6 +470,7 @@
             position: relative;
             min-height: 250px;
             gap: 20px;
+            top: -57px;
         }
 
         .members-container {
@@ -488,7 +491,7 @@
         }
 
         .dosen-title {
-            font-family: 'Bohemian Soul', cursive;
+            font-family: 'Brasika Display', cursive;
             font-size: 2.5rem;
             color: white;
             text-align: center;
@@ -503,7 +506,7 @@
         .maleo-bird {
             position: absolute;
             right: 20px;
-            bottom: 20px;
+            bottom: 0;
             width: 120px;
             height: auto;
             z-index: 20;
@@ -900,14 +903,18 @@
                 padding: 2px 6px;
             }
         }
+        .dosen-preview-card span {
+            font-family: 'Brasika Display', sans-serif;
+            color: #fff;
+            text-align: center;
+            display: block;
+            line-height: 1.2;
+            font-size: clamp(0.9rem, 2vw, 1.8rem); /* responsif */
+        }
     </style>
 
     {{-- PPO Section --}}
     <section class="relative bg-ppo-pattern">
-        {{-- Motif Decorations --}}
-        <img src="{{ asset('img/asset/2025/motif pt1.png') }}" class="motif-top-right animate-float" alt="Motif Top Right">
-        <img src="{{ asset('img/asset/2025/motif pt1.png') }}" class="motif-bottom-left animate-float" alt="Motif Bottom Left">
-        
         {{-- PPO Title --}}
         <div class="ppo-title-container">
             <img src="{{ asset('img/asset/2025/Title PPO.png') }}" alt="Title PPO" class="w-80 md:w-96 mx-auto">
@@ -961,7 +968,7 @@
                              alt="Foto Anggota"
                              onerror="this.src='{{ asset('img/default-profile.jpg') }}'">
                         <h3 class="member-name mx-3" x-text="member.nama"></h3>
-                        <p class="member-position" x-text="member.jabatan"></p>
+                        <p class="member-position mx-3" x-text="member.jabatan"></p>
                     </div>
                 </template>
             </div>
@@ -1069,7 +1076,7 @@
                     hpd: {
                         name: 'Seksi Humas Publikasi dan Dokumentasi',
                         shortName: 'HPD',
-                        description: 'Seksi Humas, Publikasi, dan Dokumentasi (HPD) bertanggung jawab atas pengelolaan komunikasi eksternal, publikasi kegiatan, serta dokumentasi seluruh rangkaian acara PKKMB. Tugasnya meliputi penyusunan strategi humas, pembuatan materi promosi, pengelolaan media sosial, serta pengambilan foto dan video untuk mendukung citra positif kampus dan memastikan informasi tersampaikan dengan efektif kepada seluruh pemangku kepentingan.',
+                        description: 'Seksi Divisi Humas, Publikasi, dan Dokumentasi bertugas membuat publikasi dan konten media sosial PKKMB, mendokumentasikan kegiatan secara visual dan audiovisual, memproduksi video pendukung, serta menjaga keamanan data dokumentasi. Selain itu, divisi ini juga berkoordinasi dalam pembuatan media kreatif.',
                         members: @json($hpd ?? [])
                     },
                     gramti: {

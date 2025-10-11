@@ -491,7 +491,7 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Koordinator'
             ],
             [
-                'nama' => 'Anugrah Putri Indahsari Tria Meiliana',
+                'nama' => 'Anugrah Putri Indahsari T. M.',
                 'foto' => 'img/ppo/hpd/Anugrah Putri Indahsari Tria Meiliana.png',
                 'jabatan' => 'Anggota'
             ],
@@ -511,7 +511,7 @@ if (!function_exists('getPanitia')) {
                 'jabatan' => 'Anggota'
             ],
             [
-                'nama' => 'Gusti Ayu Made Putra Pebriani Dharmawan',
+                'nama' => 'Gusti Ayu Made P. P. D.',
                 'foto' => 'img/ppo/hpd/Gusti Ayu Made Putra Pebriani Dharmawan.png',
                 'jabatan' => 'Anggota'
             ],
